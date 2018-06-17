@@ -1,0 +1,207 @@
+@base <http://purl.org/datanode/ex/dbrec/full/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbprop: <http://dbpedia.org/property/> .
+@prefix dn: <http://purl.org/datanode/ns/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldsd:		<http://dbrec.net/ldsd/ns#> .
+@prefix : <http://purl.org/datanode/ex/dbrec/full/> .
+
+:origin
+	void:subjects "39000"^^xsd:int ;
+	void:triples "3004351"^^xsd:int .
+:accurate 
+	dn:optimizedFrom :origin ;
+	dn:cleanedFrom :origin .
+	
+
+:origin
+    void:entities "39000"^^xsd:int ;
+    void:triples "3004351"^^xsd:int .
+:datatype-properties
+	dn:attributesOf :origin .
+:part-with-dtp
+	rdfs:comment "part of the source with datatype properties"@en ;
+	dn:hasVocabulary :datatype-properties ;
+	dn:isSectionOf :origin .
+:part-without-dtp
+	dn:differentVocabulary :part-with-dtp ;
+	dn:disjointSection :part-with-dtp ;
+	dn:isSectionOf :origin .
+:no-dtp
+    void:triples "2247019"^^xsd:int ;
+	dn:isCopyOf :part-without-dtp ;
+	dn:cleanedFrom :origin .
+	
+
+:origin 
+	dn:isPartOf :DBPedia .
+:redundant 
+	dn:isPartOf :origin .
+:inconsistent 
+	dn:isPartOf :origin .
+:good
+	dn:inconsistentWith :redundant ;
+	dn:inconsistentWith :inconsistent ;
+	dn:overlappingCapability :redundant ;
+	dn:disjointPart [ dn:hasPart :redundant , 
+	 	:inconsistent ] ;
+	dn:isPartOf :origin .
+:obtained
+	dn:isCopyOf :good ;
+	dn:cleanedFrom :DBPedia .
+	
+
+:artists
+	dn:isSelectionOf :DBPedia .
+:artists-links
+	dn:isSectionOf :artists .
+:link-stats
+	dn:isStatisticOf :artists ;
+	dn:samePopulation :artists .
+:artists-with-no-link
+    void:entities "21211"^^xsd:int ;
+	dn:isPortionOf :artists ;
+	dn:isInferenceOf :link-stats ;
+	dn:isSelectionOf :link-stats ;
+	dn:disjointPortion :artists-links .
+:artists-with-three-links
+	void:entities "9555"^^xsd:int ;
+	dn:isInferenceOf :link-stats ;
+	dn:isSelectionOf :link-stats ;
+	dn:isPortionOf :artists-links .
+:artists-with-14-links
+	void:properties "14"^^xsd:int ;
+	dn:isPortionOf :artists-links . 
+:indirect-links
+	dn:isInferenceOf :artists-links .
+	
+
+:DBPedia 
+	a dn:Datanode .
+:artists
+	dn:isSelectionOf :DBPedia .
+:relations
+	dn:relationsOf :artists .
+:artists-links
+	dn:hasVocabulary :relations ;
+	dn:isSectionOf :artists .
+:direct-relations
+	dn:isPortionOf :relations .
+:indirect-relations
+	dn:differentCapability :direct-relations ;
+	dn:disjointPortion :direct-relations .
+:direct-links
+	dn:hasVocabulary :direct-relations ;
+	dn:isSectionOf :artists-links ;
+	void:properties "578"^^xsd:int .
+:indirect-links
+	dn:hasVocabulary :indirect-relations ;
+	void:properties "767"^^xsd:int ;
+	dn:disjointSection :direct-links .
+:optimized
+	dn:isCopyOf :direct-links ;
+	dn:optimizedFrom :artists .
+	
+
+:origin 
+	dn:isPortionOf :DBPedia .
+:usefulPropertyValues
+	dn:isSectionOf :origin  .
+:uselessPropertyValues
+	dn:differentCapability :usefulPropertyValues ;
+	dn:disjointSection :usefulPropertyValues .
+:curated
+	dn:sameCapability :usefulPropertyValues ;
+	dn:hasDeletion :uselessPropertyValues ;
+	dn:updatedVersionOf :origin ;
+	dn:cleanedFrom :origin ;
+	dn:optimizedFrom :origin .
+	
+
+:origin
+	dn:hasSection [
+		void:classPartition :Artist ;
+		dn:hasSection [
+			void:classPartition :Artist ;
+			dn:disjointSection owl:nothing 
+		] 
+	] ;
+	dn:hasSection :withProperties . 
+:withProperties
+	dn:hasVocabulary :properties .
+:misusedProperties
+	dn:isPortionOf :properties .
+:withMisusedProperties
+	void:propertyPartition dbprop:notableInstruments ;
+	void:propertyPartition dbprop:nationalAnthem ;
+	dn:isSectionOf :withProperties ;
+	void:properties "188"^^xsd:int .
+
+
+:dset
+	dn:isSectionOf :DBPedia .
+:with-wrong-properties
+	void:properties "35"^^xsd:int ;
+	dn:inconsistentWith :with-wrong-properties ;
+	dn:isSectionOf :dset ;
+	dn:vocabulary :wrong-properties .
+	
+
+:artistsAndLinksToResources
+	dn:hasSection :withPropertiesUsedOnlyOnce ;
+	dn:hasSection :withPropertiesWronglyDefined .
+:withPropertiesUsedOnlyOnce
+	void:properties "183"^^xsd:int ;
+	dn:hasVocabulary :propertiesUsedOnlyOnce .
+:withPropertiesWronglyDefined
+    void:properties "36"^^xsd:int ;
+	dn:hasVocabulary :propertiesWronglyDefined .
+:propertiesWronglyDefined
+	dn:hasPart :propertiesUsedOnlyOnce .
+	
+
+:dset
+	void:properties "767"^^xsd:int ;
+	dn:hasSection :useless ;
+	dn:hasSection [
+		dn:disjointSection :useless ;
+	] .
+:uselessTooGeneric
+	dn:isSectionOf :useless ;
+	dn:disjointSection :uselessOnlyOnce .
+:uselessOnlyOnce
+	dn:isSectionOf :useless ;
+	void:properties "336"^^xsd:int ;
+	dn:relations :linkToSingleArtist .
+:linkToSingleArtist
+	rdfs:comment "these properties link to a single artist"@en ;
+	dn:hasPortion [
+		rdfs:comment "these properties are wrongly written"@en ;
+		void:entities "115"^^xsd:int ;
+	] .
+	
+
+:origin
+	a dn:Datanode .
+:cleaned
+	dn:cleanedFrom :origin ;
+	void:triples "1073077"^^xsd:int .
+	
+
+:ldsd dn:hasVocabulary :ldsdvoc .
+:ldsdvoc dn:describes ldsd:Distance, ldsd:Explanation .
+:distance 
+    dn:usesSchema ldsd:Distance ;
+    dn:hasSection ldsd:from, ldsd:from, ldsd:to, ldsd:value .
+:explanation
+	dn:usesSchema ldsd:Explanation ;
+	dn:hasPortion :links, :inputData, :linksAmountInDataset .
+:recommendations dn:samePopulationAs :links .
+:artist dn:describedBy :distance, :explanation, :recommendations .

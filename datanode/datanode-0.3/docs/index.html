@@ -1,0 +1,1514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Datanode</title>
+		<meta charset="utf-8">
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <meta name="description" content="Usecase Datanode">
+		    <meta name="author" content="enridaga">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+   		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.6.0"></script>
+		<script type="text/javascript" src="./js/model.js"></script>
+		<script type="text/javascript" src="./js/diagram.js"></script>
+		<script type="text/javascript" src="./js/dynatree.js"></script>
+		<script type="text/javascript" src="./js/dntree.js"></script><!-- SCRIPTS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./css/main.css" rel="stylesheet">
+		<script>
+		$(document).ready( function() {
+		$('.dropdown-toggle').dropdown();
+		});
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top collapse navbar-collapse" role="navigation">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="./">Datanode</a>
+		        </div>
+		        <div class="collapse navbar-collapse">
+		          <ul class="nav navbar-nav">
+		            <li><a href="./">Home</a></li>
+		            <li><a class="dropdown-toggle"
+						data-toggle="dropdown"  href="#">Download  <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="./../ns/index.ttl">Turtle</a>
+							<li><a href="./../ns/index.rdf">RDF/XML</a>
+							<li><a href="./../ns/index.nt">N-Triples</a>
+						</ul>
+					</li>
+		            <li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown"  href="#">Examples <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a role="menuitem"  href="./usecases/AEMOO-1.html">AEMOO-1</a></li><li><a role="menuitem"  href="./usecases/DBREC-1.html">DBREC-1</a></li><li><a role="menuitem"  href="./usecases/DBREC-10.html">DBREC-10</a></li><li><a role="menuitem"  href="./usecases/DBREC-11.html">DBREC-11</a></li><li><a role="menuitem"  href="./usecases/DBREC-12.html">DBREC-12</a></li><li><a role="menuitem"  href="./usecases/DBREC-2.html">DBREC-2</a></li><li><a role="menuitem"  href="./usecases/DBREC-3.html">DBREC-3</a></li><li><a role="menuitem"  href="./usecases/DBREC-4.html">DBREC-4</a></li><li><a role="menuitem"  href="./usecases/DBREC-5.html">DBREC-5</a></li><li><a role="menuitem"  href="./usecases/DBREC-6.html">DBREC-6</a></li><li><a role="menuitem"  href="./usecases/DBREC-7.html">DBREC-7</a></li><li><a role="menuitem"  href="./usecases/DBREC-8.html">DBREC-8</a></li><li><a role="menuitem"  href="./usecases/DBREC-9.html">DBREC-9</a></li><li><a role="menuitem"  href="./usecases/DISCOU-1.html">DISCOU-1</a></li><li><a role="menuitem"  href="./usecases/DISCOU-11.html">DISCOU-11</a></li><li><a role="menuitem"  href="./usecases/EventMedia-1.html">EventMedia-1</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-1.html">REXPLORE-1</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-2.html">REXPLORE-2</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-3.html">REXPLORE-3</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-4.html">REXPLORE-4</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-5.html">REXPLORE-5</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-6.html">REXPLORE-6</a></li><li><a role="menuitem"  href="./usecases/SPUD-1.html">SPUD-1</a></li><li><a role="menuitem"  href="./usecases/SPUD-2.html">SPUD-2</a></li><li><a role="menuitem"  href="./usecases/SPUD-3.html">SPUD-3</a></li><li><a role="menuitem"  href="./usecases/WATSON-1.html">WATSON-1</a></li><li><a role="menuitem"  href="./usecases/YokohamaArtSpot-1.html">YokohamaArtSpot-1</a></li>
+						</ul>
+					</li>
+	<!--	            <li><a href="./contact.html">Contact</a></li> -->
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+		
+	    <div class="container">
+		
+		<h1>Datanode</h1>
+		
+		<!-- start content here -->
+		<style type="text/css">
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 14px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+</style>
+
+<p>The Datanode ontology was designed to describe data artifacts and their relations on the Semantic Web.</p>
+<p>Datanode terms are under the <tt>http://purl.com/datanode/ns/</tt> namespace</p>
+
+<p>Data is at the center of current developments on the World Wide Web. In
+the Semantic Web, different kinds of data artifacts (datasets, catalogues, provenance 
+metadata, etc.) are published, exchanged, described and queried every day. 
+There are a number of use cases related to data hub management that 
+can only be addressed if we are able to specify the relations between the managed data 
+artifacts in a way that support useful inferences.</p> 
+<p>Datanode is a conceptual framework designed to 
+express relations between data nodes, implemented as an extendable OWL ontology 
+covering the possible relationships between such data nodes. Datanode can support the management of (possibly distributed and interlinked) catalogues 
+of web data and reasoning over the relationships between items in data catalogues.</p>
+
+<ul class="nav nav-pills">
+  <li class="active"><a href="#terms" data-toggle="tab">Terms description</a></li>
+  <li><a href="#diagram" data-toggle="tab">Properties tree</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="terms"><div>
+<h3>Classes</h3>
+<ul class="types">
+<li><a title="A data node" href="#Datanode">Datanode</a></li>
+</ul>
+</div><div>
+<h3>Properties</h3>
+<ul class="properties">
+<li><a title="about" href="#about">about</a></li><li><a title="adjacent to" href="#adjacentTo">adjacentTo</a></li><li><a title="attached to" href="#attachedTo">attachedTo</a></li><li><a title="attributes of" href="#attributesOf">attributesOf</a></li><li><a title="cleaned from" href="#cleanedFrom">cleanedFrom</a></li><li><a title="cleaned into" href="#cleanedInto">cleanedInto</a></li><li><a title="combination from" href="#combinationFrom">combinationFrom</a></li><li><a title="combined in" href="#combinedIn">combinedIn</a></li><li><a title="consistent with" href="#consistentWith">consistentWith</a></li><li><a title="" href="#creator">creator</a></li><li><a title="datatypes of" href="#datatypesOf">datatypesOf</a></li><li><a title="described by" href="#describedBy">describedBy</a></li><li><a title="describes" href="#describes">describes</a></li><li><a title="" href="#description">description</a></li><li><a title="descriptors of" href="#descriptorsOf">descriptorsOf</a></li><li><a title="different capability from" href="#differentCapabilityFrom">differentCapabilityFrom</a></li><li><a title="different population from" href="#differentPopulationFrom">differentPopulationFrom</a></li><li><a title="different vocabulary from" href="#differentVocabularyFrom">differentVocabularyFrom</a></li><li><a title="disjoint capability" href="#disjointCapabilityWith">disjointCapabilityWith</a></li><li><a title="disjoint part with" href="#disjointPartWith">disjointPartWith</a></li><li><a title="disjoint portion with" href="#disjointPortionWith">disjointPortionWith</a></li><li><a title="disjoint section with" href="#disjointSectionWith">disjointSectionWith</a></li><li><a title="duplicate" href="#duplicate">duplicate</a></li><li><a title="has addition" href="#hasAddition">hasAddition</a></li><li><a title="has annotation" href="#hasAnnotation">hasAnnotation</a></li><li><a title="has anonymized substitute" href="#hasAnonymized">hasAnonymized</a></li><li><a title="has attached" href="#hasAttached">hasAttached</a></li><li><a title="has attributes" href="#hasAttributes">hasAttributes</a></li><li><a title="has cache" href="#hasCache">hasCache</a></li><li><a title="has change" href="#hasChange">hasChange</a></li><li><a title="has computation" href="#hasComputation">hasComputation</a></li><li><a title="has copy" href="#hasCopy">hasCopy</a></li><li><a title="has datatypes" href="#hasDatatypes">hasDatatypes</a></li><li><a title="has deletion" href="#hasDeletion">hasDeletion</a></li><li><a title="has dependency" href="#hasDependency">hasDependency</a></li><li><a title="has derivation" href="#hasDerivation">hasDerivation</a></li><li><a title="has descriptors" href="#hasDescriptors">hasDescriptors</a></li><li><a title="has example" href="#hasExample">hasExample</a></li><li><a title="has extraction" href="#hasExtraction">hasExtraction</a></li><li><a title="has identifiers" href="#hasIdentifiers">hasIdentifiers</a></li><li><a title="has inference" href="#hasInference">hasInference</a></li><li><a title="has interpretation" href="#hasInterpretation">hasInterpretation</a></li><li><a title="has part" href="#hasPart">hasPart</a></li><li><a title="has portion" href="#hasPortion">hasPortion</a></li><li><a title="has reification" href="#hasReification">hasReification</a></li><li><a title="has relations" href="#hasRelations">hasRelations</a></li><li><a title="has sample" href="#hasSample">hasSample</a></li><li><a title="has section" href="#hasSection">hasSection</a></li><li><a title="has selection" href="#hasSelection">hasSelection</a></li><li><a title="has snapshot" href="#hasSnapshot">hasSnapshot</a></li><li><a title="has stand-in" href="#hasStandIn">hasStandIn</a></li><li><a title="has statistic" href="#hasStatistic">hasStatistic</a></li><li><a title="has summarization" href="#hasSummarization">hasSummarization</a></li><li><a title="has types" href="#hasTypes">hasTypes</a></li><li><a title="has update" href="#hasUpdate">hasUpdate</a></li><li><a title="updated version" href="#hasUpdatedVersion">hasUpdatedVersion</a></li><li><a title="has vocabulary" href="#hasVocabulary">hasVocabulary</a></li><li><a title="identifiers of" href="#identifiersOf">identifiersOf</a></li><li><a title="inconsistent with" href="#inconsistentWith">inconsistentWith</a></li><li><a title="is addition of" href="#isAdditionOf">isAdditionOf</a></li><li><a title="is annotation of" href="#isAnnotationOf">isAnnotationOf</a></li><li><a title="is anonymized substitute of" href="#isAnonymizedOf">isAnonymizedOf</a></li><li><a title="is cache of" href="#isCacheOf">isCacheOf</a></li><li><a title="is change of" href="#isChangeOf">isChangeOf</a></li><li><a title="is computation of" href="#isComputationOf">isComputationOf</a></li><li><a title="is copy of" href="#isCopyOf">isCopyOf</a></li><li><a title="is deletion of" href="#isDeletionOf">isDeletionOf</a></li><li><a title="is dependency of" href="#isDependencyOf">isDependencyOf</a></li><li><a title="is derivation of" href="#isDerivationOf">isDerivationOf</a></li><li><a title="example of" href="#isExampleOf">isExampleOf</a></li><li><a title="extraction of" href="#isExtractionOf">isExtractionOf</a></li><li><a title="is inference of" href="#isInferenceOf">isInferenceOf</a></li><li><a title="is interpretation of" href="#isInterpretationOf">isInterpretationOf</a></li><li><a title="is part of" href="#isPartOf">isPartOf</a></li><li><a title="is portion of" href="#isPortionOf">isPortionOf</a></li><li><a title="is reification of" href="#isReificationOf">isReificationOf</a></li><li><a title="is sample of" href="#isSampleOf">isSampleOf</a></li><li><a title="is section of" href="#isSectionOf">isSectionOf</a></li><li><a title="is selection of" href="#isSelectionOf">isSelectionOf</a></li><li><a title="is snapshot of" href="#isSnapshotOf">isSnapshotOf</a></li><li><a title="is stand-in of" href="#isStandInOf">isStandInOf</a></li><li><a title="is statistic of" href="#isStatisticOf">isStatisticOf</a></li><li><a title="is summarization of" href="#isSummarizationOf">isSummarizationOf</a></li><li><a title="is update of" href="#isUpdateOf">isUpdateOf</a></li><li><a title="updated version of" href="#isUpdatedVersionOf">isUpdatedVersionOf</a></li><li><a title="is vocabulary of" href="#isVocabularyOf">isVocabularyOf</a></li><li><a title="linked by" href="#linkedBy">linkedBy</a></li><li><a title="links" href="#links">links</a></li><li><a title="metadata" href="#metadata">metadata</a></li><li><a title="newer version of" href="#newerVersionOf">newerVersionOf</a></li><li><a title="next version of" href="#nextVersionOf">nextVersionOf</a></li><li><a title="" href="#note">note</a></li><li><a title="older version of" href="#olderVersionOf">olderVersionOf</a></li><li><a title="optimized from" href="#optimizedFrom">optimizedFrom</a></li><li><a title="optimized into" href="#optimizedInto">optimizedInto</a></li><li><a title="overlapping capability with" href="#overlappingCapabilityWith">overlappingCapabilityWith</a></li><li><a title="overlapping population with" href="#overlappingPopulationWith">overlappingPopulationWith</a></li><li><a title="overlapping vocabulary with" href="#overlappingVocabularyWith">overlappingVocabularyWith</a></li><li><a title="previous version of" href="#previousVersionOf">previousVersionOf</a></li><li><a title="processed from" href="#processedFrom">processedFrom</a></li><li><a title="processed into" href="#processedInto">processedInto</a></li><li><a title="redundant with" href="#redundantWith">redundantWith</a></li><li><a title="refactored from" href="#refactoredFrom">refactoredFrom</a></li><li><a title="refactored into" href="#refactoredInto">refactoredInto</a></li><li><a title="referenced by" href="#referencedBy">referencedBy</a></li><li><a title="references" href="#references">references</a></li><li><a title="related with" href="#relatedWith">relatedWith</a></li><li><a title="relations of" href="#relationsOf">relationsOf</a></li><li><a title="remodelled from" href="#remodelledFrom">remodelledFrom</a></li><li><a title="remodelled to" href="#remodelledTo">remodelledTo</a></li><li><a title="same capability as" href="#sameCapabilityAs">sameCapabilityAs</a></li><li><a title="same population" href="#samePopulationAs">samePopulationAs</a></li><li><a title="same vocabulary" href="#sameVocabularyAs">sameVocabularyAs</a></li><li><a title="schema used by" href="#schemaUsedBy">schemaUsedBy</a></li><li><a title="shares interpretation with" href="#sharesInterpretationWith">sharesInterpretationWith</a></li><li><a title="types of" href="#typesOf">typesOf</a></li><li><a title="uses schema" href="#usesSchema">usesSchema</a></li><li><a title="version" href="#versionOf">versionOf</a></li>
+</ul>
+</div><div class="definition">
+<h4><a name="Datanode" id="Datanode"></a>dn:Datanode
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/Datanode</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:Class  rdfs:Class</td></tr><tr><th>rdfs:label</th><td>A data node</td></tr><tr><th>rdfs:comment</th><td>A data node is an underspecified data object, in a network of data nodes.</td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="about" id="about"></a>dn:about
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/about</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>about</td></tr><tr><th>dct:description</th><td><p>A data node may be metadata about another.</p></td></tr><tr><th>rdfs:comment</th><td>A data node is about another data node.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relatedWith">dn:relatedWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#metadata">dn:metadata</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="adjacentTo" id="adjacentTo"></a>dn:adjacentTo
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/adjacentTo</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:TransitiveProperty  owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>adjacent to</td></tr><tr><th>dct:description</th><td><p>This property basically represents the proximity of some data to other. Two parts of the same dataset are adjacents each other.</p></td></tr><tr><th>rdfs:comment</th><td>To relate a data node to any of their adjacent data node.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relatedWith">dn:relatedWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="attachedTo" id="attachedTo"></a>dn:attachedTo
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/attachedTo</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>attached to</td></tr><tr><th>dct:description</th><td>This, along with its inverse "haveAttached" , are considered to model the "physical" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments.</td></tr><tr><th>rdfs:comment</th><td>Data are attached to data for some reason</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#adjacentTo">dn:adjacentTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasAttached">dn:hasAttached</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="attributesOf" id="attributesOf"></a>dn:attributesOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/attributesOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>attributes of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#descriptorsOf">dn:descriptorsOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasAttributes">dn:hasAttributes</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="cleanedFrom" id="cleanedFrom"></a>dn:cleanedFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/cleanedFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>cleaned from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a>  <a href="#overlappingCapabilityWith">dn:overlappingCapabilityWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#cleanedInto">dn:cleanedInto</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="cleanedInto" id="cleanedInto"></a>dn:cleanedInto
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/cleanedInto</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>cleaned into</td></tr><tr><th>rdfs:comment</th><td>Clean to make emerge potential capabilities. We intend cleaning in a broad sense, including activities like fixes in the syntax of the data or pruning of unfitting data, with relation to a target task.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingCapabilityWith">dn:overlappingCapabilityWith</a>  <a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#cleanedFrom">dn:cleanedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="combinationFrom" id="combinationFrom"></a>dn:combinationFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/combinationFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>combination from</td></tr><tr><th>rdfs:comment</th><td>A data node that is the result of the combination of another data node with something else.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isDerivationOf">dn:isDerivationOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#combinedIn">dn:combinedIn</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="combinedIn" id="combinedIn"></a>dn:combinedIn
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/combinedIn</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>combined in</td></tr><tr><th>rdfs:comment</th><td>A data node that have been combined (with something else) in a given data node.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasDerivation">dn:hasDerivation</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#combinationFrom">dn:combinationFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="consistentWith" id="consistentWith"></a>dn:consistentWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/consistentWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>consistent with</td></tr><tr><th>dct:description</th><td><p>We intend consistency in a general sense: two data nodes are consistent because they agree (ie, they do not disagree...).</p>  <p>It can be the case that a single data node is verified to be correct. It can then be marked to be consistent with itself.</p></td></tr><tr><th>rdfs:comment</th><td>A data node that can (should) be used together with another. </td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="creator" id="creator"></a>dct:creator
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/dc/terms/creator</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:AnnotationProperty</td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="datatypesOf" id="datatypesOf"></a>dn:datatypesOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/datatypesOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>datatypes of</td></tr><tr><th>rdfs:comment</th><td>Relates a vocabulary of datatypes to the datanode that uses them.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isVocabularyOf">dn:isVocabularyOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasDatatypes">dn:hasDatatypes</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="describedBy" id="describedBy"></a>dn:describedBy
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/describedBy</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>described by</td></tr><tr><th>dct:description</th><td><p>This relates a datanode to any datanode being an object in its representation.</p></td></tr><tr><th>rdfs:comment</th><td>Data have other data as description.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#metadata">dn:metadata</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#describes">dn:describes</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="describes" id="describes"></a>dn:describes
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/describes</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>describes</td></tr><tr><th>dct:description</th><td><p>This relates a datanode to any datanode being an object in its representation.</p></td></tr><tr><th>rdfs:comment</th><td>A data node describes another.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#about">dn:about</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#describedBy">dn:describedBy</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="description" id="description"></a>dct:description
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/dc/terms/description</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:AnnotationProperty</td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="descriptorsOf" id="descriptorsOf"></a>dn:descriptorsOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/descriptorsOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>descriptors of</td></tr><tr><th>rdfs:comment</th><td>This property relates a datanode of descriptors to the datanode that uses them.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isVocabularyOf">dn:isVocabularyOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasDescriptors">dn:hasDescriptors</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="differentCapabilityFrom" id="differentCapabilityFrom"></a>dn:differentCapabilityFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/differentCapabilityFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>different capability from</td></tr><tr><th>dct:description</th><td><p>Two nodes have different potential. Two data nodes using different vocabularies or two copies of the same data in different places.</p></td></tr><tr><th>skos:note</th><td>(Similarly to :overlappingCapabilityWith) This relation is needed to generically express comparison of data nodes with relation to specific tasks.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relatedWith">dn:relatedWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="differentPopulationFrom" id="differentPopulationFrom"></a>dn:differentPopulationFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/differentPopulationFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>different population from</td></tr><tr><th>dct:description</th><td><p>Two datanodes do not share any population.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentCapabilityFrom">dn:differentCapabilityFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="differentVocabularyFrom" id="differentVocabularyFrom"></a>dn:differentVocabularyFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/differentVocabularyFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>different vocabulary from</td></tr><tr><th>dct:description</th><td><p>Two datanodes do not share any set of vocabulary terms.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentCapabilityFrom">dn:differentCapabilityFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="disjointCapabilityWith" id="disjointCapabilityWith"></a>dn:disjointCapabilityWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/disjointCapabilityWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>disjoint capability</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentPopulationFrom">dn:differentPopulationFrom</a>  <a href="#differentVocabularyFrom">dn:differentVocabularyFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="disjointPartWith" id="disjointPartWith"></a>dn:disjointPartWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/disjointPartWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>disjoint part with</td></tr><tr><th>rdfs:comment</th><td>Two datanodes are adjacent parts of another. This property relates the two parts without specifying anything about their container. Can be used in conjunction with isPartOf to state that two parts do not overlap.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#adjacentTo">dn:adjacentTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="disjointPortionWith" id="disjointPortionWith"></a>dn:disjointPortionWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/disjointPortionWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>disjoint portion with</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentPopulationFrom">dn:differentPopulationFrom</a>  <a href="#disjointPartWith">dn:disjointPartWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="disjointSectionWith" id="disjointSectionWith"></a>dn:disjointSectionWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/disjointSectionWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>disjoint section with</td></tr><tr><th>rdfs:comment</th><td>Data can be cut in sections according to specific attributes.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentVocabularyFrom">dn:differentVocabularyFrom</a>  <a href="#disjointPartWith">dn:disjointPartWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="duplicate" id="duplicate"></a>dn:duplicate
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+<span class="badge irreflexive" title="irreflexive">I</span>
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/duplicate</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty  owl:TransitiveProperty  owl:IrreflexiveProperty</td></tr><tr><th>rdfs:label</th><td>duplicate</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sameCapabilityAs">dn:sameCapabilityAs</a></td></tr><tr><th>owl:disjointPropertyWith</th><td><a href="#disjointCapabilityWith">dn:disjointCapabilityWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasAddition" id="hasAddition"></a>dn:hasAddition
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasAddition</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has addition</td></tr><tr><th>rdfs:comment</th><td>some data is the addition-update of some other</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasChange">dn:hasChange</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isAdditionOf">dn:isAdditionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasAnnotation" id="hasAnnotation"></a>dn:hasAnnotation
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasAnnotation</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has annotation</td></tr><tr><th>rdfs:comment</th><td>This relates a datanode to some metadata attached to it.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasAttached">dn:hasAttached</a>  <a href="#metadata">dn:metadata</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isAnnotationOf">dn:isAnnotationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasAnonymized" id="hasAnonymized"></a>dn:hasAnonymized
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasAnonymized</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has anonymized substitute</td></tr><tr><th>dct:description</th><td><p>Relates a datanode to another that is the result of a process that removes any personal identifiable information. The resulting datanode is meant to play the role of its origin in the application.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasStandIn">dn:hasStandIn</a>  <a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isAnonymizedOf">dn:isAnonymizedOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasAttached" id="hasAttached"></a>dn:hasAttached
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasAttached</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has attached</td></tr><tr><th>rdfs:comment</th><td>Data have attached other data for some reason</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#adjacentTo">dn:adjacentTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#attachedTo">dn:attachedTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasAttributes" id="hasAttributes"></a>dn:hasAttributes
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasAttributes</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has attributes</td></tr><tr><th>dct:description</th><td><p>We relate with this property a data node to a collection of attributes used in it. We distinguish attributes from relations because the first does not qualify the range entity but only the domain entity (saying that a person is 1.82m tall does not change our knowledge about 1.82m).</p></td></tr><tr><th>rdfs:comment</th><td>Relates data to the attributes used.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasDescriptors">dn:hasDescriptors</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#attributesOf">dn:attributesOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasCache" id="hasCache"></a>dn:hasCache
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasCache</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has cache</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasStandIn">dn:hasStandIn</a>  <a href="#hasSnapshot">dn:hasSnapshot</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isCacheOf">dn:isCacheOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasChange" id="hasChange"></a>dn:hasChange
+
+
+
+
+
+
+<span class="badge inverseFunctional" title="inverseFunctional">I</span>
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasChange</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:InverseFunctionalProperty</td></tr><tr><th>rdfs:label</th><td>has change</td></tr><tr><th>rdfs:comment</th><td>some data has some other as a change to come</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasUpdate">dn:hasUpdate</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isChangeOf">dn:isChangeOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasComputation" id="hasComputation"></a>dn:hasComputation
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasComputation</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has computation</td></tr><tr><th>dct:description</th><td><p>Relates a datanode to another that is the result of some computation on its data.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isComputationOf">dn:isComputationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasCopy" id="hasCopy"></a>dn:hasCopy
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasCopy</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>has copy</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sameCapabilityAs">dn:sameCapabilityAs</a>  <a href="#hasDerivation">dn:hasDerivation</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isCopyOf">dn:isCopyOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasDatatypes" id="hasDatatypes"></a>dn:hasDatatypes
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasDatatypes</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has datatypes</td></tr><tr><th>rdfs:comment</th><td>Relates a datanode to the vocabulary of datatypes used in it.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasVocabulary">dn:hasVocabulary</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#datatypesOf">dn:datatypesOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasDeletion" id="hasDeletion"></a>dn:hasDeletion
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasDeletion</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has deletion</td></tr><tr><th>dct:description</th><td><p>Indicates a data node which includes information that is now old or outdated. We don't indicate it to be also a part, this is to discuss.</p></td></tr><tr><th>rdfs:comment</th><td>A data node is the to-delete-information of some other. In other terms, it is the outdated information.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasChange">dn:hasChange</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isDeletionOf">dn:isDeletionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasDependency" id="hasDependency"></a>dn:hasDependency
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasDependency</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has dependency</td></tr><tr><th>skos:note</th><td>The concept of dependency is here considered as to be expressed within the datanode (it is subproperty of references). Is this really a requirement?</td></tr><tr><th>rdfs:comment</th><td>A datanode needs another to be used or interpreted.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#references">dn:references</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isDependencyOf">dn:isDependencyOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasDerivation" id="hasDerivation"></a>dn:hasDerivation
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasDerivation</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has derivation</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relatedWith">dn:relatedWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isDerivationOf">dn:isDerivationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasDescriptors" id="hasDescriptors"></a>dn:hasDescriptors
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasDescriptors</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has descriptors</td></tr><tr><th>dct:description</th><td><p>We choose the term descriptor to indicate generically the element used to bind/map/qualify a value with respect to its entity. Practically, this term maps to <ul><li>"Field" in Object Oriented Programming; <li>"Predicate" in First Order Logic <li>Column identifier (Attribute) in Relation Database terminology <li>rdf:Property in the Resource Description Framework </ul></p></td></tr><tr><th>rdfs:comment</th><td>A descriptor is an element used to qualify a value. Relates a data node to the collection of the descriptors used (being it a data node, obviously).</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasVocabulary">dn:hasVocabulary</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#descriptorsOf">dn:descriptorsOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasExample" id="hasExample"></a>dn:hasExample
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasExample</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has example</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasSelection">dn:hasSelection</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isExampleOf">dn:isExampleOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasExtraction" id="hasExtraction"></a>dn:hasExtraction
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasExtraction</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has extraction</td></tr><tr><th>dct:description</th><td><p>Relates a datanode to another that formalize the information obtained as a result of an information extraction process, for example a data mining process.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasInterpretation">dn:hasInterpretation</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isExtractionOf">dn:isExtractionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasIdentifiers" id="hasIdentifiers"></a>dn:hasIdentifiers
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasIdentifiers</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has identifiers</td></tr><tr><th>dct:description</th><td><p>Relates a datanode to the collection of the identifiers of its population.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasSection">dn:hasSection</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#identifiersOf">dn:identifiersOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasInference" id="hasInference"></a>dn:hasInference
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasInference</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has inference</td></tr><tr><th>dct:description</th><td><p>Relates a datanode to another including a set of logical inferences deduced from the first.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasInterpretation">dn:hasInterpretation</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isInferenceOf">dn:isInferenceOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasInterpretation" id="hasInterpretation"></a>dn:hasInterpretation
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasInterpretation</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has interpretation</td></tr><tr><th>rdfs:comment</th><td>Some data is interpretated such to produce other data.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasDerivation">dn:hasDerivation</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isInterpretationOf">dn:isInterpretationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasPart" id="hasPart"></a>dn:hasPart
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasPart</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>has part</td></tr><tr><th>rdfs:comment</th><td>To related a data node to another which is contained in it.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingPopulationWith">dn:overlappingPopulationWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isPartOf">dn:isPartOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasPortion" id="hasPortion"></a>dn:hasPortion
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasPortion</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>has portion</td></tr><tr><th>dct:description</th><td>:hasPortion is used to capture the relation with a subset of the data.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasPart">dn:hasPart</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isPortionOf">dn:isPortionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasReification" id="hasReification"></a>dn:hasReification
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasReification</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has reification</td></tr><tr><th>dct:description</th><td><p>This property refer to the semantic of reification in RDF.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isReificationOf">dn:isReificationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasRelations" id="hasRelations"></a>dn:hasRelations
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasRelations</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has relations</td></tr><tr><th>rdfs:comment</th><td>Relates a datanode to another enumerating the set of relations used in it.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasDescriptors">dn:hasDescriptors</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#relationsOf">dn:relationsOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasSample" id="hasSample"></a>dn:hasSample
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasSample</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has sample</td></tr><tr><th>dct:description</th><td><p>Relates a datanode to an excerpt of its population, with some, non specified, attributes.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasPortion">dn:hasPortion</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isSampleOf">dn:isSampleOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasSection" id="hasSection"></a>dn:hasSection
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasSection</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>has section</td></tr><tr><th>dct:description</th><td>An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition.</td></tr><tr><th>rdfs:comment</th><td>Data can be cut in sections according to specific attributes.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasPart">dn:hasPart</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isSectionOf">dn:isSectionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasSelection" id="hasSelection"></a>dn:hasSelection
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasSelection</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has selection</td></tr><tr><th>rdfs:comment</th><td>We represent here the outcome of the isolation of a part of a data node for a specific intent.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasPart">dn:hasPart</a>  <a href="#hasDerivation">dn:hasDerivation</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isSelectionOf">dn:isSelectionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasSnapshot" id="hasSnapshot"></a>dn:hasSnapshot
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasSnapshot</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has snapshot</td></tr><tr><th>rdfs:comment</th><td>A copy of a data node in a specific time point</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasCopy">dn:hasCopy</a>  <a href="#versionOf">dn:versionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isSnapshotOf">dn:isSnapshotOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasStandIn" id="hasStandIn"></a>dn:hasStandIn
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasStandIn</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has stand-in</td></tr><tr><th>dct:description</th><td><p>Are we sure a stand-in is always a derivation?</p></td></tr><tr><th>rdfs:comment</th><td>Some data is a substitute of another, for specific reasons.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasDerivation">dn:hasDerivation</a>  <a href="#overlappingCapabilityWith">dn:overlappingCapabilityWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isStandInOf">dn:isStandInOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasStatistic" id="hasStatistic"></a>dn:hasStatistic
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasStatistic</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has statistic</td></tr><tr><th>dct:description</th><td><p>Statistics are at the same time computations and metadata of a source datanode.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasComputation">dn:hasComputation</a>  <a href="#describedBy">dn:describedBy</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isStatisticOf">dn:isStatisticOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasSummarization" id="hasSummarization"></a>dn:hasSummarization
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasSummarization</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has summarization</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasDerivation">dn:hasDerivation</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isSummarizationOf">dn:isSummarizationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasTypes" id="hasTypes"></a>dn:hasTypes
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasTypes</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has types</td></tr><tr><th>rdfs:comment</th><td>Relates a data node to the vocabulary of the types used.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasVocabulary">dn:hasVocabulary</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#typesOf">dn:typesOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasUpdate" id="hasUpdate"></a>dn:hasUpdate
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasUpdate</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has update</td></tr><tr><th>dct:description</th><td><p>Update is considered in a general meaning of having a role meant to better reflect the referred world.</p></td></tr><tr><th>rdfs:comment</th><td>A data node may be related to another that improves its currency.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isUpdateOf">dn:isUpdateOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasUpdatedVersion" id="hasUpdatedVersion"></a>dn:hasUpdatedVersion
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasUpdatedVersion</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>updated version</td></tr><tr><th>rdfs:comment</th><td>A new version of a data node in a specific time point that is meant to substitute it.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasUpdate">dn:hasUpdate</a>  <a href="#previousVersionOf">dn:previousVersionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isUpdatedVersionOf">dn:isUpdatedVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="hasVocabulary" id="hasVocabulary"></a>dn:hasVocabulary
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/hasVocabulary</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>has vocabulary</td></tr><tr><th>dct:description</th><td><p>The range of this property is a data node which enumerates a set of terms that are all used by the subject data node as identifiers (eventually to name structural elements, like attribute names or types).</p></td></tr><tr><th>skos:note</th><td><p>When a data node :hasVocabulary another, we expect the latter to be the collection of terms used by the data node to name its properties and types.<br/>How to know if there is some term that is not part of that vocabulary? In other words, is it relevant to know whether a vocabulary is complete or not wrt some data?</p></td></tr><tr><th>rdfs:comment</th><td>Relates a data node to a datanode representing a set of names that are all used in it.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#isVocabularyOf">dn:isVocabularyOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="identifiersOf" id="identifiersOf"></a>dn:identifiersOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/identifiersOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>identifiers of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isSectionOf">dn:isSectionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasIdentifiers">dn:hasIdentifiers</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="inconsistentWith" id="inconsistentWith"></a>dn:inconsistentWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/inconsistentWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>inconsistent with</td></tr><tr><th>dct:description</th><td><p>It can be the case that a single data node is corrupted to some respect. It can then be marked to be inconsistent with itself.</p></td></tr><tr><th>skos:note</th><td><p>We intend consistency in a general sense: two data nodes are inconsistent because they do not agree.</p></td></tr><tr><th>rdfs:comment</th><td>A data node that should not be used together with another.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a></td></tr><tr><th>owl:propertyDisjointWith</th><td><a href="#consistentWith">dn:consistentWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isAdditionOf" id="isAdditionOf"></a>dn:isAdditionOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isAdditionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is addition of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isChangeOf">dn:isChangeOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasAddition">dn:hasAddition</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isAnnotationOf" id="isAnnotationOf"></a>dn:isAnnotationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isAnnotationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is annotation of</td></tr><tr><th>rdfs:comment</th><td>When an attached datanode is also metadata about what it is attached to... it is an annotation.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#attachedTo">dn:attachedTo</a>  <a href="#about">dn:about</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasAnnotation">dn:hasAnnotation</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isAnonymizedOf" id="isAnonymizedOf"></a>dn:isAnonymizedOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isAnonymizedOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is anonymized substitute of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isStandInOf">dn:isStandInOf</a>  <a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasAnonymized">dn:hasAnonymized</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isCacheOf" id="isCacheOf"></a>dn:isCacheOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isCacheOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is cache of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isStandInOf">dn:isStandInOf</a>  <a href="#isSnapshotOf">dn:isSnapshotOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasCache">dn:hasCache</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isChangeOf" id="isChangeOf"></a>dn:isChangeOf
+
+
+
+
+
+<span class="badge functional" title="functional">F</span>
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isChangeOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:FunctionalProperty</td></tr><tr><th>rdfs:label</th><td>is change of</td></tr><tr><th>rdfs:comment</th><td>some data is the coming change of some other</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isUpdateOf">dn:isUpdateOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasChange">dn:hasChange</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isComputationOf" id="isComputationOf"></a>dn:isComputationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isComputationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is computation of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasComputation">dn:hasComputation</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isCopyOf" id="isCopyOf"></a>dn:isCopyOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isCopyOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>is copy of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sameCapabilityAs">dn:sameCapabilityAs</a>  <a href="#isDerivationOf">dn:isDerivationOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasCopy">dn:hasCopy</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isDeletionOf" id="isDeletionOf"></a>dn:isDeletionOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isDeletionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is deletion of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isChangeOf">dn:isChangeOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasDeletion">dn:hasDeletion</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isDependencyOf" id="isDependencyOf"></a>dn:isDependencyOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isDependencyOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is dependency of</td></tr><tr><th>rdfs:comment</th><td>A datanode is required by another one in order for it to be used or interpreted.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#referencedBy">dn:referencedBy</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasDependency">dn:hasDependency</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isDerivationOf" id="isDerivationOf"></a>dn:isDerivationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isDerivationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is derivation of</td></tr><tr><th>dct:description</th><td><p>This relation indicates that a data node is the origin of another, in the sense that the second have been produced using the first as information source.</p>  <p>Is this property transitive? (No)</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relatedWith">dn:relatedWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasDerivation">dn:hasDerivation</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isExampleOf" id="isExampleOf"></a>dn:isExampleOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isExampleOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>example of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isSelectionOf">dn:isSelectionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasExample">dn:hasExample</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isExtractionOf" id="isExtractionOf"></a>dn:isExtractionOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isExtractionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>extraction of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isInterpretationOf">dn:isInterpretationOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasExtraction">dn:hasExtraction</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isInferenceOf" id="isInferenceOf"></a>dn:isInferenceOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isInferenceOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is inference of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isInterpretationOf">dn:isInterpretationOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasInference">dn:hasInference</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isInterpretationOf" id="isInterpretationOf"></a>dn:isInterpretationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isInterpretationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is interpretation of</td></tr><tr><th>rdfs:comment</th><td>Some data emerge as the interpretation of other.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isDerivationOf">dn:isDerivationOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasInterpretation">dn:hasInterpretation</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isPartOf" id="isPartOf"></a>dn:isPartOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isPartOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>is part of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingPopulationWith">dn:overlappingPopulationWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasPart">dn:hasPart</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isPortionOf" id="isPortionOf"></a>dn:isPortionOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isPortionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>is portion of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isPartOf">dn:isPartOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasPortion">dn:hasPortion</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isReificationOf" id="isReificationOf"></a>dn:isReificationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isReificationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is reification of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasReification">dn:hasReification</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isSampleOf" id="isSampleOf"></a>dn:isSampleOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isSampleOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is sample of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isPortionOf">dn:isPortionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasSample">dn:hasSample</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isSectionOf" id="isSectionOf"></a>dn:isSectionOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isSectionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>is section of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isPartOf">dn:isPartOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasSection">dn:hasSection</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isSelectionOf" id="isSelectionOf"></a>dn:isSelectionOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isSelectionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is selection of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isDerivationOf">dn:isDerivationOf</a>  <a href="#isPartOf">dn:isPartOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasSelection">dn:hasSelection</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isSnapshotOf" id="isSnapshotOf"></a>dn:isSnapshotOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isSnapshotOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is snapshot of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isCopyOf">dn:isCopyOf</a>  <a href="#versionOf">dn:versionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasSnapshot">dn:hasSnapshot</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isStandInOf" id="isStandInOf"></a>dn:isStandInOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isStandInOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is stand-in of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isDerivationOf">dn:isDerivationOf</a>  <a href="#overlappingCapabilityWith">dn:overlappingCapabilityWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasStandIn">dn:hasStandIn</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isStatisticOf" id="isStatisticOf"></a>dn:isStatisticOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isStatisticOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is statistic of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isComputationOf">dn:isComputationOf</a>  <a href="#describes">dn:describes</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasStatistic">dn:hasStatistic</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isSummarizationOf" id="isSummarizationOf"></a>dn:isSummarizationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isSummarizationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is summarization of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isDerivationOf">dn:isDerivationOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasSummarization">dn:hasSummarization</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isUpdateOf" id="isUpdateOf"></a>dn:isUpdateOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isUpdateOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is update of</td></tr><tr><th>rdfs:comment</th><td>A data node that is meant to improve the currency of another.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasUpdate">dn:hasUpdate</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isUpdatedVersionOf" id="isUpdatedVersionOf"></a>dn:isUpdatedVersionOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isUpdatedVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>updated version of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isUpdateOf">dn:isUpdateOf</a>  <a href="#nextVersionOf">dn:nextVersionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasUpdatedVersion">dn:hasUpdatedVersion</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="isVocabularyOf" id="isVocabularyOf"></a>dn:isVocabularyOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/isVocabularyOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>is vocabulary of</td></tr><tr><th>dct:description</th><td><p>This datanode enumerate a set of terms that are all used by the related datanode.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasVocabulary">dn:hasVocabulary</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="linkedBy" id="linkedBy"></a>dn:linkedBy
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/linkedBy</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>linked by</td></tr><tr><th>rdfs:comment</th><td>A data node is linked by another using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs).</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingPopulationWith">dn:overlappingPopulationWith</a>  <a href="#referencedBy">dn:referencedBy</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#links">dn:links</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="links" id="links"></a>dn:links
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/links</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>links</td></tr><tr><th>skos:note</th><td>It would be interesting to have a taste of other ways of doing similar links in other context then Linked Data.</td></tr><tr><th>rdfs:comment</th><td>A data node links to other data using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs).</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingPopulationWith">dn:overlappingPopulationWith</a>  <a href="#references">dn:references</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#linkedBy">dn:linkedBy</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="metadata" id="metadata"></a>dn:metadata
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/metadata</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>metadata</td></tr><tr><th>dct:description</th><td><p>This is used to relate a data node to its metadata.</p></td></tr><tr><th>rdfs:comment</th><td>A data node has another data node as metadata.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relatedWith">dn:relatedWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#about">dn:about</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="newerVersionOf" id="newerVersionOf"></a>dn:newerVersionOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/newerVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>newer version of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#versionOf">dn:versionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#olderVersionOf">dn:olderVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="nextVersionOf" id="nextVersionOf"></a>dn:nextVersionOf
+
+
+
+
+
+<span class="badge functional" title="functional">F</span>
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/nextVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:FunctionalProperty</td></tr><tr><th>rdfs:label</th><td>next version of</td></tr><tr><th>dct:description</th><td><p>Relates a datanode to another that is the direct next version.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#newerVersionOf">dn:newerVersionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#previousVersionOf">dn:previousVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="note" id="note"></a>skos:note
+
+
+
+
+
+
+</h4>
+<tt>http://www.w3.org/2004/02/skos/core#note</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:AnnotationProperty</td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="olderVersionOf" id="olderVersionOf"></a>dn:olderVersionOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/olderVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>older version of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#versionOf">dn:versionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#newerVersionOf">dn:newerVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="optimizedFrom" id="optimizedFrom"></a>dn:optimizedFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/optimizedFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>optimized from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingCapabilityWith">dn:overlappingCapabilityWith</a>  <a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#optimizedInto">dn:optimizedInto</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="optimizedInto" id="optimizedInto"></a>dn:optimizedInto
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/optimizedInto</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>optimized into</td></tr><tr><th>rdfs:comment</th><td>A datanode have been optimized into a new one, to amplify existing capabilities.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingCapabilityWith">dn:overlappingCapabilityWith</a>  <a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#optimizedFrom">dn:optimizedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="overlappingCapabilityWith" id="overlappingCapabilityWith"></a>dn:overlappingCapabilityWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/overlappingCapabilityWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>overlapping capability with</td></tr><tr><th>dct:description</th><td><p>Two data nodes have similar potential, their domains overlap.</p></td></tr><tr><th>skos:note</th><td>This relation is needed to generically express comparison of data nodes with relation to the domain covered.  Similar relations might refer to other features, being it structural (they share schema elements), physical (they are both in XML) or related to the domain (they both talk about Music Artists) - just to make few examples.. We might want to specify other kind of features, covering: ownership (sameOwner), meta-model (sameMetaModel), syntax (sameSyntax), accessMethod (sameAccessMethod), license (compatibleLicense, sameLicense), policies (?).  If the capability is the location, two version might not have the same location. We might want to specify a number of well known capabilities - format, location, meta-model, accessMethod, ... . Might this allow more inferences than the ones we can do now?</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relatedWith">dn:relatedWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="overlappingPopulationWith" id="overlappingPopulationWith"></a>dn:overlappingPopulationWith
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/overlappingPopulationWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>overlapping population with</td></tr><tr><th>dct:description</th><td><p>Two datanodes share some population.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a>  <a href="#overlappingCapabilityWith">dn:overlappingCapabilityWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="overlappingVocabularyWith" id="overlappingVocabularyWith"></a>dn:overlappingVocabularyWith
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/overlappingVocabularyWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>overlapping vocabulary with</td></tr><tr><th>dct:description</th><td><p>Two datanodes share a set of vocabulary terms.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a>  <a href="#overlappingCapabilityWith">dn:overlappingCapabilityWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="previousVersionOf" id="previousVersionOf"></a>dn:previousVersionOf
+
+
+
+
+
+
+<span class="badge inverseFunctional" title="inverseFunctional">I</span>
+
+</h4>
+<tt>http://purl.org/datanode/ns/previousVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:InverseFunctionalProperty</td></tr><tr><th>rdfs:label</th><td>previous version of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#olderVersionOf">dn:olderVersionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#nextVersionOf">dn:nextVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="processedFrom" id="processedFrom"></a>dn:processedFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/processedFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>processed from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isDerivationOf">dn:isDerivationOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="processedInto" id="processedInto"></a>dn:processedInto
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/processedInto</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>processed into</td></tr><tr><th>rdfs:comment</th><td>A data node is processed (transformed) to obtain another one.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#hasDerivation">dn:hasDerivation</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="redundantWith" id="redundantWith"></a>dn:redundantWith
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/redundantWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>redundant with</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingVocabularyWith">dn:overlappingVocabularyWith</a>  <a href="#overlappingPopulationWith">dn:overlappingPopulationWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="refactoredFrom" id="refactoredFrom"></a>dn:refactoredFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/refactoredFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>refactored from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#refactoredInto">dn:refactoredInto</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="refactoredInto" id="refactoredInto"></a>dn:refactoredInto
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/refactoredInto</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>refactored into</td></tr><tr><th>dct:description</th><td><p>Refactoring is transforming to make it simpler, optimized and more efficient for a target task.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#refactoredFrom">dn:refactoredFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="referencedBy" id="referencedBy"></a>dn:referencedBy
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/referencedBy</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>referenced by</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#references">dn:references</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="references" id="references"></a>dn:references
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/references</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>references</td></tr><tr><th>dct:description</th><td><p>The subject of this property includes a mention to something which is (included in) another data node. <br/> Talking about RDF datasets, this refer to the mention of a URI belonging to another dataset. For example, a dataset about employees could mention a Geonames location.</p>  <p>It looks like there could be a more generic property here, which refer to the fact of sharing some signatures (identifiers), without assuming an order or direction of the reference. Two data nodes may simply use the same identifier independently from the intention of making a reference to anything else (then the identifier itself). Does this make sense?</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sharesInterpretationWith">dn:sharesInterpretationWith</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#referencedBy">dn:referencedBy</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="relatedWith" id="relatedWith"></a>dn:relatedWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+<span class="badge reflexive" title="reflexive">R</span>
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/relatedWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:SymmetricProperty  owl:ReflexiveProperty</td></tr><tr><th>rdfs:label</th><td>related with</td></tr><tr><th>dct:description</th><td><p>This is the Top Property of Datanode.</p></td></tr><tr><th>rdfs:comment</th><td>A data node is connected to another one.</td></tr><tr><th>rdfs:domain</th><td><a href="#Datanode">dn:Datanode</a></td></tr><tr><th>rdfs:range</th><td><a href="#Datanode">dn:Datanode</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="relationsOf" id="relationsOf"></a>dn:relationsOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/relationsOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>relations of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#descriptorsOf">dn:descriptorsOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasRelations">dn:hasRelations</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="remodelledFrom" id="remodelledFrom"></a>dn:remodelledFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/remodelledFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>remodelled from</td></tr><tr><th>dct:description</th><td><p>Remodelling refer to the translation of the data to another symbolic structure (model), while keeping the same interpretation.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#samePopulationAs">dn:samePopulationAs</a>  <a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#remodelledTo">dn:remodelledTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="remodelledTo" id="remodelledTo"></a>dn:remodelledTo
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/remodelledTo</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>remodelled to</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#samePopulationAs">dn:samePopulationAs</a>  <a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#remodelledFrom">dn:remodelledFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="sameCapabilityAs" id="sameCapabilityAs"></a>dn:sameCapabilityAs
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/sameCapabilityAs</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>same capability as</td></tr><tr><th>dct:description</th><td><p>Having the same capability implies having the same population and the same vocabulary. In colloquial terms, the same data is described in the same terms.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#samePopulationAs">dn:samePopulationAs</a>  <a href="#sameVocabularyAs">dn:sameVocabularyAs</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="samePopulationAs" id="samePopulationAs"></a>dn:samePopulationAs
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/samePopulationAs</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>same population</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingPopulationWith">dn:overlappingPopulationWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="sameVocabularyAs" id="sameVocabularyAs"></a>dn:sameVocabularyAs
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/sameVocabularyAs</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>same vocabulary</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingVocabularyWith">dn:overlappingVocabularyWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="schemaUsedBy" id="schemaUsedBy"></a>dn:schemaUsedBy
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/schemaUsedBy</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>schema used by</td></tr><tr><th>skos:note</th><td>Does being a schema imply being a dependency?</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#referencedBy">dn:referencedBy</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#usesSchema">dn:usesSchema</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="sharesInterpretationWith" id="sharesInterpretationWith"></a>dn:sharesInterpretationWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/sharesInterpretationWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty  owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>shares interpretation with</td></tr><tr><th>rdfs:comment</th><td>This relates a data node to any datanode that can support its interpretation. They connected nodes might be in the same interpretation model.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relatedWith">dn:relatedWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="typesOf" id="typesOf"></a>dn:typesOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/typesOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>types of</td></tr><tr><th>rdfs:comment</th><td>Relates the vocabulary of the types used in a datanode to the datanode itself.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#isVocabularyOf">dn:isVocabularyOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#hasTypes">dn:hasTypes</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="usesSchema" id="usesSchema"></a>dn:usesSchema
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/usesSchema</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>uses schema</td></tr><tr><th>dct:description</th><td><p>The second is intended to be a self contained model that is (even partly) used in the data node.</p>  <p>We distinguish the schema and the vocabulary as follows. A vocabulary is the enumeration of a set of terms. A schema organize a set of terms in a system of some sort. A list of body parts is not the anatomy of a body. The furniture is not an interior design model.</p></td></tr><tr><th>rdfs:comment</th><td>Relates a data node to another used as schema.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#references">dn:references</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#schemaUsedBy">dn:schemaUsedBy</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="versionOf" id="versionOf"></a>dn:versionOf
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/versionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>version</td></tr><tr><th>dct:description</th><td><p>Use this property to represent a temporal relation between two data nodes that are meant to be the same at a different point in time. The property is symmetric and does not specify a direction.<br/>This property is not transitive. While it can be argued that the identity of something tracked temporarly should not change, thus implying transitivity, we want support the case when a data note has more then one following version (branching). Avoiding transitivity allows it.</p></td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingCapabilityWith">dn:overlappingCapabilityWith</a></td></tr></tbody></table></div>
+</div></div>
+  <div class="tab-pane" id="diagram"></div>
+</div>
+
+<script type="text/javascript">var data = nodes;dynatree(data, "#diagram");</script>
+
+		<!-- end content here -->
+		</div>
+		
+	</body>
+</html>

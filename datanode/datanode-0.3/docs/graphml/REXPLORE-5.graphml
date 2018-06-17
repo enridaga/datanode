@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml 
+	xmlns="http://graphml.graphdrawing.org/xmlns" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:y="http://www.yworks.com/xml/graphml" 
+	xmlns:yed="http://www.yworks.com/xml/yed/3" 
+	xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+		<key attr.name="label" attr.type="string" for="node" id="k_label"/>
+		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
+		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
+	<graph edgedefault="directed" id="G">
+<!-- _:g70286236028480 -->
+<!-- _:g70286236028480 -->
+		<node id="n-3882903659865355354">
+			<data key="k_label"><![CDATA[_:g70286236028480]]></data>
+			<data key="d5"><![CDATA[_:g70286236028480]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>_:g70286236028480<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#T1publications -->
+<!-- ex:T1publications -->
+		<node id="n-2909633211270064917">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T1publications]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T1publications]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:T1publications<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- _:g70286236004800 -->
+<!-- _:g70286236004800 -->
+		<node id="n2978102726774416834">
+			<data key="k_label"><![CDATA[_:g70286236004800]]></data>
+			<data key="d5"><![CDATA[_:g70286236004800]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>_:g70286236004800<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#T2publications -->
+<!-- ex:T2publications -->
+		<node id="n-3042565737696475372">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T2publications]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T2publications]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:T2publications<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#T1T2publications -->
+<!-- ex:T1T2publications -->
+		<node id="n-2017521193400659739">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T1T2publications]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T1T2publications]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:T1T2publications<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#ontology -->
+<!-- ex:ontology -->
+		<node id="n-881356950260741364">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#ontology]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#ontology]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:ontology<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#publicationTags -->
+<!-- ex:publicationTags -->
+		<node id="n-1693415069095276999">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#publicationTags]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#publicationTags]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:publicationTags<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- _:g70286235890760 -->
+<!-- _:g70286235890760 -->
+		<node id="n-1445376286191803058">
+			<data key="k_label"><![CDATA[_:g70286235890760]]></data>
+			<data key="d5"><![CDATA[_:g70286235890760]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>_:g70286235890760<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#T1 -->
+<!-- ex:T1 -->
+		<node id="n4125446445769573578">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T1]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T1]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:T1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#aboutT1T2 -->
+<!-- ex:aboutT1T2 -->
+		<node id="n475596296596704195">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#aboutT1T2]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#aboutT1T2]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:aboutT1T2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- _:g70286235813320 -->
+<!-- _:g70286235813320 -->
+		<node id="n3518191123732342941">
+			<data key="k_label"><![CDATA[_:g70286235813320]]></data>
+			<data key="d5"><![CDATA[_:g70286235813320]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>_:g70286235813320<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#T2 -->
+<!-- ex:T2 -->
+		<node id="n-2036386272899271826">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T2]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#T2]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:T2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#transitiveSection -->
+<!-- ex:transitiveSection -->
+		<node id="n401007837292009085">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#transitiveSection]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#transitiveSection]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:transitiveSection<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#knowledgeBase -->
+<!-- ex:knowledgeBase -->
+		<node id="n-1104094761409291760">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#knowledgeBase]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#knowledgeBase]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:knowledgeBase<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- _:g70286235558840 -->
+<!-- _:g70286235558840 -->
+		<node id="n-48870614808271169">
+			<data key="k_label"><![CDATA[_:g70286235558840]]></data>
+			<data key="d5"><![CDATA[_:g70286235558840]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>_:g70286235558840<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#broaderGeneric -->
+<!-- ex:broaderGeneric -->
+		<node id="n-512204607218521280">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#broaderGeneric]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#broaderGeneric]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:broaderGeneric<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/5#relatedEquivalent -->
+<!-- ex:relatedEquivalent -->
+		<node id="n-3163283413744225961">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#relatedEquivalent]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/5#relatedEquivalent]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:relatedEquivalent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#T1publications"] -->
+		<edge id="e_-3882903659865355354_-4452100496958225065_-2909633211270064917" source="n-3882903659865355354" target="n-2909633211270064917">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#T2publications"] -->
+		<edge id="e_2978102726774416834_-4452100496958225065_-3042565737696475372" source="n2978102726774416834" target="n-3042565737696475372">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["_:g70286236028480", "_:g70286236004800"] -->
+		<edge id="e_-2017521193400659739_577318559491309794_-3882903659865355354" source="n-2017521193400659739" target="n-3882903659865355354">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["_:g70286236028480", "_:g70286236004800"] -->
+		<edge id="e_-2017521193400659739_577318559491309794_2978102726774416834" source="n-2017521193400659739" target="n2978102726774416834">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#ontology"] -->
+		<edge id="e_-2017521193400659739_-4349573095895804120_-881356950260741364" source="n-2017521193400659739" target="n-881356950260741364">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isInferenceOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#publicationTags"] -->
+		<edge id="e_-2017521193400659739_1901072115924097319_-1693415069095276999" source="n-2017521193400659739" target="n-1693415069095276999">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#T1"] -->
+		<edge id="e_-1445376286191803058_1062009623576439479_4125446445769573578" source="n-1445376286191803058" target="n4125446445769573578">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#aboutT1T2"] -->
+		<edge id="e_-1445376286191803058_-4452100496958225065_475596296596704195" source="n-1445376286191803058" target="n475596296596704195">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["_:g70286235890760"] -->
+		<edge id="e_-2909633211270064917_-1479030257036203545_-1445376286191803058" source="n-2909633211270064917" target="n-1445376286191803058">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#publicationTags"] -->
+		<edge id="e_-2909633211270064917_1901072115924097319_-1693415069095276999" source="n-2909633211270064917" target="n-1693415069095276999">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#T2"] -->
+		<edge id="e_3518191123732342941_1062009623576439479_-2036386272899271826" source="n3518191123732342941" target="n-2036386272899271826">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#aboutT1T2"] -->
+		<edge id="e_3518191123732342941_-4452100496958225065_475596296596704195" source="n3518191123732342941" target="n475596296596704195">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["_:g70286235813320"] -->
+		<edge id="e_-3042565737696475372_-1479030257036203545_3518191123732342941" source="n-3042565737696475372" target="n3518191123732342941">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#publicationTags"] -->
+		<edge id="e_-3042565737696475372_1901072115924097319_-1693415069095276999" source="n-3042565737696475372" target="n-1693415069095276999">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#T1", "http://purl.org/datanode/ex/0.2/REXPLORE/5#T2"] -->
+		<edge id="e_475596296596704195_1062009623576439479_4125446445769573578" source="n475596296596704195" target="n4125446445769573578">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#T1", "http://purl.org/datanode/ex/0.2/REXPLORE/5#T2"] -->
+		<edge id="e_475596296596704195_1062009623576439479_-2036386272899271826" source="n475596296596704195" target="n-2036386272899271826">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#transitiveSection"] -->
+		<edge id="e_475596296596704195_-4452100496958225065_401007837292009085" source="n475596296596704195" target="n401007837292009085">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#ontology"] -->
+		<edge id="e_-1104094761409291760_775488145788356664_-881356950260741364" source="n-1104094761409291760" target="n-881356950260741364">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#transitiveSection"] -->
+		<edge id="e_-881356950260741364_-1479030257036203545_401007837292009085" source="n-881356950260741364" target="n401007837292009085">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#knowledgeBase"] -->
+		<edge id="e_-1693415069095276999_3515751748868442426_-1104094761409291760" source="n-1693415069095276999" target="n-1104094761409291760">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#broaderGeneric", "http://purl.org/datanode/ex/0.2/REXPLORE/5#relatedEquivalent"] -->
+		<edge id="e_-48870614808271169_1062009623576439479_-512204607218521280" source="n-48870614808271169" target="n-512204607218521280">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/5#broaderGeneric", "http://purl.org/datanode/ex/0.2/REXPLORE/5#relatedEquivalent"] -->
+		<edge id="e_-48870614808271169_1062009623576439479_-3163283413744225961" source="n-48870614808271169" target="n-3163283413744225961">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["_:g70286235558840"] -->
+		<edge id="e_401007837292009085_-881421977605108705_-48870614808271169" source="n401007837292009085" target="n-48870614808271169">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasVocabulary</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+	</graph>
+</graphml>

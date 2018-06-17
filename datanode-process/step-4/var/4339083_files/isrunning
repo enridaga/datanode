@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>A problem has occurred in trying to retrieve the web page you requested</title>
+                                  
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" LINK="#000000" VLINK="#000000">
+         
+<table cellpadding="5" cellspacing="0" border="0" width=100%">
+       <tbody>
+         <tr>
+           <td valign="top">         <a href="http://www.open.ac.uk"><img
+ src="http://wwwcache.open.ac.uk:8080/oulogo_hor_75x55.gif"
+ alt="The Open University" width="53" height="38" align="left"
+ border="0">
+           </a>
+           </td>
+           <td valign="middle"><a href="http://intranet.open.ac.uk"><img
+ src="http://wwwcache.open.ac.uk:8080/intra.gif"
+ alt="Open University Intranet" width="111" height="16" align="right"
+ border="0">
+           </a>
+           </td>
+         </tr>
+         <tr>
+           <td valign="top" colspan="2" bgcolor="#8C8C8C"><font
+ color="#A6D2FF"><b><font face="Verdana, Arial, sans-serif"><big><big>IT
+ Web Cache Service</big></big></font></b></font></td>
+         </tr>
+                <tr>
+        <td valign="top" colspan="2" bgcolor="#A6D2FF">              
+      <table cellpadding="10" cellspacing="2" border="2" width="100%">
+          <tbody>
+            <tr>
+              <td valign="top"><font color="#000000" face="Verdana, Arial, sans-serif"><b>
+  A problem has occurred in trying to retrieve the web page you requested</b><br>
+              <br>
+   This is frequently due to problems external to the University, or incorrectly
+ typed addresses. Please check the address that you have typed.<br>
+              <br>
+   If you feel that this may be a problem with the Web cache service please
+report it via the <a href="http://askit.open.ac.uk">self-serve</a> portal.<br>
+              <br>
+  Please include the details given in the box below when reporting it.<br>
+              <br>
+              <br>
+              </font>
+            <table cellpadding="2" cellspacing="2" border="2" width="100%">
+                <tbody>
+                  <tr>
+                    <td valign="top" bgcolor="#ffffff">
+
+ <p>The following error was encountered while trying to retrieve the URL: <a href="http://127.0.0.1:4001/isrunning">http://127.0.0.1:4001/isrunning</a></p>  <blockquote id="error"> <p><b>Connection to 127.0.0.1 failed.</b></p> </blockquote>  <p id="sysmsg">The system returned: <i>(111) Connection refused</i></p>  <p>The remote host or network may be down. Please try the request again.</p>  
+                    </td>
+                  </tr>
+                               
+              </tbody>                          
+            </table>
+              <font color="#000000" face="Verdana, Arial, sans-serif"><br>
+              </font>  </td>
+            </tr>
+                   
+        </tbody>              
+      </table>
+           </td></tr><tr>
+        <td valign="top" bgcolor="#A6D2FF" colspan="2">              
+
+<!-- <a href="http://intranet.open.ac.uk/aacs/usg/tds/"><img -->
+<!--  src="http://wwwcache.open.ac.uk:8080/tdslogo.gif" -->
+<!--  alt="AACS Training and Desktop Support" width="252" height="143" border="0" -->
+<!--  align="right"></a> -->
+        
+      <table cellpadding="10" cellspacing="2" border="2">
+          <tbody>
+            <tr>
+              <td valign="top" colspan="2"><font color="#000000"
+ face="Verdana, Arial, sans-serif"><b><a href="http://intranet.open.ac.uk/aacs/usg/tss/">IT-Helpdesk</a></b><br>
+              </font></td>
+            </tr>
+            <tr>
+              <td valign="top"><font color="#000000" face="Verdana, Arial, sans-serif">
+Telephone:<br>
+              </font></td>
+              <td valign="top"><font color="#000000" face="Verdana, Arial, sans-serif">
+01908  654321 (x54321)<br>
+              </font></td>
+            </tr>
+            <tr>
+              <td valign="top"><font color="#000000" face="Verdana, Arial, sans-serif">
+IT Self-Service:<br>
+              </font></td>
+              <td valign="top"><font color="#000000" face="Verdana, Arial, sans-serif">
+<a href="http://askit.open.ac.uk">askit.open.ac.uk</a><br>
+              </font></td>
+            </tr>
+            <tr>
+              <td valign="top"><font color="#000000" face="Verdana, Arial, sans-serif">
+Visit:<br>
+              </font></td>
+              <td valign="top"><font color="#000000" face="Verdana, Arial, sans-serif">
+IT Helpdesk: Level 0 North, Berrill Building</font><br>
+              </td>
+            </tr>
+                   
+        </tbody>              
+      </table>
+<br>       
+       <div align="center">       </div>
+       </td>
+                  </tr>
+         <tr>
+           <td valign="top" colspan="2" bgcolor="#8C8C8C"><br>
+           </td>
+                  </tr>
+         <tr>
+           <td valign="top" colspan="2" bgcolor="#A6D2FF"><font
+ face="Verdana, Arial, sans-serif" color="#8C8C8C">IT Infrastructure Applications, 15th January 2013</font><br>
+           </td>
+                  </tr>
+                   
+  </tbody>     
+</table>

@@ -1,0 +1,214 @@
+@base <http://purl.org/datanode/swj-uc/kis/> .
+@prefix : <http://purl.org/datanode/swj-uc/kis/> .
+@prefix dn: <http://purl.org/datanode/ns/> .
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+
+<http://purl.org/datanode/swj-uc/kis-prov-extended> rdf:type owl:Ontology ;
+	rdfs:label "Use Case: Getting Nodes affected by a node (Prov-O + void, extended)" ;
+	skos:note """
+	# CQ: Which are the nodes affected by the new KIS release?
+	prefix : <http://purl.org/datanode/swj-uc/kis/>
+	prefix dcterms: <http://purl.org/dc/terms/> 
+	prefix prov: <http://www.w3.org/ns/prov#> 
+	SELECT distinct ?node WHERE {
+			{
+		  	  :kis.14.15  prov:wasRevisionOf ?node
+			} UNION {
+		  	  ?node prov:wasDerivedFrom* ?something .
+		  	  :kis.14.15  prov:wasRevisionOf* ?something		
+			} UNION {
+	          ?node dcterms:hasPart ?apa . 
+              ?apa prov:wasDerivedFrom ?ste . 
+              ?ste prov:wasDerivedFrom ?ast .
+		  	  :kis.14.15 prov:wasRevisionOf ?ast
+			} UNION {
+              :kis.14.15 void:vocabulary ?sc .
+              ?sc prov:wasRevisionOf* ?node
+            }
+	}
+	""" ;
+	owl:imports <http://rdfs.org/ns/void> ,  <http://www.w3.org/ns/dcat.ttl>, <http://www.w3.org/ns/prov-o> .
+
+:hesa a prov:Organization .
+:ou a prov:Organization .
+:linkedUp a prov:Organization .
+:cetis a prov:Organization .
+
+# JISC-PROD
+:jisc-prod rdf:type prov:Entity ;
+	prov:wasAttributedTo :cetis ;
+	dcterms:hasPart :jisc-prod-links .
+:jisc-prod-links rdf:type void:Linkset ;
+	dcterms:isPartOf :jisc-prod ;
+	prov:wasDerivedFrom :ld.13.14 ;
+#	prov:wasGeneratedBy :jisc-prod-linking ;
+	void:target :ld.13.14 .
+# :jisc-prod-linking a prov:Activity ; 
+#	prov:used :jisc-prod, :ld.13.14 ; 
+#	prov:wasAssociatedWith :cetis ;
+#	prov:generated :jisc-prod-links ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :ld.13.14 ;
+#		prov:hasRole :jisc-prod-linking-input ;
+#	] ;	
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :jisc-prod ;
+#		prov:hasRole :jisc-prod-linking-output ;
+#	] .
+#:linking-input a prov:Role .
+#:linking-ouput a prov:Role .
+
+# KIS 12.13
+:kis.12.13 rdf:type prov:Entity ;
+	#prov:wasGeneratedBy :kis.12.13-published ;
+	prov:wasAttributedTo :hesa .
+#:kis.12.13-published a prov:Activity ;
+#	prov:used :kis.12.13 ;
+#	prov:isAssociatedWith :hesa ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :kis.12.13 ;
+#		prov:hasRole :publishing-data ;
+#	] .
+#:publishing-data a prov:Role .
+# KIS 13.14
+:kis.13.14 rdf:type prov:Entity ;
+	prov:wasAttributedTo :hesa ;
+#	prov:wasGeneratedBy :kis.13.14-published ;
+    prov:wasRevisionOf :kis.12.13 .
+#:kis.13.14-published a prov:Activity ;
+#	prov:invalidated :kis.12.13 ;
+#	prov:used :kis.13.14 ;
+#	prov:isAssociatedWith :hesa ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :kis.13.14 ;
+#		prov:hasRole :publishing-data ;
+#	].
+# KIS.14.15
+:kis.14.15 rdf:type prov:Entity ;
+	prov:wasAttributedTo :hesa ;
+    prov:wasRevisionOf :kis.13.14 .
+#:kis.14.15-published a prov:Activity ;
+#	prov:invalidated :kis.13.14 ;
+#	prov:used :kis.14.15 ;
+#	prov:isAssociatedWith :hesa ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :ld.14.15 ;
+#		prov:hasRole :publishing-data ;
+#	].
+
+# LD.12.13
+:ld.12.13 rdf:type prov:Entity ;
+	prov:wasAttributedTo :linkedUp ;
+#	prov:wasGeneratedBy :ld.12.13-remodelled ;
+    prov:wasDerivedFrom :kis.12.13 .
+#:ld.12.13-remodelled a prov:Activity ;
+#	prov:used :ld.12.13, :kis.12.13 ;
+#	prov:isAssociatedWith :linkedUp ;
+#	prov:generated :ld.12.13 ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :kis.12.13 ;
+#		prov:hasRole :remodelling-input ;
+#	] ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :ld.12.13 ;
+#		prov:hasRole :remodelling-output ;
+#	] .
+#:remodelling-input a prov:Role .
+#:remodelling-output a prov:Role .
+
+# LD.13.14
+:ld.13.14 rdf:type prov:Entity ;
+    prov:wasDerivedFrom :kis.13.14 ;
+#	prov:wasGeneratedBy :ld.13.14-remodelled ;
+	prov:wasAttributedTo :linkedUp ;
+    prov:wasRevisionOf :ld.12.13 .
+#:ld.13.14-remodelled a prov:Activity ;
+#	prov:invalidated :ld.12.13 ;
+#	prov:used :ld.13.14, :kis.13.14 ;
+#	prov:isAssociatedWith :linkedUp ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :kis.13.14 ;
+#		prov:hasRole :remodelling-input ;
+#	] ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :ld.13.14 ;
+#		prov:hasRole :remodelling-output ;
+#	] .
+:ou.12.13 rdf:type prov:Entity ;
+    prov:wasDerivedFrom :ld.12.13 ;
+#	prov:wasGeneratedBy :ou.12.13-selected ;
+	prov:wasAttributedTo :ou ;
+    dcterms:isPartOf :ld.12.13 .
+#:ou.12.13-selected a prov:Activity ;
+#	prov:used :ld.12.13, :ou.12.13 ;
+#	prov:wasAttributedTo :ou ;
+#	prov:generated :ou.12.13 ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :ld.12.13 ;
+#		prov:hasRole :selected-input ;
+#	] ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :ou.12.13 ;
+#		prov:hasRole :selected-output ;
+#	] .
+:ou.13.14 rdf:type prov:Entity ;
+	prov:wasAttributedTo :ou ;
+    dcterms:isPartOf :ld.13.14 ;
+#	prov:wasGeneratedBy :ou.13.14-copied ;
+    prov:wasDerivedFrom :ld.13.14 ;
+    prov:wasRevisionOf :ou.12.13 .
+#:ou.13.14-copied a prov:Activity ;
+#	prov:invalidated :ou.12.13 ;
+#	prov:used :ld.13.14, :ou.13.14 ;
+#	prov:wasAttributedTo :ou ;
+#	prov:generated :ou.13.14 ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :ld.13.14 ;
+#		prov:hasRole :selected-input ;
+#	] ;
+#	prov:qualifiedUsage [
+#		a prov:Usage ;
+#		prov:entity :ou.13.14 ;
+#		prov:hasRole :selected-output ;
+#	] .
+# 
+:schema.12.13 a prov:Entity .
+:schema.13.14 a prov:Entity ; prov:wasRevisionOf :schema.12.13 .
+:schema.14.15 a prov:Entity ; prov:wasRevisionOf :schema.13.14 .
+:ld.schema.12.13 a prov:Entity ; prov:wasDerivedFrom :schema.12.13 .
+:ld.schema.13.14 a prov:Entity ; prov:wasDerivedFrom :schema.13.14 .
+:kis.12.13 void:vocabulary :schema.12.13 .
+:kis.13.14 void:vocabulary :schema.13.14 .
+:kis.14.15 void:vocabulary :schema.14.15 .
+:ld.12.13  void:vocabulary :ld.schema.12.13 .
+:ld.13.14  void:vocabulary :ld.schema.13.14 .
+
+:linkedup
+ a dcat:Catalogue ;
+ dcat:dataset :jisc-prod ;
+ dcat:dataset :cnr ;
+ dcat:dataset :kis.12.13 ;
+ dcat:dataset :kis.13.14 ;
+ dcat:dataset :kis.14.15 .

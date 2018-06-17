@@ -1,0 +1,45 @@
+@base <http://purl.org/datanode/swj-uc/kis/> .
+@prefix : <http://purl.org/datanode/swj-uc/kis/> .
+@prefix dn: <http://purl.org/datanode/ns/> .
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+
+<http://purl.org/datanode/swj-uc/kis-dn-extended> a owl:Ontology ;
+	rdfs:label "Use Case:: Getting Nodes to be updated in a Data Catalogue (DN - extended)" ;
+	owl:imports <file:/Users/enricox/Dropbox/PhD/Datanode/datanode/src/datanode.ttl> .
+
+:kis.12.13 a dn:Datanode .
+:kis.13.14 a dn:Datanode .
+:kis.14.15 a dn:Datanode .
+:ou.12.13 a dn:Datanode .
+:ou.13.14 a dn:Datanode .
+:jisc-prod a dn:Datanode .
+
+:kis.13.14 dn:isUpdatedVersionOf :kis.12.13 .
+:kis.14.15 dn:isUpdatedVersionOf :kis.13.14 .
+
+:jisc-prod dn:links :kis.13.14 .
+
+:ld.12.13 dn:remodelledFrom :kis.12.13 .
+:ld.13.14 dn:remodelledFrom :kis.13.14 .
+
+:ld.13.14 dn:isUpdatedVersionOf :ld.12.13 .
+
+:ou.12.13 dn:isSelectionOf :ld.12.13 .
+:ou.13.14 dn:isSelectionOf :ld.13.14 .
+
+:schema.12.13 a dn:Datanode .
+:schema.13.14 a dn:Datanode ; dn:nextVersionOf :schema.12.13 .
+:schema.14.15 a dn:Datanode ; dn:nextVersionOf :schema.13.14 .
+:ld.schema.12.13 a dn:Datanode ; dn:remodelledFrom :schema.12.13 .
+:ld.schema.13.14 a dn:Datanode ; dn:remodelledFrom :schema.13.14 .
+:kis.12.13 dn:usesSchema :schema.12.13 .
+:kis.13.14 dn:usesSchema :schema.13.14 .
+:kis.14.15 dn:usesSchema :schema.14.15 .
+:ld.12.13 dn:usesSchema :ld.schema.12.13 .
+:ld.13.14 dn:usesSchema :ld.schema.13.14 .
+

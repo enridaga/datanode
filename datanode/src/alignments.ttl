@@ -1,0 +1,130 @@
+@base <http://purl.org/datanode/0.3/alignments> .
+@prefix : <http://purl.org/datanode/ns/> .
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dq: <http://purl.org/linked-data/cube#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix schema: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dq: <http://purl.org/linked-data/cube#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+
+#################
+# About Datanode #
+#################
+<http://purl.org/datanode/0.3/alignments> a owl:Ontology ;
+	rdfs:label "The Datanode Alignments" ;
+	owl:versionInfo "0.3" ;
+	dcterms:creator "enridaga - enricodaga@gmail.com" ;
+ . 
+
+ dcat:Dataset
+ 	a owl:Class ;
+ 	rdfs:label "dcat:Dataset" ;
+ 	rdfs:subClassOf :Datanode .
+ dctype:Dataset
+ 	a owl:Class ;
+ 	rdfs:label "dctype:Dataset" ;
+ 	rdfs:subClassOf :Datanode .
+ schema:Dataset
+ 	a owl:Class ;
+ 	rdfs:label "schema:Dataset" ;
+ 	rdfs:subClassOf :Datanode .
+ void:Dataset
+ 	a owl:Class ;
+ 	rdfs:label "void:Dataset" ;
+ 	rdfs:subClassOf :Datanode .
+ dq:DataSet
+ 	a owl:Class ;
+ 	rdfs:label "dq:DataSet" ;
+ 	rdfs:subClassOf :Datanode .
+ foaf:Document
+ 	a owl:Class ;
+ 	rdfs:label "foaf:Document" ;
+ 	rdfs:subClassOf :Datanode . 
+
+ prov:wasRevisionOf 
+  a owl:ObjectProperty ;
+  rdfs:label "prov:wasRevisionOf" ;
+  rdfs:subPropertyOf :isUpdatedVersionOf .
+ prov:wasDerivedFrom 
+  a owl:ObjectProperty ;
+  rdfs:label "prov:wasDerivedFrom" ;
+  rdfs:subPropertyOf :isDerivationOf .
+ void:subset
+  a owl:ObjectProperty ;
+  rdfs:label "void:subset" ;
+  rdfs:subPropertyOf :hasPart .
+ #dcterms:isPartOf rdfs:subPropertyOf :isPartOf .
+ void:vocabulary
+  a owl:ObjectProperty ;
+  rdfs:label "void:vocabulary" ;
+  rdfs:subPropertyOf :usesSchema .
+ void:target
+  a owl:ObjectProperty ;
+  rdfs:label "void:target" ;
+  rdfs:subPropertyOf :links .
+ dcterms:subject 
+  a owl:ObjectProperty ;
+  rdfs:label "dcterms:subject" ;
+  rdfs:subPropertyOf :about .
+ dcat:dataset
+  a owl:ObjectProperty ;
+  rdfs:label "dcat:dataset" ;
+  rdfs:subPropertyOf :describes .
+ dcat:record
+  a owl:ObjectProperty ;
+  rdfs:label "dcat:record" ;
+  rdfs:subPropertyOf :hasPortion .
+ foaf:primaryTopic
+  a owl:ObjectProperty ;
+  rdfs:label "foaf:primaryTopic" ;
+  rdfs:subPropertyOf :describes .
+
+ dcterms:references 
+  a owl:ObjectProperty ;
+  rdfs:label "dcterms:references" ;
+  rdfs:subPropertyOf :references .
+ 
+ voaf:reliesOn 
+  a owl:ObjectProperty ;
+  rdfs:label "voaf:reliesOn" ;
+  rdfs:subPropertyOf :references .
+
+ voaf:specializes
+  a owl:ObjectProperty ;
+  rdfs:label "voaf:specializes" ;
+  rdfs:subPropertyOf :references ;
+  rdfs:subPropertyOf :isDerivationOf .
+
+ voaf:extends
+  a owl:ObjectProperty ;
+  rdfs:label "voaf:extends" ;
+  rdfs:subPropertyOf :references ;
+  rdfs:subPropertyOf :isDerivationOf .
+
+ voaf:generalizes
+  a owl:ObjectProperty ;
+  rdfs:label "voaf:generalizes" ;
+  rdfs:subPropertyOf :references ;
+  rdfs:subPropertyOf :isDerivationOf .
+
+ voaf:usedBy
+  a owl:ObjectProperty ;
+  rdfs:label "voaf:usedBy" ;
+  rdfs:subPropertyOf :references .
+
+ voaf:metadataVoc
+  a owl:ObjectProperty ;
+  rdfs:label "voaf:metadataVoc" ;
+  rdfs:subPropertyOf :usesSchema .
+
+ voaf:similar
+  a owl:ObjectProperty ;
+  rdfs:label "voaf:similar" ;
+  rdfs:subPropertyOf :overlappingCapabilityWith .

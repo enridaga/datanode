@@ -1,0 +1,23 @@
+# baseURI: file:/Users/enricox/Dropbox/PhD/WEBIST2014/survey/step-3/draft-vok-subs.nt
+
+<http://www.enridaga.net/datavok/draft#max-single-part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#more-than> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#compared-with> .
+<http://www.enridaga.net/datavok/draft#amount-of-resources> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#amount-of> .
+<http://www.enridaga.net/datavok/draft#other-than> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#compared-with> .
+<http://www.enridaga.net/datavok/draft#part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#linked-to> .
+<http://www.enridaga.net/datavok/draft#redundant-part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#amount-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#about> .
+<http://www.enridaga.net/datavok/draft#irrelevant-part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#single-part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#smaller-than> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#compared-with> .
+<http://www.enridaga.net/datavok/draft#meaningless-part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#cluster-in> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#unfitting-part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#indirectly-linked-to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#linked-to> .
+<http://www.enridaga.net/datavok/draft#amount-of-triples> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#amount-of> .
+<http://www.enridaga.net/datavok/draft#inconsistent-part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#lost-part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#directly-linked-to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#linked-to> .
+<http://www.enridaga.net/datavok/draft#amount-of-links> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#amount-of> .
+<http://www.enridaga.net/datavok/draft#best-part-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#part-of> .
+<http://www.enridaga.net/datavok/draft#amount-of-properties> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.enridaga.net/datavok/draft#amount-of> .

@@ -1,0 +1,94 @@
+Yokohama Art Spot
+
+Reference: http://ceur-ws.org/Vol-905/MatsumuraEtAl\_COLD2012.pdf
+
+Use case abstraction
+Source: paper
+
+"It uses following three different datasets as data sources; LODAC Museum, Yokohama Art LOD and PinQA. [...]
+PinQA is a social geographical Q&A service provided by NTT Resonant, Inc. that obtains and 
+shares users Q&As corresponding to the specified geographical regions in a map. [...]
+If a user takes an action, such as opening a new page that describes details about an institution, 
+this is queried to the SPARQL endpoints of each LOD. The application then presents new 
+information to the user using the data returned from the SPARQL endpoints. [...]
+When a user accesses the application, a map view is presented, as shown in Fig. 3.
+ This view gives users information on the kind of art they can experience by displaying institutions. 
+ The locations of the current day’s events and Q&As related to the displayed area are also 
+ presented on the map of Yokohama. [...]
+In this map view, the name, address, and geographical coordinates of institutions 
+to be presented are extracted from LODAC Museum with SPARQL using the latitudes and longitudes 
+of the displayed area. As for the event information, the application obtains data for the events 
+that would be held at those institutions included in the displayed area from Yokohama Art LOD using SPARQL."
+
+0) having data about locations, institutions and events >> access, Data, Location, Institution, Event
+1) having a specific location >> receive, Location
+2) identify latitude and longitude of the specific area >> identify, Latitude, Longitude, GeoLocation, Area
+3) identify near institutions >> identify, Near, Institution
+4) identify near events >> identify, Near, Event
+5) represent institutions and events as locations >> represent, Institution, Event, Location
+
+---
+
+@prefix dbpedia: 	<http://dbpedia.org/resource/> .
+@prefix dn: 		<http://purl.org/datanode/ns/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix void: 		<http://rdfs.org/ns/void#> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@prefix skos: 		<http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:	 	<http://www.w3.org/2002/07/owl#> .
+@prefix dbprop:		<http://dbpedia.org/property/> .
+@prefix dct: 		<http://purl.org/dc/terms/> .
+
+:page 
+	dn:combinationFrom :nearQA , :nearInstitutions , :nearEvents .
+:nearQA
+	dn:isPortionOf :PinQA ; dn:hasSection [ dn:describes :latitude ; dn:describes :longitude ] .
+:nearEvents
+	dn:isPortionOf :Yokohama_Art_LOD ; dn:hasSection [ dn:describes :latitude ; dn:describes :longitude ] .
+:nearInstitutions
+	dn:isPortionOf :LODAC_Museum ; dn:hasSection [ dn:describes :latitude ; dn:describes :longitude ] .
+---
+
+"To display basic information on the institution, the name, access options, hours of operation, 
+and the geographical coordinates are extracted from LODAC Museum with SPARQL according to the URI of the institution. "
+
+0) having data about institutions in a sparql endpoint source >> access, Data, About, Institution, SPARQL, Endpoint, Source
+1) receive a single institution >>  receive, Single, Institution
+2) consider name as part of basic information >> consider, Name, BasicInformation
+3) consider access option as part of basic information >> consider, AccessOption, BasicInformation
+4) consider hours of operation as part of basic information >> consider, HoursOfOperation, Part, BasicInformation
+5) consider geographical coordinates as part of basic information >> consider, GeoLocation, Part, BasicInformation
+6) collect basic information of the single institution from the source >> collect, BasicInformation, Single, Institution
+
+
+---
+
+---
+
+"Moreover, events that have links indicating a venue for the institution are extracted by SPARQL, and 
+those event data are displayed in a timeline interface as shown in Fig. 4."
+
+0) having data about events >> access, Data, Event
+1) having relevant institutions >> access, Relevance, Institution
+2) identify the part of the data about events having the venue >> identify, Part, Data, About, Event, Venue
+3) if the venue is a relevant institution, consider the event as a relevant event >> Venue, Relevance, Institution
+4) represent relevant events using the timeline shape >> represent, Relevance, Event, Timeline, Shape
+
+
+---
+
+---
+
+"Collection data are also acquired from LODAC Museum by tracing art works linked to the institution with SPARQL."
+
+0) having collection data >> access, Data
+1) having LODAC Museum Data >> access, LODACMuseumData
+2) identify Art Works linked to Institution with SPARQL >> identify, ArtWork, Link, Institution, SPARQL
+3) identify descriptions of Art Works in LDOAC Museum Data >> identify, Description, ArtWork, LODACMuseumData
+
+---
+
+---

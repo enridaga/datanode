@@ -1,0 +1,140 @@
+var nodes=
+[{ 
+	id: "0",
+	uri: "_:g70184485069580",
+	label: "_:g70184485069580",
+	links: [{
+		target: 1,
+		label: "dn:hasVocabulary",
+	uri: "http://purl.org/datanode/ns/hasVocabulary",
+		type: "default",
+		weight: 1,
+	},],
+},{ 
+	id: "1",
+	uri: "http://purl.org/datanode/ex/0.2/DISCOU/11#score",
+	label: "ex:score",
+	links: [],
+},{ 
+	id: "2",
+	uri: "_:g70184485038620",
+	label: "_:g70184485038620",
+	links: [{
+		target: 3,
+		label: "dn:isPartOf",
+	uri: "http://purl.org/datanode/ns/isPartOf",
+		type: "default",
+		weight: 1,
+	},],
+},{ 
+	id: "3",
+	uri: "http://purl.org/datanode/ex/0.2/DISCOU/11#index",
+	label: "ex:index",
+	links: [],
+},{ 
+	id: "4",
+	uri: "http://purl.org/datanode/ex/0.2/DISCOU/11#entities",
+	label: "ex:entities",
+	links: [{
+		target: 5,
+		label: "dn:extractedFrom",
+	uri: "http://purl.org/datanode/ns/extractedFrom",
+		type: "default",
+		weight: 1,
+	},{
+		target: 0,
+		label: "dn:hasSection",
+	uri: "http://purl.org/datanode/ns/hasSection",
+		type: "default",
+		weight: 1,
+	},{
+		target: 2,
+		label: "dn:overlappingPopulationWith",
+	uri: "http://purl.org/datanode/ns/overlappingPopulationWith",
+		type: "default",
+		weight: 1,
+	},],
+},{ 
+	id: "5",
+	uri: "http://purl.org/datanode/ex/0.2/DISCOU/11#text",
+	label: "ex:text",
+	links: [{
+		target: 11,
+		label: "dn:isPartOf",
+	uri: "http://purl.org/datanode/ns/isPartOf",
+		type: "default",
+		weight: 1,
+	},],
+},{ 
+	id: "6",
+	uri: "http://purl.org/datanode/ex/0.2/DISCOU/11#output",
+	label: "ex:output",
+	links: [{
+		target: 7,
+		label: "dn:isSelectionOf",
+	uri: "http://purl.org/datanode/ns/isSelectionOf",
+		type: "default",
+		weight: 1,
+	},],
+},{ 
+	id: "7",
+	uri: "http://purl.org/datanode/ex/0.2/DISCOU/11#similar",
+	label: "ex:similar",
+	links: [{
+		target: 9,
+		label: "dn:hasPart",
+	uri: "http://purl.org/datanode/ns/hasPart",
+		type: "default",
+		weight: 1,
+	},{
+		target: 8,
+		label: "dn:hasSection",
+	uri: "http://purl.org/datanode/ns/hasSection",
+		type: "default",
+		weight: 1,
+	},],
+},{ 
+	id: "8",
+	uri: "_:g70184488964720",
+	label: "_:g70184488964720",
+	links: [{
+		target: 1,
+		label: "dn:hasVocabulary",
+	uri: "http://purl.org/datanode/ns/hasVocabulary",
+		type: "default",
+		weight: 1,
+	},],
+},{ 
+	id: "9",
+	uri: "http://purl.org/datanode/ex/0.2/DISCOU/11#similarText",
+	label: "ex:similarText",
+	links: [{
+		target: 10,
+		label: "dn:hasExtraction",
+	uri: "http://purl.org/datanode/ns/hasExtraction",
+		type: "default",
+		weight: 1,
+	},],
+},{ 
+	id: "10",
+	uri: "http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities",
+	label: "ex:similarEntities",
+	links: [{
+		target: 3,
+		label: "dn:isPartOf",
+	uri: "http://purl.org/datanode/ns/isPartOf",
+		type: "default",
+		weight: 1,
+	},{
+		target: 4,
+		label: "dn:overlappingCapabilityWith",
+	uri: "http://purl.org/datanode/ns/overlappingCapabilityWith",
+		type: "default",
+		weight: 1,
+	},],
+},{ 
+	id: "11",
+	uri: "http://purl.org/datanode/ex/0.2/DISCOU/11#input",
+	label: "ex:input",
+	links: [],
+},]

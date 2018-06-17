@@ -1,0 +1,56 @@
+@base <http://purl.org/datanode/swj-uc/kis/> .
+@prefix : <http://purl.org/datanode/swj-uc/kis/> .
+@prefix dn: <http://purl.org/datanode/ns/> .
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+
+<http://purl.org/datanode/swj-uc/kis-dn> a owl:Ontology ;
+	rdfs:label "Use Case: Getting Nodes affected by a node (DN)" ;
+    skos:note """
+	# CQ: Which are the nodes affected by the new KIS release?
+	prefix dn: <http://purl.org/datanode/ns/> 
+	prefix uc: <http://purl.org/datanode/swj-uc/kis/> 
+		SELECT * WHERE {
+		  ?node dn:affectedBy uc:kis.14.15
+		}
+	""" ;
+ 	skos:note """
+	# CQ: New version of KIS comes out. Which data nodes need to be updated?
+	prefix dn: <http://purl.org/datanode/ns/> 
+	
+	SELECT ?entity WHERE { 
+	  ?entity dn:isDerivationOf ?source . 
+	  [] dn:nextVersionOf ?source . 
+	  optional { ?newRevision dn:nextVersionOf ?entity } .
+	  filter( ! bound(?newRevision) )
+	}
+	""" ;
+	owl:imports <file:/Users/enricox/Dropbox/PhD/Datanode/datanode/src/datanode.ttl> .
+
+:kis.12.13 a dn:Datanode .
+:kis.13.14 a dn:Datanode .
+:kis.14.15 a dn:Datanode .
+:ou.12.13 a dn:Datanode .
+:ou.13.14 a dn:Datanode .
+:jisc-prod a dn:Datanode .
+:jisc-prod-links a dn:Datanode .
+
+:kis.13.14 dn:isUpdatedVersionOf :kis.12.13 .
+:kis.14.15 dn:isUpdatedVersionOf :kis.13.14 .
+
+:jisc-prod dn:links :ld.13.14 .
+:jisc-prod dn:hasPart :jisc-prod-links .
+:jisc-prod-links dn:isSelectionOf :ld.13.14 .
+
+:ld.12.13 dn:remodelledFrom :kis.12.13 .
+:ld.13.14 dn:remodelledFrom :kis.13.14 .
+
+:ld.13.14 dn:isUpdatedVersionOf :ld.12.13 .
+
+:ou.12.13 dn:isCopyOf [ dn:isSelectionOf :ld.12.13 ] .
+:ou.13.14 dn:isCopyOf [ dn:isSelectionOf :ld.13.14 ] .
+

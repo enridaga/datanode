@@ -1,0 +1,238 @@
+10 amount-of-resources
+1073077 amount-of-triples
+14 amount-of-links
+188 amount-of-properties
+2 amount-of-resources
+2247019 amount-of-triples
+25.2% amount-of
+3 amount-of
+3004351 amount-of
+36 amount-of
+37 amount-of
+39000 amount-of-resources
+50% amount-of
+55.7% amount-of
+578 amount-of-properties
+767 amount-of-properties
+9555 amount-of-resources
+About about "relates data of different knowledge layers"
+Abstract 
+AccessOption
+Annotation annotation "relates some data to the data from which they have been extracted and isolated"
+AnyOther other-than "relates some data to other data that are disjoint, because of the things they refer to or for the way they are described"
+Area 
+ArtWork
+Artifact
+Artist
+BasicInformation descriptors-of "some data are the descriptors of other data"
+Because
+Before before "link some data to the same data at a preceding time"
+Best best-part-of "link some data to data which contains them, and for which they are the best sample in relation to a given concern"
+Between compared-with "says that two data sets are compared in relation to a given concern"
+Capability capability-of "some data are the capabilities of other data. In other words, some data represent the fitness-for-use with relation to specific concerns."
+Cause
+Cluster cluster-in "some data is a uniform group of things in a data containing also other uniform groups which are different for some notable features"
+Combination combination-from "some data is an ordered collection of items from other data"
+Component component-of "data is a slice of data having a specified capability"
+Concern concern-of "data represents the concern of other data"
+Country
+Criteria method-of "data represents a method that generates other data"
+Data Data "This is our top concept"
+Dataset Dataset "How is it different from Data? This represent materialized data..."
+DatatypeProperty
+DBPedia NamedDataset
+Description Description "A kind of data referring to a single entity"
+Deviation deviate-from "data deviate from a common value in a measure"
+Direct directly-linked-to  "some data is linked to other with no needed inference"
+Distinct distinct-set "data holds a distinct set from data (same data without duplicates)"
+Document Document "is this a kind of data? A kind of artifact? Similar to Dataset? A container/wrapper of Data?"
+Duplicate duplicate-of "data is a duplicate of some other data (same as copy-of?)"
+Each
+ElderData before
+Endpoint 
+Entity Entity "this is the thing which data talks about"
+EntityOccurrenceMeasure Measure "a kind of data representing a measure of some other data"
+Environment Environment "how to describe it, we should not know anything about it in OWA"
+Event
+Eventful
+Exemplar sample-of "Some data are sample of other data"
+Feature Descriptor "some data tells other data features"
+Flickr Provider
+Foursquare Provider
+GeoLocation Descriptor
+Graph shape-of "What is a graph? It deals to the shape of some data. A Datum being the shape of other data."
+HavingType shape-of "What is a document type? It deals to the fitness for use by specific (sub)systems"
+HierarchicalClustering Method "some data comes from other through a method (for a concern?)"
+HoursOfOperation
+HtmlType
+Inconsistency inconsistent-part-of
+Indirect indirectly-linked-to
+Individual single-part-of
+Influence affects "This deals with the fact that some data may justify other, for example the number of cars in a location affecting parking availability"
+Information about
+Institution
+Irrelevant irrelevant-part-of
+Issue unfitting-part-of "Some data has a negative impact with relation to a concern."
+Item single-part-of "Make sense say that a datum is part of data"
+KnownData known-data "or data in already-accessed location?
+LDSD Method
+LDSDMeasure Measure "A kind of data, measure-of some other"
+LODACMuseumData DataSource
+LODE Vocabulary
+Last.fm Provider
+Latest current-version-of "data is the current version of other data (and of itself?)"
+Latitude
+Link linked-to "Top-property"
+List sorted-by "some data is intended to be sorted by a sorting Method"
+LiveTrac Provider
+Location location-of "some data describes the location of other data"
+Longitude
+Lost lost-part-of "this is tricky, but sometimes we change data and lost some information. How to say this?"
+Max max-single-part-of
+Meaningless meaningless-part-of "Some data cannot be interpreted anymore."
+Measure Measure
+Message message "Some data is in reply to other data. How to model messages?"
+Method Method
+Misuse misused-descriptor-of "some data is wrongly described."
+MoreThen more-than "some data is more than other"
+Most best-part-of
+Musicbrain Provider
+N-Times N-Times "not sure how far we should go on describing methods"
+Name
+Near inferred-from "some data is indirectly generated from other data by inference"
+New newer-version-of "some data is the newer version of other"
+Now Now "how far shall we go on modeling time?"
+Number amount-of
+Occurrence extracted-from "some data is extracted from other (using mining techniques, for example)"
+Once cardinality-of-a-descriptor "We need to observe how descriptors are used in some data. How are they used?"
+OnlineResource
+Ontology Ontology
+OtherThan other-than
+Pair in-tuple-with "some data share with other the fact that they are a component of the same data"
+Part component-of "some data is the component of other data"
+Portion part-of
+Privacy Concern "How to model how we judge data with relation to aspects of a task? For example Privacy issues, Licensing"
+Property Descriptor
+PropertyValue Descriptor
+Protected in-protected-environment "This deals with the usage of some data in a specific context. Changing the context some issue may arise."
+Provenance provided-by "Relates data to its Provider (Authority, Agent)"
+Public in-public-environment "Can this data be used in a public unprotected setting?"
+Quality fits "Some data fits a description (in the form of data...)."
+Query query-of "data forms the query used to obtain data"
+Rank rank "rank is data representing a metric with ordering purpose attached to some data"
+Redundancy redundant-part-of "Another way of being part of some data is to contain only items which are contained more than once in another dataset"
+RelatedThing related-to "This means linked-to with a specified reason (how?)"
+Relation linked-to
+Relevance related-to "Relevant wrt a specific concern"
+Representation enable-capability "The existence of a Descriptor enables a capability"
+Representation has-descriptors "This data is described using some Descriptors"
+Representative related-to
+Resource Pointer "A pointer says which is the Entity the data is about (?)"
+Resource Entity "An Entity says what is the description about (?)"
+Resource Locator "A Locator says where to find a description of an Entity"
+ResourceFeature Descriptor
+ResourceGroup Dataset
+ResourcePair in-tuple-with
+Role takes-the-role-of "Weird, we may apply the same method with different data."
+SPARQL capability-of "Some data has some capability. The input of a process is a query written in SPARQL."
+Score score "This links some data/datum to the value of a measure (data). The way to attach a metric to some data. See also rank."
+SemanticEntity Entity "Semantic entity is entity"
+Service DataSource
+Set Dataset
+Setting Environment "Setting and Environment are synonyms. Or they don't?!"
+Shape Vocabulary "Shape deals with the set of descriptors used."
+SharedFeature shares-capability-with "Different data may share the same capability (fitness for use)"
+Similarity similar-to "Quite broad sense here"
+SimilarityQuery query-of "What else SimilarityQuery tells us? It tells the relation the resulting data have with the data that has been interpreted as a query"
+Single single-part-of
+Small smaller-than
+SmallerThen smaller-than
+Snapshot snapshot-of "Some data is the snapshot of other at a specific time point"
+Source DataSource
+Stand-In stand-in-of "Some data is used as stand-in for other, in critical contexts. This is the case of anonymized data in public settings"
+String capability-of "Some data can be processed as String."
+StringRepresentation stand-in-of "Some data is used as a stand-in of other when a specific capability is requested. In this case the concern is being a string..."
+SubOntology part-of "A set of descriptors is a portion of others"
+Subgraph part-of
+Subset part-of
+Sum sum-of "Some data is the aggregation of some other. Sum is a kind of aggregation."
+Summary 
+Synthesis summarization-of "Some data is the summarization of other"
+System Operator "Do we need to talk about operators? actions? systems?"
+Task Task "Do we need to talk about Tasks?"
+Term Data "A term in a text is some data extracted-from some data (identified from? Should we distinguish identify and extract?)"
+TermOccurrenceMeasure Measure "Being a specific kind of measure, with a specific Method?"
+TextualComponent textual-component-of "Having a specific capability: string"
+TextualData textual-component-of
+Thing Entity
+Time
+Timeline assembled-as "Some data is assembled in a specific way to presentation purpose"
+Title
+TooGeneric not-fits "This data does not fits our concern because is too generic..."
+Topic
+Total amount-of
+Traffic
+Transcript stand-in-of "A transcript is the perfect example of a component which stands for the data which is part of for the reason that it supports a specific feature (being string)."
+Trend Metric
+Triple Capability "Being a triple is a capability"
+Tweet Capability "Being a tweet is a capability"
+Tweets Capability
+Type Descriptor
+Upcoming DataSource
+Update update-of "Some data is the update for other. to be merged? Substitute?"
+Usage Measure "The usage of a descriptor. This is a kind of Measure"
+Useless  not-fits
+User
+Venue
+When fits "Another aspect is the evaluation of a description wrt to the domain."
+Without has-not-capability "We may also want to say when data has not a specific capability"
+Wrong meaningless-part-of "Some data is wrong"
+YoungerData before
+ability Capability "Fit for use"
+access accessible-by "Some data is accessible, other not. By Agent?"
+annotate annotated-by "That means to extract some data and attach it to the origin. Also a comment is a kind of extraction. Isn't it?"
+attach attached-to "Some data is attached to other, for specific reasons"
+by using-method "This should relate an Operation to a Method"
+clean Clean "A kind of data preparation to fit a specific concern."
+cluster Cluster "Create groups from a single set"
+collect Collect "Extract exemplars from a (or more) dataset and put them all in one place"
+compare Compare "Compare to datasets"
+compute Compute "Compute a measure, for example"
+concat Concat "Simply append two uniform data to obtain one single data. Two data sets to obtain one."
+consider Consider "Attach some descriptor to a data for future use"
+create Create "Add some data about something that was not described before"
+cure Clean
+dbprop:nationalAnthem
+dbprop:notableInstruments
+describe Describe
+detect Detect "detect, identify, consider. There is some redundancy here..."
+discover Discover
+explain Explain
+extract Extract "This should be identify/consider + collect?"
+find Identify
+identify Identify
+lift Lift "Attach the about info to some piece of data"
+link Link "Create a Link"
+listen Listen "An operation of data acquisition."
+map Map "Link between collections is Map"
+mine extract "Shape detection + identification + collection = mining"
+obtain obtain "To express the result of an operation. Do we need to describe this?"
+optimize Optimize "Reduction for concern. We accept to loose data to boost some other operation."
+photograph Photograph "Realize snapshot"
+preserve Preserve "To save some data before soem changes"
+produce create
+rank Rank
+receive Listen
+reduce Optimize
+remove Delete
+represent Describe
+search Capability
+select Identify "Identify is the WHERE condition of a SPARQL SELECT, for example"
+send Collect "Is a kind of Collect, looks strange."
+solve Achieve "Top-level macro"
+store Collect "Is a kind of Collect"
+summarize Summarize
+take Collect
+truncate Truncate "Kind of collect with arbitrary limit in size"
+update update-of
+use Stand-In

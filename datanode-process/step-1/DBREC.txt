@@ -1,0 +1,107 @@
+dbrec — Music Recommendations Using DBpedia
+
+Use case abstraction
+Source: paper
+
+"The original dataset, including more than 39,000 resources, 
+included 3,004,351 triples. We then cleaned it to get a smaller and more accurate dataset, "
+
+0) having data with 39,000 resources and 3,004,351 triples >> access, Data, 39000, Resource, 3004351, Triple
+1) clean it to make it smaller and accurate >> clean, reduce, cure
+
+"for two main reasons. On the one hand, we wanted to remove datatype properties, 
+as they are not relevant for our experiment6. Removing them lead to a dataset containing 
+2,247,019 triples, thus reducing the original one from about 25.2% — implying that 1/4 of 
+DBpedia assertions, in our dataset, involve literals. "
+
+0) having data_1 with 39,000 resources and 3,004,351 triples >> access, Data, 39000, Resource, 3004351, Triple
+1) remove datatype properties because they are not relevant >> remove, DatatypeProperty, Irrelevant
+2) having data_2 with 2,247,019 triples >> access, 2247019, Triple
+3) data_2 is a portion of data_1 >> Data, Portion
+4) data_2 is 25.2% smaller then data_1 >> Data, 25.2%, Small, SmallerThen
+
+"On the other hand, we identified 
+lots of redundancy and inconsistencies in our DBpedia subset7. Especially, many links 
+between resources are defined redundantly as http://dbpedia.org/ontology/xxx and at the 
+same time as http://dbpedia.org/property/xxx. We then removed duplicates, leading to 
+1,675,711 triples, i.e. only 55.7% of the original dataset."
+
+0) having data with redundancies and inconsistencies >> access, Data, Redundancy, Inconsistency
+1) remove redundancies >> remove, Redundancy
+2) remove inconsistencies >> remove, Inconsistency
+3) remove duplicates (same as redundancies?) >> remove, Duplicate
+4) data is now 55.7 percent of before >> Data, 55.7%, Now, Before
+
+"We also analysed the dataset to identify how artists are related to each other (by direct links) 
+in DBpedia (Fig. 4). We observed that 21,211 of them (more than 50%) are not linked to any artists, 
+and 9,555 are linked to three of them, the maximum being 14 links from one artist to 14 others. 
+Then, by using indirect links for computing semantic distance with LDSD, we are able to provide 
+recommendations for these 21,211 isolated artists."
+
+0) having dbpedia >> access, Dbpedia
+1) identify artists >> identify, Artist
+2) identify links between artists >> identify, Link, Artist, Between
+3) compute the number of links for each artist >> compute, Number, Link, Each, Artist
+4) the artists with no links are more then 50%, ie 21.211 >> Artist, Without, Link, MoreThen, 50%
+5) the artists with three links are 9,555 >> Artist, 3, Link, 9555
+6) the maximum number of links is 14 >> Max, Number, Link, 14
+7) identify indirect links between artists >> identify, Indirect, Link, Between, Artist
+
+
+"We then focused on further optimisations not at the query-engine level, but at the dataset level, 
+analysing it more deeply, and we identified that: (1) 188 distinct properties are used to link artists 
+together directly; (2) 578 distinct properties are used to link an artist to any resource (including artists) ;
+ (3) 767 distinct properties are used to link any resource (including artists) to an artist. "
+
+0) optimize the dataset for the task >> optimize, Dataset, Task
+1) identify the distinct properties used to link artists directly >> identify, Distinct, Property, Link, Artist, Direct
+2) there are 578 distinct properties that link artists directly >> 578, Distinct, Property, Link, Direct
+3) identify the distinct properties used to link artists to any other resource >> identify, Distinct, Property, Link, Artist, Resource, AnyOther
+4) 767 distinct properties are used to link artists to any other resource >> 767, Distinct, Property, Link, Artist, AnyOther, Resource
+
+" We then focused on data curation: (1) on the one hand to remove properties and property-values 
+ that are useless for computing the LDSD measures, and (2) on the other hand, to solve some data quality issues in DBpedia."
+
+0) cure the data for the task >> cure, Data, Task
+1) remove properties and property-values that are useless for computing LDSD measures >> remove, Property, PropertyValue, Useless, compute, LDSD, Measure, LDSDMeasure
+2) solve some data quality issues >> solve, Data, Quality, Issue
+
+"From the 188 properties linking two artists, we identified that 18 were used as links between 
+artists while it was not their main purpose8, such as the property dbprop:notableInstruments — 
+used to link an artist to its instrument(s) — or dbprop:nationalAnthem — linking a country to its anthem. "
+
+0) having a dataset of artists and links between artists and things >> access, Dataset, Artist, Link, Thing
+1) identify misused properties >> identify, Misuse, Property
+2) 188 properties misused >> 188, Property, Misuse
+3) the property dbprop:notableInstruments is misused in the dataset when/because it connects two artists >> Property, dbprop:notableInstruments, Misuse, Dataset, When, Link, Artist
+4) the property dbprop:nationalAnthem is misused in the dataset when/because it connects a country to an artist >> Property, dbprop:nationalAnthem, Misuse, Dataset, When, Link, Country, Artist
+
+"Moreover, we identified 35 properties that were wrongly defined — while however used two times of less —, 
+such as http://dbpedia.org/property/extra18 and http://dbpedia.org/property/klfsgProperty. "
+
+0) having a dataset which is a subset of dbpedia >> access, Dataset, Subset, Dbpedia
+1) identify properties wrongly defined (lost data? meaningless data?) >> identify, Property, Wrong, Lost, Meaningless
+
+"Then, from the 578 properties used to link artists to resources, 183 were used only one time and were 
+consequently useless for our recommendations, since it imply there is no more than one artist using on. 
+In addition, 36 of these properties were wrongly defined. "
+
+0) having a dataset of artists and links to resources >> access, Dataset, Artist, Link, Resource
+1) identify the properties used only once >> identify, Property, Usage, Once
+2) 36 of the 37 properties used only ones are wrongly defined >> 36, 37, Property, Usage, Wrong
+
+"Furthermore, we identified 11 useless property-value 
+combinations to compute our recommendations, by being too generic such as rdf:type foaf:Agent. 
+Finally, from the 767 properties used to link any resource to an artist, 336 were removed as 
+used only to link to a single artist, and 115 were wrongly written."
+
+0) having a dataset with artists and links to resources using 767 properties >> access, Dataset, Artist, Link, Resource, 767, Property
+1) identify useless property-value combinations because too generic >> identify, Useless, PropertyValue, Combination, Because, TooGeneric
+2) identify useless properties because used to link only to a single artist. They are 336, 115 of them are wrongly written. >> identify, Useless, Property, Because, Usage, Link, Single, Artist
+
+" We then cleaned-up the dataset and reduced it to a total of 1,073,077 triples."
+
+0) having dataset >> access, Dataset
+1) cleaning the dataset >> clean, Dataset
+2) the dataset is reduced to a total of 1,073,077 triples >> Dataset, reduce, Total, 1073077
+

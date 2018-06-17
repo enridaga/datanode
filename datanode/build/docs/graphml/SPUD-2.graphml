@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml 
+	xmlns="http://graphml.graphdrawing.org/xmlns" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:y="http://www.yworks.com/xml/graphml" 
+	xmlns:yed="http://www.yworks.com/xml/yed/3" 
+	xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+		<key attr.name="label" attr.type="string" for="node" id="k_label"/>
+		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
+		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
+	<graph edgedefault="directed" id="G">
+<!-- http://purl.org/datanode/ex/0.2/SPUD/2#LiveTrac -->
+<!-- ex:LiveTrac -->
+		<node id="n2070842548174186084">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/2#LiveTrac]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/2#LiveTrac]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:LiveTrac<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ns/Datanode -->
+<!-- dn:Datanode -->
+		<node id="n3409152757936662390">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ns/Datanode]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ns/Datanode]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>dn:Datanode<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/2#database -->
+<!-- ex:database -->
+		<node id="n815679045310911127">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/2#database]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/2#database]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:database<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- _:g70363120718160 -->
+<!-- _:g70363120718160 -->
+		<node id="n667857206798885885">
+			<data key="k_label"><![CDATA[_:g70363120718160]]></data>
+			<data key="d5"><![CDATA[_:g70363120718160]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>_:g70363120718160<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- _:g70363120712720 -->
+<!-- _:g70363120712720 -->
+		<node id="n-1544589040148389187">
+			<data key="k_label"><![CDATA[_:g70363120712720]]></data>
+			<data key="d5"><![CDATA[_:g70363120712720]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>_:g70363120712720<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://linkedevents.org/ontology/ -->
+<!-- http://linkedevents.org/ontology/ -->
+		<node id="n-1775643636042241280">
+			<data key="k_label"><![CDATA[http://linkedevents.org/ontology/]]></data>
+			<data key="d5"><![CDATA[http://linkedevents.org/ontology/]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://linkedevents.org/ontology/<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/2#view1 -->
+<!-- ex:view1 -->
+		<node id="n-816257582881945481">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/2#view1]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/2#view1]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:view1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- ... using hierarchical clustering method ... -->
+<!-- &lt;html&gt;... using hierarchical clustering method .&lt;br/&gt;..&lt;/html&gt; -->
+		<node id="n2022555945987527028">
+			<data key="k_label"><![CDATA[... using hierarchical clustering method ...]]></data>
+			<data key="d5"><![CDATA[... using hierarchical clustering method ...]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>&lt;html&gt;... using hierarchical clustering method .&lt;br/&gt;..&lt;/html&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- ["http://purl.org/datanode/ns/Datanode"] -->
+		<edge id="e_2070842548174186084_-65919626932632970_3409152757936662390" source="n2070842548174186084" target="n3409152757936662390">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ns/Datanode"] -->
+		<edge id="e_815679045310911127_-65919626932632970_3409152757936662390" source="n815679045310911127" target="n3409152757936662390">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/SPUD/2#LiveTrac"] -->
+		<edge id="e_667857206798885885_-3296909330734676275_2070842548174186084" source="n667857206798885885" target="n2070842548174186084">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/SPUD/2#database"] -->
+		<edge id="e_667857206798885885_-2159284758261389014_815679045310911127" source="n667857206798885885" target="n815679045310911127">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isUpdateOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://linkedevents.org/ontology/"] -->
+		<edge id="e_-1544589040148389187_-3081864024323558489_-1775643636042241280" source="n-1544589040148389187" target="n-1775643636042241280">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>owl:imports</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["_:g70363120718160"] -->
+		<edge id="e_-816257582881945481_3594054228466441439_667857206798885885" source="n-816257582881945481" target="n667857206798885885">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isExtractionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://linkedevents.org/ontology/", "_:g70363120712720"] -->
+		<edge id="e_-816257582881945481_-1456255859716745367_-1775643636042241280" source="n-816257582881945481" target="n-1775643636042241280">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:usesSchema</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://linkedevents.org/ontology/", "_:g70363120712720"] -->
+		<edge id="e_-816257582881945481_-1456255859716745367_-1544589040148389187" source="n-816257582881945481" target="n-1544589040148389187">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:usesSchema</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["... using hierarchical clustering method ..."] -->
+		<edge id="e_-816257582881945481_-2129165932959532834_2022555945987527028" source="n-816257582881945481" target="n2022555945987527028">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>skos:note</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+	</graph>
+</graphml>

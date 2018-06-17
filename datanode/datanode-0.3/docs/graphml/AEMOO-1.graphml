@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml 
+	xmlns="http://graphml.graphdrawing.org/xmlns" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:y="http://www.yworks.com/xml/graphml" 
+	xmlns:yed="http://www.yworks.com/xml/yed/3" 
+	xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+		<key attr.name="label" attr.type="string" for="node" id="k_label"/>
+		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
+		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
+	<graph edgedefault="directed" id="G">
+<!-- http://purl.org/datanode/ex/0.2/AEMOO/1#DBPedia -->
+<!-- ex:DBPedia -->
+		<node id="n-3783522843881253665">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#DBPedia]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#DBPedia]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:DBPedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://dbpedia.org/sparql -->
+<!-- http://dbpedia.org/sparql -->
+		<node id="n-1584431068368923707">
+			<data key="k_label"><![CDATA[http://dbpedia.org/sparql]]></data>
+			<data key="d5"><![CDATA[http://dbpedia.org/sparql]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://dbpedia.org/sparql<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource -->
+<!-- ex:aboutResource -->
+		<node id="n-458492114411063209">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:aboutResource<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://dbpedia.org/resource/Barack_Obama -->
+<!-- http://dbpedia.org/resource/Barack_Obama -->
+		<node id="n-4057799034842302692">
+			<data key="k_label"><![CDATA[http://dbpedia.org/resource/Barack_Obama]]></data>
+			<data key="d5"><![CDATA[http://dbpedia.org/resource/Barack_Obama]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://dbpedia.org/resource/Barack_Obama<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/AEMOO/1#dbpediaTypes -->
+<!-- ex:dbpediaTypes -->
+		<node id="n-489527269176636807">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#dbpediaTypes]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#dbpediaTypes]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:dbpediaTypes<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatternOfResourceType -->
+<!-- ex:knowledgePatternOfResourceType -->
+		<node id="n2011019615079931980">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatternOfResourceType]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatternOfResourceType]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:knowledgePatternOfResourceType<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatterns -->
+<!-- ex:knowledgePatterns -->
+		<node id="n2298803484506971170">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatterns]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatterns]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:knowledgePatterns<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/AEMOO/1#resourcePrimaryType -->
+<!-- ex:resourcePrimaryType -->
+		<node id="n2108317628131516601">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#resourcePrimaryType]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#resourcePrimaryType]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:resourcePrimaryType<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/AEMOO/1#summarizationMethods -->
+<!-- ex:summarizationMethods -->
+		<node id="n426866139324403137">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#summarizationMethods]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#summarizationMethods]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:summarizationMethods<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/AEMOO/1#resourceTypes -->
+<!-- ex:resourceTypes -->
+		<node id="n-1988099431865747247">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#resourceTypes]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#resourceTypes]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:resourceTypes<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/AEMOO/1#resourceSummary -->
+<!-- ex:resourceSummary -->
+		<node id="n-471152088668358619">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#resourceSummary]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/AEMOO/1#resourceSummary]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ex:resourceSummary<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+			</data>
+		</node>
+<!-- ["http://dbpedia.org/sparql"] -->
+		<edge id="e_-3783522843881253665_3293741231780524048_-1584431068368923707" source="n-3783522843881253665" target="n-1584431068368923707">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>void:sparqlEndpoint</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://dbpedia.org/resource/Barack_Obama"] -->
+		<edge id="e_-458492114411063209_-4466396150657596357_-4057799034842302692" source="n-458492114411063209" target="n-4057799034842302692">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#DBPedia"] -->
+		<edge id="e_-458492114411063209_-1516706358976643551_-3783522843881253665" source="n-458492114411063209" target="n-3783522843881253665">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#DBPedia"] -->
+		<edge id="e_-489527269176636807_640542867462492676_-3783522843881253665" source="n-489527269176636807" target="n-3783522843881253665">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:typesOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatterns"] -->
+		<edge id="e_2011019615079931980_2977664512785147163_2298803484506971170" source="n2011019615079931980" target="n2298803484506971170">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#resourcePrimaryType"] -->
+		<edge id="e_2011019615079931980_-4466396150657596357_2108317628131516601" source="n2011019615079931980" target="n2108317628131516601">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#summarizationMethods"] -->
+		<edge id="e_2011019615079931980_380896136252022892_426866139324403137" source="n2011019615079931980" target="n426866139324403137">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#DBPedia"] -->
+		<edge id="e_2298803484506971170_-1484322476269673402_-3783522843881253665" source="n2298803484506971170" target="n-3783522843881253665">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#resourceTypes"] -->
+		<edge id="e_2108317628131516601_380896136252022892_-1988099431865747247" source="n2108317628131516601" target="n-1988099431865747247">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://dbpedia.org/resource/Barack_Obama"] -->
+		<edge id="e_-471152088668358619_-4466396150657596357_-4057799034842302692" source="n-471152088668358619" target="n-4057799034842302692">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource"] -->
+		<edge id="e_-471152088668358619_214282190896589492_-458492114411063209" source="n-471152088668358619" target="n-458492114411063209">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isStandInOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource"] -->
+		<edge id="e_-471152088668358619_2527428162101328234_-458492114411063209" source="n-471152088668358619" target="n-458492114411063209">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSummarizationOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource"] -->
+		<edge id="e_-471152088668358619_-4552608226014168784_-458492114411063209" source="n-471152088668358619" target="n-458492114411063209">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:remodelledFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatternOfResourceType"] -->
+		<edge id="e_-471152088668358619_-4404328515728520391_2011019615079931980" source="n-471152088668358619" target="n2011019615079931980">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:usesSchema</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#dbpediaTypes"] -->
+		<edge id="e_-1988099431865747247_-1516706358976643551_-489527269176636807" source="n-1988099431865747247" target="n-489527269176636807">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource"] -->
+		<edge id="e_-1988099431865747247_1456643526114116448_-458492114411063209" source="n-1988099431865747247" target="n-458492114411063209">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#dbpediaTypes", "http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatterns"] -->
+		<edge id="e_426866139324403137_972259540350006327_-489527269176636807" source="n426866139324403137" target="n-489527269176636807">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ["http://purl.org/datanode/ex/0.2/AEMOO/1#dbpediaTypes", "http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatterns"] -->
+		<edge id="e_426866139324403137_972259540350006327_2298803484506971170" source="n426866139324403137" target="n2298803484506971170">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+	</graph>
+</graphml>

@@ -1,0 +1,41 @@
+<h3>Excerpt</h3>
+<div id="excerpt">%intro%</div>
+<h3>Synopsys</h3>
+<div id="synopsys">%synopsys%</div>
+<h3>Diagram</h3>
+<div  class="panel panel-default">
+<div class="panel-body" id="diagram"></div>
+</div>
+<h3>Turtle</h3>
+<div  class="panel panel-default">
+<div class="panel-body" id="example"><code>%ttl%</code></div>
+</div>
+<script type="text/javascript">
+/* example: */
+/*
+var nodes = [{
+	id: 0,
+	label: "node X",
+	links: [{
+		target: 1,
+		type: "is-a",
+		weight: 1 
+	},{
+		target: 2,
+		type: "inverse-of",
+		weight: 1 
+	}]
+},{
+	id: 1,
+	label: "node Y",
+	links: [{
+		target: 2,
+		type: "subclass-of",
+		weight: 1 
+	}]
+},{
+	id: 2,
+	label: "node Z"
+}];*/
+var data = model(nodes);
+dia(data, "#diagram");</script>

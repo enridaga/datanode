@@ -1,0 +1,48 @@
+<style type="text/css">
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 14px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+</style>
+
+<p>The Datanode ontology was designed to describe data artifacts and their relations on the Semantic Web.</p>
+<p>Datanode terms are under the <tt>http://purl.com/datanode/ns/</tt> namespace</p>
+
+<p>Data is at the center of current developments on the World Wide Web. In
+the Semantic Web, different kinds of data artifacts (datasets, catalogues, provenance 
+metadata, etc.) are published, exchanged, described and queried every day. 
+There are a number of use cases related to data hub management that 
+can only be addressed if we are able to specify the relations between the managed data 
+artifacts in a way that support useful inferences.</p> 
+<p>Datanode is a conceptual framework designed to 
+express relations between data nodes, implemented as an extendable OWL ontology 
+covering the possible relationships between such data nodes. Datanode can support the management of (possibly distributed and interlinked) catalogues 
+of web data and reasoning over the relationships between items in data catalogues.</p>
+
+<ul class="nav nav-pills">
+  <li class="active"><a href="#terms" data-toggle="tab">Terms description</a></li>
+  <li><a href="#diagram" data-toggle="tab">Properties tree</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="terms">%html%</div>
+  <div class="tab-pane" id="diagram"></div>
+</div>
+
+<script type="text/javascript">var data = %diagramDataVar%;dynatree(data, "#diagram");</script>

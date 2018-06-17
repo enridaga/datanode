@@ -1,0 +1,259 @@
+DISCOU
+
+Use case abstraction
+Source: using the application
+
+"Have a dataset of items and related topics, annotated with a relevance score.
+Given an item, find the 10 items with the most similar topics, listed in order 
+of relevance and displayed with type, title, summary, location and the most relevant common topic."
+
+0) having a dataset of resources and topics >> Dataset, Resource, Topic
+1) having a single resource from that dataset >> Single, receive
+2) identify items having topics in common with the resource >> identify, SharedFeature
+3) rank them according to a score representing how much important are the common topics for both resource >> rank, Criteria, Score, Representation, Relevance, SharedFeature, ResourcePair
+4) truncate 10 exemplars according to rank >> truncate, Number, 10, Exemplar, Criteria, Rank
+5) describe the exemplars with title, summary >> describe, Exemplar, Summary, Title
+6) explain by the most important shared common topic >> explain, Criteria, Best, SharedFeature
+
+---
+
+@prefix dbpedia: 	<http://dbpedia.org/resource/> .
+@prefix dn: 		<http://purl.org/datanode/ns/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix void: 		<http://rdfs.org/ns/void#> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@prefix skos: 		<http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:	 	<http://www.w3.org/2002/07/owl#> .
+@prefix dbprop:		<http://dbpedia.org/property/> .
+@prefix dct: 		<http://purl.org/dc/terms/> .
+
+:dset
+	void:classPartition :Resource ;
+	void:classPartition :Topic ;
+	void:propertyPartition :hasTopic .
+:myResource
+	dn:isDescribedBy :dset .
+:hasTopic
+	dn:isDescribedBy :hasTopicVoc .
+:hasTopicVoc
+	dn:isPortionOf [
+		dn:isVocabularyOf :dset ;
+		dct:hasPart :Resource ;
+		dct:hasPart :Topic ;
+		dct:hasPart :hasTopic
+	] ;
+	dn:hasPortion [
+		dct:hasPart :hasTopic ;
+		dn:disjointPortion owl:nothing 
+	] .
+:myResourceTopics
+	dn:describes :myResource ;
+	dn:hasVocabulary :hasTopicVoc ;
+	dn:isSectionOf :dset ;
+	dn:isPortionOf :dset .
+:topics
+	dn:isPortionOf :dset ;
+	dn:samePopulation [
+		dn:isPortionOf :myResourceTopics ;
+		dn:hasTypes [
+			dct:hasPart :Topic ;
+			dn:disjointPortion owl:nothing 
+		]
+	] ;
+	dn:samePopulation [
+		dn:isPortionOf :similarResources ;
+		dn:hasTypes [
+			dct:hasPart :Topic ;
+			dn:disjointPortion owl:nothing 
+		]
+	] .
+:similarResources
+	dn:hasVocabulary :hasTopicVoc ;
+	dn:isSectionOf :dset ;
+	dn:isPortionOf :dset .
+
+---
+
+"textual components of open educational resources are automatically annotated with relevant entities 
+(using a named entity recognition system)" 
+
+0) having a list of open educational resources >> List, access, ResourceGroup
+1) identify a textual component for each resource >> identify, TextualComponent, Component, Resource, Each
+2) give the textual component to a ner system and obtain a list of pairs entity/relevance score >> send, TextualComponent, System, obtain, List, Pair, Resource, Relevance, Score
+3) annotate the textual component with the entity/score list >> annotate, TextualComponent, Resource, Score, List
+
+"so that these rich annotations can be searched by similarity."
+
+0) having an open educational resource >> access, Resource
+1) identify its textual component >> identify, TextualComponent
+2) identify the list of entity/score annotations of the textual component >> identify, List, Resource, Score, Annotation, TextualComponent
+3) identify other similar lists of entity/score annotations >> identify, OtherThan, Annotation, Similarity, Score, Resource
+4) identify the textual components of the similar lists of entity/score annotations >> identify, TextualComponent, List, Similarity, Resource, Score, Annotation
+5) identify the open educational resources having the similar textual components >> identify, Resource, Set, ResourceFeature, Similarity, TextualComponent
+6) take the 10 most similar open educational resources >> take, Best, 10, Similarity, Resource, Set
+
+---
+
+
+---
+
+"1- extracting semantic entities from an online resource, "
+
+0) identify the online resource >> identify, OnlineResource
+1) identify the textual component >> identify, TextualComponent
+2) discover the occurrence of semantic entities >> discover, Occurrence, SemanticEntity
+
+---
+
+---
+
+"2- indexing these entities, "
+
+0) store the list of entities along with its relation with the online resource >> store, List, Resource, Set, Relation, OnlineResource
+
+---
+
+---
+
+"3- searching by similarity in the index and "
+
+0) having a list of entities >> access, List, Resource
+1) find similar lists of entities >> find, Similarity, List, Resource
+
+---
+
+---
+
+"4- summarising the relationships between resources"
+
+0) having two resources >> 2, access, Resource
+1) identify the relations between the two >> identify, Relation, About, 2
+2) detect the most relevant relations >> detect, Most, Relevance, Relation
+3) summarize the most relevant relations (represent in a synthesis) >> summarize, Most, Relevance, Relation, represent, Synthesis
+
+---
+
+---
+
+"Textual components are first extracted from the resources to be indexed, 
+based on their description on data.open.ac.uk 
+(using the metadata directly for the title and abstract, and links to the textual content, 
+as online documents for OpenLearn units and PDFs of transcripts for podcasts). 
+The online service provided by DBpedia Spotlight is then used to obtain a list of DBpedia 
+entities with confidence/relevance scores for each of these components."
+
+0) having resources to be indexed
+1) identify textual components >> identify, TextualComponent
+1.1) consider the title as a textual component >> consider, Title, TextualComponent
+1.2) consider the abstract as a textual component >> consider, Abstract, TextualComponent
+1.3) consider the link to a transcript as a textual component >> consider, Link, Transcript, TextualComponent
+1.4) consider link to a textual data as a textual component >> consider, Link, TextualData, TextualComponent
+1.4.1) consider link to an html page as a textual component >> consider, Link, HavingType, HtmlType, TextualComponent
+2) identify a list of dbpedia entities with relevance score for each textual component >> identify, List, Entity, Dbpedia, Relevance, Score, TextualComponent
+3) attach the list of dbpedia entities with relevance score at each textual component >> attach, List, Entity, Dbpedia, Relevance, Score, TextualComponent
+
+---
+
+---
+
+"Lucene is however designed to index documents and texts and is based on term-occurrence 
+measures for searching and ranking results (i.e., TF.IDF). The indexing of semantic 
+annotations is therefore realised in such a way that these mechanisms can be used to 
+obtain relevant results when searching on the basis of semantic entities rather than of text.
+[...] This is achieved simply by transforming the relevance score provided by 
+DBpedia Spotlight into a number of occurrences for the entity, therefore repeating the 
+mention of an entity in the index of a given resource depending on its relevance for the resource."
+
+0) being able to search using a term-occurrence measure >> ability, search, Capability, Measure, Term, Occurrence, TermOccurrenceMeasure
+1) being able to rank using a term-occurrence measure >> ability, Capability, rank, Term, Occurrence, TermOccurrenceMeasure
+3) entities may have the role of terms >>  Entity, Role, Term
+4) being able to search using an entity-occurrence measure >> ability, search, Entity, Occurrence, Measure, EntityOccurrenceMeasure
+5) being able to rank using an entity-occurrence measure >> ability, rank, Entity, Occurrence, Measure, EntityOccurrenceMeasure
+
+0) having a textual component annotated with a list of entity/score pairs >> access, TextualComponent, annotate, List, Entity, Score
+1) produce a textual component by concatenating the strings obtained by the concatenation of the string representation of each entity score times. >> produce, TextualComponent, concat, String, obtain, Representation, StringRepresentation, Entity, Each, Score, N-Times
+
+---
+
+---
+
+"'MoreLikeThis'. This mechanism takes as input an indexed document and generates a 
+query that is expected to return other resources having similar indexes."
+
+0) having a document >> access, Document
+1) obtain a similarity query >> obtain, Similarity, Query, SimilarityQuery
+1.1) obtain the set of relevant features of the document >> obtain, Relevance, Feature, Document
+1.2) consider the relevant features a query >> consider, Relevance, Feature, Query
+
+---
+
+---
+
+"to summarise lists of DPpedia entities. It uses DBpedia links between entities in a list 
+(using a local index of DBpedia, optimised for this specific task) to generate a set of 
+connected graphs. Each of these graphs is expected to represent one major topic of the 
+resources being considered. We therefore select the one which contains the most entities 
+with the highest relevance and, within this graph, the entity that appears to be the most 
+connected and the most relevant."
+
+0) having a list of entity/score pairs >> access, List, Entity, Score, Pair
+1) identify connections between the entities as a set using dbpedia >> identify, Link, Entity, Set, Dbpedia
+2) consider the connections as a graph >> consider, Link, Graph
+3) identify subsets of connected graphs within the graph >> identify, Subset, Link, Graph
+4) consider each subgraph as an individual >> consider, Each, Subgraph, Individual
+5) attach to each subgraph a score being the sum of all scores of its entities >> attach, Each, Subgraph, Score, Sum, Entity
+6) identify the subgraph with the highest score >> identify, Subgraph, Max, Score
+7) consider the subgraph with the highest score as the best subgraph >> consider, Subgraph, Max, Score, Best, Subgraph
+8) identify the most connected entity within the best subgraph >> identify, Link, Entity, Best, Subgraph
+9) consider the most connected entity as the exemplar >> consider, Link, Entity, Exemplar
+9) describe the list using the exemplar >>  describe, List, by, Exemplar
+
+---
+
+---
+
+"textual components of open educational resources are automatically annotated with relevant entities 
+(using a named entity recognition system) so that these rich annotations can be searched by similarity."
+
+0) having an open educational resource >> access, Resource
+1) identify its textual component >> identify, TextualComponent
+2) identify the list of entity/score annotations of the textual component >> identify, List, Resource, Score, Annotation, TextualComponent
+3) identify other similar lists of entity/score annotations >> identify, OtherThan, Annotation, Similarity, Score, Resource
+4) identify the textual components of the similar lists of entity/score annotations >> identify, TextualComponent, List, Similarity, Resource, Score, Annotation
+5) identify the open educational resources having the similar textual components >> identify, Resource, Set, ResourceFeature, Similarity, TextualComponent
+6) take the 10 most similar open educational resources >> take, Best, 10, Similarity, Resource, Set
+
+---
+
+@prefix dbpedia: 	<http://dbpedia.org/resource/> .
+@prefix dn: 		<http://purl.org/datanode/ns/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix void: 		<http://rdfs.org/ns/void#> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@prefix skos: 		<http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:	 	<http://www.w3.org/2002/07/owl#> .
+@prefix dbprop:		<http://dbpedia.org/property/> .
+@prefix dct: 		<http://purl.org/dc/terms/> .
+
+:text dn:isPartOf :input .
+:entities 
+	dn:extractedFrom :text ;
+	dn:overlappingPopulationWith [ dn:isPartOf :index ] .
+:entities dn:hasSection [ dn:hasVocabulary :score ] .
+:similarEntities
+	dn:isPartOf :index ;
+	dn:overlappingCapabilityWith :entities .
+:similarText
+	dn:hasExtraction :similarEntities .
+:similar
+	dn:hasSection [ dn:hasVocabulary :score ] ;
+	dn:hasPart :similarText .
+:output
+	dn:isSelectionOf :similar .
+---

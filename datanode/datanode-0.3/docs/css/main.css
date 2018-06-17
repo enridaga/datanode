@@ -1,0 +1,23 @@
+body{
+	background: #fefefe;
+	padding-top: 50px;
+}
+.code,
+code{
+	color: #c7254e;
+	background-color: #f9f2f4;
+	display:block;
+	white-space: pre-wrap;
+	font-family: monospace;
+}
+ul li{
+	display: inline-block;
+	list-style: none;
+	margin-right: 1em;
+}
+
+.definition table th{
+	width: 20%;
+	max-width: 30%;
+}
+
