@@ -1,4 +1,5 @@
-#!/usr/bin/env
+#!/usr/bin/env ruby
+##### !/usr/bin/env
 #
 #
 #
@@ -9,7 +10,7 @@
 
 require 'rubygems'
 require 'set'
-require 'trollop'
+require 'optimist'
 require 'rdf'
 require 'rdf/raptor'
 require 'yaml'
@@ -438,37 +439,37 @@ end
 if __FILE__ == $0
 
 	SUB_COMMANDS = %w(js jstree ptree pgraphml)
-	global_opts = Trollop::options do
+	global_opts = Optimist::options do
 		version "gentree.rb 1.0.0 (c) 2013 Enrico Daga"
 	    stop_on SUB_COMMANDS
 	end
 	cmd = ARGV.shift # 
 	cmd_opts = case cmd
 	    when "ptree" 
-  	   Trollop::options do
+  	   Optimist::options do
   	   opt :file, "Vocabulary file", :short => "-f", :type => :string
     	 opt :root, "Root element", :short => "-r", :type => :string, :default => ""
   	  end
 	    when "jstree" 
-  	   Trollop::options do
+  	   Optimist::options do
   	   opt :file, "Vocabulary file", :short => "-f", :type => :string
     	 opt :root, "Root element", :short => "-r", :type => :string, :default => ""
   	  end
 	    when "js" 
-  	   Trollop::options do
+  	   Optimist::options do
   	   opt :file, "Vocabulary file", :short => "-f", :type => :string
     	 opt :root, "Root element", :short => "-r", :type => :string, :default => ""
   	  end
   	  when "pgraphml"  
-    	 Trollop::options do
+    	 Optimist::options do
     	 opt :file, "Vocabulary file", :short => "-f", :type => :string
     	 opt :root, "Root element", :short => "-r", :type => :string, :default => ""
     	end
   	else
-    	Trollop::die "unknown subcommand #{cmd.inspect}"
+    	Optimist::die "unknown subcommand #{cmd.inspect}"
   	end
   	
-	Trollop::die :file, "must exist" unless File.exist?(cmd_opts[:file]) if cmd_opts[:file]
+	Optimist::die :file, "must exist" unless File.exist?(cmd_opts[:file]) if cmd_opts[:file]
 
 	file = cmd_opts[:file]
 	root = cmd_opts[:root]

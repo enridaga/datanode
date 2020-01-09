@@ -1,165 +1,21 @@
-var nodes=
-[{ 
-	id: "0",
-	uri: "http://purl.org/datanode/ex/0.2/AEMOO/1#DBPedia",
-	label: "ex:DBPedia",
-	links: [{
-		target: 1,
-		label: "void:sparqlEndpoint",
-	uri: "http://rdfs.org/ns/void#sparqlEndpoint",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "1",
-	uri: "http://dbpedia.org/sparql",
-	label: "http://dbpedia.org/sparql",
-	links: [],
-},{ 
-	id: "2",
-	uri: "http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource",
-	label: "ex:aboutResource",
-	links: [{
-		target: 3,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 0,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "3",
-	uri: "http://dbpedia.org/resource/Barack_Obama",
-	label: "http://dbpedia.org/resource/Barack_Obama",
-	links: [],
-},{ 
-	id: "4",
-	uri: "http://purl.org/datanode/ex/0.2/AEMOO/1#dbpediaTypes",
-	label: "ex:dbpediaTypes",
-	links: [{
-		target: 0,
-		label: "dn:typesOf",
-	uri: "http://purl.org/datanode/ns/typesOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "5",
-	uri: "http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatternOfResourceType",
-	label: "ex:knowledgePatternOfResourceType",
-	links: [{
-		target: 6,
-		label: "dn:describedBy",
-	uri: "http://purl.org/datanode/ns/describedBy",
-		type: "default",
-		weight: 1,
-	},{
-		target: 7,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 8,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "6",
-	uri: "http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatterns",
-	label: "ex:knowledgePatterns",
-	links: [{
-		target: 0,
-		label: "dn:extractedFrom",
-	uri: "http://purl.org/datanode/ns/extractedFrom",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "7",
-	uri: "http://purl.org/datanode/ex/0.2/AEMOO/1#resourcePrimaryType",
-	label: "ex:resourcePrimaryType",
-	links: [{
-		target: 9,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "8",
-	uri: "http://purl.org/datanode/ex/0.2/AEMOO/1#summarizationMethods",
-	label: "ex:summarizationMethods",
-	links: [{
-		target: 4,
-		label: "dn:combinationFrom",
-	uri: "http://purl.org/datanode/ns/combinationFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 6,
-		label: "dn:combinationFrom",
-	uri: "http://purl.org/datanode/ns/combinationFrom",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "9",
-	uri: "http://purl.org/datanode/ex/0.2/AEMOO/1#resourceTypes",
-	label: "ex:resourceTypes",
-	links: [{
-		target: 4,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:isSectionOf",
-	uri: "http://purl.org/datanode/ns/isSectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "10",
-	uri: "http://purl.org/datanode/ex/0.2/AEMOO/1#resourceSummary",
-	label: "ex:resourceSummary",
-	links: [{
-		target: 3,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:isStandInOf",
-	uri: "http://purl.org/datanode/ns/isStandInOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:isSummarizationOf",
-	uri: "http://purl.org/datanode/ns/isSummarizationOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:remodelledFrom",
-	uri: "http://purl.org/datanode/ns/remodelledFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 5,
-		label: "dn:usesSchema",
-	uri: "http://purl.org/datanode/ns/usesSchema",
-		type: "default",
-		weight: 1,
-	},],
-},]
+var nodes=[
+{"label": "http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatternOfResourceType", "id": "0", "links": [{"uri": "http://purl.org/datanode/ns/describedBy", "type": "default", "target": 7, "weight": 1, "label": "dn:describedBy"}, {"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 3, "weight": 1, "label": "dn:isSelectionOf"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 5, "weight": 1, "label": "dn:describes"}], "uri": "http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatternOfResourceType"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource", "id": "1", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 8, "weight": 1, "label": "dn:isPortionOf"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 9, "weight": 1, "label": "dn:describes"}], "uri": "http://purl.org/datanode/ex/0.2/AEMOO/1#aboutResource"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/AEMOO/1#dbpediaTypes", "id": "2", "links": [{"uri": "http://purl.org/datanode/ns/typesOf", "type": "default", "target": 8, "weight": 1, "label": "dn:typesOf"}], "uri": "http://purl.org/datanode/ex/0.2/AEMOO/1#dbpediaTypes"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/AEMOO/1#summarizationMethods", "id": "3", "links": [{"uri": "http://purl.org/datanode/ns/combinationFrom", "type": "default", "target": 7, "weight": 1, "label": "dn:combinationFrom"}, {"uri": "http://purl.org/datanode/ns/combinationFrom", "type": "default", "target": 2, "weight": 1, "label": "dn:combinationFrom"}], "uri": "http://purl.org/datanode/ex/0.2/AEMOO/1#summarizationMethods"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/AEMOO/1#resourceSummary", "id": "4", "links": [{"uri": "http://purl.org/datanode/ns/remodelledFrom", "type": "default", "target": 1, "weight": 1, "label": "dn:remodelledFrom"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 9, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/usesSchema", "type": "default", "target": 0, "weight": 1, "label": "dn:usesSchema"}, {"uri": "http://purl.org/datanode/ns/isSummarizationOf", "type": "default", "target": 1, "weight": 1, "label": "dn:isSummarizationOf"}, {"uri": "http://purl.org/datanode/ns/isStandInOf", "type": "default", "target": 1, "weight": 1, "label": "dn:isStandInOf"}], "uri": "http://purl.org/datanode/ex/0.2/AEMOO/1#resourceSummary"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/AEMOO/1#resourcePrimaryType", "id": "5", "links": [{"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 6, "weight": 1, "label": "dn:isSelectionOf"}], "uri": "http://purl.org/datanode/ex/0.2/AEMOO/1#resourcePrimaryType"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/AEMOO/1#resourceTypes", "id": "6", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 2, "weight": 1, "label": "dn:isPortionOf"}, {"uri": "http://purl.org/datanode/ns/isSectionOf", "type": "default", "target": 1, "weight": 1, "label": "dn:isSectionOf"}], "uri": "http://purl.org/datanode/ex/0.2/AEMOO/1#resourceTypes"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatterns", "id": "7", "links": [{"uri": "http://purl.org/datanode/ns/extractedFrom", "type": "default", "target": 8, "weight": 1, "label": "dn:extractedFrom"}], "uri": "http://purl.org/datanode/ex/0.2/AEMOO/1#knowledgePatterns"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/AEMOO/1#DBPedia", "id": "8", "links": [], "uri": "http://purl.org/datanode/ex/0.2/AEMOO/1#DBPedia"}
+,
+{"label": "dbpedia:Barack_Obama", "id": "9", "links": [], "uri": "http://dbpedia.org/resource/Barack_Obama"}
+]

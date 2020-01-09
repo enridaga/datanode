@@ -1,85 +1,15 @@
-var nodes=
-[{ 
-	id: "0",
-	uri: "_:g70274226678920",
-	label: "_:g70274226678920",
-	links: [{
-		target: 1,
-		label: "dn:disjointSection",
-	uri: "http://purl.org/datanode/ns/disjointSection",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "1",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/10#useless",
-	label: "ex:useless",
-	links: [],
-},{ 
-	id: "2",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/10#dset",
-	label: "ex:dset",
-	links: [{
-		target: 1,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 0,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "3",
-	uri: "_:g70274226597320",
-	label: "_:g70274226597320",
-	links: [],
-},{ 
-	id: "4",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/10#linkToSingleArtist",
-	label: "ex:linkToSingleArtist",
-	links: [{
-		target: 3,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "5",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/10#uselessOnlyOnce",
-	label: "ex:uselessOnlyOnce",
-	links: [{
-		target: 1,
-		label: "dn:isSectionOf",
-	uri: "http://purl.org/datanode/ns/isSectionOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 4,
-		label: "dn:relations",
-	uri: "http://purl.org/datanode/ns/relations",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "6",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/10#uselessTooGeneric",
-	label: "ex:uselessTooGeneric",
-	links: [{
-		target: 5,
-		label: "dn:disjointSection",
-	uri: "http://purl.org/datanode/ns/disjointSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 1,
-		label: "dn:isSectionOf",
-	uri: "http://purl.org/datanode/ns/isSectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},]
+var nodes=[
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/10#uselessTooGeneric", "id": "0", "links": [{"uri": "http://purl.org/datanode/ns/isSectionOf", "type": "default", "target": 5, "weight": 1, "label": "dn:isSectionOf"}, {"uri": "http://purl.org/datanode/ns/disjointSection", "type": "default", "target": 3, "weight": 1, "label": "dn:disjointSection"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/10#uselessTooGeneric"}
+,
+{"label": "ub2bL16C29", "id": "1", "links": [{"uri": "http://purl.org/datanode/ns/disjointSection", "type": "default", "target": 5, "weight": 1, "label": "dn:disjointSection"}], "uri": "ub2bL16C29"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/10#dset", "id": "2", "links": [{"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 1, "weight": 1, "label": "dn:hasSection"}, {"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 5, "weight": 1, "label": "dn:hasSection"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/10#dset"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/10#uselessOnlyOnce", "id": "3", "links": [{"uri": "http://purl.org/datanode/ns/isSectionOf", "type": "default", "target": 5, "weight": 1, "label": "dn:isSectionOf"}, {"uri": "http://purl.org/datanode/ns/relations", "type": "default", "target": 4, "weight": 1, "label": "dn:relations"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/10#uselessOnlyOnce"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/10#linkToSingleArtist", "id": "4", "links": [{"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 6, "weight": 1, "label": "dn:hasPortion"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/10#linkToSingleArtist"}
+,
+{"label": "ex1:useless", "id": "5", "links": [], "uri": "http://purl.org/datanode/ex/0.2/DBREC/10#useless"}
+,
+{"label": "ub2bL22C19", "id": "6", "links": [], "uri": "ub2bL22C19"}
+]

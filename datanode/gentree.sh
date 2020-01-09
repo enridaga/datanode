@@ -7,6 +7,8 @@ do
 done
 
 
-export DYLD_LIBRARY_PATH=/opt/local/lib:$DYLD_LIBRARY_PATH && ruby1.9 gentree.rb $params
-unset DYLD_LIBRARY_PATH
+echo "Running ruby gentree.rb $params"
+#export DYLD_LIBRARY_PATH=/opt/local/lib:$DYLD_LIBRARY_PATH && 
+ruby gentree.rb $params
+#unset DYLD_LIBRARY_PATH
 

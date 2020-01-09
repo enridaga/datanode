@@ -12,10 +12,10 @@ var docs='build/docs';
 var usecases_home=docs + "/usecases";
 var scriptPlaceholder="<!-- SCRIPTS -->"
 if(!fs.existsSync(usecases_home)){
-		fs.mkdir(usecases_home);
+		fs.mkdirSync(usecases_home);
 }
 if(!fs.existsSync(docs + '/css')){
-		fs.mkdir(docs + '/css');
+		fs.mkdir(docs + '/css', function(){});
 }
 
 function embed(tmpl, data){

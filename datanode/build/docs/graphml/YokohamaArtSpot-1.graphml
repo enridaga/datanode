@@ -9,152 +9,136 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
-<!-- _:g70310196224500 -->
-<!-- _:g70310196224500 -->
-		<node id="n3060328738112168614">
-			<data key="k_label"><![CDATA[_:g70310196224500]]></data>
-			<data key="d5"><![CDATA[_:g70310196224500]]></data>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1# -->
+<!-- It uses following three different datasets as data sources; LODAC Museum, Yokohama Art LOD and PinQA. [...] PinQA is a social geographical Q&A service provided by NTT Resonant, Inc. that obtains and  shares users Q&As corresponding to the specified geographical regions in a map. [...] If a user takes an action, such as opening a new page that describes details about an institution,  this is queried to the SPARQL endpoints of each LOD. The application then presents new  information to the user using the data returned from the SPARQL endpoints. [...] When a user accesses the application, a map view is presented, as shown in Fig. 3.  This view gives users information on the kind of art they can experience by displaying institutions.   The locations of the current day’s events and Q&As related to the displayed area are also   presented on the map of Yokohama. [...] In this map view, the name, address, and geographical coordinates of institutions  to be presented are extracted from LODAC Museum with SPARQL using the latitudes and longitudes  of the displayed area. As for the event information, the application obtains data for the events  that would be held at those institutions included in the displayed area from Yokohama Art LOD using SPARQL. -->
+		<node id="n4315614016">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->_:g70310196224500<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>It uses following three different datasets as data sources; LODAC Museum, Yokohama Art LOD and PinQA. [...] PinQA is a social geographical Q&A service provided by NTT Resonant, Inc. that obtains and  shares users Q&As corresponding to the specified geographical regions in a map. [...] If a user takes an action, such as opening a new page that describes details about an institution,  this is queried to the SPARQL endpoints of each LOD. The application then presents new  information to the user using the data returned from the SPARQL endpoints. [...] When a user accesses the application, a map view is presented, as shown in Fig. 3.  This view gives users information on the kind of art they can experience by displaying institutions.   The locations of the current day’s events and Q&As related to the displayed area are also   presented on the map of Yokohama. [...] In this map view, the name, address, and geographical coordinates of institutions  to be presented are extracted from LODAC Museum with SPARQL using the latitudes and longitudes  of the displayed area. As for the event information, the application obtains data for the events  that would be held at those institutions included in the displayed area from Yokohama Art LOD using SPARQL.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- It uses following three different datasets as data sources; LODAC Museum, Yokohama Art LOD and PinQA. [...] PinQA is a social geographical Q&A service provided by NTT Resonant, Inc. that obtains and  shares users Q&As corresponding to the specified geographical regions in a map. [...] If a user takes an action, such as opening a new page that describes details about an institution,  this is queried to the SPARQL endpoints of each LOD. The application then presents new  information to the user using the data returned from the SPARQL endpoints. [...] When a user accesses the application, a map view is presented, as shown in Fig. 3.  This view gives users information on the kind of art they can experience by displaying institutions.   The locations of the current day’s events and Q&As related to the displayed area are also   presented on the map of Yokohama. [...] In this map view, the name, address, and geographical coordinates of institutions  to be presented are extracted from LODAC Museum with SPARQL using the latitudes and longitudes  of the displayed area. As for the event information, the application obtains data for the events  that would be held at those institutions included in the displayed area from Yokohama Art LOD using SPARQL. -->
+		<edge id="e_4315614016_4315614496_4315518032" source="n4315614016" target="n4315518032">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4315614016_4315614176_4315614336" source="n4315614016" target="n4315614336">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having data about locations, institutions and events >> access, Data, Location, Institution, Event 1) having a specific location >> receive, Location 2) identify latitude and longitude of the specific area >> identify, Latitude, Longitude, GeoLocation, Area 3) identify near institutions >> identify, Near, Institution 4) identify near events >> identify, Near, Event 5) represent institutions and events as locations >> represent, Institution, Event, Location -->
+		<edge id="e_4315614016_4315614096_4315531600" source="n4315614016" target="n4315531600">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL25C19 -->
+<!-- ub2bL25C19 -->
+		<node id="n4315614256">
+			<data key="k_label"><![CDATA[ub2bL25C19]]></data>
+			<data key="d5"><![CDATA[ub2bL25C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL25C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
 <!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude -->
-<!-- ex:latitude -->
-		<node id="n-3682428621834034905">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:latitude<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+		<edge id="e_4315614256_4315615056_4315614976" source="n4315614256" target="n4315614976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
 			</data>
-		</node>
+		</edge>
 <!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude -->
-<!-- ex:longitude -->
-		<node id="n-1808245237431170904">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude]]></data>
+		<edge id="e_4315614256_4315615056_4315614736" source="n4315614256" target="n4315614736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL25C19 -->
+<!-- ub2bL25C19 -->
+		<node id="n4315614256">
+			<data key="k_label"><![CDATA[ub2bL25C19]]></data>
+			<data key="d5"><![CDATA[ub2bL25C19]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:longitude<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>ub2bL25C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents -->
-<!-- ex:nearEvents -->
-		<node id="n1226446757005591262">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:nearEvents<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude -->
+		<edge id="e_4315614256_4315615056_4315614976" source="n4315614256" target="n4315614976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
 			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#Yokohama_Art_LOD -->
-<!-- ex:Yokohama_Art_LOD -->
-		<node id="n3173764531471916099">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#Yokohama_Art_LOD]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#Yokohama_Art_LOD]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:Yokohama_Art_LOD<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude -->
+		<edge id="e_4315614256_4315615056_4315614736" source="n4315614256" target="n4315614736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
 			</data>
-		</node>
-<!-- _:g70310196139780 -->
-<!-- _:g70310196139780 -->
-		<node id="n2869145285234147583">
-			<data key="k_label"><![CDATA[_:g70310196139780]]></data>
-			<data key="d5"><![CDATA[_:g70310196139780]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->_:g70310196139780<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions -->
-<!-- ex:nearInstitutions -->
-		<node id="n2093541291913678612">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:nearInstitutions<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#LODAC_Museum -->
-<!-- ex:LODAC_Museum -->
-		<node id="n4488051975380133376">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#LODAC_Museum]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#LODAC_Museum]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:LODAC_Museum<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- _:g70310180291400 -->
-<!-- _:g70310180291400 -->
-		<node id="n-3556926434579788570">
-			<data key="k_label"><![CDATA[_:g70310180291400]]></data>
-			<data key="d5"><![CDATA[_:g70310180291400]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->_:g70310180291400<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA -->
-<!-- ex:nearQA -->
-		<node id="n1097715207996757627">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:nearQA<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#PinQA -->
-<!-- ex:PinQA -->
-		<node id="n-388618641098692576">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#PinQA]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#PinQA]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:PinQA<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
+		</edge>
 <!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page -->
-<!-- ex:page -->
-		<node id="n3827481117895223989">
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page -->
+		<node id="n4315632336">
 			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page]]></data>
 			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page]]></data>
 			<data key="key_nodegraphics">
@@ -162,131 +146,17 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:page<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude"] -->
-		<edge id="e_3060328738112168614_1608582330858932033_-3682428621834034905" source="n3060328738112168614" target="n-3682428621834034905">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:describes</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude"] -->
-		<edge id="e_3060328738112168614_1608582330858932033_-1808245237431170904" source="n3060328738112168614" target="n-1808245237431170904">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:describes</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70310196224500"] -->
-		<edge id="e_1226446757005591262_343051586767600381_3060328738112168614" source="n1226446757005591262" target="n3060328738112168614">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#Yokohama_Art_LOD"] -->
-		<edge id="e_1226446757005591262_2583324284036911506_3173764531471916099" source="n1226446757005591262" target="n3173764531471916099">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude"] -->
-		<edge id="e_2869145285234147583_1608582330858932033_-3682428621834034905" source="n2869145285234147583" target="n-3682428621834034905">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:describes</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude"] -->
-		<edge id="e_2869145285234147583_1608582330858932033_-1808245237431170904" source="n2869145285234147583" target="n-1808245237431170904">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:describes</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70310196139780"] -->
-		<edge id="e_2093541291913678612_343051586767600381_2869145285234147583" source="n2093541291913678612" target="n2869145285234147583">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#LODAC_Museum"] -->
-		<edge id="e_2093541291913678612_2583324284036911506_4488051975380133376" source="n2093541291913678612" target="n4488051975380133376">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude"] -->
-		<edge id="e_-3556926434579788570_1608582330858932033_-3682428621834034905" source="n-3556926434579788570" target="n-3682428621834034905">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:describes</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude"] -->
-		<edge id="e_-3556926434579788570_1608582330858932033_-1808245237431170904" source="n-3556926434579788570" target="n-1808245237431170904">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:describes</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70310180291400"] -->
-		<edge id="e_1097715207996757627_343051586767600381_-3556926434579788570" source="n1097715207996757627" target="n-3556926434579788570">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#PinQA"] -->
-		<edge id="e_1097715207996757627_2583324284036911506_-388618641098692576" source="n1097715207996757627" target="n-388618641098692576">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA"] -->
-		<edge id="e_3827481117895223989_-4551904354285035373_1226446757005591262" source="n3827481117895223989" target="n1226446757005591262">
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents -->
+		<edge id="e_4315632336_4315632496_4315614576" source="n4315632336" target="n4315614576">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -295,8 +165,8 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA"] -->
-		<edge id="e_3827481117895223989_-4551904354285035373_2093541291913678612" source="n3827481117895223989" target="n2093541291913678612">
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions -->
+		<edge id="e_4315632336_4315632496_4315631776" source="n4315632336" target="n4315631776">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -305,13 +175,667 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions", "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA"] -->
-		<edge id="e_3827481117895223989_-4551904354285035373_1097715207996757627" source="n3827481117895223989" target="n1097715207996757627">
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA -->
+		<edge id="e_4315632336_4315632496_4315632096" source="n4315632336" target="n4315632096">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
 				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page -->
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page -->
+		<node id="n4315632336">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents -->
+		<edge id="e_4315632336_4315632496_4315614576" source="n4315632336" target="n4315614576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions -->
+		<edge id="e_4315632336_4315632496_4315631776" source="n4315632336" target="n4315631776">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA -->
+		<edge id="e_4315632336_4315632496_4315632096" source="n4315632336" target="n4315632096">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL31C19 -->
+<!-- ub2bL31C19 -->
+		<node id="n4315632176">
+			<data key="k_label"><![CDATA[ub2bL31C19]]></data>
+			<data key="d5"><![CDATA[ub2bL31C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL31C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude -->
+		<edge id="e_4315632176_4315615056_4315614976" source="n4315632176" target="n4315614976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude -->
+		<edge id="e_4315632176_4315615056_4315614736" source="n4315632176" target="n4315614736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL31C19 -->
+<!-- ub2bL31C19 -->
+		<node id="n4315632176">
+			<data key="k_label"><![CDATA[ub2bL31C19]]></data>
+			<data key="d5"><![CDATA[ub2bL31C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL31C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude -->
+		<edge id="e_4315632176_4315615056_4315614976" source="n4315632176" target="n4315614976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude -->
+		<edge id="e_4315632176_4315615056_4315614736" source="n4315632176" target="n4315614736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA -->
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA -->
+		<node id="n4315632096">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#PinQA -->
+		<edge id="e_4315632096_4315631856_4315632256" source="n4315632096" target="n4315632256">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL31C19 -->
+		<edge id="e_4315632096_4315614816_4315632176" source="n4315632096" target="n4315632176">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA -->
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA -->
+		<node id="n4315632096">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#PinQA -->
+		<edge id="e_4315632096_4315631856_4315632256" source="n4315632096" target="n4315632256">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL31C19 -->
+		<edge id="e_4315632096_4315614816_4315632176" source="n4315632096" target="n4315632176">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents -->
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents -->
+		<node id="n4315614576">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL19C19 -->
+		<edge id="e_4315614576_4315614816_4315614656" source="n4315614576" target="n4315614656">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#Yokohama_Art_LOD -->
+		<edge id="e_4315614576_4315631856_4315631696" source="n4315614576" target="n4315631696">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page -->
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page -->
+		<node id="n4315632336">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents -->
+		<edge id="e_4315632336_4315632496_4315614576" source="n4315632336" target="n4315614576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions -->
+		<edge id="e_4315632336_4315632496_4315631776" source="n4315632336" target="n4315631776">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA -->
+		<edge id="e_4315632336_4315632496_4315632096" source="n4315632336" target="n4315632096">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents -->
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents -->
+		<node id="n4315614576">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL19C19 -->
+		<edge id="e_4315614576_4315614816_4315614656" source="n4315614576" target="n4315614656">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#Yokohama_Art_LOD -->
+		<edge id="e_4315614576_4315631856_4315631696" source="n4315614576" target="n4315631696">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL19C19 -->
+<!-- ub2bL19C19 -->
+		<node id="n4315614656">
+			<data key="k_label"><![CDATA[ub2bL19C19]]></data>
+			<data key="d5"><![CDATA[ub2bL19C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL19C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude -->
+		<edge id="e_4315614656_4315615056_4315614736" source="n4315614656" target="n4315614736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude -->
+		<edge id="e_4315614656_4315615056_4315614976" source="n4315614656" target="n4315614976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL19C19 -->
+<!-- ub2bL19C19 -->
+		<node id="n4315614656">
+			<data key="k_label"><![CDATA[ub2bL19C19]]></data>
+			<data key="d5"><![CDATA[ub2bL19C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL19C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude -->
+		<edge id="e_4315614656_4315615056_4315614736" source="n4315614656" target="n4315614736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude -->
+		<edge id="e_4315614656_4315615056_4315614976" source="n4315614656" target="n4315614976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL31C19 -->
+<!-- ub2bL31C19 -->
+		<node id="n4315632176">
+			<data key="k_label"><![CDATA[ub2bL31C19]]></data>
+			<data key="d5"><![CDATA[ub2bL31C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL31C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude -->
+		<edge id="e_4315632176_4315615056_4315614976" source="n4315632176" target="n4315614976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude -->
+		<edge id="e_4315632176_4315615056_4315614736" source="n4315632176" target="n4315614736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions -->
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions -->
+		<node id="n4315631776">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#LODAC_Museum -->
+		<edge id="e_4315631776_4315631856_4315632016" source="n4315631776" target="n4315632016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL25C19 -->
+		<edge id="e_4315631776_4315614816_4315614256" source="n4315631776" target="n4315614256">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL25C19 -->
+<!-- ub2bL25C19 -->
+		<node id="n4315614256">
+			<data key="k_label"><![CDATA[ub2bL25C19]]></data>
+			<data key="d5"><![CDATA[ub2bL25C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL25C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude -->
+		<edge id="e_4315614256_4315615056_4315614976" source="n4315614256" target="n4315614976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude -->
+		<edge id="e_4315614256_4315615056_4315614736" source="n4315614256" target="n4315614736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL19C19 -->
+<!-- ub2bL19C19 -->
+		<node id="n4315614656">
+			<data key="k_label"><![CDATA[ub2bL19C19]]></data>
+			<data key="d5"><![CDATA[ub2bL19C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL19C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude -->
+		<edge id="e_4315614656_4315615056_4315614736" source="n4315614656" target="n4315614736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude -->
+		<edge id="e_4315614656_4315615056_4315614976" source="n4315614656" target="n4315614976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1# -->
+<!-- It uses following three different datasets as data sources; LODAC Museum, Yokohama Art LOD and PinQA. [...] PinQA is a social geographical Q&A service provided by NTT Resonant, Inc. that obtains and  shares users Q&As corresponding to the specified geographical regions in a map. [...] If a user takes an action, such as opening a new page that describes details about an institution,  this is queried to the SPARQL endpoints of each LOD. The application then presents new  information to the user using the data returned from the SPARQL endpoints. [...] When a user accesses the application, a map view is presented, as shown in Fig. 3.  This view gives users information on the kind of art they can experience by displaying institutions.   The locations of the current day’s events and Q&As related to the displayed area are also   presented on the map of Yokohama. [...] In this map view, the name, address, and geographical coordinates of institutions  to be presented are extracted from LODAC Museum with SPARQL using the latitudes and longitudes  of the displayed area. As for the event information, the application obtains data for the events  that would be held at those institutions included in the displayed area from Yokohama Art LOD using SPARQL. -->
+		<node id="n4315614016">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>It uses following three different datasets as data sources; LODAC Museum, Yokohama Art LOD and PinQA. [...] PinQA is a social geographical Q&A service provided by NTT Resonant, Inc. that obtains and  shares users Q&As corresponding to the specified geographical regions in a map. [...] If a user takes an action, such as opening a new page that describes details about an institution,  this is queried to the SPARQL endpoints of each LOD. The application then presents new  information to the user using the data returned from the SPARQL endpoints. [...] When a user accesses the application, a map view is presented, as shown in Fig. 3.  This view gives users information on the kind of art they can experience by displaying institutions.   The locations of the current day’s events and Q&As related to the displayed area are also   presented on the map of Yokohama. [...] In this map view, the name, address, and geographical coordinates of institutions  to be presented are extracted from LODAC Museum with SPARQL using the latitudes and longitudes  of the displayed area. As for the event information, the application obtains data for the events  that would be held at those institutions included in the displayed area from Yokohama Art LOD using SPARQL.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- It uses following three different datasets as data sources; LODAC Museum, Yokohama Art LOD and PinQA. [...] PinQA is a social geographical Q&A service provided by NTT Resonant, Inc. that obtains and  shares users Q&As corresponding to the specified geographical regions in a map. [...] If a user takes an action, such as opening a new page that describes details about an institution,  this is queried to the SPARQL endpoints of each LOD. The application then presents new  information to the user using the data returned from the SPARQL endpoints. [...] When a user accesses the application, a map view is presented, as shown in Fig. 3.  This view gives users information on the kind of art they can experience by displaying institutions.   The locations of the current day’s events and Q&As related to the displayed area are also   presented on the map of Yokohama. [...] In this map view, the name, address, and geographical coordinates of institutions  to be presented are extracted from LODAC Museum with SPARQL using the latitudes and longitudes  of the displayed area. As for the event information, the application obtains data for the events  that would be held at those institutions included in the displayed area from Yokohama Art LOD using SPARQL. -->
+		<edge id="e_4315614016_4315614496_4315518032" source="n4315614016" target="n4315518032">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4315614016_4315614176_4315614336" source="n4315614016" target="n4315614336">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having data about locations, institutions and events >> access, Data, Location, Institution, Event 1) having a specific location >> receive, Location 2) identify latitude and longitude of the specific area >> identify, Latitude, Longitude, GeoLocation, Area 3) identify near institutions >> identify, Near, Institution 4) identify near events >> identify, Near, Event 5) represent institutions and events as locations >> represent, Institution, Event, Location -->
+		<edge id="e_4315614016_4315614096_4315531600" source="n4315614016" target="n4315531600">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions -->
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions -->
+		<node id="n4315631776">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#LODAC_Museum -->
+		<edge id="e_4315631776_4315631856_4315632016" source="n4315631776" target="n4315632016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL25C19 -->
+		<edge id="e_4315631776_4315614816_4315614256" source="n4315631776" target="n4315614256">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>

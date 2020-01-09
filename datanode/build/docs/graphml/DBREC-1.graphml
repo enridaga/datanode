@@ -9,22 +9,9 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
-<!-- http://purl.org/datanode/ex/0.2/DBREC/1#accurate -->
-<!-- ex:accurate -->
-		<node id="n-1823153308509229133">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#accurate]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#accurate]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:accurate<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
 <!-- http://purl.org/datanode/ex/0.2/DBREC/1#origin -->
-<!-- ex:origin -->
-		<node id="n-2118346706881800401">
+<!-- http://purl.org/datanode/ex/0.2/DBREC/1#origin -->
+		<node id="n4445747632">
 			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#origin]]></data>
 			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#origin]]></data>
 			<data key="key_nodegraphics">
@@ -32,57 +19,17 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:origin<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/DBREC/1#origin<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
 <!-- 39000 -->
-<!-- &lt;html&gt;39000&lt;/html&gt; -->
-		<node id="n3702665091863330204">
-			<data key="k_label"><![CDATA[39000]]></data>
-			<data key="d5"><![CDATA[39000]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->&lt;html&gt;39000&lt;/html&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- 3004351 -->
-<!-- &lt;html&gt;3004351&lt;/html&gt; -->
-		<node id="n-609054532279976219">
-			<data key="k_label"><![CDATA[3004351]]></data>
-			<data key="d5"><![CDATA[3004351]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->&lt;html&gt;3004351&lt;/html&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- ["http://purl.org/datanode/ex/0.2/DBREC/1#origin"] -->
-		<edge id="e_-1823153308509229133_1885186466339237565_-2118346706881800401" source="n-1823153308509229133" target="n-2118346706881800401">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:cleanedFrom</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/DBREC/1#origin"] -->
-		<edge id="e_-1823153308509229133_2759364124942208761_-2118346706881800401" source="n-1823153308509229133" target="n-2118346706881800401">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:optimizedFrom</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["39000"] -->
-		<edge id="e_-2118346706881800401_-1687809774399569788_3702665091863330204" source="n-2118346706881800401" target="n3702665091863330204">
+		<edge id="e_4445747632_4445748112_4445666000" source="n4445747632" target="n4445666000">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -91,13 +38,150 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["3004351"] -->
-		<edge id="e_-2118346706881800401_-1414171295137498460_-609054532279976219" source="n-2118346706881800401" target="n-609054532279976219">
+<!-- 3004351 -->
+		<edge id="e_4445747632_4445748352_4445664464" source="n4445747632" target="n4445664464">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
 				<y:EdgeLabel>void:triples</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/1#accurate -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/1#accurate -->
+		<node id="n4445747472">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#accurate]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#accurate]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/1#accurate<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/1#origin -->
+		<edge id="e_4445747472_4445747712_4445747632" source="n4445747472" target="n4445747632">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:cleanedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/1#origin -->
+		<edge id="e_4445747472_4445747152_4445747632" source="n4445747472" target="n4445747632">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:optimizedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/1# -->
+<!-- The original dataset, including more than 39,000 resources,  included 3,004,351 triples. We then cleaned it to get a smaller and more accurate dataset,  -->
+		<node id="n4445746752">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>The original dataset, including more than 39,000 resources,  included 3,004,351 triples. We then cleaned it to get a smaller and more accurate dataset, <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4445746752_4445747072_4445747232" source="n4445746752" target="n4445747232">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having data with 39,000 resources and 3,004,351 triples >> access, Data, 39000, Resource, 3004351, Triple 1) clean it to make it smaller and accurate >> clean, reduce, cure -->
+		<edge id="e_4445746752_4445746992_4445653840" source="n4445746752" target="n4445653840">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- The original dataset, including more than 39,000 resources,  included 3,004,351 triples. We then cleaned it to get a smaller and more accurate dataset,  -->
+		<edge id="e_4445746752_4445747392_4445652688" source="n4445746752" target="n4445652688">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/1# -->
+<!-- The original dataset, including more than 39,000 resources,  included 3,004,351 triples. We then cleaned it to get a smaller and more accurate dataset,  -->
+		<node id="n4445746752">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/1#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>The original dataset, including more than 39,000 resources,  included 3,004,351 triples. We then cleaned it to get a smaller and more accurate dataset, <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4445746752_4445747072_4445747232" source="n4445746752" target="n4445747232">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having data with 39,000 resources and 3,004,351 triples >> access, Data, 39000, Resource, 3004351, Triple 1) clean it to make it smaller and accurate >> clean, reduce, cure -->
+		<edge id="e_4445746752_4445746992_4445653840" source="n4445746752" target="n4445653840">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- The original dataset, including more than 39,000 resources,  included 3,004,351 triples. We then cleaned it to get a smaller and more accurate dataset,  -->
+		<edge id="e_4445746752_4445747392_4445652688" source="n4445746752" target="n4445652688">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>

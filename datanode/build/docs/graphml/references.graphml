@@ -9,29 +9,24 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
-		<node id="n-621480009554151488">
-			<data key="k_label"><![CDATA[referenced by/references]]></data>
-			<data key="d5"><![CDATA[referenced by/references]]></data>
+		<node id="n4496020656">
+			<data key="k_label"><![CDATA[references]]></data>
+			<data key="d5"><![CDATA[references]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->referenced by/references<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<node id="n2599311373789345107">
-			<data key="k_label"><![CDATA[has dependency/is dependency of]]></data>
-			<data key="d5"><![CDATA[has dependency/is dependency of]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->has dependency/is dependency of<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-		<edge id="e_2599311373789345107_-621480009554151488" source="n2599311373789345107" target="n-621480009554151488">
+		<edge id="e_4496266576_4496020656" source="n4496266576" target="n4496020656}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -39,18 +34,24 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-		<node id="n-1336114014901007085">
-			<data key="k_label"><![CDATA[linked by/links]]></data>
-			<data key="d5"><![CDATA[linked by/links]]></data>
+		<node id="n4496266576">
+			<data key="k_label"><![CDATA[links]]></data>
+			<data key="d5"><![CDATA[links]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->linked by/links<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<edge id="e_-1336114014901007085_-621480009554151488" source="n-1336114014901007085" target="n-621480009554151488">
+		<edge id="e_4496328976_4496020656" source="n4496328976" target="n4496020656}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -58,18 +59,24 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-		<node id="n4354261941611562154">
-			<data key="k_label"><![CDATA[schema used by/uses schema]]></data>
-			<data key="d5"><![CDATA[schema used by/uses schema]]></data>
+		<node id="n4496328976">
+			<data key="k_label"><![CDATA[uses schema]]></data>
+			<data key="d5"><![CDATA[uses schema]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->schema used by/uses schema<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<edge id="e_4354261941611562154_-621480009554151488" source="n4354261941611562154" target="n-621480009554151488">
+		<edge id="e_4496125216_4496020656" source="n4496125216" target="n4496020656}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -77,5 +84,22 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
+		<node id="n4496125216">
+			<data key="k_label"><![CDATA[has dependency]]></data>
+			<data key="d5"><![CDATA[has dependency]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
 	</graph>
 </graphml>

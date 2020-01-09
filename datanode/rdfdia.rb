@@ -3,7 +3,7 @@
 
 require 'rubygems'
 require 'set'
-require 'trollop'
+require 'optimist'
 require 'rdf'
 require 'cgi'
 require 'rdf/raptor'
@@ -245,7 +245,7 @@ end
 
 if __FILE__ == $0
 
-	opts = Trollop::options do
+	opts = Optimist::options do
     version "Voctoys 1.0.0 (c) 2013 Enrico Daga"
 	  opt :file, "RDF file", :short => "-f", :type => :string
 	  opt :voc, "RDF vocabulary", :short => "-v", :type => :string
@@ -253,7 +253,7 @@ if __FILE__ == $0
 	  opt :modifier, "Modifier: links|all", :short => "-m", :type => :string, :default => "all"
 	end
 	
-	Trollop::die :file, "must exist" unless File.exist?(opts[:file]) if opts[:file]
+	Optimist::die :file, "must exist" unless File.exist?(opts[:file]) if opts[:file]
 
   $stdout.sync = true
 

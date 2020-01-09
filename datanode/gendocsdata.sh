@@ -58,14 +58,14 @@ for ttlf in $(ls build/docs/ttl | grep -i .ttl)
 do
 	usecase=${ttlf%.ttl}
 	echo "Generating build/docs/js/$usecase.js"
-	./rdfdia.sh -m links -o js -v src/datanode.ttl -f build/docs/ttl/$ttlf > build/docs/js/$usecase".js"
+	./rdfdia.py -m links -o js -V src/datanode.ttl -f build/docs/ttl/$ttlf > build/docs/js/$usecase".js"
 done
 
 # generate js file for datanode
 echo "Generating build/docs/js/datanode.js"
 # only links here
 #./rdfdia.sh -o js -m links -v src/datanode.ttl -f src/datanode.ttl > "build/docs/js/datanode.js"
-./gentree.sh jstree -f src/datanode.ttl > build/docs/js/dntree.js
+./rdftree.py jstree -f src/datanode.ttl -r "http://purl.org/datanode/ns/relatedWith" > build/docs/js/dntree.js
 
 # generate GRAPHML files
 mkdir -p build/docs/graphml
@@ -73,5 +73,5 @@ for ttlf in $(ls build/docs/ttl | grep -i .ttl)
 do
 	usecase=${ttlf%.ttl}
 	echo "Generating build/docs/graphml/$usecase.graphml"
-	./rdfdia.sh -o graphml -v src/datanode.ttl -f build/docs/ttl/$ttlf > build/docs/graphml/$usecase".graphml"
+	./rdfdia.py -o graphml -V src/datanode.ttl -f build/docs/ttl/$ttlf > build/docs/graphml/$usecase".graphml"
 done

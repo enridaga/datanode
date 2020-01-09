@@ -1,125 +1,19 @@
-var nodes=
-[{ 
-	id: "0",
-	uri: "_:g70234497566360",
-	label: "_:g70234497566360",
-	links: [{
-		target: 1,
-		label: "dn:usesSchema",
-	uri: "http://purl.org/datanode/ns/usesSchema",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "1",
-	uri: "http://www.w3.org/ns/prov#",
-	label: "http://www.w3.org/ns/prov#",
-	links: [],
-},{ 
-	id: "2",
-	uri: "_:g70234497733240",
-	label: "_:g70234497733240",
-	links: [{
-		target: 3,
-		label: "dn:extractedFrom",
-	uri: "http://purl.org/datanode/ns/extractedFrom",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "3",
-	uri: "http://purl.org/datanode/ex/0.2/SPUD/1#view1",
-	label: "ex:view1",
-	links: [{
-		target: 0,
-		label: "dn:hasAnnotation",
-	uri: "http://purl.org/datanode/ns/hasAnnotation",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:hasAnnotation",
-	uri: "http://purl.org/datanode/ns/hasAnnotation",
-		type: "default",
-		weight: 1,
-	},{
-		target: 4,
-		label: "dn:hasNextVersion",
-	uri: "http://purl.org/datanode/ns/hasNextVersion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 5,
-		label: "dn:isSnapshotOf",
-	uri: "http://purl.org/datanode/ns/isSnapshotOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "4",
-	uri: "http://purl.org/datanode/ex/0.2/SPUD/1#view2",
-	label: "ex:view2",
-	links: [{
-		target: 6,
-		label: "dn:hasAnnotation",
-	uri: "http://purl.org/datanode/ns/hasAnnotation",
-		type: "default",
-		weight: 1,
-	},{
-		target: 7,
-		label: "dn:hasAnnotation",
-	uri: "http://purl.org/datanode/ns/hasAnnotation",
-		type: "default",
-		weight: 1,
-	},{
-		target: 8,
-		label: "dn:hasNextVersion",
-	uri: "http://purl.org/datanode/ns/hasNextVersion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 3,
-		label: "dn:hasPrevVersion",
-	uri: "http://purl.org/datanode/ns/hasPrevVersion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 5,
-		label: "dn:isSnapshotOf",
-	uri: "http://purl.org/datanode/ns/isSnapshotOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "5",
-	uri: "http://purl.org/datanode/ex/0.2/SPUD/1#database",
-	label: "ex:database",
-	links: [],
-},{ 
-	id: "6",
-	uri: "_:g70234501411540",
-	label: "_:g70234501411540",
-	links: [{
-		target: 1,
-		label: "dn:usesSchema",
-	uri: "http://purl.org/datanode/ns/usesSchema",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "7",
-	uri: "_:g70234501408520",
-	label: "_:g70234501408520",
-	links: [{
-		target: 4,
-		label: "dn:extractedFrom",
-	uri: "http://purl.org/datanode/ns/extractedFrom",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "8",
-	uri: "http://purl.org/datanode/ex/0.2/SPUD/1#view3",
-	label: "ex:view3",
-	links: [],
-},]
+var nodes=[
+{"label": "ub2bL28C22", "id": "0", "links": [{"uri": "http://purl.org/datanode/ns/usesSchema", "type": "default", "target": 6, "weight": 1, "label": "dn:usesSchema"}], "uri": "ub2bL28C22"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/SPUD/1#view1", "id": "1", "links": [{"uri": "http://purl.org/datanode/ns/hasAnnotation", "type": "default", "target": 2, "weight": 1, "label": "dn:hasAnnotation"}, {"uri": "http://purl.org/datanode/ns/hasAnnotation", "type": "default", "target": 5, "weight": 1, "label": "dn:hasAnnotation"}, {"uri": "http://purl.org/datanode/ns/hasNextVersion", "type": "default", "target": 3, "weight": 1, "label": "dn:hasNextVersion"}, {"uri": "http://purl.org/datanode/ns/isSnapshotOf", "type": "default", "target": 8, "weight": 1, "label": "dn:isSnapshotOf"}], "uri": "http://purl.org/datanode/ex/0.2/SPUD/1#view1"}
+,
+{"label": "ub2bL19C22", "id": "2", "links": [{"uri": "http://purl.org/datanode/ns/usesSchema", "type": "default", "target": 6, "weight": 1, "label": "dn:usesSchema"}], "uri": "ub2bL19C22"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/SPUD/1#view2", "id": "3", "links": [{"uri": "http://purl.org/datanode/ns/hasAnnotation", "type": "default", "target": 0, "weight": 1, "label": "dn:hasAnnotation"}, {"uri": "http://purl.org/datanode/ns/hasAnnotation", "type": "default", "target": 4, "weight": 1, "label": "dn:hasAnnotation"}, {"uri": "http://purl.org/datanode/ns/hasNextVersion", "type": "default", "target": 7, "weight": 1, "label": "dn:hasNextVersion"}, {"uri": "http://purl.org/datanode/ns/hasPrevVersion", "type": "default", "target": 1, "weight": 1, "label": "dn:hasPrevVersion"}, {"uri": "http://purl.org/datanode/ns/isSnapshotOf", "type": "default", "target": 8, "weight": 1, "label": "dn:isSnapshotOf"}], "uri": "http://purl.org/datanode/ex/0.2/SPUD/1#view2"}
+,
+{"label": "ub2bL30C8", "id": "4", "links": [{"uri": "http://purl.org/datanode/ns/extractedFrom", "type": "default", "target": 3, "weight": 1, "label": "dn:extractedFrom"}], "uri": "ub2bL30C8"}
+,
+{"label": "ub2bL21C8", "id": "5", "links": [{"uri": "http://purl.org/datanode/ns/extractedFrom", "type": "default", "target": 1, "weight": 1, "label": "dn:extractedFrom"}], "uri": "ub2bL21C8"}
+,
+{"label": "http://www.w3.org/ns/prov#", "id": "6", "links": [], "uri": "http://www.w3.org/ns/prov#"}
+,
+{"label": "ex1:view3", "id": "7", "links": [], "uri": "http://purl.org/datanode/ex/0.2/SPUD/1#view3"}
+,
+{"label": "ex1:database", "id": "8", "links": [], "uri": "http://purl.org/datanode/ex/0.2/SPUD/1#database"}
+]

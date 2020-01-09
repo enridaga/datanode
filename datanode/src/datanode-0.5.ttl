@@ -1,0 +1,1035 @@
+@prefix : <http://purl.org/datanode/ns/> .
+@prefix dn: <http://purl.org/datanode/ns/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://purl.org/datanode/ns/> .
+
+<http://purl.org/datanode/ns/> rdf:type owl:Ontology ;
+                                dct:creator "enridaga - enricodaga@gmail.com" ;
+                                owl:versionInfo "0.5-SNAPSHOT" ;
+                                rdfs:label "The Datanode Vocabulary" ;
+                                dct:description "<p>Naming conventions: <ol><li>camel case <li>has[Noun]/is[Noun]Of <li>[present tense transitive verb]/[past tense verb]By,To,From,... <li>has[Past tense verb]/[past tense verb]To,From,... </ol></p>" ;
+                                skos:note """
+<p>Changelog 0.5:</p>
+<ol>
+<li>
+</ol>
+<p>Changelog 0.4:</p>
+<ol>
+<li>A dn:touch
+</ol>
+
+<p>Changelog 0.3</p>
+<ol>
+<li>D :isUpdatedVersionOf rdfs:subPropertyOf :olderVersionOf
+<li>D :hasUpdatedVersion rdfs:subPropertyOf :newerVersionOf
+<li>A :isUpdatedVersionOf rdfs:subPropertyOf :nextVersionOf
+<li>A :hasUpdatedVersion rdfs:subPropertyOf :previousVersionOf
+<li>A :versionOf :subPropertyOf :overlappingCapabilityWith
+<li>A :remodelledFrom rdfs:subPropertyOf :overlappingPopulationWith ;
+<li>A :remodelledTo rdfs:subPropertyOf :overlappingPopulationWith ;
+<li>A :isPartOf rdfs:subPropertyOf :overlappingPopulationWith, :overlappingVocabularyWith
+<li>A :duplicate a owl:TransitiveProperty
+<li>A :isCopyOf rdfs:subPropertyOf :sameCapabilityAs
+<li>A :links rdfs:subPropertyOf :overlappingPopulationWith
+<li>A :linkedTo rdfs:subPropertyOf :overlappingPopulationWith
+<li>A 
+:sharesInterpretationWith
+	a owl:TransitiveProperty, owl:SymmetricProperty ;
+	rdfs:label \"shares interpretation with\"@en ;
+	rdfs:comment \"This relates a data node to any datanode that can support its interpretation. They connected nodes might be in the same interpretation model.\"@en .
+:isUpdateOf rdfs:subPropertyOf :sharesInterpretationWith .
+:hasUpdate rdfs:subPropertyOf :sharesInterpretationWith .
+:overlappingPopulation rdfs:subPropertyOf :sharesInterpretationWith .
+:overlappingVocabulary rdfs:subPropertyOf :sharesInterpretationWith .
+:inconsistentWith rdfs:subPropertyOf :sharesInterpretationWith .
+:consistentWith rdfs:subPropertyOf :sharesInterpretationWith .
+:references rdfs:subPropertyOf :sharesInterpretationWith .
+:referencedBy rdfs:subPropertyOf :sharesInterpretationWith .
+:hasVocabulary rdfs:subPropertyOf :sharesInterpretationWith .
+:isVocabularyOf rdfs:subPropertyOf :sharesInterpretationWith .
+<li>Alignments with prov, void and dcat
+</ol> """ .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML
+rdf:HTML rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/datanode/ns/about
+dn:about rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf dn:relatedWith ;
+         owl:inverseOf dn:metadata ;
+         dct:description "<p>A data node may be metadata about another.</p>" ;
+         rdfs:comment "A data node is about another data node."@en ;
+         rdfs:label "about"@en .
+
+
+###  http://purl.org/datanode/ns/adjacentTo
+dn:adjacentTo rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:relatedWith ;
+              rdf:type owl:SymmetricProperty ,
+                       owl:TransitiveProperty ;
+              dct:description "<p>This property basically represents the proximity of some data to other. Two parts of the same dataset are adjacents each other.</p>"^^rdf:HTML ;
+              rdfs:comment "To relate a data node to any of their adjacent data node."@en ;
+              rdfs:label "adjacent to"@en .
+
+
+###  http://purl.org/datanode/ns/attachedTo
+dn:attachedTo rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:adjacentTo ;
+              owl:inverseOf dn:hasAttached ;
+              dct:description "<p>This, along with its inverse <em>haveAttached</em> , are considered to model the \"physical\" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments.</p>"^^rdf:HTML ;
+              rdfs:comment "Data are attached to data for some reason"@en ;
+              rdfs:label "attached to"@en .
+
+
+###  http://purl.org/datanode/ns/attributesOf
+dn:attributesOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:descriptorsOf ;
+                owl:inverseOf dn:hasAttributes ;
+                rdfs:label "attributes of"@en .
+
+
+###  http://purl.org/datanode/ns/cleanedFrom
+dn:cleanedFrom rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:overlappingCapabilityWith ,
+                                  dn:processedFrom ;
+               owl:inverseOf dn:cleanedInto ;
+               rdfs:comment "A data node is obtained as the result of a data cleaning activity."@en ;
+               rdfs:label "cleaned from"@end .
+
+
+###  http://purl.org/datanode/ns/cleanedInto
+dn:cleanedInto rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:overlappingCapabilityWith ,
+                                  dn:processedInto ;
+               dct:description "<p>Data are cleaned to better fit a purpose, sometimes making explicit potential capabilities. We intend cleaning in a broad sense, including activities like fixes in the syntax of the data or pruning of unfitting data with relation to a given task.</p>"^^rdf:HTML ;
+               rdfs:comment "A data node has been cleaned, a new data node is obtained."@en ;
+               rdfs:label "cleaned into"@end .
+
+
+###  http://purl.org/datanode/ns/combinationFrom
+dn:combinationFrom rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf dn:isDerivationOf ;
+                   owl:inverseOf dn:combinedIn ;
+                   dct:description "<p>This relation specifies the fact that the object includes the subject. However, this does not mean that the subject is included as-is. Therefore, a combination implies derivation but not partition.</p>"^^rdf:HTML ;
+                   rdfs:comment "The subject data node is the result of the combination of a data node with some other."@en ;
+                   rdfs:label "combination from"@en .
+
+
+###  http://purl.org/datanode/ns/combinedIn
+dn:combinedIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:hasDerivation ;
+              rdfs:comment "A data node that have been combined (with another data node) into a target one."@en ;
+              rdfs:label "combined in"@en .
+
+
+###  http://purl.org/datanode/ns/consistentWith
+dn:consistentWith rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:sharesInterpretationWith ;
+                  rdf:type owl:SymmetricProperty ;
+                  dct:description "<p>We intend consistency in a general sense: two data nodes are consistent because they agree (ie, they do not disagree...).</p>"^^rdf:HTML ;
+                  rdfs:comment "A data node that can (should) be used together with another. "@en ;
+                  rdfs:label "consistent with"@en ;
+                  skos:note "<p>It can be the case that a single data node is verified to be consistent (with relation to some logic). It can then be marked to be consistent with itself.</p>" .
+
+
+###  http://purl.org/datanode/ns/datatypesOf
+dn:datatypesOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:isVocabularyOf ;
+               owl:inverseOf dn:hasDatatypes ;
+               rdfs:comment "Relates a vocabulary of datatypes to the datanode that uses them."@en ;
+               rdfs:label "datatypes of"@en .
+
+
+###  http://purl.org/datanode/ns/describedBy
+dn:describedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:metadata ;
+               owl:inverseOf dn:describes ;
+               dct:description "<p>This relates a datanode to any datanode being an object in its representation.</p>" ;
+               rdfs:comment "Data have other data as description."@en ;
+               rdfs:label "described by"@en .
+
+
+###  http://purl.org/datanode/ns/describes
+dn:describes rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dn:about ;
+             dct:description "<p>This relates a datanode to any datanode being an object in its representation.</p>" ;
+             rdfs:comment "A data node describes another."@en ;
+             rdfs:label "describes"@en .
+
+
+###  http://purl.org/datanode/ns/descriptorsOf
+dn:descriptorsOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:isVocabularyOf ;
+                 owl:inverseOf dn:hasDescriptors ;
+                 rdfs:comment "This property relates a datanode of descriptors to the datanode that uses them."@en ;
+                 rdfs:label "descriptors of"@en .
+
+
+###  http://purl.org/datanode/ns/differentCapabilityFrom
+dn:differentCapabilityFrom rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf dn:relatedWith ;
+                           rdf:type owl:SymmetricProperty ;
+                           dct:description "<p>Two nodes have different potential. Two data nodes using different vocabularies or two copies of the same data in different places.</p>" ;
+                           rdfs:label "different capability from"@en ;
+                           skos:note "(Similarly to :overlappingCapabilityWith) This relation is needed to generically express comparison of data nodes with relation to specific tasks."@en .
+
+
+###  http://purl.org/datanode/ns/differentPopulationFrom
+dn:differentPopulationFrom rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf dn:differentCapabilityFrom ;
+                           rdf:type owl:SymmetricProperty ;
+                           dct:description "<p>Two datanodes do not share any population.</p>" ;
+                           rdfs:label "different population from"@en .
+
+
+###  http://purl.org/datanode/ns/differentVocabularyFrom
+dn:differentVocabularyFrom rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf dn:differentCapabilityFrom ;
+                           rdf:type owl:SymmetricProperty ;
+                           dct:description "<p>Two datanodes do not share any set of vocabulary terms.</p>" ;
+                           rdfs:label "different vocabulary from"@en .
+
+
+###  http://purl.org/datanode/ns/disjointCapabilityWith
+dn:disjointCapabilityWith rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf dn:differentPopulationFrom ,
+                                             dn:differentVocabularyFrom ;
+                          rdf:type owl:SymmetricProperty ;
+                          rdfs:label "disjoint capability"@en .
+
+
+###  http://purl.org/datanode/ns/disjointPartWith
+dn:disjointPartWith rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf dn:adjacentTo ;
+                    rdf:type owl:SymmetricProperty ;
+                    rdfs:comment "Two datanodes are adjacent parts of another. This property relates the two parts without specifying anything about their container. Can be used in conjunction with isPartOf to state that two parts do not overlap."@en ;
+                    rdfs:label "disjoint part with"@en .
+
+
+###  http://purl.org/datanode/ns/disjointPortionWith
+dn:disjointPortionWith rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf dn:differentPopulationFrom ,
+                                          dn:disjointPartWith ;
+                       rdf:type owl:SymmetricProperty ;
+                       rdfs:label "disjoint portion with"@en .
+
+
+###  http://purl.org/datanode/ns/disjointSectionWith
+dn:disjointSectionWith rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf dn:differentVocabularyFrom ,
+                                          dn:disjointPartWith ;
+                       rdf:type owl:SymmetricProperty ;
+                       rdfs:comment "Data can be cut in sections according to specific attributes."@en ;
+                       rdfs:label "disjoint section with"@en .
+
+
+###  http://purl.org/datanode/ns/duplicate
+dn:duplicate rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dn:sameIdentityAs ;
+             rdf:type owl:SymmetricProperty ,
+                      owl:TransitiveProperty ,
+                      owl:IrreflexiveProperty ;
+             rdfs:label "duplicate"@en .
+
+
+###  http://purl.org/datanode/ns/hasAddition
+dn:hasAddition rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:hasChange ;
+               owl:inverseOf dn:isAdditionOf ;
+               rdfs:comment "some data is the addition-update of some other"@en ;
+               rdfs:label "has addition"@en .
+
+
+###  http://purl.org/datanode/ns/hasAnnotation
+dn:hasAnnotation rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:hasAttached ,
+                                    dn:metadata ;
+                 owl:inverseOf dn:isAnnotationOf ;
+                 rdfs:comment "This relates a datanode to some metadata attached to it."@en ;
+                 rdfs:label "has annotation"@en .
+
+
+###  http://purl.org/datanode/ns/hasAnonymized
+dn:hasAnonymized rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:hasStandIn ,
+                                    dn:processedInto ;
+                 owl:inverseOf dn:isAnonymizedOf ;
+                 dct:description "<p>Relates a datanode to another that is the result of a process that removes any personal identifiable information. The resulting datanode is meant to play the role of its origin in the application.</p>" ;
+                 rdfs:label "has anonymized substitute"@en .
+
+
+###  http://purl.org/datanode/ns/hasAttached
+dn:hasAttached rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:adjacentTo ;
+               rdfs:comment "Data have attached other data for some reason"@en ;
+               rdfs:label "has attached"@en .
+
+
+###  http://purl.org/datanode/ns/hasAttributes
+dn:hasAttributes rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:hasDescriptors ;
+                 dct:description "<p>We relate with this property a data node to a collection of attributes used in it. We distinguish attributes from relations because the first does not qualify the range entity but only the domain entity (saying that a person is 1.82m tall does not change our knowledge about 1.82m).</p>" ;
+                 rdfs:comment "Relates data to the attributes used."@en ;
+                 rdfs:label "has attributes"@en .
+
+
+###  http://purl.org/datanode/ns/hasCache
+dn:hasCache rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf dn:hasSnapshot ,
+                               dn:hasStandIn ;
+            owl:inverseOf dn:isCacheOf ;
+            rdfs:label "has cache"@en .
+
+
+###  http://purl.org/datanode/ns/hasChange
+dn:hasChange rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dn:hasUpdate ,
+                                dn:touch ;
+             owl:inverseOf dn:isChangeOf ;
+             rdf:type owl:InverseFunctionalProperty ;
+             rdfs:comment "some data has some other as a change to come"@en ;
+             rdfs:label "has change"@en .
+
+
+###  http://purl.org/datanode/ns/hasComputation
+dn:hasComputation rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:processedInto ;
+                  owl:inverseOf dn:isComputationOf ;
+                  dct:description "<p>Relates a datanode to another that is the result of some computation on its data.</p>" ;
+                  rdfs:label "has computation"@en .
+
+
+###  http://purl.org/datanode/ns/hasCopy
+dn:hasCopy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf dn:hasDerivation ,
+                              dn:sameIdentityAs ;
+           owl:inverseOf dn:isCopyOf ;
+           rdf:type owl:TransitiveProperty ;
+           rdfs:label "has copy"@en .
+
+
+###  http://purl.org/datanode/ns/hasDatatypes
+dn:hasDatatypes rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:hasVocabulary ;
+                rdfs:comment "Relates a datanode to the vocabulary of datatypes used in it."@en ;
+                rdfs:label "has datatypes"@en .
+
+
+###  http://purl.org/datanode/ns/hasDeletion
+dn:hasDeletion rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:hasChange ;
+               owl:inverseOf dn:isDeletionOf ;
+               dct:description "<p>Indicates a data node which includes information that is now old or outdated. We don't indicate it to be also a part, this is to discuss.</p>" ;
+               rdfs:comment "A data node is the to-delete-information of some other. In other terms, it is the outdated information."@en ;
+               rdfs:label "has deletion"@en .
+
+
+###  http://purl.org/datanode/ns/hasDependency
+dn:hasDependency rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:references ;
+                 owl:inverseOf dn:isDependencyOf ;
+                 rdfs:comment "A datanode needs another to be used or interpreted."@en ;
+                 rdfs:label "has dependency"@en ;
+                 skos:note "The concept of dependency is here considered as to be expressed within the datanode (it is subproperty of references). Is this really a requirement?" .
+
+
+###  http://purl.org/datanode/ns/hasDerivation
+dn:hasDerivation rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:relatedWith ;
+                 owl:inverseOf dn:isDerivationOf ;
+                 rdfs:label "has derivation"@en .
+
+
+###  http://purl.org/datanode/ns/hasDescriptors
+dn:hasDescriptors rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:hasVocabulary ;
+                  dct:description "<p>We choose the term descriptor to indicate generically the element used to bind/map/qualify a value with respect to its entity. Practically, this term maps to <ul><li>\"Field\" in Object Oriented Programming; <li>\"Predicate\" in First Order Logic <li>Column identifier (Attribute) in Relation Database terminology <li>rdf:Property in the Resource Description Framework </ul></p>" ;
+                  rdfs:comment "A descriptor is an element used to qualify a value. Relates a data node to the collection of the descriptors used (being it a data node, obviously)."@en ;
+                  rdfs:label "has descriptors"@en .
+
+
+###  http://purl.org/datanode/ns/hasExample
+dn:hasExample rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:hasSelection ;
+              owl:inverseOf dn:isExampleOf ;
+              rdfs:label "has example"@en .
+
+
+###  http://purl.org/datanode/ns/hasExtraction
+dn:hasExtraction rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:hasInterpretation ;
+                 owl:inverseOf dn:isExtractionOf ;
+                 dct:description "<p>Relates a datanode to another that formalize the information obtained as a result of an information extraction process, for example a data mining process.</p>" ;
+                 rdfs:label "has extraction"@en .
+
+
+###  http://purl.org/datanode/ns/hasIdentifiers
+dn:hasIdentifiers rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:hasSection ;
+                  owl:inverseOf dn:identifiersOf ;
+                  dct:description "<p>Relates a datanode to the collection of the identifiers of its population.</p>" ;
+                  rdfs:label "has identifiers"@en .
+
+
+###  http://purl.org/datanode/ns/hasInference
+dn:hasInference rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:hasInterpretation ;
+                owl:inverseOf dn:isInferenceOf ;
+                dct:description "<p>Relates a datanode to another including a set of logical inferences deduced from the first.</p>" ;
+                rdfs:label "has inference"@en .
+
+
+###  http://purl.org/datanode/ns/hasInterpretation
+dn:hasInterpretation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf dn:hasDerivation ;
+                     owl:inverseOf dn:isInterpretationOf ;
+                     rdfs:comment "Some data is interpretated such to produce other data."@en ;
+                     rdfs:label "has interpretation"@en .
+
+
+###  http://purl.org/datanode/ns/hasPart
+dn:hasPart rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf dn:overlappingPopulationWith ,
+                              dn:touch ;
+           owl:inverseOf dn:isPartOf ;
+           rdf:type owl:TransitiveProperty ;
+           rdfs:comment "To related a data node to another which is contained in it."@en ;
+           rdfs:label "has part"@en .
+
+
+###  http://purl.org/datanode/ns/hasPortion
+dn:hasPortion rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:hasPart ;
+              owl:inverseOf dn:isPortionOf ;
+              rdf:type owl:TransitiveProperty ;
+              dct:description ":hasPortion is used to capture the relation with a subset of the data."@en ;
+              rdfs:label "has portion"@en .
+
+
+###  http://purl.org/datanode/ns/hasReification
+dn:hasReification rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:processedInto ;
+                  owl:inverseOf dn:isReificationOf ;
+                  dct:description "<p>This property refer to the semantic of reification in RDF.</p>" ;
+                  rdfs:label "has reification"@en .
+
+
+###  http://purl.org/datanode/ns/hasRelations
+dn:hasRelations rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:hasDescriptors ;
+                owl:inverseOf dn:relationsOf ;
+                rdfs:comment "Relates a datanode to another enumerating the set of relations used in it."@en ;
+                rdfs:label "has relations"@en .
+
+
+###  http://purl.org/datanode/ns/hasSample
+dn:hasSample rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dn:hasPortion ;
+             owl:inverseOf dn:isSampleOf ;
+             dct:description "<p>Relates a datanode to an excerpt of its population, with some, non specified, attributes.</p>" ;
+             rdfs:label "has sample"@en .
+
+
+###  http://purl.org/datanode/ns/hasSection
+dn:hasSection rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:hasPart ;
+              owl:inverseOf dn:isSectionOf ;
+              rdf:type owl:TransitiveProperty ;
+              dct:description "An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition."@en ;
+              rdfs:comment "Data can be cut in sections according to specific attributes."@en ;
+              rdfs:label "has section"@en .
+
+
+###  http://purl.org/datanode/ns/hasSelection
+dn:hasSelection rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:hasDerivation ,
+                                   dn:hasPart ;
+                owl:inverseOf dn:isSelectionOf ;
+                rdfs:comment "We represent here the outcome of the isolation of a part of a data node for a specific intent."@en ;
+                rdfs:label "has selection"@en .
+
+
+###  http://purl.org/datanode/ns/hasSnapshot
+dn:hasSnapshot rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:hasCopy ,
+                                  dn:versionOf ;
+               owl:inverseOf dn:isSnapshotOf ;
+               rdfs:comment "A copy of a data node in a specific time point"@en ;
+               rdfs:label "has snapshot"@en .
+
+
+###  http://purl.org/datanode/ns/hasStandIn
+dn:hasStandIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:hasDerivation ,
+                                 dn:overlappingCapabilityWith ;
+              owl:inverseOf dn:isStandInOf ;
+              dct:description "<p>Are we sure a stand-in is always a derivation?</p>" ;
+              rdfs:comment "Some data is a substitute of another, for specific reasons."@en ;
+              rdfs:label "has stand-in"@en .
+
+
+###  http://purl.org/datanode/ns/hasStatistic
+dn:hasStatistic rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:describedBy ,
+                                   dn:hasComputation ;
+                owl:inverseOf dn:isStatisticOf ;
+                dct:description "<p>Statistics are at the same time computations and metadata of a source datanode.</p>" ;
+                rdfs:comment "Computed metadata." ;
+                rdfs:label "has statistic"@en ;
+                skos:note "Maybe rename hasStatistics?" .
+
+
+###  http://purl.org/datanode/ns/hasSummarization
+dn:hasSummarization rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf dn:hasDerivation ;
+                    owl:inverseOf dn:isSummarizationOf ;
+                    rdfs:label "has summarization"@en .
+
+
+###  http://purl.org/datanode/ns/hasTypes
+dn:hasTypes rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf dn:hasVocabulary ;
+            owl:inverseOf dn:typesOf ;
+            rdfs:comment "Relates a data node to the vocabulary of the types used."@en ;
+            rdfs:label "has types"@en .
+
+
+###  http://purl.org/datanode/ns/hasUpdate
+dn:hasUpdate rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dn:sharesInterpretationWith ;
+             owl:inverseOf dn:isUpdateOf ;
+             dct:description "<p>Update is considered in a general meaning of having a role meant to better reflect the referred world.</p>" ;
+             rdfs:comment "A data node may be related to another that improves its currency."@en ;
+             rdfs:label "has update"@en .
+
+
+###  http://purl.org/datanode/ns/hasUpdatedVersion
+dn:hasUpdatedVersion rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf dn:hasUpdate ,
+                                        dn:previousVersionOf ;
+                     owl:inverseOf dn:isUpdatedVersionOf ;
+                     rdfs:comment "A new version of a data node in a specific time point that is meant to substitute it."@en ;
+                     rdfs:label "updated version"@en .
+
+
+###  http://purl.org/datanode/ns/hasVocabulary
+dn:hasVocabulary rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:sharesInterpretationWith ,
+                                    dn:touch ;
+                 owl:inverseOf dn:isVocabularyOf ;
+                 dct:description "<p>The range of this property is a data node which enumerates a set of terms that are all used by the subject data node as identifiers (eventually to name structural elements, like attribute names or types).</p>" ;
+                 rdfs:comment "Relates a data node to a datanode representing a set of names that are all used in it."@en ;
+                 rdfs:label "has vocabulary"@en ;
+                 skos:note "<p>When a data node :hasVocabulary another, we expect the latter to be the collection of terms used by the data node to name its properties and types.<br/>How to know if there is some term that is not part of that vocabulary? In other words, is it relevant to know whether a vocabulary is complete or not wrt some data?</p>" .
+
+
+###  http://purl.org/datanode/ns/identifiersOf
+dn:identifiersOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:isSectionOf ;
+                 rdfs:label "identifiers of"@en .
+
+
+###  http://purl.org/datanode/ns/inconsistentWith
+dn:inconsistentWith rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf dn:sharesInterpretationWith ;
+                    rdf:type owl:SymmetricProperty ;
+                    dct:description "<p>It can be the case that a single data node is corrupted to some respect. It can then be marked to be inconsistent with itself.</p>" ;
+                    rdfs:comment "A data node that should not be used together with another."@en ;
+                    rdfs:label "inconsistent with"@en ;
+                    skos:note "<p>We intend consistency in a general sense: two data nodes are inconsistent because they do not agree.</p>" .
+
+
+###  http://purl.org/datanode/ns/isAdditionOf
+dn:isAdditionOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:isChangeOf ;
+                rdfs:label "is addition of"@en .
+
+
+###  http://purl.org/datanode/ns/isAnnotationOf
+dn:isAnnotationOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:about ,
+                                     dn:attachedTo ;
+                  rdfs:comment "When an attached datanode is also metadata about what it is attached to... it is an annotation."@en ;
+                  rdfs:label "is annotation of"@en .
+
+
+###  http://purl.org/datanode/ns/isAnonymizedOf
+dn:isAnonymizedOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:isStandInOf ,
+                                     dn:processedFrom ;
+                  rdfs:label "is anonymized substitute of"@en .
+
+
+###  http://purl.org/datanode/ns/isCacheOf
+dn:isCacheOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dn:isSnapshotOf ,
+                                dn:isStandInOf ;
+             rdfs:label "is cache of"@en .
+
+
+###  http://purl.org/datanode/ns/isChangeOf
+dn:isChangeOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:isUpdateOf ,
+                                 dn:touch ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:comment "some data is the coming change of some other"@en ;
+              rdfs:label "is change of"@en .
+
+
+###  http://purl.org/datanode/ns/isComputationOf
+dn:isComputationOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf dn:processedFrom ;
+                   rdfs:label "is computation of"@en .
+
+
+###  http://purl.org/datanode/ns/isCopyOf
+dn:isCopyOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf dn:isDerivationOf ,
+                               dn:sameIdentityAs ;
+            rdf:type owl:TransitiveProperty ;
+            rdfs:label "is copy of"@en .
+
+
+###  http://purl.org/datanode/ns/isDeletionOf
+dn:isDeletionOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:isChangeOf ;
+                rdfs:label "is deletion of"@en .
+
+
+###  http://purl.org/datanode/ns/isDependencyOf
+dn:isDependencyOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:referencedBy ;
+                  rdfs:comment "A datanode is required by another one in order for it to be used or interpreted."@en ;
+                  rdfs:label "is dependency of"@en .
+
+
+###  http://purl.org/datanode/ns/isDerivationOf
+dn:isDerivationOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:relatedWith ;
+                  dct:description "<p>This relation indicates that a data node is the origin of another, in the sense that the second have been produced using the first as information source.</p>" ;
+                  rdfs:label "is derivation of"@en ;
+                  skos:note "This property is not transitive." .
+
+
+###  http://purl.org/datanode/ns/isExampleOf
+dn:isExampleOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:isSelectionOf ;
+               rdfs:label "example of"@en .
+
+
+###  http://purl.org/datanode/ns/isExtractionOf
+dn:isExtractionOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:isInterpretationOf ;
+                  rdfs:label "extraction of"@en .
+
+
+###  http://purl.org/datanode/ns/isInferenceOf
+dn:isInferenceOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:isInterpretationOf ;
+                 rdfs:label "is inference of"@en .
+
+
+###  http://purl.org/datanode/ns/isInterpretationOf
+dn:isInterpretationOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf dn:isDerivationOf ;
+                      rdfs:comment "Some data emerge as the interpretation of other."@en ;
+                      rdfs:label "is interpretation of"@en .
+
+
+###  http://purl.org/datanode/ns/isPartOf
+dn:isPartOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf dn:overlappingPopulationWith ,
+                               dn:touch ;
+            rdf:type owl:TransitiveProperty ;
+            rdfs:label "is part of"@en .
+
+
+###  http://purl.org/datanode/ns/isPortionOf
+dn:isPortionOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:isPartOf ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:label "is portion of"@en .
+
+
+###  http://purl.org/datanode/ns/isReificationOf
+dn:isReificationOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf dn:processedFrom ;
+                   rdfs:label "is reification of"@en .
+
+
+###  http://purl.org/datanode/ns/isSampleOf
+dn:isSampleOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:isPortionOf ;
+              rdfs:label "is sample of"@en .
+
+
+###  http://purl.org/datanode/ns/isSectionOf
+dn:isSectionOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:isPartOf ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:label "is section of"@en .
+
+
+###  http://purl.org/datanode/ns/isSelectionOf
+dn:isSelectionOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:isDerivationOf ,
+                                    dn:isPartOf ;
+                 rdfs:label "is selection of"@en .
+
+
+###  http://purl.org/datanode/ns/isSnapshotOf
+dn:isSnapshotOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:isCopyOf ,
+                                   dn:versionOf ;
+                rdfs:label "is snapshot of"@en .
+
+
+###  http://purl.org/datanode/ns/isStandInOf
+dn:isStandInOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:isDerivationOf ,
+                                  dn:overlappingCapabilityWith ;
+               rdfs:label "is stand-in of"@en .
+
+
+###  http://purl.org/datanode/ns/isStatisticOf
+dn:isStatisticOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:describes ,
+                                    dn:isComputationOf ;
+                 rdfs:label "is statistic of"@en .
+
+
+###  http://purl.org/datanode/ns/isSummarizationOf
+dn:isSummarizationOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf dn:isDerivationOf ;
+                     rdfs:label "is summarization of"@en .
+
+
+###  http://purl.org/datanode/ns/isUpdateOf
+dn:isUpdateOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:sharesInterpretationWith ;
+              rdfs:comment "A data node that is meant to improve the currency of another."@en ;
+              rdfs:label "is update of"@en .
+
+
+###  http://purl.org/datanode/ns/isUpdatedVersionOf
+dn:isUpdatedVersionOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf dn:isUpdateOf ,
+                                         dn:nextVersionOf ;
+                      rdfs:label "updated version of"@en .
+
+
+###  http://purl.org/datanode/ns/isVocabularyOf
+dn:isVocabularyOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:sharesInterpretationWith ,
+                                     dn:touch ;
+                  dct:description "<p>This datanode enumerate a set of terms that are all used by the related datanode.</p>" ;
+                  rdfs:label "is vocabulary of"@en .
+
+
+###  http://purl.org/datanode/ns/linkedBy
+dn:linkedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf dn:overlappingPopulationWith ,
+                               dn:referencedBy ;
+            owl:inverseOf dn:links ;
+            rdfs:comment "A data node is linked by another using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs)."@en ;
+            rdfs:label "linked by"@en .
+
+
+###  http://purl.org/datanode/ns/links
+dn:links rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf dn:overlappingPopulationWith ,
+                            dn:references ;
+         rdfs:comment "A data node links to other data using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs)."@en ;
+         rdfs:label "links"@en ;
+         skos:note "It would be interesting to have a taste of other ways of doing similar links in other context then Linked Data."@en .
+
+
+###  http://purl.org/datanode/ns/metadata
+dn:metadata rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf dn:relatedWith ;
+            dct:description "<p>This is used to relate a data node to its metadata.</p>" ;
+            rdfs:comment "A data node has another data node as metadata."@en ;
+            rdfs:label "metadata" .
+
+
+###  http://purl.org/datanode/ns/newerVersionOf
+dn:newerVersionOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:versionOf ;
+                  owl:inverseOf dn:olderVersionOf ;
+                  rdf:type owl:TransitiveProperty ;
+                  rdfs:label "newer version of"@en .
+
+
+###  http://purl.org/datanode/ns/nextVersionOf
+dn:nextVersionOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:newerVersionOf ;
+                 owl:inverseOf dn:previousVersionOf ;
+                 rdf:type owl:FunctionalProperty ;
+                 dct:description "<p>Relates a datanode to another that is the direct next version.</p>" ;
+                 rdfs:label "next version of"@en .
+
+
+###  http://purl.org/datanode/ns/olderVersionOf
+dn:olderVersionOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:versionOf ;
+                  rdf:type owl:TransitiveProperty ;
+                  rdfs:label "older version of"@en .
+
+
+###  http://purl.org/datanode/ns/optimizedFrom
+dn:optimizedFrom rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:overlappingCapabilityWith ,
+                                    dn:processedFrom ;
+                 owl:inverseOf dn:optimizedInto ;
+                 rdfs:label "optimized from"@end .
+
+
+###  http://purl.org/datanode/ns/optimizedInto
+dn:optimizedInto rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:overlappingCapabilityWith ,
+                                    dn:processedInto ;
+                 rdfs:comment "A datanode have been optimized into a new one, to amplify its functional capabilities."@en ;
+                 rdfs:label "optimized into"@end .
+
+
+###  http://purl.org/datanode/ns/overlappingCapabilityWith
+dn:overlappingCapabilityWith rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf dn:relatedWith ;
+                             rdf:type owl:SymmetricProperty ;
+                             dct:description "<p>Two data nodes have similar potential, their domains overlap.</p>" ;
+                             rdfs:label "overlapping capability with"@en ;
+                             skos:note "If the capability is the location, two version might not have the same location. We might want to specify a number of well known capabilities - format, location, meta-model, accessMethod, ... . Might this allow more inferences than the ones we can do now?"@en ,
+                                       "Similar relations might refer to other features, being it structural (they share schema elements), physical (they are both in XML) or related to the domain (they both talk about Music Artists) - just to make few examples.. We might want to specify other kind of features, covering: ownership (sameOwner), meta-model (sameMetaModel), syntax (sameSyntax), accessMethod (sameAccessMethod), license (compatibleLicense, sameLicense), policies (?)."@en ,
+                                       "This relation is needed to generically express comparison of data nodes with relation to the domain covered."@en .
+
+
+###  http://purl.org/datanode/ns/overlappingPopulationWith
+dn:overlappingPopulationWith rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf dn:overlappingCapabilityWith ,
+                                                dn:sharesInterpretationWith ;
+                             dct:description "<p>Two datanodes share some population.</p>" ;
+                             rdfs:label "overlapping population with"@en .
+
+
+###  http://purl.org/datanode/ns/overlappingVocabularyWith
+dn:overlappingVocabularyWith rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf dn:overlappingCapabilityWith ,
+                                                dn:sharesInterpretationWith ;
+                             dct:description "<p>Two datanodes share a set of vocabulary terms.</p>" ;
+                             rdfs:label "overlapping vocabulary with"@en .
+
+
+###  http://purl.org/datanode/ns/previousVersionOf
+dn:previousVersionOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf dn:olderVersionOf ;
+                     rdf:type owl:InverseFunctionalProperty ;
+                     rdfs:label "previous version of"@en .
+
+
+###  http://purl.org/datanode/ns/processedFrom
+dn:processedFrom rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:isDerivationOf ;
+                 owl:inverseOf dn:processedInto ;
+                 rdfs:label "processed from"@en .
+
+
+###  http://purl.org/datanode/ns/processedInto
+dn:processedInto rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:hasDerivation ;
+                 rdfs:comment "A data node is processed (transformed) to obtain another one."@en ;
+                 rdfs:label "processed into"@en .
+
+
+###  http://purl.org/datanode/ns/redundantWith
+dn:redundantWith rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dn:overlappingPopulationWith ,
+                                    dn:overlappingVocabularyWith ;
+                 rdf:type owl:TransitiveProperty ;
+                 rdfs:label "redundant with"@en .
+
+
+###  http://purl.org/datanode/ns/refactoredFrom
+dn:refactoredFrom rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:processedFrom ;
+                  owl:inverseOf dn:refactoredInto ;
+                  rdfs:label "refactored from"@en .
+
+
+###  http://purl.org/datanode/ns/refactoredInto
+dn:refactoredInto rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:processedInto ;
+                  dct:description "<p>Refactoring is transforming to make it simpler, optimized and more efficient for a target task.</p>" ;
+                  rdfs:label "refactored into"@en .
+
+
+###  http://purl.org/datanode/ns/referencedBy
+dn:referencedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:sharesInterpretationWith ;
+                owl:inverseOf dn:references ;
+                rdfs:label "referenced by"@en .
+
+
+###  http://purl.org/datanode/ns/references
+dn:references rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:sharesInterpretationWith ;
+              dct:description "<p>It looks like there could be a more generic property here, which refer to the fact of sharing some signatures (identifiers), without assuming an order or direction of the reference. Two data nodes may simply use the same identifier independently from the intention of making a reference to anything else (then the identifier itself). Does this make sense?</p>" ,
+                              "<p>The subject of this property includes a mention to something which is (included in) another data node. <br/> Talking about RDF datasets, this refer to the mention of a URI belonging to another dataset. For example, a dataset about employees could mention a Geonames location.</p>" ;
+              rdfs:label "references"@en .
+
+
+###  http://purl.org/datanode/ns/relatedWith
+dn:relatedWith rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ,
+                        owl:ReflexiveProperty ;
+               rdfs:domain dn:Datanode ;
+               rdfs:range dn:Datanode ;
+               dct:description "<p>This is the Top Property of Datanode.</p>" ;
+               rdfs:comment "A data node is connected to another one."@en ;
+               rdfs:label "related with"@en .
+
+
+###  http://purl.org/datanode/ns/relationsOf
+dn:relationsOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dn:descriptorsOf ;
+               rdfs:label "relations of"@en .
+
+
+###  http://purl.org/datanode/ns/remodelledFrom
+dn:remodelledFrom rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:processedFrom ,
+                                     dn:samePopulationAs ;
+                  owl:inverseOf dn:remodelledTo ;
+                  dct:description "<p>Remodelling refer to the translation of the data to another symbolic structure (model), while keeping the same interpretation.</p>" ;
+                  rdfs:label "remodelled from"@en .
+
+
+###  http://purl.org/datanode/ns/remodelledTo
+dn:remodelledTo rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:processedInto ,
+                                   dn:samePopulationAs ;
+                rdfs:label "remodelled to"@en .
+
+
+###  http://purl.org/datanode/ns/sameCapabilityAs
+dn:sameCapabilityAs rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf dn:samePopulationAs ,
+                                       dn:sameVocabularyAs ;
+                    rdf:type owl:TransitiveProperty ;
+                    dct:description "<p>Having the same capability implies having the same population and the same vocabulary. In colloquial terms, the same data is described in the same terms.</p>" ;
+                    rdfs:label "same capability as"@en .
+
+
+###  http://purl.org/datanode/ns/sameIdentityAs
+dn:sameIdentityAs rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf dn:sameCapabilityAs ,
+                                     dn:touch ;
+                  rdfs:label "same identity as"@en .
+
+
+###  http://purl.org/datanode/ns/samePopulationAs
+dn:samePopulationAs rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf dn:overlappingPopulationWith ;
+                    rdf:type owl:TransitiveProperty ;
+                    rdfs:label "same population"@en .
+
+
+###  http://purl.org/datanode/ns/sameVocabularyAs
+dn:sameVocabularyAs rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf dn:overlappingVocabularyWith ;
+                    rdf:type owl:TransitiveProperty ;
+                    rdfs:label "same vocabulary"@en .
+
+
+###  http://purl.org/datanode/ns/schemaUsedBy
+dn:schemaUsedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dn:referencedBy ;
+                owl:inverseOf dn:usesSchema ;
+                rdfs:label "schema used by"@en ;
+                skos:note "Does being a schema imply being a dependency?"@en .
+
+
+###  http://purl.org/datanode/ns/sharesInterpretationWith
+dn:sharesInterpretationWith rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf dn:relatedWith ;
+                            rdf:type owl:SymmetricProperty ,
+                                     owl:TransitiveProperty ;
+                            rdfs:comment "This relates a data node to any datanode that can support its interpretation. They connected nodes might be in the same interpretation model."@en ;
+                            rdfs:label "shares interpretation with"@en .
+
+
+###  http://purl.org/datanode/ns/touch
+dn:touch rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf dn:sharesInterpretationWith ;
+         rdfs:label "touch"@en .
+
+
+###  http://purl.org/datanode/ns/typesOf
+dn:typesOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf dn:isVocabularyOf ;
+           rdfs:comment "Relates the vocabulary of the types used in a datanode to the datanode itself."@en ;
+           rdfs:label "types of"@en .
+
+
+###  http://purl.org/datanode/ns/usesSchema
+dn:usesSchema rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dn:references ;
+              dct:description "<p>The second is intended to be a self contained model that is (even partly) used in the data node.</p>" ,
+                              "<p>We distinguish the schema and the vocabulary as follows. A vocabulary is the enumeration of a set of terms. A schema organize a set of terms in a system of some sort. A list of body parts is not the anatomy of a body. The furniture is not an interior design model.</p>" ;
+              rdfs:comment "Relates a data node to another used as schema."@en ;
+              rdfs:label "uses schema"@en .
+
+
+###  http://purl.org/datanode/ns/versionOf
+dn:versionOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dn:overlappingCapabilityWith ;
+             rdf:type owl:SymmetricProperty ;
+             dct:description "<p>Use this property to represent a temporal relation between two data nodes that are meant to be the same at a different point in time. The property is symmetric and does not specify a direction.<br/>This property is not transitive. While it can be argued that the identity of something tracked temporarly should not change, thus implying transitivity, we want support the case when a data note has more then one following version (branching). Avoiding transitivity allows it.</p>" ;
+             rdfs:label "version"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/datanode/ns/Datanode
+dn:Datanode rdf:type owl:Class ;
+            rdfs:comment "A data node is an underspecified data object, in a network of data nodes."@en ;
+            rdfs:label "A data node"@en .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

@@ -9,9 +9,58 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9# -->
+<!-- Then, from the 578 properties used to link artists to resources, 183 were used only one time and were  consequently useless for our recommendations, since it imply there is no more than one artist using on.  In addition, 36 of these properties were wrongly defined.  -->
+		<node id="n4504315776">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>Then, from the 578 properties used to link artists to resources, 183 were used only one time and were  consequently useless for our recommendations, since it imply there is no more than one artist using on.  In addition, 36 of these properties were wrongly defined. <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4504315776_4504316096_4504316256" source="n4504315776" target="n4504316256">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having a dataset of artists and links to resources >> access, Dataset, Artist, Link, Resource 1) identify the properties used only once >> identify, Property, Usage, Once 2) 36 of the 183 properties used only ones are wrongly defined >> 36, 183, Property, Usage, Wrong -->
+		<edge id="e_4504315776_4504316016_4504221392" source="n4504315776" target="n4504221392">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- Then, from the 578 properties used to link artists to resources, 183 were used only one time and were  consequently useless for our recommendations, since it imply there is no more than one artist using on.  In addition, 36 of these properties were wrongly defined.  -->
+		<edge id="e_4504315776_4504316416_4504234704" source="n4504315776" target="n4504234704">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
 <!-- http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources -->
-<!-- ex:artistsAndLinksToResources -->
-		<node id="n2947065428974101731">
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources -->
+		<node id="n4504316496">
 			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources]]></data>
 			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources]]></data>
 			<data key="key_nodegraphics">
@@ -19,12 +68,126 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:artistsAndLinksToResources<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
 <!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce -->
-<!-- ex:withPropertiesUsedOnlyOnce -->
-		<node id="n-2131447329502133985">
+		<edge id="e_4504316496_4504316736_4504316656" source="n4504316496" target="n4504316656">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined -->
+		<edge id="e_4504316496_4504316736_4504316176" source="n4504316496" target="n4504316176">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources -->
+		<node id="n4504316496">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/9#artistsAndLinksToResources<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce -->
+		<edge id="e_4504316496_4504316736_4504316656" source="n4504316496" target="n4504316656">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined -->
+		<edge id="e_4504316496_4504316736_4504316176" source="n4504316496" target="n4504316176">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9# -->
+<!-- Then, from the 578 properties used to link artists to resources, 183 were used only one time and were  consequently useless for our recommendations, since it imply there is no more than one artist using on.  In addition, 36 of these properties were wrongly defined.  -->
+		<node id="n4504315776">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>Then, from the 578 properties used to link artists to resources, 183 were used only one time and were  consequently useless for our recommendations, since it imply there is no more than one artist using on.  In addition, 36 of these properties were wrongly defined. <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4504315776_4504316096_4504316256" source="n4504315776" target="n4504316256">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having a dataset of artists and links to resources >> access, Dataset, Artist, Link, Resource 1) identify the properties used only once >> identify, Property, Usage, Once 2) 36 of the 183 properties used only ones are wrongly defined >> 36, 183, Property, Usage, Wrong -->
+		<edge id="e_4504315776_4504316016_4504221392" source="n4504315776" target="n4504221392">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- Then, from the 578 properties used to link artists to resources, 183 were used only one time and were  consequently useless for our recommendations, since it imply there is no more than one artist using on.  In addition, 36 of these properties were wrongly defined.  -->
+		<edge id="e_4504315776_4504316416_4504234704" source="n4504315776" target="n4504234704">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce -->
+		<node id="n4504316656">
 			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce]]></data>
 			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce]]></data>
 			<data key="key_nodegraphics">
@@ -32,106 +195,17 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:withPropertiesUsedOnlyOnce<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined -->
-<!-- ex:withPropertiesWronglyDefined -->
-		<node id="n-921965793682680641">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:withPropertiesWronglyDefined<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined -->
-<!-- ex:propertiesWronglyDefined -->
-		<node id="n-731820636980037608">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:propertiesWronglyDefined<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
 <!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesUsedOnlyOnce -->
-<!-- ex:propertiesUsedOnlyOnce -->
-		<node id="n2184018854800040607">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#propertiesUsedOnlyOnce]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#propertiesUsedOnlyOnce]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:propertiesUsedOnlyOnce<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- 183 -->
-<!-- &lt;html&gt;183&lt;/html&gt; -->
-		<node id="n-3469092098177840268">
-			<data key="k_label"><![CDATA[183]]></data>
-			<data key="d5"><![CDATA[183]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->&lt;html&gt;183&lt;/html&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- 36 -->
-<!-- &lt;html&gt;36&lt;/html&gt; -->
-		<node id="n994322653444580763">
-			<data key="k_label"><![CDATA[36]]></data>
-			<data key="d5"><![CDATA[36]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->&lt;html&gt;36&lt;/html&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- ["http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce", "http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined"] -->
-		<edge id="e_2947065428974101731_1267111699478125169_-2131447329502133985" source="n2947065428974101731" target="n-2131447329502133985">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce", "http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined"] -->
-		<edge id="e_2947065428974101731_1267111699478125169_-921965793682680641" source="n2947065428974101731" target="n-921965793682680641">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/DBREC/9#propertiesUsedOnlyOnce"] -->
-		<edge id="e_-731820636980037608_1393523306225642594_2184018854800040607" source="n-731820636980037608" target="n2184018854800040607">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/DBREC/9#propertiesUsedOnlyOnce"] -->
-		<edge id="e_-2131447329502133985_-2414394263795017364_2184018854800040607" source="n-2131447329502133985" target="n2184018854800040607">
+		<edge id="e_4504316656_4504317296_4504317056" source="n4504316656" target="n4504317056">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -140,8 +214,8 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["183"] -->
-		<edge id="e_-2131447329502133985_-3455547399428618046_-3469092098177840268" source="n-2131447329502133985" target="n-3469092098177840268">
+<!-- 183 -->
+		<edge id="e_4504316656_4504317616_4504233808" source="n4504316656" target="n4504233808">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -150,8 +224,85 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined"] -->
-		<edge id="e_-921965793682680641_-2414394263795017364_-731820636980037608" source="n-921965793682680641" target="n-731820636980037608">
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined -->
+		<node id="n4504316896">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesUsedOnlyOnce -->
+		<edge id="e_4504316896_4504317136_4504317056" source="n4504316896" target="n4504317056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined -->
+		<node id="n4504316896">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesUsedOnlyOnce -->
+		<edge id="e_4504316896_4504317136_4504317056" source="n4504316896" target="n4504317056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce -->
+		<node id="n4504316656">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesUsedOnlyOnce<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesUsedOnlyOnce -->
+		<edge id="e_4504316656_4504317296_4504317056" source="n4504316656" target="n4504317056">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -160,8 +311,47 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["36"] -->
-		<edge id="e_-921965793682680641_-3455547399428618046_994322653444580763" source="n-921965793682680641" target="n994322653444580763">
+<!-- 183 -->
+		<edge id="e_4504316656_4504317616_4504233808" source="n4504316656" target="n4504233808">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>void:properties</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined -->
+		<node id="n4504316176">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/9#withPropertiesWronglyDefined<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/9#propertiesWronglyDefined -->
+		<edge id="e_4504316176_4504317296_4504316896" source="n4504316176" target="n4504316896">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasVocabulary</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 36 -->
+		<edge id="e_4504316176_4504317616_4504233168" source="n4504316176" target="n4504233168">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>

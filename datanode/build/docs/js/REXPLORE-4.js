@@ -1,146 +1,25 @@
-var nodes=
-[{ 
-	id: "0",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers",
-	label: "ex:affiliationsIdentifiers",
-	links: [{
-		target: 1,
-		label: "dn:extractedFrom",
-	uri: "http://purl.org/datanode/ns/extractedFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:processedFrom",
-	uri: "http://purl.org/datanode/ns/processedFrom",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "1",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#Wikipedia",
-	label: "ex:Wikipedia",
-	links: [],
-},{ 
-	id: "2",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings",
-	label: "ex:affiliationsStrings",
-	links: [{
-		target: 3,
-		label: "dn:isSectionOf",
-	uri: "http://purl.org/datanode/ns/isSectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "3",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#corpusOfPublications",
-	label: "ex:corpusOfPublications",
-	links: [],
-},{ 
-	id: "4",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#locations",
-	label: "ex:locations",
-	links: [{
-		target: 5,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 6,
-		label: "dn:processedFrom",
-	uri: "http://purl.org/datanode/ns/processedFrom",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "5",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#Geonames",
-	label: "ex:Geonames",
-	links: [],
-},{ 
-	id: "6",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames",
-	label: "ex:locationsNames",
-	links: [{
-		target: 7,
-		label: "dn:hasPart",
-	uri: "http://purl.org/datanode/ns/hasPart",
-		type: "default",
-		weight: 1,
-	},{
-		target: 9,
-		label: "dn:hasPart",
-	uri: "http://purl.org/datanode/ns/hasPart",
-		type: "default",
-		weight: 1,
-	},{
-		target: 10,
-		label: "dn:hasPart",
-	uri: "http://purl.org/datanode/ns/hasPart",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "7",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia",
-	label: "ex:locationsFromDBPedia",
-	links: [{
-		target: 0,
-		label: "dn:hasIdentifiers",
-	uri: "http://purl.org/datanode/ns/hasIdentifiers",
-		type: "default",
-		weight: 1,
-	},{
-		target: 8,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "8",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#DBPedia",
-	label: "ex:DBPedia",
-	links: [],
-},{ 
-	id: "9",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia",
-	label: "ex:locationsFromWikipedia",
-	links: [{
-		target: 1,
-		label: "dn:extractedFrom",
-	uri: "http://purl.org/datanode/ns/extractedFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 0,
-		label: "dn:hasIdentifiers",
-	uri: "http://purl.org/datanode/ns/hasIdentifiers",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "10",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames",
-	label: "ex:simplifiedLocationsNames",
-	links: [{
-		target: 11,
-		label: "dn:processedFrom",
-	uri: "http://purl.org/datanode/ns/processedFrom",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "11",
-	uri: "_:g70169984629860",
-	label: "_:g70169984629860",
-	links: [{
-		target: 2,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},]
+var nodes=[
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames", "id": "0", "links": [{"uri": "http://purl.org/datanode/ns/hasPart", "type": "default", "target": 6, "weight": 1, "label": "dn:hasPart"}, {"uri": "http://purl.org/datanode/ns/hasPart", "type": "default", "target": 1, "weight": 1, "label": "dn:hasPart"}, {"uri": "http://purl.org/datanode/ns/hasPart", "type": "default", "target": 5, "weight": 1, "label": "dn:hasPart"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia", "id": "1", "links": [{"uri": "http://purl.org/datanode/ns/hasIdentifiers", "type": "default", "target": 4, "weight": 1, "label": "dn:hasIdentifiers"}, {"uri": "http://purl.org/datanode/ns/extractedFrom", "type": "default", "target": 11, "weight": 1, "label": "dn:extractedFrom"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings", "id": "2", "links": [{"uri": "http://purl.org/datanode/ns/isSectionOf", "type": "default", "target": 8, "weight": 1, "label": "dn:isSectionOf"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings"}
+,
+{"label": "ub2bL38C22", "id": "3", "links": [{"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 2, "weight": 1, "label": "dn:isSelectionOf"}], "uri": "ub2bL38C22"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers", "id": "4", "links": [{"uri": "http://purl.org/datanode/ns/processedFrom", "type": "default", "target": 2, "weight": 1, "label": "dn:processedFrom"}, {"uri": "http://purl.org/datanode/ns/extractedFrom", "type": "default", "target": 11, "weight": 1, "label": "dn:extractedFrom"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames", "id": "5", "links": [{"uri": "http://purl.org/datanode/ns/processedFrom", "type": "default", "target": 3, "weight": 1, "label": "dn:processedFrom"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia", "id": "6", "links": [{"uri": "http://purl.org/datanode/ns/hasIdentifiers", "type": "default", "target": 4, "weight": 1, "label": "dn:hasIdentifiers"}, {"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 9, "weight": 1, "label": "dn:isSelectionOf"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/4#locations", "id": "7", "links": [{"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 10, "weight": 1, "label": "dn:isSelectionOf"}, {"uri": "http://purl.org/datanode/ns/processedFrom", "type": "default", "target": 0, "weight": 1, "label": "dn:processedFrom"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#locations"}
+,
+{"label": "ex1:corpusOfPublications", "id": "8", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#corpusOfPublications"}
+,
+{"label": "ex1:DBPedia", "id": "9", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#DBPedia"}
+,
+{"label": "ex1:Geonames", "id": "10", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#Geonames"}
+,
+{"label": "ex1:Wikipedia", "id": "11", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/4#Wikipedia"}
+]

@@ -1,136 +1,19 @@
-var nodes=
-[{ 
-	id: "0",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/5#DBPedia",
-	label: "ex:DBPedia",
-	links: [{
-		target: 1,
-		label: "rdf:type",
-	uri: "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "1",
-	uri: "http://purl.org/datanode/ns/Datanode",
-	label: "dn:Datanode",
-	links: [],
-},{ 
-	id: "2",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/5#artists",
-	label: "ex:artists",
-	links: [{
-		target: 0,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "3",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/5#artists-links",
-	label: "ex:artists-links",
-	links: [{
-		target: 4,
-		label: "dn:hasVocabulary",
-	uri: "http://purl.org/datanode/ns/hasVocabulary",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:isSectionOf",
-	uri: "http://purl.org/datanode/ns/isSectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "4",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/5#relations",
-	label: "ex:relations",
-	links: [{
-		target: 2,
-		label: "dn:relationsOf",
-	uri: "http://purl.org/datanode/ns/relationsOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "5",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/5#direct-links",
-	label: "ex:direct-links",
-	links: [{
-		target: 6,
-		label: "dn:hasVocabulary",
-	uri: "http://purl.org/datanode/ns/hasVocabulary",
-		type: "default",
-		weight: 1,
-	},{
-		target: 3,
-		label: "dn:isSectionOf",
-	uri: "http://purl.org/datanode/ns/isSectionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "6",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/5#direct-relations",
-	label: "ex:direct-relations",
-	links: [{
-		target: 4,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "7",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/5#indirect-links",
-	label: "ex:indirect-links",
-	links: [{
-		target: 5,
-		label: "dn:disjointSection",
-	uri: "http://purl.org/datanode/ns/disjointSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 8,
-		label: "dn:hasVocabulary",
-	uri: "http://purl.org/datanode/ns/hasVocabulary",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "8",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/5#indirect-relations",
-	label: "ex:indirect-relations",
-	links: [{
-		target: 6,
-		label: "dn:differentCapability",
-	uri: "http://purl.org/datanode/ns/differentCapability",
-		type: "default",
-		weight: 1,
-	},{
-		target: 6,
-		label: "dn:disjointPortion",
-	uri: "http://purl.org/datanode/ns/disjointPortion",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "9",
-	uri: "http://purl.org/datanode/ex/0.2/DBREC/5#optimized",
-	label: "ex:optimized",
-	links: [{
-		target: 5,
-		label: "dn:isCopyOf",
-	uri: "http://purl.org/datanode/ns/isCopyOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:optimizedFrom",
-	uri: "http://purl.org/datanode/ns/optimizedFrom",
-		type: "default",
-		weight: 1,
-	},],
-},]
+var nodes=[
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/5#relations", "id": "0", "links": [{"uri": "http://purl.org/datanode/ns/relationsOf", "type": "default", "target": 6, "weight": 1, "label": "dn:relationsOf"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/5#relations"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/5#indirect-relations", "id": "1", "links": [{"uri": "http://purl.org/datanode/ns/differentCapability", "type": "default", "target": 5, "weight": 1, "label": "dn:differentCapability"}, {"uri": "http://purl.org/datanode/ns/disjointPortion", "type": "default", "target": 5, "weight": 1, "label": "dn:disjointPortion"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/5#indirect-relations"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/5#artists-links", "id": "2", "links": [{"uri": "http://purl.org/datanode/ns/isSectionOf", "type": "default", "target": 6, "weight": 1, "label": "dn:isSectionOf"}, {"uri": "http://purl.org/datanode/ns/hasVocabulary", "type": "default", "target": 0, "weight": 1, "label": "dn:hasVocabulary"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/5#artists-links"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/5#indirect-links", "id": "3", "links": [{"uri": "http://purl.org/datanode/ns/disjointSection", "type": "default", "target": 7, "weight": 1, "label": "dn:disjointSection"}, {"uri": "http://purl.org/datanode/ns/hasVocabulary", "type": "default", "target": 1, "weight": 1, "label": "dn:hasVocabulary"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/5#indirect-links"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/5#optimized", "id": "4", "links": [{"uri": "http://purl.org/datanode/ns/isCopyOf", "type": "default", "target": 7, "weight": 1, "label": "dn:isCopyOf"}, {"uri": "http://purl.org/datanode/ns/optimizedFrom", "type": "default", "target": 6, "weight": 1, "label": "dn:optimizedFrom"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/5#optimized"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/5#direct-relations", "id": "5", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 0, "weight": 1, "label": "dn:isPortionOf"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/5#direct-relations"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/5#artists", "id": "6", "links": [{"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 8, "weight": 1, "label": "dn:isSelectionOf"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/5#artists"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/5#direct-links", "id": "7", "links": [{"uri": "http://purl.org/datanode/ns/hasVocabulary", "type": "default", "target": 5, "weight": 1, "label": "dn:hasVocabulary"}, {"uri": "http://purl.org/datanode/ns/isSectionOf", "type": "default", "target": 2, "weight": 1, "label": "dn:isSectionOf"}], "uri": "http://purl.org/datanode/ex/0.2/DBREC/5#direct-links"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/DBREC/5#DBPedia", "id": "8", "links": [], "uri": "http://purl.org/datanode/ex/0.2/DBREC/5#DBPedia"}
+]

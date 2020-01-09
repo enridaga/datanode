@@ -9,48 +9,147 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
-<!-- _:g70113084953080 -->
-<!-- _:g70113084953080 -->
-		<node id="n-2493011974986453413">
-			<data key="k_label"><![CDATA[_:g70113084953080]]></data>
-			<data key="d5"><![CDATA[_:g70113084953080]]></data>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1# -->
+<!-- (Reference http://eventmedia.eurecom.fr/) is obtained from three public event directories (Last.fm, Eventful, Upcoming) and from one large media directory (Flickr).  It encapsulates media and events descriptions, enriched with background knowledge from external datasets such as DBpedia, MusicBrainz, BBC  and Foursquare. The dataset used the LODE ontology and consists of more than 30 millions RDF triples. [...] The data retrieved is de-serialized and exported into a common schema providing descriptions of events, venues, agents, attendees and photos.  -->
+		<node id="n4434415856">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->_:g70113084953080<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>(Reference http://eventmedia.eurecom.fr/) is obtained from three public event directories (Last.fm, Eventful, Upcoming) and from one large media directory (Flickr).  It encapsulates media and events descriptions, enriched with background knowledge from external datasets such as DBpedia, MusicBrainz, BBC  and Foursquare. The dataset used the LODE ontology and consists of more than 30 millions RDF triples. [...] The data retrieved is de-serialized and exported into a common schema providing descriptions of events, venues, agents, attendees and photos. <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr -->
-<!-- ex:descriptionsFromFlickr -->
-		<node id="n-3930187475313248179">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr]]></data>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4434415856_4434416016_4434416176" source="n4434415856" target="n4434416176">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- How to say that :collection does not have any other portion than the ones defined? In other places we used to say that a node has a portion some node which has disjointSection owl:nothing, but this is ugly verbose... -->
+		<edge id="e_4434415856_4434416416_4434315600" source="n4434415856" target="n4434315600">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>skos:note</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ?x dn:isSelectionOf :Flickr -> ?x dn:hasPortion [ dn:samePopulation [ dn:isPortionOf :Flickr ] ] -->
+		<edge id="e_4434415856_4434416416_4434315216" source="n4434415856" target="n4434315216">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>skos:note</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having event descriptions from last.fm >> access, Event, Description, Last.fm 1) having event descriptions from eventful >> access, Event, Description, Eventful 2) having event descriptions from upcoming >> access, Event, Description, Upcoming 3) identify relevant descriptions from flickr >> identify, Relevance, Description, Flickr 3.1) identify descriptions of the event >> identify, Description, Event 3.2) identify things representatives of the event >> identify, Thing, Representative, Event 3.3) identify descriptions of things representative of the event >> identify, Description, Thing, Representative 4) identify relevant descriptions from dbpedia >> identify, Relevance, Description, Dbpedia 5) identify relevant descriptions from musicbrain >> identify, Relevance, Description, Musicbrain 6) identify relevant descriptions from foursquare >> identify, Relevance, Description, Foursquare 7) collect all the information about the event and related things in one place >> collect, Information, Event, RelatedThing, Thing, Location 8) represent the information using the LODE ontology >> describe, Information, Ontology, LODE -->
+		<edge id="e_4434415856_4434415936_4434302032" source="n4434415856" target="n4434302032">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- (Reference http://eventmedia.eurecom.fr/) is obtained from three public event directories (Last.fm, Eventful, Upcoming) and from one large media directory (Flickr).  It encapsulates media and events descriptions, enriched with background knowledge from external datasets such as DBpedia, MusicBrainz, BBC  and Foursquare. The dataset used the LODE ontology and consists of more than 30 millions RDF triples. [...] The data retrieved is de-serialized and exported into a common schema providing descriptions of events, venues, agents, attendees and photos.  -->
+		<edge id="e_4434415856_4434416336_4434302800" source="n4434415856" target="n4434302800">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1# -->
+<!-- (Reference http://eventmedia.eurecom.fr/) is obtained from three public event directories (Last.fm, Eventful, Upcoming) and from one large media directory (Flickr).  It encapsulates media and events descriptions, enriched with background knowledge from external datasets such as DBpedia, MusicBrainz, BBC  and Foursquare. The dataset used the LODE ontology and consists of more than 30 millions RDF triples. [...] The data retrieved is de-serialized and exported into a common schema providing descriptions of events, venues, agents, attendees and photos.  -->
+		<node id="n4434415856">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:descriptionsFromFlickr<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>(Reference http://eventmedia.eurecom.fr/) is obtained from three public event directories (Last.fm, Eventful, Upcoming) and from one large media directory (Flickr).  It encapsulates media and events descriptions, enriched with background knowledge from external datasets such as DBpedia, MusicBrainz, BBC  and Foursquare. The dataset used the LODE ontology and consists of more than 30 millions RDF triples. [...] The data retrieved is de-serialized and exported into a common schema providing descriptions of events, venues, agents, attendees and photos. <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- _:g70113088803940 -->
-<!-- _:g70113088803940 -->
-		<node id="n2908204391919248867">
-			<data key="k_label"><![CDATA[_:g70113088803940]]></data>
-			<data key="d5"><![CDATA[_:g70113088803940]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->_:g70113088803940<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4434415856_4434416016_4434416176" source="n4434415856" target="n4434416176">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
 			</data>
-		</node>
+		</edge>
+<!-- How to say that :collection does not have any other portion than the ones defined? In other places we used to say that a node has a portion some node which has disjointSection owl:nothing, but this is ugly verbose... -->
+		<edge id="e_4434415856_4434416416_4434315600" source="n4434415856" target="n4434315600">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>skos:note</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ?x dn:isSelectionOf :Flickr -> ?x dn:hasPortion [ dn:samePopulation [ dn:isPortionOf :Flickr ] ] -->
+		<edge id="e_4434415856_4434416416_4434315216" source="n4434415856" target="n4434315216">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>skos:note</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having event descriptions from last.fm >> access, Event, Description, Last.fm 1) having event descriptions from eventful >> access, Event, Description, Eventful 2) having event descriptions from upcoming >> access, Event, Description, Upcoming 3) identify relevant descriptions from flickr >> identify, Relevance, Description, Flickr 3.1) identify descriptions of the event >> identify, Description, Event 3.2) identify things representatives of the event >> identify, Thing, Representative, Event 3.3) identify descriptions of things representative of the event >> identify, Description, Thing, Representative 4) identify relevant descriptions from dbpedia >> identify, Relevance, Description, Dbpedia 5) identify relevant descriptions from musicbrain >> identify, Relevance, Description, Musicbrain 6) identify relevant descriptions from foursquare >> identify, Relevance, Description, Foursquare 7) collect all the information about the event and related things in one place >> collect, Information, Event, RelatedThing, Thing, Location 8) represent the information using the LODE ontology >> describe, Information, Ontology, LODE -->
+		<edge id="e_4434415856_4434415936_4434302032" source="n4434415856" target="n4434302032">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- (Reference http://eventmedia.eurecom.fr/) is obtained from three public event directories (Last.fm, Eventful, Upcoming) and from one large media directory (Flickr).  It encapsulates media and events descriptions, enriched with background knowledge from external datasets such as DBpedia, MusicBrainz, BBC  and Foursquare. The dataset used the LODE ontology and consists of more than 30 millions RDF triples. [...] The data retrieved is de-serialized and exported into a common schema providing descriptions of events, venues, agents, attendees and photos.  -->
+		<edge id="e_4434415856_4434416336_4434302800" source="n4434415856" target="n4434302800">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
 <!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia -->
-<!-- ex:descriptionsFromDbpedia -->
-		<node id="n53282752056336691">
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia -->
+		<node id="n4434417216">
 			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia]]></data>
 			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia]]></data>
 			<data key="key_nodegraphics">
@@ -58,51 +157,251 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:descriptionsFromDbpedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- _:g70113088795160 -->
-<!-- _:g70113088795160 -->
-		<node id="n3070569980625067056">
-			<data key="k_label"><![CDATA[_:g70113088795160]]></data>
-			<data key="d5"><![CDATA[_:g70113088795160]]></data>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Dbpedia -->
+		<edge id="e_4434417216_4434417136_4434417536" source="n4434417216" target="n4434417536">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL32C23 -->
+		<edge id="e_4434417216_4434417776_4434417616" source="n4434417216" target="n4434417616">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia -->
+		<node id="n4434417216">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->_:g70113088795160<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain -->
-<!-- ex:descriptionsFromMusicbrain -->
-		<node id="n3512286677152384004">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain]]></data>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Dbpedia -->
+		<edge id="e_4434417216_4434417136_4434417536" source="n4434417216" target="n4434417536">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL32C23 -->
+		<edge id="e_4434417216_4434417776_4434417616" source="n4434417216" target="n4434417616">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL44C23 -->
+<!-- ub2bL44C23 -->
+		<node id="n4434417936">
+			<data key="k_label"><![CDATA[ub2bL44C23]]></data>
+			<data key="d5"><![CDATA[ub2bL44C23]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:descriptionsFromMusicbrain<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>ub2bL44C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- _:g70113084845940 -->
-<!-- _:g70113084845940 -->
-		<node id="n1570465614301577216">
-			<data key="k_label"><![CDATA[_:g70113084845940]]></data>
-			<data key="d5"><![CDATA[_:g70113084845940]]></data>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<edge id="e_4434417936_4434418096_4434418016" source="n4434417936" target="n4434418016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL44C23 -->
+<!-- ub2bL44C23 -->
+		<node id="n4434417936">
+			<data key="k_label"><![CDATA[ub2bL44C23]]></data>
+			<data key="d5"><![CDATA[ub2bL44C23]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->_:g70113084845940<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>ub2bL44C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<edge id="e_4434417936_4434418096_4434418016" source="n4434417936" target="n4434418016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL38C23 -->
+<!-- ub2bL38C23 -->
+		<node id="n4434417696">
+			<data key="k_label"><![CDATA[ub2bL38C23]]></data>
+			<data key="d5"><![CDATA[ub2bL38C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL38C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<edge id="e_4434417696_4434418096_4434418016" source="n4434417696" target="n4434418016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL38C23 -->
+<!-- ub2bL38C23 -->
+		<node id="n4434417696">
+			<data key="k_label"><![CDATA[ub2bL38C23]]></data>
+			<data key="d5"><![CDATA[ub2bL38C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL38C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<edge id="e_4434417696_4434418096_4434418016" source="n4434417696" target="n4434418016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL26C8 -->
+<!-- ub2bL26C8 -->
+		<node id="n4434417456">
+			<data key="k_label"><![CDATA[ub2bL26C8]]></data>
+			<data key="d5"><![CDATA[ub2bL26C8]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL26C8<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
 <!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare -->
-<!-- ex:descriptionsFromFoursquare -->
-		<node id="n309278170605693079">
+		<edge id="e_4434417456_4434416976_4434417376" source="n4434417456" target="n4434417376">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isCopyOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL26C8 -->
+<!-- ub2bL26C8 -->
+		<node id="n4434417456">
+			<data key="k_label"><![CDATA[ub2bL26C8]]></data>
+			<data key="d5"><![CDATA[ub2bL26C8]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL26C8<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare -->
+		<edge id="e_4434417456_4434416976_4434417376" source="n4434417456" target="n4434417376">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isCopyOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare -->
+		<node id="n4434417376">
 			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare]]></data>
 			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare]]></data>
 			<data key="key_nodegraphics">
@@ -110,181 +409,135 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:descriptionsFromFoursquare<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#collection -->
-<!-- ex:collection -->
-		<node id="n-3849541269081831452">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#collection]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#collection]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:collection<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- _:g70113084826120 -->
-<!-- _:g70113084826120 -->
-		<node id="n-457992331313639024">
-			<data key="k_label"><![CDATA[_:g70113084826120]]></data>
-			<data key="d5"><![CDATA[_:g70113084826120]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->_:g70113084826120<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
-<!-- ex:events -->
-		<node id="n-3067712218059699535">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:events<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Dbpedia -->
-<!-- ex:Dbpedia -->
-		<node id="n-1799020533695197875">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Dbpedia]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Dbpedia]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:Dbpedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- _:g70113073291980 -->
-<!-- _:g70113073291980 -->
-		<node id="n-1163210592594450488">
-			<data key="k_label"><![CDATA[_:g70113073291980]]></data>
-			<data key="d5"><![CDATA[_:g70113073291980]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->_:g70113073291980<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Flickr -->
-<!-- ex:Flickr -->
-		<node id="n-3803398273537508860">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Flickr]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Flickr]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:Flickr<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- _:g70113072912080 -->
-<!-- _:g70113072912080 -->
-		<node id="n2317769589669707728">
-			<data key="k_label"><![CDATA[_:g70113072912080]]></data>
-			<data key="d5"><![CDATA[_:g70113072912080]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->_:g70113072912080<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
 <!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Foursquare -->
-<!-- ex:Foursquare -->
-		<node id="n2558853611675508666">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Foursquare]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Foursquare]]></data>
+		<edge id="e_4434417376_4434417136_4434418656" source="n4434417376" target="n4434418656">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL44C23 -->
+		<edge id="e_4434417376_4434417776_4434417936" source="n4434417376" target="n4434417936">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare -->
+		<node id="n4434417376">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:Foursquare<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- _:g70113072802660 -->
-<!-- _:g70113072802660 -->
-		<node id="n-1520644827679168911">
-			<data key="k_label"><![CDATA[_:g70113072802660]]></data>
-			<data key="d5"><![CDATA[_:g70113072802660]]></data>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Foursquare -->
+		<edge id="e_4434417376_4434417136_4434418656" source="n4434417376" target="n4434418656">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL44C23 -->
+		<edge id="e_4434417376_4434417776_4434417936" source="n4434417376" target="n4434417936">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL32C23 -->
+<!-- ub2bL32C23 -->
+		<node id="n4434417616">
+			<data key="k_label"><![CDATA[ub2bL32C23]]></data>
+			<data key="d5"><![CDATA[ub2bL32C23]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->_:g70113072802660<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>ub2bL32C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Musicbrain -->
-<!-- ex:Musicbrain -->
-		<node id="n3885584537500633646">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Musicbrain]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Musicbrain]]></data>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<edge id="e_4434417616_4434418096_4434418016" source="n4434417616" target="n4434418016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL32C23 -->
+<!-- ub2bL32C23 -->
+		<node id="n4434417616">
+			<data key="k_label"><![CDATA[ub2bL32C23]]></data>
+			<data key="d5"><![CDATA[ub2bL32C23]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:Musicbrain<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>ub2bL32C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful -->
-<!-- ex:Eventful -->
-		<node id="n-24929714354440133">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:Eventful<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<edge id="e_4434417616_4434418096_4434418016" source="n4434417616" target="n4434418016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
 			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM -->
-<!-- ex:LastFM -->
-		<node id="n1924704089696712703">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:LastFM<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming -->
-<!-- ex:Upcoming -->
-		<node id="n-3094016833587034908">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:Upcoming<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
+		</edge>
 <!-- http://purl.org/datanode/ex/0.2/EventMedia/1#output -->
-<!-- ex:output -->
-		<node id="n2905689349417098088">
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#output -->
+		<node id="n4434418736">
 			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#output]]></data>
 			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#output]]></data>
 			<data key="key_nodegraphics">
@@ -292,254 +545,17 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:output<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/EventMedia/1#output<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#TheLODEOntology -->
-<!-- ex:TheLODEOntology -->
-		<node id="n-413497793852760350">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#TheLODEOntology]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#TheLODEOntology]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:TheLODEOntology<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr"] -->
-		<edge id="e_-2493011974986453413_-4063911145653914995_-3930187475313248179" source="n-2493011974986453413" target="n-3930187475313248179">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isCopyOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia"] -->
-		<edge id="e_2908204391919248867_-4063911145653914995_53282752056336691" source="n2908204391919248867" target="n53282752056336691">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isCopyOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain"] -->
-		<edge id="e_3070569980625067056_-4063911145653914995_3512286677152384004" source="n3070569980625067056" target="n3512286677152384004">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isCopyOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare"] -->
-		<edge id="e_1570465614301577216_-4063911145653914995_309278170605693079" source="n1570465614301577216" target="n309278170605693079">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isCopyOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70113084953080", "_:g70113088803940", "_:g70113088795160", "_:g70113084845940"] -->
-		<edge id="e_-3849541269081831452_1656419316490004195_-2493011974986453413" source="n-3849541269081831452" target="n-2493011974986453413">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70113084953080", "_:g70113088803940", "_:g70113088795160", "_:g70113084845940"] -->
-		<edge id="e_-3849541269081831452_1656419316490004195_2908204391919248867" source="n-3849541269081831452" target="n2908204391919248867">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70113084953080", "_:g70113088803940", "_:g70113088795160", "_:g70113084845940"] -->
-		<edge id="e_-3849541269081831452_1656419316490004195_3070569980625067056" source="n-3849541269081831452" target="n3070569980625067056">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70113084953080", "_:g70113088803940", "_:g70113088795160", "_:g70113084845940"] -->
-		<edge id="e_-3849541269081831452_1656419316490004195_1570465614301577216" source="n-3849541269081831452" target="n1570465614301577216">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#events"] -->
-		<edge id="e_-457992331313639024_-3149144526070245418_-3067712218059699535" source="n-457992331313639024" target="n-3067712218059699535">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#Dbpedia"] -->
-		<edge id="e_53282752056336691_-2533983204582036596_-1799020533695197875" source="n53282752056336691" target="n-1799020533695197875">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70113084826120"] -->
-		<edge id="e_53282752056336691_3912541889113413801_-457992331313639024" source="n53282752056336691" target="n-457992331313639024">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#events"] -->
-		<edge id="e_-1163210592594450488_-3149144526070245418_-3067712218059699535" source="n-1163210592594450488" target="n-3067712218059699535">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#Flickr"] -->
-		<edge id="e_-3930187475313248179_-2533983204582036596_-3803398273537508860" source="n-3930187475313248179" target="n-3803398273537508860">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70113073291980"] -->
-		<edge id="e_-3930187475313248179_3912541889113413801_-1163210592594450488" source="n-3930187475313248179" target="n-1163210592594450488">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#events"] -->
-		<edge id="e_2317769589669707728_-3149144526070245418_-3067712218059699535" source="n2317769589669707728" target="n-3067712218059699535">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#Foursquare"] -->
-		<edge id="e_309278170605693079_-2533983204582036596_2558853611675508666" source="n309278170605693079" target="n2558853611675508666">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70113072912080"] -->
-		<edge id="e_309278170605693079_3912541889113413801_2317769589669707728" source="n309278170605693079" target="n2317769589669707728">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#events"] -->
-		<edge id="e_-1520644827679168911_-3149144526070245418_-3067712218059699535" source="n-1520644827679168911" target="n-3067712218059699535">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#Musicbrain"] -->
-		<edge id="e_3512286677152384004_-2533983204582036596_3885584537500633646" source="n3512286677152384004" target="n3885584537500633646">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["_:g70113072802660"] -->
-		<edge id="e_3512286677152384004_3912541889113413801_-1520644827679168911" source="n3512286677152384004" target="n-1520644827679168911">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful", "http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM", "http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming"] -->
-		<edge id="e_-3067712218059699535_-4108494307313779821_-24929714354440133" source="n-3067712218059699535" target="n-24929714354440133">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful", "http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM", "http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming"] -->
-		<edge id="e_-3067712218059699535_-4108494307313779821_1924704089696712703" source="n-3067712218059699535" target="n1924704089696712703">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful", "http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM", "http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming"] -->
-		<edge id="e_-3067712218059699535_-4108494307313779821_-3094016833587034908" source="n-3067712218059699535" target="n-3094016833587034908">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#collection"] -->
-		<edge id="e_2905689349417098088_-1205677171493535104_-3849541269081831452" source="n2905689349417098088" target="n-3849541269081831452">
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#collection -->
+		<edge id="e_4434418736_4434418496_4434416496" source="n4434418736" target="n4434416496">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -548,13 +564,579 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/EventMedia/1#TheLODEOntology"] -->
-		<edge id="e_2905689349417098088_-4235875257635137550_-413497793852760350" source="n2905689349417098088" target="n-413497793852760350">
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#TheLODEOntology -->
+		<edge id="e_4434418736_4434419296_4434419216" source="n4434418736" target="n4434419216">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
 				<y:EdgeLabel>dn:usesSchema</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#output -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#output -->
+		<node id="n4434418736">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#output]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#output]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#output<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#collection -->
+		<edge id="e_4434418736_4434418496_4434416496" source="n4434418736" target="n4434416496">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isRemodelledFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#TheLODEOntology -->
+		<edge id="e_4434418736_4434419296_4434419216" source="n4434418736" target="n4434419216">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:usesSchema</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#collection -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#collection -->
+		<node id="n4434416496">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#collection]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#collection]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#collection<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL20C19 -->
+		<edge id="e_4434416496_4434416736_4434416576" source="n4434416496" target="n4434416576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL22C8 -->
+		<edge id="e_4434416496_4434416736_4434416096" source="n4434416496" target="n4434416096">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL24C8 -->
+		<edge id="e_4434416496_4434416736_4434417296" source="n4434416496" target="n4434417296">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL26C8 -->
+		<edge id="e_4434416496_4434416736_4434417456" source="n4434416496" target="n4434417456">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr -->
+		<node id="n4434416896">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL38C23 -->
+		<edge id="e_4434416896_4434417776_4434417696" source="n4434416896" target="n4434417696">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Flickr -->
+		<edge id="e_4434416896_4434417136_4434418256" source="n4434416896" target="n4434418256">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr -->
+		<node id="n4434416896">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL38C23 -->
+		<edge id="e_4434416896_4434417776_4434417696" source="n4434416896" target="n4434417696">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Flickr -->
+		<edge id="e_4434416896_4434417136_4434418256" source="n4434416896" target="n4434418256">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<node id="n4434418016">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#events<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming -->
+		<edge id="e_4434418016_4434417856_4434418576" source="n4434418016" target="n4434418576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful -->
+		<edge id="e_4434418016_4434417856_4434418976" source="n4434418016" target="n4434418976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM -->
+		<edge id="e_4434418016_4434417856_4434419056" source="n4434418016" target="n4434419056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<node id="n4434418016">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#events<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming -->
+		<edge id="e_4434418016_4434417856_4434418576" source="n4434418016" target="n4434418576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful -->
+		<edge id="e_4434418016_4434417856_4434418976" source="n4434418016" target="n4434418976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM -->
+		<edge id="e_4434418016_4434417856_4434419056" source="n4434418016" target="n4434419056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain -->
+		<node id="n4434416656">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL50C23 -->
+		<edge id="e_4434416656_4434417776_4434418336" source="n4434416656" target="n4434418336">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Musicbrain -->
+		<edge id="e_4434416656_4434417136_4434418816" source="n4434416656" target="n4434418816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain -->
+		<node id="n4434416656">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL50C23 -->
+		<edge id="e_4434416656_4434417776_4434418336" source="n4434416656" target="n4434418336">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Musicbrain -->
+		<edge id="e_4434416656_4434417136_4434418816" source="n4434416656" target="n4434418816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL20C19 -->
+<!-- ub2bL20C19 -->
+		<node id="n4434416576">
+			<data key="k_label"><![CDATA[ub2bL20C19]]></data>
+			<data key="d5"><![CDATA[ub2bL20C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL20C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr -->
+		<edge id="e_4434416576_4434416976_4434416896" source="n4434416576" target="n4434416896">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isCopyOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL50C23 -->
+<!-- ub2bL50C23 -->
+		<node id="n4434418336">
+			<data key="k_label"><![CDATA[ub2bL50C23]]></data>
+			<data key="d5"><![CDATA[ub2bL50C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL50C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<edge id="e_4434418336_4434418096_4434418016" source="n4434418336" target="n4434418016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<node id="n4434418016">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#events<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming -->
+		<edge id="e_4434418016_4434417856_4434418576" source="n4434418016" target="n4434418576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful -->
+		<edge id="e_4434418016_4434417856_4434418976" source="n4434418016" target="n4434418976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM -->
+		<edge id="e_4434418016_4434417856_4434419056" source="n4434418016" target="n4434419056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#events -->
+		<node id="n4434418016">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/EventMedia/1#events]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/EventMedia/1#events<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming -->
+		<edge id="e_4434418016_4434417856_4434418576" source="n4434418016" target="n4434418576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful -->
+		<edge id="e_4434418016_4434417856_4434418976" source="n4434418016" target="n4434418976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM -->
+		<edge id="e_4434418016_4434417856_4434419056" source="n4434418016" target="n4434419056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL24C8 -->
+<!-- ub2bL24C8 -->
+		<node id="n4434417296">
+			<data key="k_label"><![CDATA[ub2bL24C8]]></data>
+			<data key="d5"><![CDATA[ub2bL24C8]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL24C8<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain -->
+		<edge id="e_4434417296_4434416976_4434416656" source="n4434417296" target="n4434416656">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isCopyOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL22C8 -->
+<!-- ub2bL22C8 -->
+		<node id="n4434416096">
+			<data key="k_label"><![CDATA[ub2bL22C8]]></data>
+			<data key="d5"><![CDATA[ub2bL22C8]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL22C8<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia -->
+		<edge id="e_4434416096_4434416976_4434417216" source="n4434416096" target="n4434417216">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isCopyOf</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
