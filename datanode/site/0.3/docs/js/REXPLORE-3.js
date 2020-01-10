@@ -1,240 +1,37 @@
-var nodes=
-[{ 
-	id: "0",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#contributesTo",
-	label: "ex:contributesTo",
-	links: [{
-		target: 1,
-		label: "rdfs:subPropertyOf",
-	uri: "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "1",
-	uri: "http://www.w3.org/2004/02/skos/core#related",
-	label: "skos:related",
-	links: [],
-},{ 
-	id: "2",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#corpusOfPublications",
-	label: "ex:corpusOfPublications",
-	links: [{
-		target: 3,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "3",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#keywords",
-	label: "ex:keywords",
-	links: [{
-		target: 6,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 7,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 4,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 8,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 9,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 6,
-		label: "dn:hasSelection",
-	uri: "http://purl.org/datanode/ns/hasSelection",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "4",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#extractedKeywords",
-	label: "ex:extractedKeywords",
-	links: [{
-		target: 5,
-		label: "dn:isExtractionOf",
-	uri: "http://purl.org/datanode/ns/isExtractionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "5",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#publicationTexts",
-	label: "ex:publicationTexts",
-	links: [],
-},{ 
-	id: "6",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#correctKeywords",
-	label: "ex:correctKeywords",
-	links: [],
-},{ 
-	id: "7",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#erroneousKeywords",
-	label: "ex:erroneousKeywords",
-	links: [],
-},{ 
-	id: "8",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#irrelevantKeywords",
-	label: "ex:irrelevantKeywords",
-	links: [],
-},{ 
-	id: "9",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#userDefinedKeywords",
-	label: "ex:userDefinedKeywords",
-	links: [],
-},{ 
-	id: "10",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#ontology",
-	label: "ex:ontology",
-	links: [{
-		target: 3,
-		label: "dn:cleanedFrom",
-	uri: "http://purl.org/datanode/ns/cleanedFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 11,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 6,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 12,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 3,
-		label: "dn:optimizedFrom",
-	uri: "http://purl.org/datanode/ns/optimizedFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 13,
-		label: "dn:usesSchema",
-	uri: "http://purl.org/datanode/ns/usesSchema",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "11",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#topicsSet",
-	label: "ex:topicsSet",
-	links: [],
-},{ 
-	id: "12",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#relations",
-	label: "ex:relations",
-	links: [{
-		target: 15,
-		label: "dn:hasVocabulary",
-	uri: "http://purl.org/datanode/ns/hasVocabulary",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:processedFrom",
-	uri: "http://purl.org/datanode/ns/processedFrom",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "13",
-	uri: "http://purl.org/ontology/bibo/",
-	label: "http://purl.org/ontology/bibo/",
-	links: [{
-		target: 18,
-		label: "dn:usesSchema",
-	uri: "http://purl.org/datanode/ns/usesSchema",
-		type: "default",
-		weight: 1,
-	},{
-		target: 19,
-		label: "dn:usesSchema",
-	uri: "http://purl.org/datanode/ns/usesSchema",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "14",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#relatedEquivalent",
-	label: "ex:relatedEquivalent",
-	links: [{
-		target: 1,
-		label: "rdfs:subPropertyOf",
-	uri: "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "15",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#semanticRelations",
-	label: "ex:semanticRelations",
-	links: [{
-		target: 16,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 14,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 17,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "16",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/3#constributesTo",
-	label: "ex:constributesTo",
-	links: [],
-},{ 
-	id: "17",
-	uri: "http://www.w3.org/2004/02/skos/core#broaderGeneric",
-	label: "skos:broaderGeneric",
-	links: [],
-},{ 
-	id: "18",
-	uri: "http://www.w3.org/2004/02/skos/core#",
-	label: "skos:",
-	links: [],
-},{ 
-	id: "19",
-	uri: "http://xmlns.com/foaf/0.1/",
-	label: "foaf:",
-	links: [],
-},]
+var nodes=[
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/3#ontology", "id": "0", "links": [{"uri": "http://purl.org/datanode/ns/usesSchema", "type": "default", "target": 4, "weight": 1, "label": "dn:usesSchema"}, {"uri": "http://purl.org/datanode/ns/cleanedFrom", "type": "default", "target": 1, "weight": 1, "label": "dn:cleanedFrom"}, {"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 5, "weight": 1, "label": "dn:hasSection"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 11, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/optimizedFrom", "type": "default", "target": 1, "weight": 1, "label": "dn:optimizedFrom"}, {"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 10, "weight": 1, "label": "dn:hasPortion"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#ontology"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/3#keywords", "id": "1", "links": [{"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 10, "weight": 1, "label": "dn:hasPortion"}, {"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 14, "weight": 1, "label": "dn:hasPortion"}, {"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 7, "weight": 1, "label": "dn:hasPortion"}, {"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 6, "weight": 1, "label": "dn:hasPortion"}, {"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 8, "weight": 1, "label": "dn:hasPortion"}, {"uri": "http://purl.org/datanode/ns/hasSelection", "type": "default", "target": 10, "weight": 1, "label": "dn:hasSelection"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#keywords"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/3#corpusOfPublications", "id": "2", "links": [{"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 1, "weight": 1, "label": "dn:hasSection"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#corpusOfPublications"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/3#semanticRelations", "id": "3", "links": [{"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 9, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 13, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 12, "weight": 1, "label": "dn:describes"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#semanticRelations"}
+,
+{"label": "http://purl.org/ontology/bibo/", "id": "4", "links": [{"uri": "http://purl.org/datanode/ns/usesSchema", "type": "default", "target": 15, "weight": 1, "label": "dn:usesSchema"}, {"uri": "http://purl.org/datanode/ns/usesSchema", "type": "default", "target": 16, "weight": 1, "label": "dn:usesSchema"}], "uri": "http://purl.org/ontology/bibo/"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/3#relations", "id": "5", "links": [{"uri": "http://purl.org/datanode/ns/processedFrom", "type": "default", "target": 2, "weight": 1, "label": "dn:processedFrom"}, {"uri": "http://purl.org/datanode/ns/hasVocabulary", "type": "default", "target": 3, "weight": 1, "label": "dn:hasVocabulary"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#relations"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/3#extractedKeywords", "id": "6", "links": [{"uri": "http://purl.org/datanode/ns/isExtractionOf", "type": "default", "target": 17, "weight": 1, "label": "dn:isExtractionOf"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#extractedKeywords"}
+,
+{"label": "ex1:irrelevantKeywords", "id": "7", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#irrelevantKeywords"}
+,
+{"label": "ex1:erroneousKeywords", "id": "8", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#erroneousKeywords"}
+,
+{"label": "skos:broaderGeneric", "id": "9", "links": [], "uri": "http://www.w3.org/2004/02/skos/core#broaderGeneric"}
+,
+{"label": "ex1:correctKeywords", "id": "10", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#correctKeywords"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/3#topicsSet", "id": "11", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#topicsSet"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/3#relatedEquivalent", "id": "12", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#relatedEquivalent"}
+,
+{"label": "ex1:constributesTo", "id": "13", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#constributesTo"}
+,
+{"label": "ex1:userDefinedKeywords", "id": "14", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#userDefinedKeywords"}
+,
+{"label": "http://www.w3.org/2004/02/skos/core#", "id": "15", "links": [], "uri": "http://www.w3.org/2004/02/skos/core#"}
+,
+{"label": "http://xmlns.com/foaf/0.1/", "id": "16", "links": [], "uri": "http://xmlns.com/foaf/0.1/"}
+,
+{"label": "ex1:publicationTexts", "id": "17", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/3#publicationTexts"}
+]

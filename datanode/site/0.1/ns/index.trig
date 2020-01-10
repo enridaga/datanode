@@ -1,0 +1,537 @@
+@prefix :      <http://purl.org/datanode/ns/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+{ :optimizedFrom  a           owl:ObjectProperty ;
+          rdfs:label          "optimized from"@end ;
+          rdfs:subPropertyOf  :processedFrom ;
+          owl:inverseOf       :optimized .
+  
+  :datatypes  a               owl:ObjectProperty ;
+          rdfs:comment        "Relates data to the properties used."@en ;
+          rdfs:label          "datatypes"@en ;
+          rdfs:subPropertyOf  :descriptors .
+  
+  :inference  a               owl:ObjectProperty ;
+          rdfs:label          "inference"@en ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :dependencyOf  rdfs:label   "dependency of"@en ;
+          rdfs:subPropertyOf  :relateTo ;
+          owl:inverseOf       :dependency .
+  
+  :fuzzySimilarTo  a          owl:SymmetricProperty ;
+          rdfs:label          "fuzzy similar to"@en ;
+          rdfs:subPropertyOf  :similarTo .
+  
+  :metadata  rdfs:comment     "To relate data to metadata."@en , "Data have other data as metadata."@en ;
+          rdfs:label          "metadata" ;
+          rdfs:subPropertyOf  :relateTo ;
+          owl:inverseOf       :about .
+  
+  :sectionOf  a               owl:TransitiveProperty ;
+          rdfs:label          "section of"@en ;
+          rdfs:subPropertyOf  :partOf ;
+          owl:inverseOf       :section .
+  
+  :portionOf  a               owl:TransitiveProperty ;
+          rdfs:label          "portion of"@en ;
+          rdfs:subPropertyOf  :partOf .
+  
+  :previousVersionOf  a       owl:InverseFunctionalProperty ;
+          rdfs:label          "previous version of"@en ;
+          rdfs:subPropertyOf  :olderVersionOf ;
+          owl:inverseOf       :nextVersionOf .
+  
+  :descriptors  a             owl:ObjectProperty ;
+          rdfs:comment        "Relates data to the schema entities used."@en ;
+          rdfs:label          "**descriptors"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :example  a                 owl:ObjectProperty ;
+          rdfs:label          "example"@en ;
+          rdfs:subPropertyOf  :derive .
+  
+  :sameDescriptorsAs  a             owl:SymmetricProperty ;
+          rdfs:label                "same descriptors as"@en ;
+          rdfs:subPropertyOf        :similarTo ;
+          owl:propertyDisjointWith  :differentDescriptorsFrom .
+  
+  :removalOf  a               owl:ObjectProperty ;
+          rdfs:label          "removal of"@en ;
+          rdfs:subPropertyOf  :changeOf ;
+          owl:inverseOf       :removal .
+  
+  :datatypeOf  a              owl:ObjectProperty ;
+          rdfs:label          "datatypes of"@en ;
+          rdfs:subPropertyOf  :descriptorsOf ;
+          owl:inverseOf       :datatypes .
+  
+  :differentDescriptorsFrom
+          a                         owl:SymmetricProperty ;
+          rdfs:label                "different descriptors from"@en ;
+          rdfs:subPropertyOf        :differentFrom ;
+          owl:propertyDisjointWith  :sameDescriptorsAs .
+  
+  :processedFrom  a           owl:ObjectProperty ;
+          rdfs:label          "processed from"@en ;
+          rdfs:subPropertyOf  :derivedFrom ;
+          owl:inverseOf       :processedInto .
+  
+  :selection  a               owl:ObjectProperty ;
+          rdfs:label          "selection"@en ;
+          rdfs:subPropertyOf  :derive .
+  
+  :adjacent  a                owl:SymmetricProperty , owl:TransitiveProperty ;
+          rdfs:comment        "To relate data to any of their adjacent data."@en ;
+          rdfs:label          "adjacent"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :optimized  a               owl:ObjectProperty ;
+          rdfs:label          "optimized"@end ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :dependency  rdfs:label     "dependency"@en ;
+          rdfs:subPropertyOf  :referenceTo .
+  
+  :disjointPortion  a         owl:SymmetricProperty ;
+          rdfs:label          "disjoint portion"@en ;
+          rdfs:subPropertyOf  :disjointPart .
+  
+  :typesOf  a                 owl:ObjectProperty ;
+          rdfs:label          "types of"@en ;
+          rdfs:subPropertyOf  :descriptorsOf ;
+          owl:inverseOf       :types .
+  
+  :updatedVersionOf  a        owl:ObjectProperty ;
+          rdfs:label          "updated version of"@en ;
+          rdfs:subPropertyOf  :newerVersionOf , :updateOf ;
+          owl:inverseOf       :updatedVersion .
+  
+  :similarTo  a               owl:SymmetricProperty ;
+          rdfs:label          "similar to"@en ;
+          rdfs:subPropertyOf  :comparedAgainst .
+  
+  :propertiesOf  a            owl:ObjectProperty ;
+          rdfs:label          "properties of"@en ;
+          rdfs:subPropertyOf  :descriptorsOf ;
+          owl:inverseOf       :properties .
+  
+  :attachedTo  rdfs:comment   "Data are attached to data for some reason"@en ;
+          rdfs:label          "attached to"@en ;
+          rdfs:subPropertyOf  :adjacent ;
+          owl:inverseOf       :haveAttached ;
+          skos:note           "This, along with its inverse \"haveAttached\" , are considered to model the \"physical\" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments; but there may emerge other examples."@en .
+  
+  :Data   a             rdfs:Class , owl:Class ;
+          rdfs:comment  "This is the Top Class of DataVOK"@en ;
+          rdfs:label    "Data"@en .
+  
+  :section  a                 owl:TransitiveProperty ;
+          rdfs:comment        "Data can be cut in sections according to specific attributes."@en ;
+          rdfs:label          "section"@en ;
+          rdfs:subPropertyOf  :part ;
+          skos:note           "An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition."@en .
+  
+  :inconsistentWith  a              owl:SymmetricProperty , owl:ObjectProperty ;
+          rdfs:label                "inconsistent with"@en ;
+          rdfs:subPropertyOf        :comparedAgainst ;
+          owl:propertyDisjointWith  :consistentWith .
+  
+  :exampleOf  a               owl:ObjectProperty ;
+          rdfs:label          "example of"@en ;
+          rdfs:subPropertyOf  :derivedFrom ;
+          owl:inverseOf       :example .
+  
+  :statistic  a               owl:ObjectProperty ;
+          rdfs:label          "statistic"@en ;
+          rdfs:subPropertyOf  :describedBy , :computation .
+  
+  :statisticOf  a             owl:ObjectProperty ;
+          rdfs:label          "statistic of"@en ;
+          rdfs:subPropertyOf  :describe , :computationOf ;
+          owl:inverseOf       :statistic .
+  
+  :types  a                   owl:ObjectProperty ;
+          rdfs:comment        "Relates data to the types used."@en ;
+          rdfs:label          "types"@en ;
+          rdfs:subPropertyOf  :descriptors .
+  
+  :redundantWith  a           owl:ObjectProperty ;
+          rdfs:label          "redundant with"@en ;
+          rdfs:subPropertyOf  :overlappingCapability .
+  
+  :processedInto  a           owl:ObjectProperty ;
+          rdfs:label          "processed into"@en ;
+          rdfs:subPropertyOf  :derive .
+  
+  :reification  a             owl:ObjectProperty ;
+          rdfs:label          "reification"@en ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :samePopulationAs  a              owl:SymmetricProperty ;
+          rdfs:label                "same population as"@en ;
+          rdfs:subPropertyOf        :similarTo ;
+          owl:propertyDisjointWith  :differentPopulationFrom .
+  
+  :translation  a             owl:ObjectProperty ;
+          rdfs:comment        "Living in a RDF world, data can be translated in many ways (vocabulary may change, RDF structure may be changed). Another example is reification." ;
+          rdfs:label          "translation"@en ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :sampleOf  a                owl:ObjectProperty ;
+          rdfs:label          "sample of"@en ;
+          rdfs:subPropertyOf  :portionOf ;
+          owl:inverseOf       :sample .
+  
+  :referenceTo  rdfs:label    "reference to"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :linkTo  rdfs:comment       "Data link to data"@en ;
+          rdfs:label          "link to"@en ;
+          rdfs:subPropertyOf  :referenceTo .
+  
+  :overlappingCapability
+          a                   owl:SymmetricProperty ;
+          rdfs:label          "overlapping capability"@en ;
+          rdfs:subPropertyOf  :similarTo .
+  
+  :consistentWith  a          owl:SymmetricProperty , owl:ObjectProperty ;
+          rdfs:label          "consistent with"@en ;
+          rdfs:subPropertyOf  :comparedAgainst .
+  
+  :cleanedFrom  a             owl:ObjectProperty ;
+          rdfs:label          "cleaned from"@end ;
+          rdfs:subPropertyOf  :processedFrom ;
+          owl:inverseOf       :cleaned .
+  
+  :comparedAgainst  a         owl:SymmetricProperty ;
+          rdfs:comment        "Anytime we need to describe a comparison as a binary relation (for example smaller, similar)"@en ;
+          rdfs:label          "**compared against"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :properties  a              owl:ObjectProperty ;
+          rdfs:comment        "Relates data to the properties used."@en ;
+          rdfs:label          "properties"@en ;
+          rdfs:subPropertyOf  :descriptors .
+  
+  :copy   a                   owl:TransitiveProperty ;
+          rdfs:label          "copy"@en ;
+          rdfs:subPropertyOf  :derive .
+  
+  :describe  rdfs:comment     "Data describe other data."@en ;
+          rdfs:label          "describe"@en ;
+          rdfs:subPropertyOf  :about .
+  
+  :versionOf  a               owl:ObjectProperty ;
+          rdfs:comment        "Use this property to represent a temporal relation between two dataset."@en ;
+          rdfs:label          "version of"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :fuzzyDifferentFrom
+          a                   owl:SymmetricProperty ;
+          rdfs:label          "fuzzy different from"@en ;
+          rdfs:subPropertyOf  :differentFrom .
+  
+  :disjointSection  a         owl:SymmetricProperty ;
+          rdfs:comment        "Data can be cut in sections according to specific attributes."@en ;
+          rdfs:label          "disjoint section"@en ;
+          rdfs:subPropertyOf  :disjointPart .
+  
+  :standIn  a                 owl:ObjectProperty ;
+          rdfs:label          "stand in"@en ;
+          rdfs:subPropertyOf  :derive .
+  
+  :summarization  a           owl:ObjectProperty ;
+          rdfs:label          "summarization"@en ;
+          rdfs:subPropertyOf  :derive .
+  
+  :enhancementOf  a           owl:ObjectProperty ;
+          rdfs:label          "enhancement of"@en ;
+          rdfs:subPropertyOf  :derivedFrom , :attachedTo ;
+          owl:inverseOf       :enhancement .
+  
+  :newerVersionOf  a          owl:TransitiveProperty ;
+          rdfs:label          "newer version of"@en ;
+          rdfs:subPropertyOf  :versionOf .
+  
+  :sample  a                  owl:ObjectProperty ;
+          rdfs:label          "sample"@en ;
+          rdfs:subPropertyOf  :portion .
+  
+  :update  a                  owl:ObjectProperty ;
+          rdfs:comment        "some data is the update of some other"@en ;
+          rdfs:label          "**update"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :referencedBy  rdfs:label   "referenced by"@en ;
+          rdfs:subPropertyOf  :relateTo ;
+          owl:inverseOf       :referenceTo .
+  
+  :linkedFrom  rdfs:label     "linked from"@en ;
+          rdfs:subPropertyOf  :referencedBy ;
+          owl:inverseOf       :linkTo .
+  
+  :anonymized  a              owl:ObjectProperty ;
+          rdfs:label          "anonymized"@en ;
+          rdfs:subPropertyOf  :processedInto , :standIn .
+  
+  :extractionOf  a            owl:ObjectProperty ;
+          rdfs:label          "extraction of"@en ;
+          rdfs:subPropertyOf  :processedFrom ;
+          owl:inverseOf       :extraction .
+  
+  :annotation  a              owl:ObjectProperty ;
+          rdfs:label          "annotation"@en ;
+          rdfs:subPropertyOf  :metadata , :haveAttached .
+  
+  :snapshot  a                owl:ObjectProperty ;
+          rdfs:comment        "a copy of data in a specific time point"@en ;
+          rdfs:label          "snapshot"@en ;
+          rdfs:subPropertyOf  :version , :copy .
+  
+  :computation  a             owl:ObjectProperty ;
+          rdfs:label          "computation"@en ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :version  a                 owl:ObjectProperty ;
+          rdfs:label          "version"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :sameCapabilityAs  a        owl:SymmetricProperty ;
+          rdfs:label          "same capability as"@en ;
+          rdfs:subPropertyOf  :redundantWith .
+  
+  :haveAttached  rdfs:comment  "Data have attached other data for some reason"@en ;
+          rdfs:label          "have attached"@en ;
+          rdfs:subPropertyOf  :adjacent .
+  
+  :addition  a                owl:ObjectProperty ;
+          rdfs:comment        "some data is the addition-update of some other"@en ;
+          rdfs:label          "addition"@en ;
+          rdfs:subPropertyOf  :change .
+  
+  :anonymizedFrom  a          owl:ObjectProperty ;
+          rdfs:label          "anonymized from"@en ;
+          rdfs:subPropertyOf  :processedFrom , :standInFor ;
+          owl:inverseOf       :anonymized .
+  
+  :partOf  a                  owl:TransitiveProperty ;
+          rdfs:label          "part of"@en ;
+          rdfs:subPropertyOf  :relateTo ;
+          owl:inverseOf       :part .
+  
+  :differentPopulationFrom
+          a                         owl:SymmetricProperty ;
+          rdfs:label                "different population from"@en ;
+          rdfs:subPropertyOf        :differentFrom ;
+          owl:propertyDisjointWith  :samePopulationAs .
+  
+  :enhancement  a             owl:ObjectProperty ;
+          rdfs:label          "enhancement"@en ;
+          rdfs:subPropertyOf  :derive , :haveAttached .
+  
+  :nearlySamePopulationAs
+          a                   owl:SymmetricProperty ;
+          rdfs:label          "nearly same population as"@en ;
+          rdfs:subPropertyOf  :fuzzySimilarTo .
+  
+  :differentRoleFrom  a       owl:SymmetricProperty ;
+          rdfs:label          "different role from"@en ;
+          rdfs:subPropertyOf  :differentFrom .
+  
+  :derive  a                  owl:ObjectProperty ;
+          rdfs:label          "**derive"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :translationOf  a           owl:ObjectProperty ;
+          rdfs:comment        "Some data being the translated form of other." ;
+          rdfs:label          "translation of"@en ;
+          rdfs:subPropertyOf  :processedFrom ;
+          owl:inverseOf       :translation .
+  
+  :descriptorsOf  a           owl:ObjectProperty ;
+          rdfs:label          "descriptors of"@en ;
+          rdfs:subPropertyOf  :relateTo ;
+          owl:inverseOf       :descriptors .
+  
+  :inferenceOf  a             owl:ObjectProperty ;
+          rdfs:label          "inference of"@en ;
+          rdfs:subPropertyOf  :processedFrom ;
+          owl:inverseOf       :inference .
+  
+  :olderVersionOf  a          owl:TransitiveProperty ;
+          rdfs:label          "older version of"@en ;
+          rdfs:subPropertyOf  :versionOf ;
+          owl:inverseOf       :newerVersionOf .
+  
+  :changeOf  a                owl:FunctionalProperty , owl:ObjectProperty ;
+          rdfs:comment        "some data is the coming change of some other"@en ;
+          rdfs:label          "change of"@en ;
+          rdfs:subPropertyOf  :updateOf ;
+          owl:inverseOf       :change .
+  
+  :part   a                   owl:TransitiveProperty ;
+          rdfs:comment        "To related data to any of their subset data."@en ;
+          rdfs:label          "part"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :removal  a                 owl:ObjectProperty ;
+          rdfs:comment        "some data is the removal-update of some other"@en ;
+          rdfs:label          "removal"@en ;
+          rdfs:subPropertyOf  :change .
+  
+  :describedBy  rdfs:comment  "Data have other data as description."@en ;
+          rdfs:label          "described by" ;
+          rdfs:subPropertyOf  :metadata ;
+          owl:inverseOf       :describe .
+  
+  :selectionFrom  a           owl:ObjectProperty ;
+          rdfs:label          "selection from"@en ;
+          rdfs:subPropertyOf  :derivedFrom ;
+          owl:inverseOf       :selection .
+  
+  :identifiers  a             owl:ObjectProperty ;
+          rdfs:label          "identifiers"@en ;
+          rdfs:subPropertyOf  :section .
+  
+  :annotationOf  a            owl:ObjectProperty ;
+          rdfs:label          "annotation of"@en ;
+          rdfs:subPropertyOf  :about , :attachedTo ;
+          owl:inverseOf       :annotation .
+  
+  :additionOf  a              owl:ObjectProperty ;
+          rdfs:label          "addition of"@en ;
+          rdfs:subPropertyOf  :changeOf ;
+          owl:inverseOf       :addition .
+  
+  :summarizationOf  a         owl:ObjectProperty ;
+          rdfs:label          "summarization of"@en ;
+          rdfs:subPropertyOf  :derivedFrom ;
+          owl:inverseOf       :summarization .
+  
+  :extraction  a              owl:ObjectProperty ;
+          rdfs:label          "extraction"@en ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :duplicate  a               owl:IrreflexiveProperty , owl:SymmetricProperty ;
+          rdfs:label          "duplicate"@en ;
+          rdfs:subPropertyOf  :similarTo .
+  
+  :differentFrom  a           owl:SymmetricProperty ;
+          rdfs:label          "different from"@en ;
+          rdfs:subPropertyOf  :comparedAgainst .
+  
+  :disjointPart  a            owl:SymmetricProperty ;
+          rdfs:label          "disjoint part"@en ;
+          rdfs:subPropertyOf  :adjacent .
+  
+  :updateOf  a                owl:ObjectProperty ;
+          rdfs:label          "update of"@en ;
+          rdfs:subPropertyOf  :relateTo ;
+          owl:inverseOf       :update .
+  
+  :standInFor  a              owl:ObjectProperty ;
+          rdfs:label          "stand in for"@en ;
+          rdfs:subPropertyOf  :derivedFrom ;
+          owl:inverseOf       :standIn .
+  
+  :combinationFrom  a         owl:ObjectProperty ;
+          rdfs:comment        "A dataset that is the result of the combination of another dataset with something else"@en ;
+          rdfs:label          "combination from"@en ;
+          rdfs:subPropertyOf  :derivedFrom .
+  
+  :derivedFrom  a             owl:ObjectProperty ;
+          rdfs:label          "derived from"@en ;
+          rdfs:subPropertyOf  :relateTo ;
+          owl:inverseOf       :derive .
+  
+  :differentCapabilityFrom
+          a                   owl:SymmetricProperty ;
+          rdfs:label          "different capability from"@en ;
+          rdfs:subPropertyOf  :differentFrom .
+  
+  :copyOf  a                  owl:TransitiveProperty ;
+          rdfs:label          "copy of"@en ;
+          rdfs:subPropertyOf  :derivedFrom ;
+          owl:inverseOf       :copy .
+  
+  :reificationOf  a           owl:ObjectProperty ;
+          rdfs:label          "reification of"@en ;
+          rdfs:subPropertyOf  :derivedFrom ;
+          owl:inverseOf       :reification .
+  
+  :nextVersionOf  a           owl:FunctionalProperty ;
+          rdfs:label          "next version of"@en ;
+          rdfs:subPropertyOf  :newerVersionOf .
+  
+  :computationOf  a           owl:ObjectProperty ;
+          rdfs:label          "computation of"@en ;
+          rdfs:subPropertyOf  :processedFrom ;
+          owl:inverseOf       :computation .
+  
+  :relateTo  a          owl:ReflexiveProperty , owl:SymmetricProperty , owl:ObjectProperty ;
+          rdfs:comment  "This is the Top Property of DataVOK."@en , "Some data relate to other data."@en ;
+          rdfs:domain   :Data ;
+          rdfs:label    "relate to"@en ;
+          rdfs:range    :Data .
+  
+  :nearlySameDescriptorsAs
+          a                   owl:SymmetricProperty ;
+          rdfs:label          "nearly same descriptors as"@en ;
+          rdfs:subPropertyOf  :fuzzySimilarTo .
+  
+  :snapshotOf  a              owl:ObjectProperty ;
+          rdfs:label          "snapshot of"@en ;
+          rdfs:subPropertyOf  :versionOf , :copyOf ;
+          owl:inverseOf       :snapshot .
+  
+  :disjointCapabilityFrom
+          a                         owl:SymmetricProperty ;
+          rdfs:label                "disjoint capability from"@en ;
+          rdfs:subPropertyOf        :differentCapabilityFrom ;
+          owl:propertyDisjointWith  :overlappingCapability .
+  
+  :sameRoleAs  a              owl:SymmetricProperty ;
+          rdfs:label          "same role as"@en ;
+          rdfs:subPropertyOf  :similarTo .
+  
+  <http://purl.org/datanode/0.1/>
+          a                owl:Ontology ;
+          rdfs:label       "The Datanode Vocabulary" ;
+          dcterms:creator  "enridaga - enricodaga@gmail.com" ;
+          owl:versionInfo  "0.1" ;
+          foaf:depiction   <http://www.radioantena.si/img/Gallery/Photo/wo_d0608ed2-3af3-43e2-af1a-1bb1d09c7705.jpg> .
+  
+  :change  a                  owl:InverseFunctionalProperty , owl:ObjectProperty ;
+          rdfs:comment        "some data has a change to come"@en ;
+          rdfs:label          "change"@en ;
+          rdfs:subPropertyOf  :update .
+  
+  :portion  a                 owl:TransitiveProperty ;
+          rdfs:label          "portion"@en ;
+          rdfs:subPropertyOf  :part ;
+          owl:inverseOf       :portionOf ;
+          skos:note           ":portion is used to capture the relation with a subset of the data."@en .
+  
+  :about  rdfs:comment        "Data is metadata of other data."@en , "Data is about other data."@en ;
+          rdfs:label          "about"@en ;
+          rdfs:subPropertyOf  :relateTo .
+  
+  :updatedVersion  a          owl:ObjectProperty ;
+          rdfs:label          "updated version"@en ;
+          rdfs:subPropertyOf  :update .
+  
+  :identifiersOf  a           owl:ObjectProperty ;
+          rdfs:label          "identifiers of"@en ;
+          rdfs:subPropertyOf  :sectionOf ;
+          owl:inverseOf       :identifiers .
+  
+  :cleaned  a                 owl:ObjectProperty ;
+          rdfs:label          "cleaned"@end ;
+          rdfs:subPropertyOf  :processedInto .
+}

@@ -1,249 +1,35 @@
-var nodes=
-[{ 
-	id: "0",
-	uri: "_:g70355423875500",
-	label: "_:g70355423875500",
-	links: [{
-		target: 1,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 3,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "1",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic",
-	label: "ex:aTopic",
-	links: [],
-},{ 
-	id: "2",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#authors",
-	label: "ex:authors",
-	links: [{
-		target: 7,
-		label: "dn:isDescribedBy",
-	uri: "http://purl.org/datanode/ns/isDescribedBy",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "3",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#time",
-	label: "ex:time",
-	links: [{
-		target: 7,
-		label: "dn:isDescribedBy",
-	uri: "http://purl.org/datanode/ns/isDescribedBy",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "4",
-	uri: "_:g70355423652740",
-	label: "_:g70355423652740",
-	links: [{
-		target: 0,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 5,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "5",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags",
-	label: "ex:publicationTags",
-	links: [{
-		target: 7,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "6",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends",
-	label: "ex:authorTrends",
-	links: [{
-		target: 4,
-		label: "dn:isStatisticOf",
-	uri: "http://purl.org/datanode/ns/isStatisticOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "7",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase",
-	label: "ex:knowledgeBase",
-	links: [],
-},{ 
-	id: "8",
-	uri: "_:g70355423485120",
-	label: "_:g70355423485120",
-	links: [{
-		target: 1,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 3,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 9,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "9",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#topics",
-	label: "ex:topics",
-	links: [{
-		target: 1,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 7,
-		label: "dn:isDescribedBy",
-	uri: "http://purl.org/datanode/ns/isDescribedBy",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "10",
-	uri: "_:g70355423464480",
-	label: "_:g70355423464480",
-	links: [{
-		target: 8,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 5,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "11",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends",
-	label: "ex:migrationTrends",
-	links: [{
-		target: 10,
-		label: "dn:isInterpretationOf",
-	uri: "http://purl.org/datanode/ns/isInterpretationOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "12",
-	uri: "_:g70355423219620",
-	label: "_:g70355423219620",
-	links: [{
-		target: 1,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 13,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 3,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "13",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#publications",
-	label: "ex:publications",
-	links: [{
-		target: 5,
-		label: "dn:isDescribedBy",
-	uri: "http://purl.org/datanode/ns/isDescribedBy",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "14",
-	uri: "_:g70355423411520",
-	label: "_:g70355423411520",
-	links: [{
-		target: 12,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 5,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "15",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends",
-	label: "ex:publicationTrends",
-	links: [{
-		target: 14,
-		label: "dn:isStatisticOf",
-	uri: "http://purl.org/datanode/ns/isStatisticOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "16",
-	uri: "http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends",
-	label: "ex:topicTrends",
-	links: [{
-		target: 6,
-		label: "dn:hasPart",
-	uri: "http://purl.org/datanode/ns/hasPart",
-		type: "default",
-		weight: 1,
-	},{
-		target: 11,
-		label: "dn:hasPart",
-	uri: "http://purl.org/datanode/ns/hasPart",
-		type: "default",
-		weight: 1,
-	},{
-		target: 15,
-		label: "dn:hasPart",
-	uri: "http://purl.org/datanode/ns/hasPart",
-		type: "default",
-		weight: 1,
-	},],
-},]
+var nodes=[
+{"label": "ub2bL17C23", "id": "0", "links": [{"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 7, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 3, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 15, "weight": 1, "label": "dn:describes"}], "uri": "ub2bL17C23"}
+,
+{"label": "ub2bL39C23", "id": "1", "links": [{"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 7, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 15, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 12, "weight": 1, "label": "dn:describes"}], "uri": "ub2bL39C23"}
+,
+{"label": "ub2bL38C22", "id": "2", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 9, "weight": 1, "label": "dn:isPortionOf"}, {"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 1, "weight": 1, "label": "dn:hasSection"}], "uri": "ub2bL38C22"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/6#authors", "id": "3", "links": [{"uri": "http://purl.org/datanode/ns/isDescribedBy", "type": "default", "target": 16, "weight": 1, "label": "dn:isDescribedBy"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#authors"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/6#topics", "id": "4", "links": [{"uri": "http://purl.org/datanode/ns/isDescribedBy", "type": "default", "target": 16, "weight": 1, "label": "dn:isDescribedBy"}, {"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 15, "weight": 1, "label": "dn:hasPortion"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#topics"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends", "id": "5", "links": [{"uri": "http://purl.org/datanode/ns/isStatisticOf", "type": "default", "target": 2, "weight": 1, "label": "dn:isStatisticOf"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends"}
+,
+{"label": "ub2bL28C23", "id": "6", "links": [{"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 7, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 15, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 4, "weight": 1, "label": "dn:describes"}], "uri": "ub2bL28C23"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/6#time", "id": "7", "links": [{"uri": "http://purl.org/datanode/ns/isDescribedBy", "type": "default", "target": 16, "weight": 1, "label": "dn:isDescribedBy"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#time"}
+,
+{"label": "ub2bL27C27", "id": "8", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 9, "weight": 1, "label": "dn:isPortionOf"}, {"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 6, "weight": 1, "label": "dn:hasSection"}], "uri": "ub2bL27C27"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags", "id": "9", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 16, "weight": 1, "label": "dn:isPortionOf"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags"}
+,
+{"label": "ub2bL16C22", "id": "10", "links": [{"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 0, "weight": 1, "label": "dn:hasSection"}, {"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 9, "weight": 1, "label": "dn:isPortionOf"}], "uri": "ub2bL16C22"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends", "id": "11", "links": [{"uri": "http://purl.org/datanode/ns/hasPart", "type": "default", "target": 13, "weight": 1, "label": "dn:hasPart"}, {"uri": "http://purl.org/datanode/ns/hasPart", "type": "default", "target": 5, "weight": 1, "label": "dn:hasPart"}, {"uri": "http://purl.org/datanode/ns/hasPart", "type": "default", "target": 14, "weight": 1, "label": "dn:hasPart"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/6#publications", "id": "12", "links": [{"uri": "http://purl.org/datanode/ns/isDescribedBy", "type": "default", "target": 9, "weight": 1, "label": "dn:isDescribedBy"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#publications"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends", "id": "13", "links": [{"uri": "http://purl.org/datanode/ns/isStatisticOf", "type": "default", "target": 10, "weight": 1, "label": "dn:isStatisticOf"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends", "id": "14", "links": [{"uri": "http://purl.org/datanode/ns/isInterpretationOf", "type": "default", "target": 8, "weight": 1, "label": "dn:isInterpretationOf"}], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends"}
+,
+{"label": "ex1:aTopic", "id": "15", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic"}
+,
+{"label": "ex1:knowledgeBase", "id": "16", "links": [], "uri": "http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase"}
+]

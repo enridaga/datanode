@@ -388,7 +388,9 @@ exports.View = function(_data){
 		// We bind the data to the view
 		for(var i in _data)
 			o[i] = _data[i];
-		
+		if(typeof o.symmetric == "undefined"){
+			console.log("BUG INdata.label", o)
+		}
 		o.render = function(template){
 			var compiled = _.template(_fs.readFileSync(template, {encoding: 'UTF-8'}));
 			return compiled(this)

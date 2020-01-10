@@ -4,10 +4,8 @@ AddType application/rdf+xml .rdf .owl
 AddType application/x-trig .trig
 AddType application/n-quads .nq
 AddType application/n-triples .nt
+AddHandler type-map .txt
 
 DefaultLanguage en
 
-DirectoryIndex index.ttl
-
-
-
+DirectoryIndex index

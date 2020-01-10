@@ -1,0 +1,582 @@
+@prefix :      <http://purl.org/datanode/ns/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+{ :optimizedFrom  a           owl:ObjectProperty ;
+          rdfs:label          "optimized from"@end ;
+          rdfs:subPropertyOf  :processedFrom , :overlappingCapability ;
+          owl:inverseOf       :optimized .
+  
+  :links  rdfs:comment        "A data node links to other data using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs)."@en ;
+          rdfs:label          "links"@en ;
+          rdfs:subPropertyOf  :references .
+  
+  :hasChange  a               owl:InverseFunctionalProperty , owl:ObjectProperty ;
+          rdfs:comment        "some data has a change to come"@en ;
+          rdfs:label          "has change"@en ;
+          rdfs:subPropertyOf  :hasUpdate .
+  
+  :hasComputation  a          owl:ObjectProperty ;
+          rdfs:label          "has computation"@en ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :isPartOf  a                owl:TransitiveProperty ;
+          rdfs:label          "is part of"@en ;
+          rdfs:subPropertyOf  :related ;
+          owl:inverseOf       :hasPart .
+  
+  :hasDatatypes  a            owl:ObjectProperty ;
+          rdfs:comment        "Relates data to the properties used."@en ;
+          rdfs:label          "has datatypes"@en ;
+          rdfs:subPropertyOf  :hasVocabulary .
+  
+  :metadata  rdfs:comment      "A data node has another data node as metadata."@en ;
+          rdfs:label           "metadata" ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>This is used to relate a data node to its metadata.</p>"^^rdf:HTML ;
+          owl:inverseOf        :about .
+  
+  :hasInference  a            owl:ObjectProperty ;
+          rdfs:label          "has inference"@en ;
+          rdfs:subPropertyOf  :hasInterpretation .
+  
+  :datatypesOf  a             owl:ObjectProperty ;
+          rdfs:label          "datatypes of"@en ;
+          rdfs:subPropertyOf  :isVocabularyOf ;
+          owl:inverseOf       :hasDatatypes .
+  
+  :isUpdatedVersionOf
+          a                   owl:ObjectProperty ;
+          rdfs:label          "updated version of"@en ;
+          rdfs:subPropertyOf  :olderVersion , :isUpdateOf ;
+          owl:inverseOf       :hasUpdatedVersion .
+  
+  :isDerivationOf  rdfs:label  "is derivation of"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>Is this property transitive?</p>"^^rdf:HTML , "<p>This relation indicates that a data node is the origin of another, in the sense that the second have been produced using the first as main information source.</p>"^^rdf:HTML .
+  
+  :hasDependency  rdfs:label  "has dependency"@en ;
+          rdfs:subPropertyOf  :references .
+  
+  :isUpdateOf  a              owl:ObjectProperty ;
+          rdfs:label          "is update of"@en ;
+          rdfs:subPropertyOf  :related ;
+          owl:inverseOf       :hasUpdate .
+  
+  :references  rdfs:label      "references"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>It looks like there could be a more generic property here, which refer to the fact of sharing some signatures (identifiers), without assuming an order or direction of the reference. Two data nodes may simply use the same identifier independently from the intention of making a reference to anything else (then the identifier itself). Does this make sense?</p>"^^rdf:HTML , "<p>This property indicates that data includes a mention to something which is included in another data node. <br/> Talking about RDF datasets, this refer to the mention of a URI belonging to another dataset. For example, a dataset about employees could mention a Geonames location.</p>"^^rdf:HTML .
+  
+  :processedFrom  a           owl:ObjectProperty ;
+          rdfs:label          "processed from"@en ;
+          rdfs:subPropertyOf  :isDerivationOf ;
+          owl:inverseOf       :processedInto .
+  
+  :hasTypes  a                owl:ObjectProperty ;
+          rdfs:comment        "Relatesa a data node to the collection of types used."@en ;
+          rdfs:label          "has types"@en ;
+          rdfs:subPropertyOf  :hasVocabulary .
+  
+  :refactoredInto  a          owl:ObjectProperty ;
+          rdfs:label          "refactored into"@en ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :isSelectionOf  a           owl:ObjectProperty ;
+          rdfs:label          "is selection of"@en ;
+          rdfs:subPropertyOf  :isPartOf , :isDerivationOf ;
+          owl:inverseOf       :hasSelection .
+  
+  :adjacent  a                 owl:SymmetricProperty , owl:TransitiveProperty ;
+          rdfs:comment         "To relate a data node to any of their adjacent data node."@en ;
+          rdfs:label           "adjacent"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>This property basically represents the proximity of some data node to another, without assuming any other kind of relation at domain or structural level.</p>"^^rdf:HTML .
+  
+  :optimized  a               owl:ObjectProperty ;
+          rdfs:comment        "Optimize to amplify existing capabilities."@en ;
+          rdfs:label          "optimized"@end ;
+          rdfs:subPropertyOf  :processedInto , :overlappingCapability .
+  
+  :disjointPortion  a         owl:SymmetricProperty ;
+          rdfs:label          "disjoint portion"@en ;
+          rdfs:subPropertyOf  :disjointPart , :differentPopulation .
+  
+  :isCacheOf  a               owl:ObjectProperty ;
+          rdfs:label          "is cache of"@en ;
+          rdfs:subPropertyOf  :isSnapshotOf , :isStandInOf ;
+          owl:inverseOf       :hasCache .
+  
+  :hasSelection  a            owl:ObjectProperty ;
+          rdfs:comment        "We represent here the outcome of the isolation of a part of a data node for a specific intent."@en ;
+          rdfs:label          "has selection"@en ;
+          rdfs:subPropertyOf  :hasDerivation , :hasPart .
+  
+  :typesOf  a                 owl:ObjectProperty ;
+          rdfs:label          "types of"@en ;
+          rdfs:subPropertyOf  :isVocabularyOf ;
+          owl:inverseOf       :hasTypes .
+  
+  :overlappingVocabulary
+          a                   owl:ObjectProperty ;
+          rdfs:label          "overlapping vocabulary"@en ;
+          rdfs:subPropertyOf  :overlappingCapability .
+  
+  :hasCopy  a                 owl:TransitiveProperty ;
+          rdfs:label          "has copy"@en ;
+          rdfs:subPropertyOf  :hasDerivation , :hasDuplicate .
+  
+  :isExtractionOf  a          owl:ObjectProperty ;
+          rdfs:label          "extraction of"@en ;
+          rdfs:subPropertyOf  :isInterpretationOf ;
+          owl:inverseOf       :hasExtraction .
+  
+  :newerVersion  a            owl:TransitiveProperty ;
+          rdfs:label          "newer version of"@en ;
+          rdfs:subPropertyOf  :version .
+  
+  :hasIdentifiers  a          owl:ObjectProperty ;
+          rdfs:label          "has identifiers"@en ;
+          rdfs:subPropertyOf  :hasSection .
+  
+  :attachedTo  rdfs:comment    "Data are attached to data for some reason"@en ;
+          rdfs:label           "attached to"@en ;
+          rdfs:subPropertyOf   :adjacent ;
+          dcterms:description  "This, along with its inverse \"haveAttached\" , are considered to model the \"physical\" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments; but there may emerge other examples."@en ;
+          owl:inverseOf        :hasAttached .
+  
+  :hasAttached  rdfs:comment  "Data have attached other data for some reason"@en ;
+          rdfs:label          "has attached"@en ;
+          rdfs:subPropertyOf  :adjacent .
+  
+  :isStatisticOf  a           owl:ObjectProperty ;
+          rdfs:label          "is statistic of"@en ;
+          rdfs:subPropertyOf  :describes , :isComputationOf ;
+          owl:inverseOf       :hasStatistic .
+  
+  :inconsistentWith  a              owl:SymmetricProperty , owl:ObjectProperty ;
+          rdfs:label                "inconsistent with"@en ;
+          rdfs:subPropertyOf        :related ;
+          dcterms:description       "<p>It can be the case that a single data node is corrupted to some respect. It can then be marked to be inconsistent with itself.</p>"^^rdf:HTML , "<p>A data node that should not be used together with another. We intend consistency in a general sense: two data nodes are inconsistent because they do not agree.</p>"^^rdf:HTML ;
+          owl:propertyDisjointWith  :consistentWith .
+  
+  :isSectionOf  a             owl:TransitiveProperty ;
+          rdfs:label          "is section of"@en ;
+          rdfs:subPropertyOf  :isPartOf ;
+          owl:inverseOf       :hasSection .
+  
+  :isPortionOf  a             owl:TransitiveProperty ;
+          rdfs:label          "is portion of"@en ;
+          rdfs:subPropertyOf  :isPartOf .
+  
+  :hasSnapshot  a             owl:ObjectProperty ;
+          rdfs:comment        "A copy of a data node in a specific time point"@en ;
+          rdfs:label          "has snapshot"@en ;
+          rdfs:subPropertyOf  :version , :hasCopy .
+  
+  :isAdditionOf  a            owl:ObjectProperty ;
+          rdfs:label          "is addition of"@en ;
+          rdfs:subPropertyOf  :isChangeOf ;
+          owl:inverseOf       :hasAddition .
+  
+  :hasStatistic  a            owl:ObjectProperty ;
+          rdfs:label          "has statistic"@en ;
+          rdfs:subPropertyOf  :describedBy , :hasComputation .
+  
+  :isCopyOf  a                owl:TransitiveProperty ;
+          rdfs:label          "is copy of"@en ;
+          rdfs:subPropertyOf  :isDerivationOf , :isDuplicateOf ;
+          owl:inverseOf       :hasCopy .
+  
+  :redundantWith  a           owl:TransitiveProperty ;
+          rdfs:label          "redundant with"@en ;
+          rdfs:subPropertyOf  :overlappingPopulation , :overlappingVocabulary .
+  
+  :hasAttributes  a            owl:ObjectProperty ;
+          rdfs:comment         "Relates data to the attributes used."@en ;
+          rdfs:label           "has attributes"@en ;
+          rdfs:subPropertyOf   :hasDescriptors ;
+          dcterms:description  "<p>We relate with this property a data node to a collection of attributes used in it. We distinguish attributes from relations because the first does qualify its range but only its domain (saying that a person is 1.82m tall does not change our knowledge about 1.82m).</p>"^^rdf:HTML .
+  
+  :processedInto  a           owl:ObjectProperty ;
+          rdfs:comment        "A data node is processed (transformed) to obtain another one."@en ;
+          rdfs:label          "processed into"@en ;
+          rdfs:subPropertyOf  :hasDerivation .
+  
+  :sameVocabulary  a          owl:TransitiveProperty ;
+          rdfs:label          "same vocabulary"@en ;
+          rdfs:subPropertyOf  :overlappingVocabulary .
+  
+  :hasAddition  a             owl:ObjectProperty ;
+          rdfs:comment        "some data is the addition-update of some other"@en ;
+          rdfs:label          "has addition"@en ;
+          rdfs:subPropertyOf  :hasChange .
+  
+  :nextVersion  a             owl:FunctionalProperty ;
+          rdfs:label          "next version"@en ;
+          rdfs:subPropertyOf  :newerVersion .
+  
+  :differentVocabulary
+          a                         owl:SymmetricProperty ;
+          rdfs:label                "different vocabulary"@en ;
+          rdfs:subPropertyOf        :differentCapability ;
+          owl:propertyDisjointWith  :sameVocabulary .
+  
+  :Datanode  a          rdfs:Class , owl:Class ;
+          rdfs:comment  "A data node is an underspecified data node, in a network of data nodes."@en ;
+          rdfs:label    "A data node"@en .
+  
+  :overlappingCapability
+          a                    owl:SymmetricProperty ;
+          rdfs:label           "overlapping capability"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>Two data nodes have similar potential. This may refer to any kind of feature, being it structural (they share schemas), physical (they are both in XML) or related to the domain (they both talk about Music Artists) - just to make few examples.</p>"^^rdf:HTML .
+  
+  :consistentWith  a           owl:SymmetricProperty , owl:ObjectProperty ;
+          rdfs:label           "consistent with"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>It can be the case that a single data node is verified to be correct. It can then be marked to be consistent with itself.</p>"^^rdf:HTML , "<p>A data node that should be used together with another. We intend consistency in a general sense: two data nodes are consistent because they agree (ie, they do not disagree...).</p>"^^rdf:HTML .
+  
+  :cleanedFrom  a             owl:ObjectProperty ;
+          rdfs:label          "cleaned from"@end ;
+          rdfs:subPropertyOf  :overlappingCapability , :processedFrom ;
+          owl:inverseOf       :cleanedInto .
+  
+  :isSnapshotOf  a            owl:ObjectProperty ;
+          rdfs:label          "is snapshot of"@en ;
+          rdfs:subPropertyOf  :version , :isCopyOf ;
+          owl:inverseOf       :hasSnapshot .
+  
+  :usesSchema  a               owl:ObjectProperty ;
+          rdfs:comment         "Relates a data node to another used as schema."@en ;
+          rdfs:label           "uses schema"@en ;
+          rdfs:subPropertyOf   :references ;
+          dcterms:description  "<p>We distinguish the schema and the vocabulary as follows. A vocabulary is the enumeration of a set of terms. A schema organize a set of terms in a system of some sort. A list of body parts is not the anatomy of a body. The furniture is not an interior design model.</p>"^^rdf:HTML , "<p>The second is intended to be a self contained model that is (partly) used in the data node.</p>"^^rdf:HTML .
+  
+  :isStandInOf  a             owl:ObjectProperty ;
+          rdfs:label          "is stand-in of"@en ;
+          rdfs:subPropertyOf  :overlappingCapability , :isDerivationOf ;
+          owl:inverseOf       :hasStandIn .
+  
+  :relationsOf  a             owl:ObjectProperty ;
+          rdfs:label          "relations of"@en ;
+          rdfs:subPropertyOf  :descriptorsOf ;
+          owl:inverseOf       :hasRelations .
+  
+  :schemaUsedBy  a             owl:ObjectProperty ;
+          rdfs:label           "schema used by"@en ;
+          rdfs:subPropertyOf   :referencedBy ;
+          dcterms:description  "Does being a schema imply being a dependency?"@en ;
+          owl:inverseOf        :usesSchema .
+  
+  :isExampleOf  a             owl:ObjectProperty ;
+          rdfs:label          "example of"@en ;
+          rdfs:subPropertyOf  :isSelectionOf ;
+          owl:inverseOf       :hasExample .
+  
+  :disjointSection  a         owl:SymmetricProperty ;
+          rdfs:comment        "Data can be cut in sections according to specific attributes."@en ;
+          rdfs:label          "disjoint section"@en ;
+          rdfs:subPropertyOf  :disjointPart , :differentVocabulary .
+  
+  :hasRelations  a            owl:ObjectProperty ;
+          rdfs:comment        "Relates data to the relations used."@en ;
+          rdfs:label          "has relations"@en ;
+          rdfs:subPropertyOf  :hasDescriptors .
+  
+  <http://purl.org/datanode/0.2/>
+          a                    owl:Ontology ;
+          rdfs:label           "The Datanode Vocabulary" ;
+          dcterms:creator      "enridaga - enricodaga@gmail.com" ;
+          dcterms:description  "Which are the allowed inferences? Should we write a RIF ontology to describe the intended meaning of the relations of Datanode?"@en , "Which is the recommended way of linking a datanode to one of its member? A vocabulary to one of its Class?"@en , "Is it possible to express the same things in different ways?"@en , "<p>Naming conventions: <ol><li>camel case <li>has[Noun]/is[Noun]Of <li>[present tense transitive verb]/[past tense verb]By,To,From,... <li>has[Past tense verb]/[past tense verb]To,From,... </ol></p>"^^rdf:HTML ;
+          owl:versionInfo      "0.2" .
+  
+  :hasAnonymized  a           owl:ObjectProperty ;
+          rdfs:label          "has anonymized substitute"@en ;
+          rdfs:subPropertyOf  :processedInto , :hasStandIn .
+  
+  :hasPart  a                 owl:TransitiveProperty ;
+          rdfs:comment        "To related a data node to another which is somehow contained in it."@en ;
+          rdfs:label          "has part"@en ;
+          rdfs:subPropertyOf  :related .
+  
+  :hasAnnotation  a           owl:ObjectProperty ;
+          rdfs:label          "has annotation"@en ;
+          rdfs:subPropertyOf  :metadata , :hasAttached .
+  
+  :referencedBy  rdfs:label   "referenced by"@en ;
+          rdfs:subPropertyOf  :related ;
+          owl:inverseOf       :references .
+  
+  :sameCapability  a          owl:TransitiveProperty ;
+          rdfs:label          "same capability"@en ;
+          rdfs:subPropertyOf  :sameVocabulary , :samePopulation .
+  
+  :isSummarizationOf  a       owl:ObjectProperty ;
+          rdfs:label          "is summarization of"@en ;
+          rdfs:subPropertyOf  :isDerivationOf ;
+          owl:inverseOf       :hasSummarization .
+  
+  :hasReification  a          owl:ObjectProperty ;
+          rdfs:label          "has reification"@en ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :hasSummarization  a        owl:ObjectProperty ;
+          rdfs:label          "has summarization"@en ;
+          rdfs:subPropertyOf  :hasDerivation .
+  
+  :overlappingPopulation
+          a                   owl:ObjectProperty ;
+          rdfs:label          "overlapping population"@en ;
+          rdfs:subPropertyOf  :overlappingCapability .
+  
+  :differentCapability
+          a                    owl:SymmetricProperty ;
+          rdfs:label           "different capability"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>Two nodes have different potential. Two data nodes using different vocabularies or two copies of the same data in different places.</p>"^^rdf:HTML .
+  
+  :version  a                  owl:SymmetricProperty , owl:ObjectProperty ;
+          rdfs:label           "version"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>Use this property to represent a temporal relation between two data nodes that are meant to be the same at a different point in time. The property is symmetric and does not specify a direction.<br/>This property is not transitive. While it can be argued that the identity of something tracked temporarly should not change, thus implying transitivity, we want support the case when a data note has more then one following version (branching). Avoiding transitivity allows it.</p>"^^rdf:HTML .
+  
+  :hasDescriptors  a           owl:ObjectProperty ;
+          rdfs:comment         "Relates a data node to the collection of the descriptors used (being it a data node, obviously)."@en ;
+          rdfs:label           "has descriptors"@en ;
+          rdfs:subPropertyOf   :hasVocabulary ;
+          dcterms:description  "<p>We choose the term descriptor to indicate generically the element used to bind/map/qualify a value with respect to its entity. Practically, this term maps to <ul><li>\"Field\" in Object Oriented Programming; <li>\"Predicate\" in First Order Logic <li>Column identifier (Attribute) in Relation Database terminology <li>rdf:Property in the Resource Description Framework </ul></p>"^^rdf:HTML .
+  
+  :cleanedInto  a             owl:ObjectProperty ;
+          rdfs:comment        "Clean to make emerge potential capabilities."@en ;
+          rdfs:label          "cleaned into"@end ;
+          rdfs:subPropertyOf  :processedInto , :overlappingCapability .
+  
+  :hasSample  a               owl:ObjectProperty ;
+          rdfs:label          "has sample"@en ;
+          rdfs:subPropertyOf  :hasPortion .
+  
+  :related  a                  owl:ReflexiveProperty , owl:SymmetricProperty , owl:ObjectProperty ;
+          rdfs:comment         "A data node is connected to one other."@en ;
+          rdfs:domain          :Datanode ;
+          rdfs:label           "related"@en ;
+          rdfs:range           :Datanode ;
+          dcterms:description  "<p>This is the Top Property of Datanode.</p>"^^rdf:HTML .
+  
+  :hasUpdate  a                owl:ObjectProperty ;
+          rdfs:label           "has update"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>A data node may be related to another by improving its currency.</p>"^^rdf:HTML .
+  
+  :hasExample  a              owl:ObjectProperty ;
+          rdfs:label          "has example"@en ;
+          rdfs:subPropertyOf  :hasSelection .
+  
+  :hasUpdatedVersion  a        owl:ObjectProperty ;
+          rdfs:label           "updated version"@en ;
+          rdfs:subPropertyOf   :newerVersion , :hasUpdate ;
+          dcterms:description  "It is not clear why this is not also a sub property of :nextVersion"@en .
+  
+  :isInferenceOf  a           owl:ObjectProperty ;
+          rdfs:label          "is inference of"@en ;
+          rdfs:subPropertyOf  :isInterpretationOf ;
+          owl:inverseOf       :hasInference .
+  
+  :isSampleOf  a              owl:ObjectProperty ;
+          rdfs:label          "is sample of"@en ;
+          rdfs:subPropertyOf  :isPortionOf ;
+          owl:inverseOf       :hasSample .
+  
+  :isAnnotationOf  a          owl:ObjectProperty ;
+          rdfs:label          "is annotation of"@en ;
+          rdfs:subPropertyOf  :about , :attachedTo ;
+          owl:inverseOf       :hasAnnotation .
+  
+  :isAnonymizedOf  a          owl:ObjectProperty ;
+          rdfs:label          "is anonymized substitute of"@en ;
+          rdfs:subPropertyOf  :processedFrom , :isStandInOf ;
+          owl:inverseOf       :hasAnonymized .
+  
+  :isVocabularyOf  a          owl:ObjectProperty ;
+          rdfs:comment        "relates a set of names to a data node that make use of them as part of their schema."@en ;
+          rdfs:label          "is vocabulary of"@en ;
+          rdfs:subPropertyOf  :related ;
+          owl:inverseOf       :hasVocabulary .
+  
+  :combinedIn  a              owl:ObjectProperty ;
+          rdfs:comment        "A data node that have been combined (with something else) in a given data node."@en ;
+          rdfs:label          "combined in"@en ;
+          rdfs:subPropertyOf  :hasDerivation .
+  
+  :descriptorsOf  a           owl:ObjectProperty ;
+          rdfs:label          "descriptors of"@en ;
+          rdfs:subPropertyOf  :isVocabularyOf ;
+          owl:inverseOf       :hasDescriptors .
+  
+  :isDeletionOf  a            owl:ObjectProperty ;
+          rdfs:label          "is deletion of"@en ;
+          rdfs:subPropertyOf  :isChangeOf ;
+          owl:inverseOf       :hasDeletion .
+  
+  :hasPortion  a               owl:TransitiveProperty ;
+          rdfs:label           "has portion"@en ;
+          rdfs:subPropertyOf   :hasPart ;
+          dcterms:description  ":hasPortion is used to capture the relation with a subset of the data."@en ;
+          owl:inverseOf        :isPortionOf .
+  
+  :samePopulation  a          owl:TransitiveProperty ;
+          rdfs:label          "same population"@en ;
+          rdfs:subPropertyOf  :overlappingPopulation .
+  
+  :describedBy  rdfs:comment  "Data have other data as description."@en ;
+          rdfs:label          "described by" ;
+          rdfs:subPropertyOf  :metadata ;
+          owl:inverseOf       :describes .
+  
+  :previousVersion  a         owl:InverseFunctionalProperty ;
+          rdfs:label          "previous version"@en ;
+          rdfs:subPropertyOf  :olderVersion ;
+          owl:inverseOf       :nextVersion .
+  
+  :isComputationOf  a         owl:ObjectProperty ;
+          rdfs:label          "is computation of"@en ;
+          rdfs:subPropertyOf  :processedFrom ;
+          owl:inverseOf       :hasComputation .
+  
+  :differentPopulation
+          a                         owl:SymmetricProperty ;
+          rdfs:label                "different population"@en ;
+          rdfs:subPropertyOf        :differentCapability ;
+          owl:propertyDisjointWith  :samePopulation .
+  
+  :remodelledTo  a            owl:ObjectProperty ;
+          rdfs:label          "remodelled to"@en ;
+          rdfs:subPropertyOf  :processedInto .
+  
+  :hasExtraction  a           owl:ObjectProperty ;
+          rdfs:label          "has extraction"@en ;
+          rdfs:subPropertyOf  :hasInterpretation .
+  
+  :attributesOf  a            owl:ObjectProperty ;
+          rdfs:label          "attributes of"@en ;
+          rdfs:subPropertyOf  :descriptorsOf ;
+          owl:inverseOf       :hasAttributes .
+  
+  :duplicate  a                     owl:IrreflexiveProperty , owl:SymmetricProperty ;
+          rdfs:label                "duplicate"@en ;
+          rdfs:subPropertyOf        :sameCapability ;
+          owl:disjointPropertyWith  :disjointCapability .
+  
+  :disjointPart  a            owl:SymmetricProperty ;
+          rdfs:label          "disjoint part"@en ;
+          rdfs:subPropertyOf  :adjacent .
+  
+  :describes  rdfs:comment     "A data node describes another."@en ;
+          rdfs:label           "describe"@en ;
+          rdfs:subPropertyOf   :about ;
+          dcterms:description  "<p></p>"^^rdf:HTML .
+  
+  :hasDerivation  rdfs:label  "has derivation"@en ;
+          rdfs:subPropertyOf  :related ;
+          owl:inverseOf       :isDerivationOf .
+  
+  :remodelledFrom  a           owl:ObjectProperty ;
+          rdfs:label           "remodelled from"@en ;
+          rdfs:subPropertyOf   :precessedFrom ;
+          dcterms:description  "Refactor is transforming to make it simpler, optimized, clean. Remodelling looks not necessarly that."@en ;
+          owl:inverseOf        :remodelledTo .
+  
+  :combinationFrom  a         owl:ObjectProperty ;
+          rdfs:comment        "A data node that is the result of the combination of another data node with something else."@en ;
+          rdfs:label          "combination from"@en ;
+          rdfs:subPropertyOf  :isDerivationOf ;
+          owl:inverseOf       :combinedIn .
+  
+  :disjointCapability
+          a                         owl:SymmetricProperty ;
+          rdfs:label                "disjoint capability"@en ;
+          rdfs:subPropertyOf        :differentVocabulary , :differentPopulation ;
+          owl:propertyDisjointWith  :overlappingCapability .
+  
+  :hasDeletion  a              owl:ObjectProperty ;
+          rdfs:comment         "A data node is the to-delete-information of some other. In other terms, it is the outdated information."@en ;
+          rdfs:label           "has deletion"@en ;
+          rdfs:subPropertyOf   :hasChange ;
+          dcterms:description  "<p>Indicates a data node which includes information that is now old or outdated. We don't indicate it to be also a part, this is to discuss.</p>"^^rdf:HTML .
+  
+  :isInterpretationOf
+          a                   owl:ObjectProperty ;
+          rdfs:comment        "Some data emerge as the interpretation of other."@en ;
+          rdfs:label          "is interpretation of"@en ;
+          rdfs:subPropertyOf  :isDerivationOf ;
+          owl:inverseOf       :hasInterpretation .
+  
+  :refactoredFrom  a          owl:ObjectProperty ;
+          rdfs:label          "refactored from"@en ;
+          rdfs:subPropertyOf  :processedFrom ;
+          owl:inverseOf       :refactoredInto .
+  
+  :about  rdfs:comment         "A data node is about another data node."@en ;
+          rdfs:label           "about"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>A data node may be metadata about another.</p>"^^rdf:HTML .
+  
+  :identifiersOf  a           owl:ObjectProperty ;
+          rdfs:label          "identifiers of"@en ;
+          rdfs:subPropertyOf  :isSectionOf ;
+          owl:inverseOf       :hasIdentifiers .
+  
+  :hasStandIn  a               owl:ObjectProperty ;
+          rdfs:comment         "Some data is a substitute of another, for specific reasons."@en ;
+          rdfs:label           "has stand-in"@en ;
+          rdfs:subPropertyOf   :overlappingCapability , :hasDerivation ;
+          dcterms:description  "<p>Are we sure a stand-in is always a derivation?</p>"^^rdf:HTML .
+  
+  :olderVersion  a            owl:TransitiveProperty ;
+          rdfs:label          "older version of"@en ;
+          rdfs:subPropertyOf  :version ;
+          owl:inverseOf       :newerVersion .
+  
+  :isDependencyOf  rdfs:label  "is dependency of"@en ;
+          rdfs:subPropertyOf  :referencedBy ;
+          owl:inverseOf       :hasDependency .
+  
+  :isReificationOf  a         owl:ObjectProperty ;
+          rdfs:label          "is reification of"@en ;
+          rdfs:subPropertyOf  :processedFrom ;
+          owl:inverseOf       :hasReification .
+  
+  :hasCache  a                owl:ObjectProperty ;
+          rdfs:label          "has cache"@en ;
+          rdfs:subPropertyOf  :hasSnapshot , :hasStandIn .
+  
+  :linkedBy  rdfs:label       "linked by"@en ;
+          rdfs:subPropertyOf  :referencedBy ;
+          owl:inverseOf       :links .
+  
+  :isChangeOf  a              owl:FunctionalProperty , owl:ObjectProperty ;
+          rdfs:comment        "some data is the coming change of some other"@en ;
+          rdfs:label          "is change of"@en ;
+          rdfs:subPropertyOf  :isUpdateOf ;
+          owl:inverseOf       :hasChange .
+  
+  :hasVocabulary  a            owl:ObjectProperty ;
+          rdfs:comment         "relates a data node to a set of names that are all used in the first."@en ;
+          rdfs:label           "has vocabulary"@en ;
+          rdfs:subPropertyOf   :related ;
+          dcterms:description  "<p>When a data node :hasVocabulary another, we expect the latter to be the collection of terms used by the data node to name its properties and types.<br/>How to know if there is some term that is not part of that vocabulary? In other words, is it relevant to know whether a vocabulary is complete or not wrt some data?</p>"^^rdf:HTML , "<p>The range of this property is a data node which enumerates a set of terms that are all used by the subject data node to name structural elements, like attribute names or types.</p>"^^rdf:HTML .
+  
+  :hasSection  a               owl:TransitiveProperty ;
+          rdfs:comment         "Data can be cut in sections according to specific attributes."@en ;
+          rdfs:label           "has section"@en ;
+          rdfs:subPropertyOf   :hasPart ;
+          dcterms:description  "An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition."@en .
+  
+  :hasInterpretation  a       owl:ObjectProperty ;
+          rdfs:comment        "Some data is interpretated such to produce other data."@en ;
+          rdfs:label          "has interpretation"@en ;
+          rdfs:subPropertyOf  :hasDerivation .
+}

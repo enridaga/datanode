@@ -24,8 +24,9 @@ echo "Generating GraphML files for Datanode and each branch"
 ./rdftree.py pgraphml -f $datanode -r "http://purl.org/datanode/ns/references" > $build/docs/graphml/references.graphml
 echo "Copying main datanode file to ns/index.ttl"
 cp $datanode $build/ns/index.ttl
-echo "Copying .htaccess file"
+echo "Copying .htaccess and type map file"
 cp docs-src/htaccess.txt $build/ns/.htaccess
+cp docs-src/index.txt $build/ns/index.txt
 echo "Generating inferred version /ns/index.inf.ttl"
 ./infer.sh ttl $build/ns/index.ttl > $build/ns/index.inf.ttl
 echo "Generating versions in other RDF syntaxes"

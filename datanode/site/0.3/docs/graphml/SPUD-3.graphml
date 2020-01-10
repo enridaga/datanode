@@ -9,86 +9,47 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
-<!-- http://purl.org/datanode/ex/0.2/SPUD/3#database -->
-<!-- ex:database -->
-		<node id="n3387990678255780648">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#database]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#database]]></data>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3# -->
+<!-- vulnerability identification, data masking and anonymisation tools that enable data  publishers to protect their data from re-identification and sensitive information disclosure  attacks, prior to data publishing -->
+		<node id="n4497365664">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:database<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>vulnerability identification, data masking and anonymisation tools that enable data  publishers to protect their data from re-identification and sensitive information disclosure  attacks, prior to data publishing<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- http://purl.org/datanode/ns/Datanode -->
-<!-- dn:Datanode -->
-		<node id="n3926025429777878768">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ns/Datanode]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ns/Datanode]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->dn:Datanode<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+<!-- 0) having data >> access, Data 1) identify data parts with privacy issues as private data >> identify, Data, Part, Privacy, Concern, Privacy 2) identify the features of the private data that is relevant for the task >> identify, Feature, Privacy, Relevance, Task 3) preserve the private data with the relevant feature >> preserve, Privacy, Relevance, Feature 4) use the relevant feature on behalf of the private data on a public setting >> use, Relevance, Feature, Stand-In, Environment, Setting, Public 5) use the private data on a protected setting >> use, Protected, Setting, Data, Privacy -->
+		<edge id="e_4497365664_4497365584_4497269712" source="n4497365664" target="n4497269712">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
 			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/SPUD/3#privatePart -->
-<!-- ex:privatePart -->
-		<node id="n-661882623420792654">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#privatePart]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#privatePart]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:privatePart<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+		</edge>
+<!-- vulnerability identification, data masking and anonymisation tools that enable data  publishers to protect their data from re-identification and sensitive information disclosure  attacks, prior to data publishing -->
+		<edge id="e_4497365664_4497366144_4497270352" source="n4497365664" target="n4497270352">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
 			</data>
-		</node>
-<!-- _:g70137996117200 -->
-<!-- _:g70137996117200 -->
-		<node id="n-3157179978935617343">
-			<data key="k_label"><![CDATA[_:g70137996117200]]></data>
-			<data key="d5"><![CDATA[_:g70137996117200]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->_:g70137996117200<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- _:g70137996082680 -->
-<!-- _:g70137996082680 -->
-		<node id="n-3884906811243933405">
-			<data key="k_label"><![CDATA[_:g70137996082680]]></data>
-			<data key="d5"><![CDATA[_:g70137996082680]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->_:g70137996082680<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/SPUD/3#published -->
-<!-- ex:published -->
-		<node id="n1179444021542377242">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#published]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#published]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:published<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- ["http://purl.org/datanode/ns/Datanode"] -->
-		<edge id="e_3387990678255780648_257941054873058580_3926025429777878768" source="n3387990678255780648" target="n3926025429777878768">
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4497365664_4497365824_4497365984" source="n4497365664" target="n4497365984">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -97,28 +58,173 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/SPUD/3#database"] -->
-		<edge id="e_-661882623420792654_-39062165529399755_3387990678255780648" source="n-661882623420792654" target="n3387990678255780648">
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3# -->
+<!-- vulnerability identification, data masking and anonymisation tools that enable data  publishers to protect their data from re-identification and sensitive information disclosure  attacks, prior to data publishing -->
+		<node id="n4497365664">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>vulnerability identification, data masking and anonymisation tools that enable data  publishers to protect their data from re-identification and sensitive information disclosure  attacks, prior to data publishing<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- 0) having data >> access, Data 1) identify data parts with privacy issues as private data >> identify, Data, Part, Privacy, Concern, Privacy 2) identify the features of the private data that is relevant for the task >> identify, Feature, Privacy, Relevance, Task 3) preserve the private data with the relevant feature >> preserve, Privacy, Relevance, Feature 4) use the relevant feature on behalf of the private data on a public setting >> use, Relevance, Feature, Stand-In, Environment, Setting, Public 5) use the private data on a protected setting >> use, Protected, Setting, Data, Privacy -->
+		<edge id="e_4497365664_4497365584_4497269712" source="n4497365664" target="n4497269712">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isSectionOf</y:EdgeLabel>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/SPUD/3#privatePart"] -->
-		<edge id="e_-3157179978935617343_-3966364490474273867_-661882623420792654" source="n-3157179978935617343" target="n-661882623420792654">
+<!-- vulnerability identification, data masking and anonymisation tools that enable data  publishers to protect their data from re-identification and sensitive information disclosure  attacks, prior to data publishing -->
+		<edge id="e_4497365664_4497366144_4497270352" source="n4497365664" target="n4497270352">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:disjointSection</y:EdgeLabel>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/SPUD/3#privatePart"] -->
-		<edge id="e_-3884906811243933405_2260474110428432856_-661882623420792654" source="n-3884906811243933405" target="n-661882623420792654">
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4497365664_4497365824_4497365984" source="n4497365664" target="n4497365984">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#published -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#published -->
+		<node id="n4497365904">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#published]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#published]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/3#published<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL27C8 -->
+		<edge id="e_4497365904_4497366944_4497366864" source="n4497365904" target="n4497366864">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL25C19 -->
+		<edge id="e_4497365904_4497366944_4497366304" source="n4497365904" target="n4497366304">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#database -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#database -->
+		<node id="n4497366224">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#database]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#database]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/3#database<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ns/Datanode -->
+		<edge id="e_4497366224_4497365824_4497366464" source="n4497366224" target="n4497366464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#database -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#database -->
+		<node id="n4497366224">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#database]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#database]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/3#database<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ns/Datanode -->
+		<edge id="e_4497366224_4497365824_4497366464" source="n4497366224" target="n4497366464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL27C8 -->
+<!-- ub2bL27C8 -->
+		<node id="n4497366864">
+			<data key="k_label"><![CDATA[ub2bL27C8]]></data>
+			<data key="d5"><![CDATA[ub2bL27C8]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL27C8<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#privatePart -->
+		<edge id="e_4497366864_4497383664_4497366384" source="n4497366864" target="n4497366384">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -127,23 +233,90 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["_:g70137996117200", "_:g70137996082680"] -->
-		<edge id="e_1179444021542377242_4380289213569128635_-3157179978935617343" source="n1179444021542377242" target="n-3157179978935617343">
+<!-- ub2bL27C8 -->
+<!-- ub2bL27C8 -->
+		<node id="n4497366864">
+			<data key="k_label"><![CDATA[ub2bL27C8]]></data>
+			<data key="d5"><![CDATA[ub2bL27C8]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL27C8<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#privatePart -->
+		<edge id="e_4497366864_4497383664_4497366384" source="n4497366864" target="n4497366384">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+				<y:EdgeLabel>dn:isAnonymizedOf</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["_:g70137996117200", "_:g70137996082680"] -->
-		<edge id="e_1179444021542377242_4380289213569128635_-3884906811243933405" source="n1179444021542377242" target="n-3884906811243933405">
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#privatePart -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#privatePart -->
+		<node id="n4497366384">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#privatePart]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/3#privatePart]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/3#privatePart<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#database -->
+		<edge id="e_4497366384_4497366704_4497366224" source="n4497366384" target="n4497366224">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+				<y:EdgeLabel>dn:isSectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL25C19 -->
+<!-- ub2bL25C19 -->
+		<node id="n4497366304">
+			<data key="k_label"><![CDATA[ub2bL25C19]]></data>
+			<data key="d5"><![CDATA[ub2bL25C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL25C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/3#privatePart -->
+		<edge id="e_4497366304_4497366624_4497366384" source="n4497366304" target="n4497366384">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:disjointSection</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>

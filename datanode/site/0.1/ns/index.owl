@@ -1,0 +1,701 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://purl.org/datanode/ns/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <owl:Ontology rdf:about="http://purl.org/datanode/0.1/">
+    <dcterms:creator>enridaga - enricodaga@gmail.com</dcterms:creator>
+    <foaf:depiction rdf:resource="http://www.radioantena.si/img/Gallery/Photo/wo_d0608ed2-3af3-43e2-af1a-1bb1d09c7705.jpg"/>
+    <owl:versionInfo>0.1</owl:versionInfo>
+    <rdfs:label>The Datanode Vocabulary</rdfs:label>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://purl.org/datanode/ns/Data">
+    <rdfs:comment xml:lang="en">This is the Top Class of DataVOK</rdfs:comment>
+    <rdfs:label xml:lang="en">Data</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/snapshot">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/version"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/copy"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment xml:lang="en">a copy of data in a specific time point</rdfs:comment>
+    <rdfs:label xml:lang="en">snapshot</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/inference">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedInto"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">inference</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/identifiersOf">
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sectionOf"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/identifiers"/>
+    </owl:inverseOf>
+    <rdfs:label xml:lang="en">identifiers of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/datatypes">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/descriptors"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment xml:lang="en">Relates data to the properties used.</rdfs:comment>
+    <rdfs:label xml:lang="en">datatypes</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/selection">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derive"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">selection</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/annotation">
+    <rdfs:subPropertyOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/metadata">
+        <owl:inverseOf>
+          <rdf:Description rdf:about="http://purl.org/datanode/ns/about">
+            <rdfs:subPropertyOf>
+              <owl:ReflexiveProperty rdf:about="http://purl.org/datanode/ns/relateTo">
+                <rdfs:range rdf:resource="http://purl.org/datanode/ns/Data"/>
+                <rdfs:domain rdf:resource="http://purl.org/datanode/ns/Data"/>
+                <rdfs:comment xml:lang="en">This is the Top Property of DataVOK.</rdfs:comment>
+                <rdfs:comment xml:lang="en">Some data relate to other data.</rdfs:comment>
+                <rdfs:label xml:lang="en">relate to</rdfs:label>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+              </owl:ReflexiveProperty>
+            </rdfs:subPropertyOf>
+            <rdfs:comment xml:lang="en">Data is metadata of other data.</rdfs:comment>
+            <rdfs:comment xml:lang="en">Data is about other data.</rdfs:comment>
+            <rdfs:label xml:lang="en">about</rdfs:label>
+          </rdf:Description>
+        </owl:inverseOf>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+        <rdfs:comment xml:lang="en">To relate data to metadata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Data have other data as metadata.</rdfs:comment>
+        <rdfs:label>metadata</rdfs:label>
+      </rdf:Description>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/haveAttached">
+        <rdfs:subPropertyOf>
+          <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/adjacent"/>
+        </rdfs:subPropertyOf>
+        <rdfs:comment xml:lang="en">Data have attached other data for some reason</rdfs:comment>
+        <rdfs:label xml:lang="en">have attached</rdfs:label>
+      </rdf:Description>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">annotation</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/removalOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/removal"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:FunctionalProperty rdf:about="http://purl.org/datanode/ns/changeOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">removal of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/computation">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedInto"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">computation</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/descriptors">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:comment xml:lang="en">Relates data to the schema entities used.</rdfs:comment>
+    <rdfs:label xml:lang="en">**descriptors</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/reification">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedInto"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">reification</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/exampleOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/example"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derivedFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">example of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/addition">
+    <rdfs:subPropertyOf>
+      <owl:InverseFunctionalProperty rdf:about="http://purl.org/datanode/ns/change"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment xml:lang="en">some data is the addition-update of some other</rdfs:comment>
+    <rdfs:label xml:lang="en">addition</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/cleaned">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedInto"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="end">cleaned</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/descriptorsOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/descriptors"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:label xml:lang="en">descriptors of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/statisticOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/statistic"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/describe">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/about"/>
+        <rdfs:comment xml:lang="en">Data describe other data.</rdfs:comment>
+        <rdfs:label xml:lang="en">describe</rdfs:label>
+      </rdf:Description>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/computationOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">statistic of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/propertiesOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/properties"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/descriptorsOf"/>
+    <rdfs:label xml:lang="en">properties of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/versionOf">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:comment xml:lang="en">Use this property to represent a temporal relation between two dataset.</rdfs:comment>
+    <rdfs:label xml:lang="en">version of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/annotationOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/annotation"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/about"/>
+    <rdfs:subPropertyOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/attachedTo">
+        <rdfs:subPropertyOf>
+          <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/adjacent"/>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/haveAttached"/>
+        <skos:note xml:lang="en">This, along with its inverse "haveAttached" , are considered to model the "physical" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments; but there may emerge other examples.</skos:note>
+        <rdfs:comment xml:lang="en">Data are attached to data for some reason</rdfs:comment>
+        <rdfs:label xml:lang="en">attached to</rdfs:label>
+      </rdf:Description>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">annotation of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedInto">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derive"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">processed into</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/combinationFrom">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derivedFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment xml:lang="en">A dataset that is the result of the combination of another dataset with something else</rdfs:comment>
+    <rdfs:label xml:lang="en">combination from</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/extractionOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/extraction"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">extraction of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/removal">
+    <rdfs:subPropertyOf>
+      <owl:InverseFunctionalProperty rdf:about="http://purl.org/datanode/ns/change"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment xml:lang="en">some data is the removal-update of some other</rdfs:comment>
+    <rdfs:label xml:lang="en">removal</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/updatedVersion">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/update"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">updated version</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/summarizationOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/summarization"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derivedFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">summarization of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/enhancementOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/enhancement"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derivedFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/attachedTo"/>
+    <rdfs:label xml:lang="en">enhancement of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/sample">
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/portion"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">sample</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derivedFrom">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derive"/>
+    </owl:inverseOf>
+    <rdfs:label xml:lang="en">derived from</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/properties">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/descriptors"/>
+    <rdfs:comment xml:lang="en">Relates data to the properties used.</rdfs:comment>
+    <rdfs:label xml:lang="en">properties</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/standIn">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derive"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">stand in</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/extraction">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+    <rdfs:label xml:lang="en">extraction</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/types">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/descriptors"/>
+    <rdfs:comment xml:lang="en">Relates data to the types used.</rdfs:comment>
+    <rdfs:label xml:lang="en">types</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/cleanedFrom">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/cleaned"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="end">cleaned from</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/translationOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/translation"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>Some data being the translated form of other.</rdfs:comment>
+    <rdfs:label xml:lang="en">translation of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/typesOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/types"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/descriptorsOf"/>
+    <rdfs:label xml:lang="en">types of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/translation">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+    <rdfs:comment>Living in a RDF world, data can be translated in many ways (vocabulary may change, RDF structure may be changed). Another example is reification.</rdfs:comment>
+    <rdfs:label xml:lang="en">translation</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/derivedFrom"/>
+    <rdfs:label xml:lang="en">processed from</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/optimizedFrom">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/optimized"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedFrom"/>
+    <rdfs:label xml:lang="end">optimized from</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/redundantWith">
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapability"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">redundant with</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/sampleOf">
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/portionOf"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/sample"/>
+    <rdfs:label xml:lang="en">sample of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/update">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:comment xml:lang="en">some data is the update of some other</rdfs:comment>
+    <rdfs:label xml:lang="en">**update</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/standInFor">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/standIn"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/derivedFrom"/>
+    <rdfs:label xml:lang="en">stand in for</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/computationOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/computation"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedFrom"/>
+    <rdfs:label xml:lang="en">computation of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/summarization">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derive"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">summarization</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/additionOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/addition"/>
+    <rdfs:subPropertyOf>
+      <owl:FunctionalProperty rdf:about="http://purl.org/datanode/ns/changeOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">addition of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/identifiers">
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/section"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">identifiers</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/datatypeOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/datatypes"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/descriptorsOf"/>
+    <rdfs:label xml:lang="en">datatypes of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/inferenceOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/inference"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedFrom"/>
+    <rdfs:label xml:lang="en">inference of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/reificationOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/reification"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/derivedFrom"/>
+    <rdfs:label xml:lang="en">reification of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/selectionFrom">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/selection"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/derivedFrom"/>
+    <rdfs:label xml:lang="en">selection from</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/statistic">
+    <rdfs:subPropertyOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/describedBy">
+        <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/describe"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/metadata"/>
+        <rdfs:comment xml:lang="en">Data have other data as description.</rdfs:comment>
+        <rdfs:label>described by</rdfs:label>
+      </rdf:Description>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/computation"/>
+    <rdfs:label xml:lang="en">statistic</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/updatedVersionOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/updatedVersion"/>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/newerVersionOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/updateOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">updated version of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/updateOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/update"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:label xml:lang="en">update of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/example">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derive"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">example</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/anonymized">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/standIn"/>
+    <rdfs:label xml:lang="en">anonymized</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/version">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:label xml:lang="en">version</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/enhancement">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derive"/>
+    </rdfs:subPropertyOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/haveAttached"/>
+    <rdfs:label xml:lang="en">enhancement</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/anonymizedFrom">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/anonymized"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedFrom"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/standInFor"/>
+    <rdfs:label xml:lang="en">anonymized from</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/snapshotOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/snapshot"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/versionOf"/>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/copyOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">snapshot of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/optimized">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+    <rdfs:label xml:lang="end">optimized</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/datanode/ns/derive">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:label xml:lang="en">**derive</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/copy">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/derive"/>
+    <rdfs:label xml:lang="en">copy</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/newerVersionOf">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/versionOf"/>
+    <rdfs:label xml:lang="en">newer version of</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/part">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:comment xml:lang="en">To related data to any of their subset data.</rdfs:comment>
+    <rdfs:label xml:lang="en">part</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/section">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/part"/>
+    <skos:note xml:lang="en">An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition.</skos:note>
+    <rdfs:comment xml:lang="en">Data can be cut in sections according to specific attributes.</rdfs:comment>
+    <rdfs:label xml:lang="en">section</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/portion">
+    <owl:inverseOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/portionOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/part"/>
+    <skos:note xml:lang="en">:portion is used to capture the relation with a subset of the data.</skos:note>
+    <rdfs:label xml:lang="en">portion</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sectionOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/section"/>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/partOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">section of</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/portionOf">
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/partOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">portion of</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/olderVersionOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/newerVersionOf"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/versionOf"/>
+    <rdfs:label xml:lang="en">older version of</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/partOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/part"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:label xml:lang="en">part of</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/datanode/ns/copyOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/copy"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/derivedFrom"/>
+    <rdfs:label xml:lang="en">copy of</rdfs:label>
+  </owl:TransitiveProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentRoleFrom">
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">different role from</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/similarTo">
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/comparedAgainst"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">similar to</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/adjacent">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:comment xml:lang="en">To relate data to any of their adjacent data.</rdfs:comment>
+    <rdfs:label xml:lang="en">adjacent</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/sameDescriptorsAs">
+    <owl:propertyDisjointWith>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentDescriptorsFrom"/>
+    </owl:propertyDisjointWith>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/similarTo"/>
+    <rdfs:label xml:lang="en">same descriptors as</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointPart">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/adjacent"/>
+    <rdfs:label xml:lang="en">disjoint part</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointSection">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/disjointPart"/>
+    <rdfs:comment xml:lang="en">Data can be cut in sections according to specific attributes.</rdfs:comment>
+    <rdfs:label xml:lang="en">disjoint section</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/inconsistentWith">
+    <owl:propertyDisjointWith>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/consistentWith"/>
+    </owl:propertyDisjointWith>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/comparedAgainst"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">inconsistent with</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/nearlySamePopulationAs">
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/fuzzySimilarTo"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">nearly same population as</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentPopulationFrom">
+    <owl:propertyDisjointWith>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/samePopulationAs"/>
+    </owl:propertyDisjointWith>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">different population from</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/sameCapabilityAs">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/redundantWith"/>
+    <rdfs:label xml:lang="en">same capability as</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentDescriptorsFrom">
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/datanode/ns/sameDescriptorsAs"/>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">different descriptors from</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/sameRoleAs">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/similarTo"/>
+    <rdfs:label xml:lang="en">same role as</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/comparedAgainst">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:comment xml:lang="en">Anytime we need to describe a comparison as a binary relation (for example smaller, similar)</rdfs:comment>
+    <rdfs:label xml:lang="en">**compared against</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/fuzzyDifferentFrom">
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">fuzzy different from</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointPortion">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/disjointPart"/>
+    <rdfs:label xml:lang="en">disjoint portion</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointCapabilityFrom">
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentCapabilityFrom"/>
+    </rdfs:subPropertyOf>
+    <owl:propertyDisjointWith>
+      <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapability"/>
+    </owl:propertyDisjointWith>
+    <rdfs:label xml:lang="en">disjoint capability from</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentFrom">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/comparedAgainst"/>
+    <rdfs:label xml:lang="en">different from</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapability">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/similarTo"/>
+    <rdfs:label xml:lang="en">overlapping capability</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/consistentWith">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/comparedAgainst"/>
+    <rdfs:label xml:lang="en">consistent with</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/fuzzySimilarTo">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/similarTo"/>
+    <rdfs:label xml:lang="en">fuzzy similar to</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/samePopulationAs">
+    <owl:propertyDisjointWith rdf:resource="http://purl.org/datanode/ns/differentPopulationFrom"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/similarTo"/>
+    <rdfs:label xml:lang="en">same population as</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/nearlySameDescriptorsAs">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/fuzzySimilarTo"/>
+    <rdfs:label xml:lang="en">nearly same descriptors as</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentCapabilityFrom">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/differentFrom"/>
+    <rdfs:label xml:lang="en">different capability from</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:about="http://purl.org/datanode/ns/changeOf">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="http://purl.org/datanode/ns/change"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/updateOf"/>
+    <rdfs:comment xml:lang="en">some data is the coming change of some other</rdfs:comment>
+    <rdfs:label xml:lang="en">change of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://purl.org/datanode/ns/nextVersionOf">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/newerVersionOf"/>
+    <rdfs:label xml:lang="en">next version of</rdfs:label>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://purl.org/datanode/ns/previousVersionOf">
+    <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/nextVersionOf"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/olderVersionOf"/>
+    <rdfs:label xml:lang="en">previous version of</rdfs:label>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://purl.org/datanode/ns/change">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/update"/>
+    <rdfs:comment xml:lang="en">some data has a change to come</rdfs:comment>
+    <rdfs:label xml:lang="en">change</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:IrreflexiveProperty rdf:about="http://purl.org/datanode/ns/duplicate">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/similarTo"/>
+    <rdfs:label xml:lang="en">duplicate</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  </owl:IrreflexiveProperty>
+  <rdf:Description rdf:about="http://purl.org/datanode/ns/linkedFrom">
+    <owl:inverseOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/linkTo">
+        <rdfs:subPropertyOf>
+          <rdf:Description rdf:about="http://purl.org/datanode/ns/referenceTo">
+            <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+            <rdfs:label xml:lang="en">reference to</rdfs:label>
+          </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:comment xml:lang="en">Data link to data</rdfs:comment>
+        <rdfs:label xml:lang="en">link to</rdfs:label>
+      </rdf:Description>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/referencedBy">
+        <owl:inverseOf rdf:resource="http://purl.org/datanode/ns/referenceTo"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+        <rdfs:label xml:lang="en">referenced by</rdfs:label>
+      </rdf:Description>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">linked from</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/datanode/ns/dependencyOf">
+    <owl:inverseOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/dependency">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/referenceTo"/>
+        <rdfs:label xml:lang="en">dependency</rdfs:label>
+      </rdf:Description>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relateTo"/>
+    <rdfs:label xml:lang="en">dependency of</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

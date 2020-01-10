@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>DISCOU-11.js</title>
+		<meta charset="utf-8">
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <meta name="description" content="Usecase DISCOU-11.js">
+		    <meta name="author" content="enridaga">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+   		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.6.0"></script>
+		<script type="text/javascript" src="../js/model.js"></script>
+		<script type="text/javascript" src="../js/diagram.js"></script>
+		<script type="text/javascript" src="../js/dynatree.js"></script>
+		<script type="text/javascript" src="../js/DISCOU-11.js"></script><!-- SCRIPTS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<script>
+		$(document).ready( function() {
+		$('.dropdown-toggle').dropdown();
+		});
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top collapse navbar-collapse" role="navigation">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="../">Datanode</a>
+		        </div>
+		        <div class="collapse navbar-collapse">
+		          <ul class="nav navbar-nav">
+		            <li><a href="../">Home</a></li>
+		            <li><a class="dropdown-toggle"
+						data-toggle="dropdown"  href="#">Download  <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="../../ns/index.ttl">Turtle</a>
+							<li><a href="../../ns/index.rdf">RDF/XML</a>
+							<li><a href="../../ns/index.nt">N-Triples</a>
+						</ul>
+					</li>
+		            <li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown"  href="#">Examples <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a role="menuitem"  href="AEMOO-1.html">AEMOO-1</a></li><li><a role="menuitem"  href="DBREC-1.html">DBREC-1</a></li><li><a role="menuitem"  href="DBREC-10.html">DBREC-10</a></li><li><a role="menuitem"  href="DBREC-11.html">DBREC-11</a></li><li><a role="menuitem"  href="DBREC-12.html">DBREC-12</a></li><li><a role="menuitem"  href="DBREC-2.html">DBREC-2</a></li><li><a role="menuitem"  href="DBREC-3.html">DBREC-3</a></li><li><a role="menuitem"  href="DBREC-4.html">DBREC-4</a></li><li><a role="menuitem"  href="DBREC-5.html">DBREC-5</a></li><li><a role="menuitem"  href="DBREC-6.html">DBREC-6</a></li><li><a role="menuitem"  href="DBREC-7.html">DBREC-7</a></li><li><a role="menuitem"  href="DBREC-8.html">DBREC-8</a></li><li><a role="menuitem"  href="DBREC-9.html">DBREC-9</a></li><li><a role="menuitem"  href="DISCOU-1.html">DISCOU-1</a></li><li><a role="menuitem"  href="DISCOU-11.html">DISCOU-11</a></li><li><a role="menuitem"  href="EventMedia-1.html">EventMedia-1</a></li><li><a role="menuitem"  href="REXPLORE-1.html">REXPLORE-1</a></li><li><a role="menuitem"  href="REXPLORE-2.html">REXPLORE-2</a></li><li><a role="menuitem"  href="REXPLORE-3.html">REXPLORE-3</a></li><li><a role="menuitem"  href="REXPLORE-4.html">REXPLORE-4</a></li><li><a role="menuitem"  href="REXPLORE-5.html">REXPLORE-5</a></li><li><a role="menuitem"  href="REXPLORE-6.html">REXPLORE-6</a></li><li><a role="menuitem"  href="SPUD-1.html">SPUD-1</a></li><li><a role="menuitem"  href="SPUD-2.html">SPUD-2</a></li><li><a role="menuitem"  href="SPUD-3.html">SPUD-3</a></li><li><a role="menuitem"  href="WATSON-1.html">WATSON-1</a></li><li><a role="menuitem"  href="YokohamaArtSpot-1.html">YokohamaArtSpot-1</a></li>
+						</ul>
+					</li>
+		            <li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown"  href="#">v0.2 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="../../../0.5/docs/">v0.5</a>
+							<li><a href="../../../0.4/docs/">v0.4</a>
+							<li><a href="../../../0.3/docs/">v0.3</a>
+							<li><a href="../../../0.2/docs/">v0.2</a>
+							<li><a href="../../../0.1/docs/">v0.1</a>
+						</ul>
+					</li>
+	<!--	            <li><a href="../contact.html">Contact</a></li> -->
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+		
+	    <div class="container">
+		
+		<h1>DISCOU-11.js</h1>
+		<!-- start content here -->
+		<style type="text/css">
+.marker  {
+	fill: #555;
+}
+#is-a {
+	fill: red;
+}
+#inverse-of {
+	fill: green;
+}
+#subclass-of {
+	fill: blue;
+}
+#example{
+	background-color: #f9f2f4;
+}
+#synopsys{
+}
+#excerpt{
+	font-style: italic;
+}
+#diagram{
+	overflow: scroll;
+/*	width: 960px;
+	height: 500px; */
+	height: 700px; 
+}
+svg .link-label{
+/*	display:none; */
+}
+</style>
+
+<h3>Excerpt</h3>
+<div id="excerpt">textual components of open educational resources are automatically annotated with relevant entities  (using a named entity recognition system) so that these rich annotations can be searched by similarity.</div>
+<h3>Synopsys</h3>
+<div id="synopsys"><ol><li>having an open educational resource >> access, Resource <li>identify its textual component >> identify, TextualComponent <li>identify the list of entity/score annotations of the textual component >> identify, List, Resource, Score, Annotation, TextualComponent <li>identify other similar lists of entity/score annotations >> identify, OtherThan, Annotation, Similarity, Score, Resource <li>identify the textual components of the similar lists of entity/score annotations >> identify, TextualComponent, List, Similarity, Resource, Score, Annotation <li>identify the open educational resources having the similar textual components >> identify, Resource, Set, ResourceFeature, Similarity, TextualComponent <li>take the 10 most similar open educational resources >> take, Best, 10, Similarity, Resource, Set</ol></div>
+<h3>Diagram</h3>
+<div  class="panel panel-default">
+<div class="panel-body" id="diagram"></div>
+</div>
+<h3>Turtle</h3>
+<div  class="panel panel-default">
+<div class="panel-body" id="example"><code>@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix : &lt;http://purl.org/datanode/ex/0.2/DISCOU/11#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix dbpedia: &lt;http://dbpedia.org/resource/&gt; .
+@prefix dn: &lt;http://purl.org/datanode/ns/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix void: &lt;http://rdfs.org/ns/void#&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix dbprop: &lt;http://dbpedia.org/property/&gt; .
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+&lt;http://purl.org/datanode/ex/0.2/DISCOU/11#&gt;
+    a foaf:Document ;
+    rdfs:comment &quot;0) having an open educational resource &gt;&gt; access, Resource 1) identify its textual component &gt;&gt; identify, TextualComponent 2) identify the list of entity/score annotations of the textual component &gt;&gt; identify, List, Resource, Score, Annotation, TextualComponent 3) identify other similar lists of entity/score annotations &gt;&gt; identify, OtherThan, Annotation, Similarity, Score, Resource 4) identify the textual components of the similar lists of entity/score annotations &gt;&gt; identify, TextualComponent, List, Similarity, Resource, Score, Annotation 5) identify the open educational resources having the similar textual components &gt;&gt; identify, Resource, Set, ResourceFeature, Similarity, TextualComponent 6) take the 10 most similar open educational resources &gt;&gt; take, Best, 10, Similarity, Resource, Set&quot; ;
+    rdfs:label &quot;textual components of open educational resources are automatically annotated with relevant entities  (using a named entity recognition system) so that these rich annotations can be searched by similarity.&quot; .
+
+:entities
+    dn:extractedFrom :text ;
+    dn:hasSection [
+        dn:hasVocabulary :score
+    ] ;
+    dn:overlappingPopulationWith [
+        dn:isPartOf :index
+    ] .
+
+:output
+    dn:isSelectionOf :similar .
+
+:similar
+    dn:hasPart :similarText ;
+    dn:hasSection [
+        dn:hasVocabulary :score
+    ] .
+
+:similarEntities
+    dn:isPartOf :index ;
+    dn:overlappingCapabilityWith :entities .
+
+:similarText
+    dn:hasExtraction :similarEntities .
+
+:text
+    dn:isPartOf :input .
+
+</code></div>
+</div>
+<script type="text/javascript">
+/* example: */
+/*
+var nodes = [{
+	id: 0,
+	label: "node X",
+	links: [{
+		target: 1,
+		type: "is-a",
+		weight: 1 
+	},{
+		target: 2,
+		type: "inverse-of",
+		weight: 1 
+	}]
+},{
+	id: 1,
+	label: "node Y",
+	links: [{
+		target: 2,
+		type: "subclass-of",
+		weight: 1 
+	}]
+},{
+	id: 2,
+	label: "node Z"
+}];*/
+var data = model(nodes);
+dia(data, "#diagram");</script>
+		<!-- end content here -->
+		</div>
+		
+	</body>
+</html>

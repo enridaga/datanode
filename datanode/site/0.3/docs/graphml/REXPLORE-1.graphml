@@ -9,61 +9,9 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
-<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
-<!-- ex:backgroundKnowledge -->
-		<node id="n3807894905709993814">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:backgroundKnowledge<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#corpusOfPublications -->
-<!-- ex:corpusOfPublications -->
-		<node id="n2553275108763689344">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#corpusOfPublications]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#corpusOfPublications]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:corpusOfPublications<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation -->
-<!-- ex:geographicInformation -->
-		<node id="n4102431759483218535">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:geographicInformation<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase -->
-<!-- ex:knowledgeBase -->
-		<node id="n3585130790739445938">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:knowledgeBase<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
 <!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults -->
-<!-- ex:statisticsResults -->
-		<node id="n-4198951630643832300">
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults -->
+		<node id="n4540067344">
 			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults]]></data>
 			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults]]></data>
 			<data key="key_nodegraphics">
@@ -71,60 +19,124 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:statisticsResults<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology -->
-<!-- ex:ontology -->
-		<node id="n4324427678773642111">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:ontology<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#topicsSet -->
-<!-- ex:topicsSet -->
-		<node id="n-3899785407903556259">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#topicsSet]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#topicsSet]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:topicsSet<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#semanticRelations -->
-<!-- ex:semanticRelations -->
-		<node id="n651931836516626847">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#semanticRelations]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#semanticRelations]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:semanticRelations<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/1#corpusOfPublications"] -->
-		<edge id="e_3807894905709993814_1632842924802872242_2553275108763689344" source="n3807894905709993814" target="n2553275108763689344">
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
+		<edge id="e_4540067344_4540076192_4540066624" source="n4540067344" target="n4540066624">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+				<y:EdgeLabel>dn:isStatisticOf</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge"] -->
-		<edge id="e_4102431759483218535_4442432912554300506_3807894905709993814" source="n4102431759483218535" target="n3807894905709993814">
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults -->
+		<node id="n4540067344">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
+		<edge id="e_4540067344_4540076192_4540066624" source="n4540067344" target="n4540066624">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isStatisticOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1# -->
+<!-- Rexplore (uses) a fine-grained,  automatically populated topic ontology, in which topics are identified and structured according to a number of semantic relationships.  The resulting knowledge base is generated using a combination of statistical methods and background knowledge on the basis of a large-scale  corpus of publications [...] and is then augmented with geographic information [...] .  -->
+		<node id="n4540065904">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>Rexplore (uses) a fine-grained,  automatically populated topic ontology, in which topics are identified and structured according to a number of semantic relationships.  The resulting knowledge base is generated using a combination of statistical methods and background knowledge on the basis of a large-scale  corpus of publications [...] and is then augmented with geographic information [...] . <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4540065904_4540066224_4540066384" source="n4540065904" target="n4540066384">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- Rexplore (uses) a fine-grained,  automatically populated topic ontology, in which topics are identified and structured according to a number of semantic relationships.  The resulting knowledge base is generated using a combination of statistical methods and background knowledge on the basis of a large-scale  corpus of publications [...] and is then augmented with geographic information [...] .  -->
+		<edge id="e_4540065904_4540066544_4539966544" source="n4540065904" target="n4539966544">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) Rexplore Ontology is automatically populated 1) The Ontology includes Topics with a number of semantic relationships 2) The KnowledgeBase is generated using a combination of statistical methods and background knowledge 3) Background knowledge includes a corpus of publications 4) The Knowledge Base is augmented with geographic information -->
+		<edge id="e_4540065904_4540066144_4539980112" source="n4540065904" target="n4539980112">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation -->
+		<node id="n4540066304">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
+		<edge id="e_4540066304_4540067024_4540066624" source="n4540066304" target="n4540066624">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -133,28 +145,56 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge", "http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults"] -->
-		<edge id="e_3585130790739445938_3837694675175096328_3807894905709993814" source="n3585130790739445938" target="n3807894905709993814">
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation -->
+		<node id="n4540066304">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
+		<edge id="e_4540066304_4540067024_4540066624" source="n4540066304" target="n4540066624">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+				<y:EdgeLabel>dn:isExtractionOf</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge", "http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults"] -->
-		<edge id="e_3585130790739445938_3837694675175096328_-4198951630643832300" source="n3585130790739445938" target="n-4198951630643832300">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
-			</y:BezierEdge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
+		<node id="n4540066624">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation"] -->
-		<edge id="e_3585130790739445938_1632842924802872242_4102431759483218535" source="n3585130790739445938" target="n4102431759483218535">
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#corpusOfPublications -->
+		<edge id="e_4540066624_4540066864_4540066784" source="n4540066624" target="n4540066784">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -163,18 +203,154 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/1#topicsSet"] -->
-		<edge id="e_4324427678773642111_4348794336369417588_-3899785407903556259" source="n4324427678773642111" target="n-3899785407903556259">
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
+		<node id="n4540066624">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#corpusOfPublications -->
+		<edge id="e_4540066624_4540066864_4540066784" source="n4540066624" target="n4540066784">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/1#semanticRelations"] -->
-		<edge id="e_4324427678773642111_-2546577942191974202_651931836516626847" source="n4324427678773642111" target="n651931836516626847">
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase -->
+		<node id="n4540066704">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#geographicInformation -->
+		<edge id="e_4540066704_4540066864_4540066304" source="n4540066704" target="n4540066304">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#statisticsResults -->
+		<edge id="e_4540066704_4540067184_4540067344" source="n4540066704" target="n4540067344">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge -->
+		<edge id="e_4540066704_4540067184_4540066624" source="n4540066704" target="n4540066624">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1# -->
+<!-- Rexplore (uses) a fine-grained,  automatically populated topic ontology, in which topics are identified and structured according to a number of semantic relationships.  The resulting knowledge base is generated using a combination of statistical methods and background knowledge on the basis of a large-scale  corpus of publications [...] and is then augmented with geographic information [...] .  -->
+		<node id="n4540065904">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>Rexplore (uses) a fine-grained,  automatically populated topic ontology, in which topics are identified and structured according to a number of semantic relationships.  The resulting knowledge base is generated using a combination of statistical methods and background knowledge on the basis of a large-scale  corpus of publications [...] and is then augmented with geographic information [...] . <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4540065904_4540066224_4540066384" source="n4540065904" target="n4540066384">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- Rexplore (uses) a fine-grained,  automatically populated topic ontology, in which topics are identified and structured according to a number of semantic relationships.  The resulting knowledge base is generated using a combination of statistical methods and background knowledge on the basis of a large-scale  corpus of publications [...] and is then augmented with geographic information [...] .  -->
+		<edge id="e_4540065904_4540066544_4539966544" source="n4540065904" target="n4539966544">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) Rexplore Ontology is automatically populated 1) The Ontology includes Topics with a number of semantic relationships 2) The KnowledgeBase is generated using a combination of statistical methods and background knowledge 3) Background knowledge includes a corpus of publications 4) The Knowledge Base is augmented with geographic information -->
+		<edge id="e_4540065904_4540066144_4539980112" source="n4540065904" target="n4539980112">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology -->
+		<node id="n4540067664">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#semanticRelations -->
+		<edge id="e_4540067664_4540067584_4540067744" source="n4540067664" target="n4540067744">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -183,8 +359,18 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase"] -->
-		<edge id="e_4324427678773642111_-3298023291279496912_3585130790739445938" source="n4324427678773642111" target="n3585130790739445938">
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#topicsSet -->
+		<edge id="e_4540067664_4540067504_4540067264" source="n4540067664" target="n4540067264">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase -->
+		<edge id="e_4540067664_4540076272_4540066704" source="n4540067664" target="n4540066704">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -193,13 +379,101 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/REXPLORE/1#backgroundKnowledge"] -->
-		<edge id="e_-4198951630643832300_-164693268893146346_3807894905709993814" source="n-4198951630643832300" target="n3807894905709993814">
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology -->
+		<node id="n4540067664">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#semanticRelations -->
+		<edge id="e_4540067664_4540067584_4540067744" source="n4540067664" target="n4540067744">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isStatisticOf</y:EdgeLabel>
+				<y:EdgeLabel>dn:hasRelations</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#topicsSet -->
+		<edge id="e_4540067664_4540067504_4540067264" source="n4540067664" target="n4540067264">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase -->
+		<edge id="e_4540067664_4540076272_4540066704" source="n4540067664" target="n4540066704">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology -->
+		<node id="n4540067664">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/1#ontology<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#semanticRelations -->
+		<edge id="e_4540067664_4540067584_4540067744" source="n4540067664" target="n4540067744">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasRelations</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#topicsSet -->
+		<edge id="e_4540067664_4540067504_4540067264" source="n4540067664" target="n4540067264">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/1#knowledgeBase -->
+		<edge id="e_4540067664_4540076272_4540066704" source="n4540067664" target="n4540066704">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>

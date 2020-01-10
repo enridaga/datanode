@@ -9,29 +9,24 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
-		<node id="n-4327521708799803873">
-			<data key="k_label"><![CDATA[about/metadata]]></data>
-			<data key="d5"><![CDATA[about/metadata]]></data>
+		<node id="n4342077152">
+			<data key="k_label"><![CDATA[about]]></data>
+			<data key="d5"><![CDATA[about]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->about/metadata<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<node id="n2222121895877409257">
-			<data key="k_label"><![CDATA[described by/describes]]></data>
-			<data key="d5"><![CDATA[described by/describes]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->described by/describes<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-		<edge id="e_2222121895877409257_-4327521708799803873" source="n2222121895877409257" target="n-4327521708799803873">
+		<edge id="e_4342186464_4342077152" source="n4342186464" target="n4342077152}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -39,18 +34,24 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-		<node id="n-220185891626836810">
-			<data key="k_label"><![CDATA[has statistic/is statistic of]]></data>
-			<data key="d5"><![CDATA[has statistic/is statistic of]]></data>
+		<node id="n4342186464">
+			<data key="k_label"><![CDATA[describes]]></data>
+			<data key="d5"><![CDATA[describes]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->has statistic/is statistic of<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<edge id="e_-220185891626836810_2222121895877409257" source="n-220185891626836810" target="n2222121895877409257">
+		<edge id="e_4342279936_4342186464" source="n4342279936" target="n4342186464}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -58,18 +59,24 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-		<node id="n3896532232597909862">
-			<data key="k_label"><![CDATA[has annotation/is annotation of]]></data>
-			<data key="d5"><![CDATA[has annotation/is annotation of]]></data>
+		<node id="n4342279936">
+			<data key="k_label"><![CDATA[is statistic of]]></data>
+			<data key="d5"><![CDATA[is statistic of]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->has annotation/is annotation of<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<edge id="e_3896532232597909862_-4327521708799803873" source="n3896532232597909862" target="n-4327521708799803873">
+		<edge id="e_4342187104_4342077152" source="n4342187104" target="n4342077152}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -77,5 +84,22 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
+		<node id="n4342187104">
+			<data key="k_label"><![CDATA[is annotation of]]></data>
+			<data key="d5"><![CDATA[is annotation of]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
 	</graph>
 </graphml>

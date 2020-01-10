@@ -342,12 +342,10 @@
 :hasCopy
 	a owl:TransitiveProperty ;
 	rdfs:label "has copy"@en ;
-	rdfs:subPropertyOf :hasDuplicate  ;
 	rdfs:subPropertyOf :hasDerivation .
 :isCopyOf
 	a owl:TransitiveProperty ;
 	rdfs:label "is copy of"@en ;
-	rdfs:subPropertyOf :isDuplicateOf ;
 	rdfs:subPropertyOf :isDerivationOf ;
 	owl:inverseOf :hasCopy .
 
@@ -618,7 +616,7 @@
 	rdfs:label "remodelled from"@en ;
 	dcterms:description "Refactor is transforming to make it simpler, optimized, clean. Remodelling looks not necessarly that."@en ;
 	owl:inverseOf :remodelledTo ;
-	rdfs:subPropertyOf :precessedFrom .
+	rdfs:subPropertyOf :processedFrom .
 
 :cleanedInto
 	a owl:ObjectProperty ;

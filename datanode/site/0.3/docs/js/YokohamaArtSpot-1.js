@@ -1,152 +1,25 @@
-var nodes=
-[{ 
-	id: "0",
-	uri: "_:g70242349702380",
-	label: "_:g70242349702380",
-	links: [{
-		target: 1,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "1",
-	uri: "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude",
-	label: "ex:latitude",
-	links: [],
-},{ 
-	id: "2",
-	uri: "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude",
-	label: "ex:longitude",
-	links: [],
-},{ 
-	id: "3",
-	uri: "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents",
-	label: "ex:nearEvents",
-	links: [{
-		target: 0,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 4,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "4",
-	uri: "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#Yokohama_Art_LOD",
-	label: "ex:Yokohama_Art_LOD",
-	links: [],
-},{ 
-	id: "5",
-	uri: "_:g70242349584940",
-	label: "_:g70242349584940",
-	links: [{
-		target: 1,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "6",
-	uri: "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions",
-	label: "ex:nearInstitutions",
-	links: [{
-		target: 5,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 7,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "7",
-	uri: "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#LODAC_Museum",
-	label: "ex:LODAC_Museum",
-	links: [],
-},{ 
-	id: "8",
-	uri: "_:g70242349541460",
-	label: "_:g70242349541460",
-	links: [{
-		target: 1,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:describes",
-	uri: "http://purl.org/datanode/ns/describes",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "9",
-	uri: "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA",
-	label: "ex:nearQA",
-	links: [{
-		target: 8,
-		label: "dn:hasSection",
-	uri: "http://purl.org/datanode/ns/hasSection",
-		type: "default",
-		weight: 1,
-	},{
-		target: 10,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "10",
-	uri: "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#PinQA",
-	label: "ex:PinQA",
-	links: [],
-},{ 
-	id: "11",
-	uri: "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page",
-	label: "ex:page",
-	links: [{
-		target: 3,
-		label: "dn:combinationFrom",
-	uri: "http://purl.org/datanode/ns/combinationFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 6,
-		label: "dn:combinationFrom",
-	uri: "http://purl.org/datanode/ns/combinationFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 9,
-		label: "dn:combinationFrom",
-	uri: "http://purl.org/datanode/ns/combinationFrom",
-		type: "default",
-		weight: 1,
-	},],
-},]
+var nodes=[
+{"label": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents", "id": "0", "links": [{"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 6, "weight": 1, "label": "dn:hasSection"}, {"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 10, "weight": 1, "label": "dn:isPortionOf"}], "uri": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearEvents"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page", "id": "1", "links": [{"uri": "http://purl.org/datanode/ns/combinationFrom", "type": "default", "target": 0, "weight": 1, "label": "dn:combinationFrom"}, {"uri": "http://purl.org/datanode/ns/combinationFrom", "type": "default", "target": 3, "weight": 1, "label": "dn:combinationFrom"}, {"uri": "http://purl.org/datanode/ns/combinationFrom", "type": "default", "target": 4, "weight": 1, "label": "dn:combinationFrom"}], "uri": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#page"}
+,
+{"label": "ub2bL25C19", "id": "2", "links": [{"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 9, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 7, "weight": 1, "label": "dn:describes"}], "uri": "ub2bL25C19"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions", "id": "3", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 11, "weight": 1, "label": "dn:isPortionOf"}, {"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 2, "weight": 1, "label": "dn:hasSection"}], "uri": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearInstitutions"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA", "id": "4", "links": [{"uri": "http://purl.org/datanode/ns/hasSection", "type": "default", "target": 5, "weight": 1, "label": "dn:hasSection"}, {"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 8, "weight": 1, "label": "dn:isPortionOf"}], "uri": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#nearQA"}
+,
+{"label": "ub2bL31C19", "id": "5", "links": [{"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 7, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 9, "weight": 1, "label": "dn:describes"}], "uri": "ub2bL31C19"}
+,
+{"label": "ub2bL19C19", "id": "6", "links": [{"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 9, "weight": 1, "label": "dn:describes"}, {"uri": "http://purl.org/datanode/ns/describes", "type": "default", "target": 7, "weight": 1, "label": "dn:describes"}], "uri": "ub2bL19C19"}
+,
+{"label": "ex1:latitude", "id": "7", "links": [], "uri": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#latitude"}
+,
+{"label": "ex1:PinQA", "id": "8", "links": [], "uri": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#PinQA"}
+,
+{"label": "ex1:longitude", "id": "9", "links": [], "uri": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#longitude"}
+,
+{"label": "ex1:Yokohama_Art_LOD", "id": "10", "links": [], "uri": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#Yokohama_Art_LOD"}
+,
+{"label": "ex1:LODAC_Museum", "id": "11", "links": [], "uri": "http://purl.org/datanode/ex/0.2/YokohamaArtSpot/1#LODAC_Museum"}
+]

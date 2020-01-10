@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml 
+	xmlns="http://graphml.graphdrawing.org/xmlns" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:y="http://www.yworks.com/xml/graphml" 
+	xmlns:yed="http://www.yworks.com/xml/yed/3" 
+	xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+		<key attr.name="label" attr.type="string" for="node" id="k_label"/>
+		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
+		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
+	<graph edgedefault="directed" id="G">
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia -->
+		<node id="n4342791536">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+		<edge id="e_4342791536_4342804560_4342791136" source="n4342791536" target="n4342791136">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasIdentifiers</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#DBPedia -->
+		<edge id="e_4342791536_4342790816_4342804800" source="n4342791536" target="n4342804800">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia -->
+		<node id="n4342791536">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+		<edge id="e_4342791536_4342804560_4342791136" source="n4342791536" target="n4342791136">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasIdentifiers</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#DBPedia -->
+		<edge id="e_4342791536_4342790816_4342804800" source="n4342791536" target="n4342804800">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames -->
+		<node id="n4342792096">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames -->
+		<edge id="e_4342792096_4342804880_4342805200" source="n4342792096" target="n4342805200">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia -->
+		<edge id="e_4342792096_4342804880_4342791536" source="n4342792096" target="n4342791536">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia -->
+		<edge id="e_4342792096_4342804880_4342804720" source="n4342792096" target="n4342804720">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames -->
+		<node id="n4342792096">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames -->
+		<edge id="e_4342792096_4342804880_4342805200" source="n4342792096" target="n4342805200">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia -->
+		<edge id="e_4342792096_4342804880_4342791536" source="n4342792096" target="n4342791536">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia -->
+		<edge id="e_4342792096_4342804880_4342804720" source="n4342792096" target="n4342804720">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4# -->
+<!-- The data sources used by Rexplore offer in most cases only the name of the author’s affiliation  (e.g., Universities, Research Labs, Hospitals), which is usually derived from parsing research  papers and thus it is simply treated as a string.  The procedure uses initially Wikipedia to retrieve a ‘standard’ identifier for the affiliation and then  searches for the location associated with the affiliation in DBpedia. If the latter search is unsuccessful,  then the Wikipedia page is parsed for the tag “location” from which city and country are extracted using a  set of heuristic rules. After recovering information about the city or the country, the affiliation is mapped  to the correct GeoNames ID. If the search for affiliation and/or location in Wikipedia/DBpedia fails, then the  affiliation name is stripped of a set of typical terms, such as “university”, “college” or “hospital”, and the  remaining string is searched for in the GeoNames database. This simple method provided good results, allowing  us to correctly map disambiguated affiliations to GeoNames in about 85% of the cases. -->
+		<node id="n4342790416">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>The data sources used by Rexplore offer in most cases only the name of the author’s affiliation  (e.g., Universities, Research Labs, Hospitals), which is usually derived from parsing research  papers and thus it is simply treated as a string.  The procedure uses initially Wikipedia to retrieve a ‘standard’ identifier for the affiliation and then  searches for the location associated with the affiliation in DBpedia. If the latter search is unsuccessful,  then the Wikipedia page is parsed for the tag “location” from which city and country are extracted using a  set of heuristic rules. After recovering information about the city or the country, the affiliation is mapped  to the correct GeoNames ID. If the search for affiliation and/or location in Wikipedia/DBpedia fails, then the  affiliation name is stripped of a set of typical terms, such as “university”, “college” or “hospital”, and the  remaining string is searched for in the GeoNames database. This simple method provided good results, allowing  us to correctly map disambiguated affiliations to GeoNames in about 85% of the cases.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- 0) Have the affiliation as string 1) Retrieve standard identifier using wikipedia 2) Search the location of the affiliation in dbpedia, or 3) Search the location of the affiliation in the wikipedia page 4) Map the location to a GeoNames ID 5) Or simplify the affiliation name and search it in the GeoNames database the ID -->
+		<edge id="e_4342790416_4342790656_4342704080" source="n4342790416" target="n4342704080">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4342790416_4342790736_4342790896" source="n4342790416" target="n4342790896">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- The data sources used by Rexplore offer in most cases only the name of the author’s affiliation  (e.g., Universities, Research Labs, Hospitals), which is usually derived from parsing research  papers and thus it is simply treated as a string.  The procedure uses initially Wikipedia to retrieve a ‘standard’ identifier for the affiliation and then  searches for the location associated with the affiliation in DBpedia. If the latter search is unsuccessful,  then the Wikipedia page is parsed for the tag “location” from which city and country are extracted using a  set of heuristic rules. After recovering information about the city or the country, the affiliation is mapped  to the correct GeoNames ID. If the search for affiliation and/or location in Wikipedia/DBpedia fails, then the  affiliation name is stripped of a set of typical terms, such as “university”, “college” or “hospital”, and the  remaining string is searched for in the GeoNames database. This simple method provided good results, allowing  us to correctly map disambiguated affiliations to GeoNames in about 85% of the cases. -->
+		<edge id="e_4342790416_4342791056_4342704464" source="n4342790416" target="n4342704464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4# -->
+<!-- The data sources used by Rexplore offer in most cases only the name of the author’s affiliation  (e.g., Universities, Research Labs, Hospitals), which is usually derived from parsing research  papers and thus it is simply treated as a string.  The procedure uses initially Wikipedia to retrieve a ‘standard’ identifier for the affiliation and then  searches for the location associated with the affiliation in DBpedia. If the latter search is unsuccessful,  then the Wikipedia page is parsed for the tag “location” from which city and country are extracted using a  set of heuristic rules. After recovering information about the city or the country, the affiliation is mapped  to the correct GeoNames ID. If the search for affiliation and/or location in Wikipedia/DBpedia fails, then the  affiliation name is stripped of a set of typical terms, such as “university”, “college” or “hospital”, and the  remaining string is searched for in the GeoNames database. This simple method provided good results, allowing  us to correctly map disambiguated affiliations to GeoNames in about 85% of the cases. -->
+		<node id="n4342790416">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>The data sources used by Rexplore offer in most cases only the name of the author’s affiliation  (e.g., Universities, Research Labs, Hospitals), which is usually derived from parsing research  papers and thus it is simply treated as a string.  The procedure uses initially Wikipedia to retrieve a ‘standard’ identifier for the affiliation and then  searches for the location associated with the affiliation in DBpedia. If the latter search is unsuccessful,  then the Wikipedia page is parsed for the tag “location” from which city and country are extracted using a  set of heuristic rules. After recovering information about the city or the country, the affiliation is mapped  to the correct GeoNames ID. If the search for affiliation and/or location in Wikipedia/DBpedia fails, then the  affiliation name is stripped of a set of typical terms, such as “university”, “college” or “hospital”, and the  remaining string is searched for in the GeoNames database. This simple method provided good results, allowing  us to correctly map disambiguated affiliations to GeoNames in about 85% of the cases.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- 0) Have the affiliation as string 1) Retrieve standard identifier using wikipedia 2) Search the location of the affiliation in dbpedia, or 3) Search the location of the affiliation in the wikipedia page 4) Map the location to a GeoNames ID 5) Or simplify the affiliation name and search it in the GeoNames database the ID -->
+		<edge id="e_4342790416_4342790656_4342704080" source="n4342790416" target="n4342704080">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4342790416_4342790736_4342790896" source="n4342790416" target="n4342790896">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- The data sources used by Rexplore offer in most cases only the name of the author’s affiliation  (e.g., Universities, Research Labs, Hospitals), which is usually derived from parsing research  papers and thus it is simply treated as a string.  The procedure uses initially Wikipedia to retrieve a ‘standard’ identifier for the affiliation and then  searches for the location associated with the affiliation in DBpedia. If the latter search is unsuccessful,  then the Wikipedia page is parsed for the tag “location” from which city and country are extracted using a  set of heuristic rules. After recovering information about the city or the country, the affiliation is mapped  to the correct GeoNames ID. If the search for affiliation and/or location in Wikipedia/DBpedia fails, then the  affiliation name is stripped of a set of typical terms, such as “university”, “college” or “hospital”, and the  remaining string is searched for in the GeoNames database. This simple method provided good results, allowing  us to correctly map disambiguated affiliations to GeoNames in about 85% of the cases. -->
+		<edge id="e_4342790416_4342791056_4342704464" source="n4342790416" target="n4342704464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL38C22 -->
+<!-- ub2bL38C22 -->
+		<node id="n4342792016">
+			<data key="k_label"><![CDATA[ub2bL38C22]]></data>
+			<data key="d5"><![CDATA[ub2bL38C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL38C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings -->
+		<edge id="e_4342792016_4342790816_4342791456" source="n4342792016" target="n4342791456">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL38C22 -->
+<!-- ub2bL38C22 -->
+		<node id="n4342792016">
+			<data key="k_label"><![CDATA[ub2bL38C22]]></data>
+			<data key="d5"><![CDATA[ub2bL38C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL38C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings -->
+		<edge id="e_4342792016_4342790816_4342791456" source="n4342792016" target="n4342791456">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locations -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locations -->
+		<node id="n4342791616">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locations]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locations]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locations<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames -->
+		<edge id="e_4342791616_4342791376_4342792096" source="n4342791616" target="n4342792096">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#Geonames -->
+		<edge id="e_4342791616_4342790816_4342791936" source="n4342791616" target="n4342791936">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locations -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locations -->
+		<node id="n4342791616">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locations]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locations]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locations<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames -->
+		<edge id="e_4342791616_4342791376_4342792096" source="n4342791616" target="n4342792096">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#Geonames -->
+		<edge id="e_4342791616_4342790816_4342791936" source="n4342791616" target="n4342791936">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames -->
+		<node id="n4342792096">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsNames<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames -->
+		<edge id="e_4342792096_4342804880_4342805200" source="n4342792096" target="n4342805200">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia -->
+		<edge id="e_4342792096_4342804880_4342791536" source="n4342792096" target="n4342791536">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia -->
+		<edge id="e_4342792096_4342804880_4342804720" source="n4342792096" target="n4342804720">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+		<node id="n4342791136">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings -->
+		<edge id="e_4342791136_4342791376_4342791456" source="n4342791136" target="n4342791456">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#Wikipedia -->
+		<edge id="e_4342791136_4342791216_4342791296" source="n4342791136" target="n4342791296">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+		<node id="n4342791136">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings -->
+		<edge id="e_4342791136_4342791376_4342791456" source="n4342791136" target="n4342791456">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#Wikipedia -->
+		<edge id="e_4342791136_4342791216_4342791296" source="n4342791136" target="n4342791296">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+		<node id="n4342791136">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings -->
+		<edge id="e_4342791136_4342791376_4342791456" source="n4342791136" target="n4342791456">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#Wikipedia -->
+		<edge id="e_4342791136_4342791216_4342791296" source="n4342791136" target="n4342791296">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia -->
+		<node id="n4342804720">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#Wikipedia -->
+		<edge id="e_4342804720_4342791216_4342791296" source="n4342804720" target="n4342791296">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+		<edge id="e_4342804720_4342804560_4342791136" source="n4342804720" target="n4342791136">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasIdentifiers</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames -->
+		<node id="n4342805200">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#simplifiedLocationsNames<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL38C22 -->
+		<edge id="e_4342805200_4342791376_4342792016" source="n4342805200" target="n4342792016">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings -->
+		<node id="n4342791456">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#corpusOfPublications -->
+		<edge id="e_4342791456_4342791776_4342791696" source="n4342791456" target="n4342791696">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings -->
+		<node id="n4342791456">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsStrings<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#corpusOfPublications -->
+		<edge id="e_4342791456_4342791776_4342791696" source="n4342791456" target="n4342791696">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia -->
+		<node id="n4342804720">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromWikipedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#Wikipedia -->
+		<edge id="e_4342804720_4342791216_4342791296" source="n4342804720" target="n4342791296">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+		<edge id="e_4342804720_4342804560_4342791136" source="n4342804720" target="n4342791136">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasIdentifiers</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia -->
+		<node id="n4342791536">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/4#locationsFromDBPedia<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#affiliationsIdentifiers -->
+		<edge id="e_4342791536_4342804560_4342791136" source="n4342791536" target="n4342791136">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasIdentifiers</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/4#DBPedia -->
+		<edge id="e_4342791536_4342790816_4342804800" source="n4342791536" target="n4342804800">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+	</graph>
+</graphml>

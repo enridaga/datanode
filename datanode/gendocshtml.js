@@ -112,6 +112,7 @@ usecases.forEach(function(file){
 			   container = embed(container, { 
 				   content: content, 
 				   title: title,
+				   version: version,
 				   examples_menu: examples_menu,
 				   web_home: web_home,
 			   });
@@ -210,7 +211,7 @@ fs.readFile(lib_home+'/container.html','utf-8', function (err, data) {
 	  container = embed(container, { 
 	   content: content, 
 	   title: "Datanode",
-		  version: version,
+	   version: version,
 	   examples_menu: examples_menu,
 	   introduction: text,
 	   web_home: web_home,

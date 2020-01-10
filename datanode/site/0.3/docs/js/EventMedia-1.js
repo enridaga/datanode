@@ -1,267 +1,47 @@
-var nodes=
-[{ 
-	id: "0",
-	uri: "_:g70285816060340",
-	label: "_:g70285816060340",
-	links: [{
-		target: 1,
-		label: "dn:isCopyOf",
-	uri: "http://purl.org/datanode/ns/isCopyOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "1",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr",
-	label: "ex:descriptionsFromFlickr",
-	links: [{
-		target: 13,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 12,
-		label: "dn:samePopulation",
-	uri: "http://purl.org/datanode/ns/samePopulation",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "2",
-	uri: "_:g70285816039760",
-	label: "_:g70285816039760",
-	links: [{
-		target: 3,
-		label: "dn:isCopyOf",
-	uri: "http://purl.org/datanode/ns/isCopyOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "3",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia",
-	label: "ex:descriptionsFromDbpedia",
-	links: [{
-		target: 11,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 9,
-		label: "dn:samePopulation",
-	uri: "http://purl.org/datanode/ns/samePopulation",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "4",
-	uri: "_:g70285815982340",
-	label: "_:g70285815982340",
-	links: [{
-		target: 5,
-		label: "dn:isCopyOf",
-	uri: "http://purl.org/datanode/ns/isCopyOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "5",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain",
-	label: "ex:descriptionsFromMusicbrain",
-	links: [{
-		target: 17,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 16,
-		label: "dn:samePopulation",
-	uri: "http://purl.org/datanode/ns/samePopulation",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "6",
-	uri: "_:g70285815795980",
-	label: "_:g70285815795980",
-	links: [{
-		target: 7,
-		label: "dn:isCopyOf",
-	uri: "http://purl.org/datanode/ns/isCopyOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "7",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare",
-	label: "ex:descriptionsFromFoursquare",
-	links: [{
-		target: 15,
-		label: "dn:isSelectionOf",
-	uri: "http://purl.org/datanode/ns/isSelectionOf",
-		type: "default",
-		weight: 1,
-	},{
-		target: 14,
-		label: "dn:samePopulation",
-	uri: "http://purl.org/datanode/ns/samePopulation",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "8",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#collection",
-	label: "ex:collection",
-	links: [{
-		target: 0,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 2,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 4,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},{
-		target: 6,
-		label: "dn:hasPortion",
-	uri: "http://purl.org/datanode/ns/hasPortion",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "9",
-	uri: "_:g70285815706200",
-	label: "_:g70285815706200",
-	links: [{
-		target: 10,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "10",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#events",
-	label: "ex:events",
-	links: [{
-		target: 18,
-		label: "dn:combinationFrom",
-	uri: "http://purl.org/datanode/ns/combinationFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 19,
-		label: "dn:combinationFrom",
-	uri: "http://purl.org/datanode/ns/combinationFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 20,
-		label: "dn:combinationFrom",
-	uri: "http://purl.org/datanode/ns/combinationFrom",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "11",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#Dbpedia",
-	label: "ex:Dbpedia",
-	links: [],
-},{ 
-	id: "12",
-	uri: "_:g70285815656940",
-	label: "_:g70285815656940",
-	links: [{
-		target: 10,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "13",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#Flickr",
-	label: "ex:Flickr",
-	links: [],
-},{ 
-	id: "14",
-	uri: "_:g70285815635540",
-	label: "_:g70285815635540",
-	links: [{
-		target: 10,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "15",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#Foursquare",
-	label: "ex:Foursquare",
-	links: [],
-},{ 
-	id: "16",
-	uri: "_:g70285815546660",
-	label: "_:g70285815546660",
-	links: [{
-		target: 10,
-		label: "dn:isPortionOf",
-	uri: "http://purl.org/datanode/ns/isPortionOf",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "17",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#Musicbrain",
-	label: "ex:Musicbrain",
-	links: [],
-},{ 
-	id: "18",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful",
-	label: "ex:Eventful",
-	links: [],
-},{ 
-	id: "19",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM",
-	label: "ex:LastFM",
-	links: [],
-},{ 
-	id: "20",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming",
-	label: "ex:Upcoming",
-	links: [],
-},{ 
-	id: "21",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#output",
-	label: "ex:output",
-	links: [{
-		target: 8,
-		label: "dn:isRemodelledFrom",
-	uri: "http://purl.org/datanode/ns/isRemodelledFrom",
-		type: "default",
-		weight: 1,
-	},{
-		target: 22,
-		label: "dn:usesSchema",
-	uri: "http://purl.org/datanode/ns/usesSchema",
-		type: "default",
-		weight: 1,
-	},],
-},{ 
-	id: "22",
-	uri: "http://purl.org/datanode/ex/0.2/EventMedia/1#TheLODEOntology",
-	label: "ex:TheLODEOntology",
-	links: [],
-},]
+var nodes=[
+{"label": "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain", "id": "0", "links": [{"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 15, "weight": 1, "label": "dn:isSelectionOf"}, {"uri": "http://purl.org/datanode/ns/samePopulation", "type": "default", "target": 6, "weight": 1, "label": "dn:samePopulation"}], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromMusicbrain"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/EventMedia/1#collection", "id": "1", "links": [{"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 12, "weight": 1, "label": "dn:hasPortion"}, {"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 3, "weight": 1, "label": "dn:hasPortion"}, {"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 10, "weight": 1, "label": "dn:hasPortion"}, {"uri": "http://purl.org/datanode/ns/hasPortion", "type": "default", "target": 7, "weight": 1, "label": "dn:hasPortion"}], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#collection"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia", "id": "2", "links": [{"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 19, "weight": 1, "label": "dn:isSelectionOf"}, {"uri": "http://purl.org/datanode/ns/samePopulation", "type": "default", "target": 8, "weight": 1, "label": "dn:samePopulation"}], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromDbpedia"}
+,
+{"label": "ub2bL22C8", "id": "3", "links": [{"uri": "http://purl.org/datanode/ns/isCopyOf", "type": "default", "target": 2, "weight": 1, "label": "dn:isCopyOf"}], "uri": "ub2bL22C8"}
+,
+{"label": "ub2bL44C23", "id": "4", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 5, "weight": 1, "label": "dn:isPortionOf"}], "uri": "ub2bL44C23"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/EventMedia/1#events", "id": "5", "links": [{"uri": "http://purl.org/datanode/ns/combinationFrom", "type": "default", "target": 21, "weight": 1, "label": "dn:combinationFrom"}, {"uri": "http://purl.org/datanode/ns/combinationFrom", "type": "default", "target": 16, "weight": 1, "label": "dn:combinationFrom"}, {"uri": "http://purl.org/datanode/ns/combinationFrom", "type": "default", "target": 17, "weight": 1, "label": "dn:combinationFrom"}], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#events"}
+,
+{"label": "ub2bL50C23", "id": "6", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 5, "weight": 1, "label": "dn:isPortionOf"}], "uri": "ub2bL50C23"}
+,
+{"label": "ub2bL26C8", "id": "7", "links": [{"uri": "http://purl.org/datanode/ns/isCopyOf", "type": "default", "target": 11, "weight": 1, "label": "dn:isCopyOf"}], "uri": "ub2bL26C8"}
+,
+{"label": "ub2bL32C23", "id": "8", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 5, "weight": 1, "label": "dn:isPortionOf"}], "uri": "ub2bL32C23"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/EventMedia/1#output", "id": "9", "links": [{"uri": "http://purl.org/datanode/ns/isRemodelledFrom", "type": "default", "target": 1, "weight": 1, "label": "dn:isRemodelledFrom"}, {"uri": "http://purl.org/datanode/ns/usesSchema", "type": "default", "target": 18, "weight": 1, "label": "dn:usesSchema"}], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#output"}
+,
+{"label": "ub2bL24C8", "id": "10", "links": [{"uri": "http://purl.org/datanode/ns/isCopyOf", "type": "default", "target": 0, "weight": 1, "label": "dn:isCopyOf"}], "uri": "ub2bL24C8"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare", "id": "11", "links": [{"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 22, "weight": 1, "label": "dn:isSelectionOf"}, {"uri": "http://purl.org/datanode/ns/samePopulation", "type": "default", "target": 4, "weight": 1, "label": "dn:samePopulation"}], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFoursquare"}
+,
+{"label": "ub2bL20C19", "id": "12", "links": [{"uri": "http://purl.org/datanode/ns/isCopyOf", "type": "default", "target": 13, "weight": 1, "label": "dn:isCopyOf"}], "uri": "ub2bL20C19"}
+,
+{"label": "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr", "id": "13", "links": [{"uri": "http://purl.org/datanode/ns/samePopulation", "type": "default", "target": 14, "weight": 1, "label": "dn:samePopulation"}, {"uri": "http://purl.org/datanode/ns/isSelectionOf", "type": "default", "target": 20, "weight": 1, "label": "dn:isSelectionOf"}], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#descriptionsFromFlickr"}
+,
+{"label": "ub2bL38C23", "id": "14", "links": [{"uri": "http://purl.org/datanode/ns/isPortionOf", "type": "default", "target": 5, "weight": 1, "label": "dn:isPortionOf"}], "uri": "ub2bL38C23"}
+,
+{"label": "ex1:Musicbrain", "id": "15", "links": [], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#Musicbrain"}
+,
+{"label": "ex1:LastFM", "id": "16", "links": [], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#LastFM"}
+,
+{"label": "ex1:Upcoming", "id": "17", "links": [], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#Upcoming"}
+,
+{"label": "ex1:TheLODEOntology", "id": "18", "links": [], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#TheLODEOntology"}
+,
+{"label": "ex1:Dbpedia", "id": "19", "links": [], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#Dbpedia"}
+,
+{"label": "ex1:Flickr", "id": "20", "links": [], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#Flickr"}
+,
+{"label": "ex1:Eventful", "id": "21", "links": [], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#Eventful"}
+,
+{"label": "ex1:Foursquare", "id": "22", "links": [], "uri": "http://purl.org/datanode/ex/0.2/EventMedia/1#Foursquare"}
+]

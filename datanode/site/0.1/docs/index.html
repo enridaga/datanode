@@ -1,0 +1,1455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Datanode</title>
+		<meta charset="utf-8">
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <meta name="description" content="Usecase Datanode">
+		    <meta name="author" content="enridaga">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+   		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.6.0"></script>
+		<script type="text/javascript" src="./js/model.js"></script>
+		<script type="text/javascript" src="./js/diagram.js"></script>
+		<script type="text/javascript" src="./js/dynatree.js"></script>
+		<script type="text/javascript" src="./js/dntree.js"></script><!-- SCRIPTS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./css/main.css" rel="stylesheet">
+		<script>
+		$(document).ready( function() {
+		$('.dropdown-toggle').dropdown();
+		});
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top collapse navbar-collapse" role="navigation">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="./">Datanode</a>
+		        </div>
+		        <div class="collapse navbar-collapse">
+		          <ul class="nav navbar-nav">
+		            <li><a href="./">Home</a></li>
+		            <li><a class="dropdown-toggle"
+						data-toggle="dropdown"  href="#">Download  <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="./../ns/index.ttl">Turtle</a>
+							<li><a href="./../ns/index.rdf">RDF/XML</a>
+							<li><a href="./../ns/index.nt">N-Triples</a>
+						</ul>
+					</li>
+		            <li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown"  href="#">Examples <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a role="menuitem"  href="./usecases/AEMOO-1.html">AEMOO-1</a></li><li><a role="menuitem"  href="./usecases/DBREC-1.html">DBREC-1</a></li><li><a role="menuitem"  href="./usecases/DBREC-10.html">DBREC-10</a></li><li><a role="menuitem"  href="./usecases/DBREC-11.html">DBREC-11</a></li><li><a role="menuitem"  href="./usecases/DBREC-12.html">DBREC-12</a></li><li><a role="menuitem"  href="./usecases/DBREC-2.html">DBREC-2</a></li><li><a role="menuitem"  href="./usecases/DBREC-3.html">DBREC-3</a></li><li><a role="menuitem"  href="./usecases/DBREC-4.html">DBREC-4</a></li><li><a role="menuitem"  href="./usecases/DBREC-5.html">DBREC-5</a></li><li><a role="menuitem"  href="./usecases/DBREC-6.html">DBREC-6</a></li><li><a role="menuitem"  href="./usecases/DBREC-7.html">DBREC-7</a></li><li><a role="menuitem"  href="./usecases/DBREC-8.html">DBREC-8</a></li><li><a role="menuitem"  href="./usecases/DBREC-9.html">DBREC-9</a></li><li><a role="menuitem"  href="./usecases/DISCOU-1.html">DISCOU-1</a></li><li><a role="menuitem"  href="./usecases/DISCOU-11.html">DISCOU-11</a></li><li><a role="menuitem"  href="./usecases/EventMedia-1.html">EventMedia-1</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-1.html">REXPLORE-1</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-2.html">REXPLORE-2</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-3.html">REXPLORE-3</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-4.html">REXPLORE-4</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-5.html">REXPLORE-5</a></li><li><a role="menuitem"  href="./usecases/REXPLORE-6.html">REXPLORE-6</a></li><li><a role="menuitem"  href="./usecases/SPUD-1.html">SPUD-1</a></li><li><a role="menuitem"  href="./usecases/SPUD-2.html">SPUD-2</a></li><li><a role="menuitem"  href="./usecases/SPUD-3.html">SPUD-3</a></li><li><a role="menuitem"  href="./usecases/WATSON-1.html">WATSON-1</a></li><li><a role="menuitem"  href="./usecases/YokohamaArtSpot-1.html">YokohamaArtSpot-1</a></li>
+						</ul>
+					</li>
+		            <li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown"  href="#">v0.1 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="./../../0.5/docs/">v0.5</a>
+							<li><a href="./../../0.4/docs/">v0.4</a>
+							<li><a href="./../../0.3/docs/">v0.3</a>
+							<li><a href="./../../0.2/docs/">v0.2</a>
+							<li><a href="./../../0.1/docs/">v0.1</a>
+						</ul>
+					</li>
+	<!--	            <li><a href="./contact.html">Contact</a></li> -->
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+		
+	    <div class="container">
+		
+		<h1>Datanode</h1>
+		<!-- start content here -->
+		<style type="text/css">
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 14px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+</style>
+
+<h3>Version 0.1</h3>
+<p>The Datanode ontology was designed to describe data artifacts and their relations on the Semantic Web.</p>
+<p>Datanode terms are under the <tt>http://purl.com/datanode/ns/</tt> namespace</p>
+
+<p>Data is at the center of current developments on the World Wide Web. In
+the Semantic Web, different kinds of data artifacts (datasets, catalogues, provenance 
+metadata, etc.) are published, exchanged, described and queried every day. 
+There are a number of use cases related to data hub management that 
+can only be addressed if we are able to specify the relations between the managed data 
+artifacts in a way that support useful inferences.</p> 
+<p>Datanode is a conceptual framework designed to 
+express relations between data nodes, implemented as an extendable OWL ontology 
+covering the possible relationships between such data nodes. Datanode can support the management of (possibly distributed and interlinked) catalogues 
+of web data and reasoning over the relationships between items in data catalogues.</p>
+
+<!--<ul class="nav nav-pills">
+  <li class="active"><a href="#terms" data-toggle="tab">Terms description</a></li>
+  <li><a href="#diagram" data-toggle="tab">Properties tree</a></li>
+</ul> -->
+
+<div class="tab-content">
+  <div class="tab-pane active" id="terms"><div>
+<h3>Classes</h3>
+<ul class="types">
+<li><a title="Data" href="#Data">Data</a></li>
+</ul>
+</div><div>
+<h3>Properties</h3>
+<ul class="properties">
+<li><a title="about" href="#about">about</a></li><li><a title="addition" href="#addition">addition</a></li><li><a title="addition of" href="#additionOf">additionOf</a></li><li><a title="adjacent" href="#adjacent">adjacent</a></li><li><a title="annotation" href="#annotation">annotation</a></li><li><a title="annotation of" href="#annotationOf">annotationOf</a></li><li><a title="anonymized" href="#anonymized">anonymized</a></li><li><a title="anonymized from" href="#anonymizedFrom">anonymizedFrom</a></li><li><a title="attached to" href="#attachedTo">attachedTo</a></li><li><a title="change" href="#change">change</a></li><li><a title="change of" href="#changeOf">changeOf</a></li><li><a title="cleaned" href="#cleaned">cleaned</a></li><li><a title="cleaned from" href="#cleanedFrom">cleanedFrom</a></li><li><a title="combination from" href="#combinationFrom">combinationFrom</a></li><li><a title="**compared against" href="#comparedAgainst">comparedAgainst</a></li><li><a title="computation" href="#computation">computation</a></li><li><a title="computation of" href="#computationOf">computationOf</a></li><li><a title="consistent with" href="#consistentWith">consistentWith</a></li><li><a title="copy" href="#copy">copy</a></li><li><a title="copy of" href="#copyOf">copyOf</a></li><li><a title="datatypes of" href="#datatypeOf">datatypeOf</a></li><li><a title="datatypes" href="#datatypes">datatypes</a></li><li><a title="dependency" href="#dependency">dependency</a></li><li><a title="dependency of" href="#dependencyOf">dependencyOf</a></li><li><a title="**derive" href="#derive">derive</a></li><li><a title="derived from" href="#derivedFrom">derivedFrom</a></li><li><a title="describe" href="#describe">describe</a></li><li><a title="described by" href="#describedBy">describedBy</a></li><li><a title="**descriptors" href="#descriptors">descriptors</a></li><li><a title="descriptors of" href="#descriptorsOf">descriptorsOf</a></li><li><a title="different capability from" href="#differentCapabilityFrom">differentCapabilityFrom</a></li><li><a title="different descriptors from" href="#differentDescriptorsFrom">differentDescriptorsFrom</a></li><li><a title="different from" href="#differentFrom">differentFrom</a></li><li><a title="different population from" href="#differentPopulationFrom">differentPopulationFrom</a></li><li><a title="different role from" href="#differentRoleFrom">differentRoleFrom</a></li><li><a title="disjoint capability from" href="#disjointCapabilityFrom">disjointCapabilityFrom</a></li><li><a title="disjoint part" href="#disjointPart">disjointPart</a></li><li><a title="disjoint portion" href="#disjointPortion">disjointPortion</a></li><li><a title="disjoint section" href="#disjointSection">disjointSection</a></li><li><a title="duplicate" href="#duplicate">duplicate</a></li><li><a title="enhancement" href="#enhancement">enhancement</a></li><li><a title="enhancement of" href="#enhancementOf">enhancementOf</a></li><li><a title="example" href="#example">example</a></li><li><a title="example of" href="#exampleOf">exampleOf</a></li><li><a title="extraction" href="#extraction">extraction</a></li><li><a title="extraction of" href="#extractionOf">extractionOf</a></li><li><a title="fuzzy different from" href="#fuzzyDifferentFrom">fuzzyDifferentFrom</a></li><li><a title="fuzzy similar to" href="#fuzzySimilarTo">fuzzySimilarTo</a></li><li><a title="have attached" href="#haveAttached">haveAttached</a></li><li><a title="identifiers" href="#identifiers">identifiers</a></li><li><a title="identifiers of" href="#identifiersOf">identifiersOf</a></li><li><a title="inconsistent with" href="#inconsistentWith">inconsistentWith</a></li><li><a title="inference" href="#inference">inference</a></li><li><a title="inference of" href="#inferenceOf">inferenceOf</a></li><li><a title="link to" href="#linkTo">linkTo</a></li><li><a title="linked from" href="#linkedFrom">linkedFrom</a></li><li><a title="metadata" href="#metadata">metadata</a></li><li><a title="nearly same descriptors as" href="#nearlySameDescriptorsAs">nearlySameDescriptorsAs</a></li><li><a title="nearly same population as" href="#nearlySamePopulationAs">nearlySamePopulationAs</a></li><li><a title="newer version of" href="#newerVersionOf">newerVersionOf</a></li><li><a title="next version of" href="#nextVersionOf">nextVersionOf</a></li><li><a title="older version of" href="#olderVersionOf">olderVersionOf</a></li><li><a title="optimized" href="#optimized">optimized</a></li><li><a title="optimized from" href="#optimizedFrom">optimizedFrom</a></li><li><a title="overlapping capability" href="#overlappingCapability">overlappingCapability</a></li><li><a title="part" href="#part">part</a></li><li><a title="part of" href="#partOf">partOf</a></li><li><a title="portion" href="#portion">portion</a></li><li><a title="portion of" href="#portionOf">portionOf</a></li><li><a title="previous version of" href="#previousVersionOf">previousVersionOf</a></li><li><a title="processed from" href="#processedFrom">processedFrom</a></li><li><a title="processed into" href="#processedInto">processedInto</a></li><li><a title="properties" href="#properties">properties</a></li><li><a title="properties of" href="#propertiesOf">propertiesOf</a></li><li><a title="redundant with" href="#redundantWith">redundantWith</a></li><li><a title="reference to" href="#referenceTo">referenceTo</a></li><li><a title="referenced by" href="#referencedBy">referencedBy</a></li><li><a title="reification" href="#reification">reification</a></li><li><a title="reification of" href="#reificationOf">reificationOf</a></li><li><a title="relate to" href="#relateTo">relateTo</a></li><li><a title="removal" href="#removal">removal</a></li><li><a title="removal of" href="#removalOf">removalOf</a></li><li><a title="same capability as" href="#sameCapabilityAs">sameCapabilityAs</a></li><li><a title="same descriptors as" href="#sameDescriptorsAs">sameDescriptorsAs</a></li><li><a title="same population as" href="#samePopulationAs">samePopulationAs</a></li><li><a title="same role as" href="#sameRoleAs">sameRoleAs</a></li><li><a title="sample" href="#sample">sample</a></li><li><a title="sample of" href="#sampleOf">sampleOf</a></li><li><a title="section" href="#section">section</a></li><li><a title="section of" href="#sectionOf">sectionOf</a></li><li><a title="selection" href="#selection">selection</a></li><li><a title="selection from" href="#selectionFrom">selectionFrom</a></li><li><a title="similar to" href="#similarTo">similarTo</a></li><li><a title="snapshot" href="#snapshot">snapshot</a></li><li><a title="snapshot of" href="#snapshotOf">snapshotOf</a></li><li><a title="stand in" href="#standIn">standIn</a></li><li><a title="stand in for" href="#standInFor">standInFor</a></li><li><a title="statistic" href="#statistic">statistic</a></li><li><a title="statistic of" href="#statisticOf">statisticOf</a></li><li><a title="summarization" href="#summarization">summarization</a></li><li><a title="summarization of" href="#summarizationOf">summarizationOf</a></li><li><a title="translation" href="#translation">translation</a></li><li><a title="translation of" href="#translationOf">translationOf</a></li><li><a title="types" href="#types">types</a></li><li><a title="types of" href="#typesOf">typesOf</a></li><li><a title="**update" href="#update">update</a></li><li><a title="update of" href="#updateOf">updateOf</a></li><li><a title="updated version" href="#updatedVersion">updatedVersion</a></li><li><a title="updated version of" href="#updatedVersionOf">updatedVersionOf</a></li><li><a title="version" href="#version">version</a></li><li><a title="version of" href="#versionOf">versionOf</a></li>
+</ul>
+</div><div class="definition">
+<h4><a name="Data" id="Data"></a>dn:Data
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/Data</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:Class  rdfs:Class</td></tr><tr><th>rdfs:label</th><td>Data</td></tr><tr><th>rdfs:comment</th><td>This is the Top Class of DataVOK</td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="about" id="about"></a>dn:about
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/about</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>about</td></tr><tr><th>rdfs:comment</th><td>Data is about other data.  Data is metadata of other data.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#metadata">dn:metadata</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="addition" id="addition"></a>dn:addition
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/addition</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>addition</td></tr><tr><th>rdfs:comment</th><td>some data is the addition-update of some other</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#change">dn:change</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#additionOf">dn:additionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="additionOf" id="additionOf"></a>dn:additionOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/additionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>addition of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#changeOf">dn:changeOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#addition">dn:addition</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="adjacent" id="adjacent"></a>dn:adjacent
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/adjacent</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty  owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>adjacent</td></tr><tr><th>rdfs:comment</th><td>To relate data to any of their adjacent data.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="annotation" id="annotation"></a>dn:annotation
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/annotation</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>annotation</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#haveAttached">dn:haveAttached</a>  <a href="#metadata">dn:metadata</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#annotationOf">dn:annotationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="annotationOf" id="annotationOf"></a>dn:annotationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/annotationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>annotation of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#attachedTo">dn:attachedTo</a>  <a href="#about">dn:about</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#annotation">dn:annotation</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="anonymized" id="anonymized"></a>dn:anonymized
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/anonymized</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>anonymized</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#standIn">dn:standIn</a>  <a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#anonymizedFrom">dn:anonymizedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="anonymizedFrom" id="anonymizedFrom"></a>dn:anonymizedFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/anonymizedFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>anonymized from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#standInFor">dn:standInFor</a>  <a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#anonymized">dn:anonymized</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="attachedTo" id="attachedTo"></a>dn:attachedTo
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/attachedTo</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>attached to</td></tr><tr><th>rdfs:comment</th><td>Data are attached to data for some reason</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#adjacent">dn:adjacent</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#haveAttached">dn:haveAttached</a></td></tr><tr><th>skos:note</th><td>This, along with its inverse "haveAttached" , are considered to model the "physical" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments; but there may emerge other examples.</td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="change" id="change"></a>dn:change
+
+
+
+
+
+
+<span class="badge inverseFunctional" title="inverseFunctional">I</span>
+
+</h4>
+<tt>http://purl.org/datanode/ns/change</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:InverseFunctionalProperty</td></tr><tr><th>rdfs:label</th><td>change</td></tr><tr><th>rdfs:comment</th><td>some data has a change to come</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#update">dn:update</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#changeOf">dn:changeOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="changeOf" id="changeOf"></a>dn:changeOf
+
+
+
+
+
+<span class="badge functional" title="functional">F</span>
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/changeOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:FunctionalProperty</td></tr><tr><th>rdfs:label</th><td>change of</td></tr><tr><th>rdfs:comment</th><td>some data is the coming change of some other</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#updateOf">dn:updateOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#change">dn:change</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="cleaned" id="cleaned"></a>dn:cleaned
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/cleaned</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>cleaned</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#cleanedFrom">dn:cleanedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="cleanedFrom" id="cleanedFrom"></a>dn:cleanedFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/cleanedFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>cleaned from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#cleaned">dn:cleaned</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="combinationFrom" id="combinationFrom"></a>dn:combinationFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/combinationFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>combination from</td></tr><tr><th>rdfs:comment</th><td>A dataset that is the result of the combination of another dataset with something else</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derivedFrom">dn:derivedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="comparedAgainst" id="comparedAgainst"></a>dn:comparedAgainst
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/comparedAgainst</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>**compared against</td></tr><tr><th>rdfs:comment</th><td>Anytime we need to describe a comparison as a binary relation (for example smaller, similar)</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="computation" id="computation"></a>dn:computation
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/computation</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>computation</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#computationOf">dn:computationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="computationOf" id="computationOf"></a>dn:computationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/computationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>computation of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#computation">dn:computation</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="consistentWith" id="consistentWith"></a>dn:consistentWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/consistentWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>consistent with</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#comparedAgainst">dn:comparedAgainst</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="copy" id="copy"></a>dn:copy
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/copy</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>copy</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derive">dn:derive</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#copyOf">dn:copyOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="copyOf" id="copyOf"></a>dn:copyOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/copyOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>copy of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derivedFrom">dn:derivedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#copy">dn:copy</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="datatypeOf" id="datatypeOf"></a>dn:datatypeOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/datatypeOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>datatypes of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#descriptorsOf">dn:descriptorsOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#datatypes">dn:datatypes</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="datatypes" id="datatypes"></a>dn:datatypes
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/datatypes</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>datatypes</td></tr><tr><th>rdfs:comment</th><td>Relates data to the properties used.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#descriptors">dn:descriptors</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#datatypeOf">dn:datatypeOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="dependency" id="dependency"></a>dn:dependency
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/dependency</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>dependency</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#referenceTo">dn:referenceTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#dependencyOf">dn:dependencyOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="dependencyOf" id="dependencyOf"></a>dn:dependencyOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/dependencyOf</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>dependency of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#dependency">dn:dependency</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="derive" id="derive"></a>dn:derive
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/derive</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>**derive</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#derivedFrom">dn:derivedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="derivedFrom" id="derivedFrom"></a>dn:derivedFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/derivedFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>derived from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#derive">dn:derive</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="describe" id="describe"></a>dn:describe
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/describe</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>describe</td></tr><tr><th>rdfs:comment</th><td>Data describe other data.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#about">dn:about</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#describedBy">dn:describedBy</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="describedBy" id="describedBy"></a>dn:describedBy
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/describedBy</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>described by</td></tr><tr><th>rdfs:comment</th><td>Data have other data as description.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#metadata">dn:metadata</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#describe">dn:describe</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="descriptors" id="descriptors"></a>dn:descriptors
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/descriptors</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>**descriptors</td></tr><tr><th>rdfs:comment</th><td>Relates data to the schema entities used.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#descriptorsOf">dn:descriptorsOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="descriptorsOf" id="descriptorsOf"></a>dn:descriptorsOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/descriptorsOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>descriptors of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#descriptors">dn:descriptors</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="differentCapabilityFrom" id="differentCapabilityFrom"></a>dn:differentCapabilityFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/differentCapabilityFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>different capability from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentFrom">dn:differentFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="differentDescriptorsFrom" id="differentDescriptorsFrom"></a>dn:differentDescriptorsFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/differentDescriptorsFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>different descriptors from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentFrom">dn:differentFrom</a></td></tr><tr><th>owl:propertyDisjointWith</th><td><a href="#sameDescriptorsAs">dn:sameDescriptorsAs</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="differentFrom" id="differentFrom"></a>dn:differentFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/differentFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>different from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#comparedAgainst">dn:comparedAgainst</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="differentPopulationFrom" id="differentPopulationFrom"></a>dn:differentPopulationFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/differentPopulationFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>different population from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentFrom">dn:differentFrom</a></td></tr><tr><th>owl:propertyDisjointWith</th><td><a href="#samePopulationAs">dn:samePopulationAs</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="differentRoleFrom" id="differentRoleFrom"></a>dn:differentRoleFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/differentRoleFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>different role from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentFrom">dn:differentFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="disjointCapabilityFrom" id="disjointCapabilityFrom"></a>dn:disjointCapabilityFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/disjointCapabilityFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>disjoint capability from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentCapabilityFrom">dn:differentCapabilityFrom</a></td></tr><tr><th>owl:propertyDisjointWith</th><td><a href="#overlappingCapability">dn:overlappingCapability</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="disjointPart" id="disjointPart"></a>dn:disjointPart
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/disjointPart</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>disjoint part</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#adjacent">dn:adjacent</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="disjointPortion" id="disjointPortion"></a>dn:disjointPortion
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/disjointPortion</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>disjoint portion</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#disjointPart">dn:disjointPart</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="disjointSection" id="disjointSection"></a>dn:disjointSection
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/disjointSection</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>disjoint section</td></tr><tr><th>rdfs:comment</th><td>Data can be cut in sections according to specific attributes.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#disjointPart">dn:disjointPart</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="duplicate" id="duplicate"></a>dn:duplicate
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+<span class="badge irreflexive" title="irreflexive">I</span>
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/duplicate</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty  owl:IrreflexiveProperty</td></tr><tr><th>rdfs:label</th><td>duplicate</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#similarTo">dn:similarTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="enhancement" id="enhancement"></a>dn:enhancement
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/enhancement</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>enhancement</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#haveAttached">dn:haveAttached</a>  <a href="#derive">dn:derive</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#enhancementOf">dn:enhancementOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="enhancementOf" id="enhancementOf"></a>dn:enhancementOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/enhancementOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>enhancement of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#attachedTo">dn:attachedTo</a>  <a href="#derivedFrom">dn:derivedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#enhancement">dn:enhancement</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="example" id="example"></a>dn:example
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/example</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>example</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derive">dn:derive</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#exampleOf">dn:exampleOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="exampleOf" id="exampleOf"></a>dn:exampleOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/exampleOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>example of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derivedFrom">dn:derivedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#example">dn:example</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="extraction" id="extraction"></a>dn:extraction
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/extraction</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>extraction</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#extractionOf">dn:extractionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="extractionOf" id="extractionOf"></a>dn:extractionOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/extractionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>extraction of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#extraction">dn:extraction</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="fuzzyDifferentFrom" id="fuzzyDifferentFrom"></a>dn:fuzzyDifferentFrom
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/fuzzyDifferentFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>fuzzy different from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#differentFrom">dn:differentFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="fuzzySimilarTo" id="fuzzySimilarTo"></a>dn:fuzzySimilarTo
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/fuzzySimilarTo</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>fuzzy similar to</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#similarTo">dn:similarTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="haveAttached" id="haveAttached"></a>dn:haveAttached
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/haveAttached</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>have attached</td></tr><tr><th>rdfs:comment</th><td>Data have attached other data for some reason</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#adjacent">dn:adjacent</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#attachedTo">dn:attachedTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="identifiers" id="identifiers"></a>dn:identifiers
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/identifiers</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>identifiers</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#section">dn:section</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#identifiersOf">dn:identifiersOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="identifiersOf" id="identifiersOf"></a>dn:identifiersOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/identifiersOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>identifiers of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#sectionOf">dn:sectionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#identifiers">dn:identifiers</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="inconsistentWith" id="inconsistentWith"></a>dn:inconsistentWith
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/inconsistentWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>inconsistent with</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#comparedAgainst">dn:comparedAgainst</a></td></tr><tr><th>owl:propertyDisjointWith</th><td><a href="#consistentWith">dn:consistentWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="inference" id="inference"></a>dn:inference
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/inference</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>inference</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#inferenceOf">dn:inferenceOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="inferenceOf" id="inferenceOf"></a>dn:inferenceOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/inferenceOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>inference of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#inference">dn:inference</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="linkTo" id="linkTo"></a>dn:linkTo
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/linkTo</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>link to</td></tr><tr><th>rdfs:comment</th><td>Data link to data</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#referenceTo">dn:referenceTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#linkedFrom">dn:linkedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="linkedFrom" id="linkedFrom"></a>dn:linkedFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/linkedFrom</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>linked from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#referencedBy">dn:referencedBy</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#linkTo">dn:linkTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="metadata" id="metadata"></a>dn:metadata
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/metadata</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>metadata</td></tr><tr><th>rdfs:comment</th><td>Data have other data as metadata.  To relate data to metadata.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#about">dn:about</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="nearlySameDescriptorsAs" id="nearlySameDescriptorsAs"></a>dn:nearlySameDescriptorsAs
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/nearlySameDescriptorsAs</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>nearly same descriptors as</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#fuzzySimilarTo">dn:fuzzySimilarTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="nearlySamePopulationAs" id="nearlySamePopulationAs"></a>dn:nearlySamePopulationAs
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/nearlySamePopulationAs</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>nearly same population as</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#fuzzySimilarTo">dn:fuzzySimilarTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="newerVersionOf" id="newerVersionOf"></a>dn:newerVersionOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/newerVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>newer version of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#versionOf">dn:versionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#olderVersionOf">dn:olderVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="nextVersionOf" id="nextVersionOf"></a>dn:nextVersionOf
+
+
+
+
+
+<span class="badge functional" title="functional">F</span>
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/nextVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:FunctionalProperty</td></tr><tr><th>rdfs:label</th><td>next version of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#newerVersionOf">dn:newerVersionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#previousVersionOf">dn:previousVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="olderVersionOf" id="olderVersionOf"></a>dn:olderVersionOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/olderVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>older version of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#versionOf">dn:versionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#newerVersionOf">dn:newerVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="optimized" id="optimized"></a>dn:optimized
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/optimized</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>optimized</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#optimizedFrom">dn:optimizedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="optimizedFrom" id="optimizedFrom"></a>dn:optimizedFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/optimizedFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>optimized from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#optimized">dn:optimized</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="overlappingCapability" id="overlappingCapability"></a>dn:overlappingCapability
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/overlappingCapability</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>overlapping capability</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#similarTo">dn:similarTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="part" id="part"></a>dn:part
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/part</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>part</td></tr><tr><th>rdfs:comment</th><td>To related data to any of their subset data.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#partOf">dn:partOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="partOf" id="partOf"></a>dn:partOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/partOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>part of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#part">dn:part</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="portion" id="portion"></a>dn:portion
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/portion</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>portion</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#part">dn:part</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#portionOf">dn:portionOf</a></td></tr><tr><th>skos:note</th><td>:portion is used to capture the relation with a subset of the data.</td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="portionOf" id="portionOf"></a>dn:portionOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/portionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>portion of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#partOf">dn:partOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#portion">dn:portion</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="previousVersionOf" id="previousVersionOf"></a>dn:previousVersionOf
+
+
+
+
+
+
+<span class="badge inverseFunctional" title="inverseFunctional">I</span>
+
+</h4>
+<tt>http://purl.org/datanode/ns/previousVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:InverseFunctionalProperty</td></tr><tr><th>rdfs:label</th><td>previous version of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#olderVersionOf">dn:olderVersionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#nextVersionOf">dn:nextVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="processedFrom" id="processedFrom"></a>dn:processedFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/processedFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>processed from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derivedFrom">dn:derivedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="processedInto" id="processedInto"></a>dn:processedInto
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/processedInto</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>processed into</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derive">dn:derive</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="properties" id="properties"></a>dn:properties
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/properties</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>properties</td></tr><tr><th>rdfs:comment</th><td>Relates data to the properties used.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#descriptors">dn:descriptors</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#propertiesOf">dn:propertiesOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="propertiesOf" id="propertiesOf"></a>dn:propertiesOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/propertiesOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>properties of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#descriptorsOf">dn:descriptorsOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#properties">dn:properties</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="redundantWith" id="redundantWith"></a>dn:redundantWith
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/redundantWith</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>redundant with</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#overlappingCapability">dn:overlappingCapability</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="referenceTo" id="referenceTo"></a>dn:referenceTo
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/referenceTo</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>reference to</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#referencedBy">dn:referencedBy</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="referencedBy" id="referencedBy"></a>dn:referencedBy
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/referencedBy</tt>
+<div><table class="table"><tbody><tr><th>rdfs:label</th><td>referenced by</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#referenceTo">dn:referenceTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="reification" id="reification"></a>dn:reification
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/reification</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>reification</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#reificationOf">dn:reificationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="reificationOf" id="reificationOf"></a>dn:reificationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/reificationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>reification of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derivedFrom">dn:derivedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#reification">dn:reification</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="relateTo" id="relateTo"></a>dn:relateTo
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+<span class="badge reflexive" title="reflexive">R</span>
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/relateTo</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty  owl:SymmetricProperty  owl:ReflexiveProperty</td></tr><tr><th>rdfs:label</th><td>relate to</td></tr><tr><th>rdfs:comment</th><td>Some data relate to other data.  This is the Top Property of DataVOK.</td></tr><tr><th>rdfs:domain</th><td><a href="#Data">dn:Data</a></td></tr><tr><th>rdfs:range</th><td><a href="#Data">dn:Data</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="removal" id="removal"></a>dn:removal
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/removal</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>removal</td></tr><tr><th>rdfs:comment</th><td>some data is the removal-update of some other</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#change">dn:change</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#removalOf">dn:removalOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="removalOf" id="removalOf"></a>dn:removalOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/removalOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>removal of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#changeOf">dn:changeOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#removal">dn:removal</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="sameCapabilityAs" id="sameCapabilityAs"></a>dn:sameCapabilityAs
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/sameCapabilityAs</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>same capability as</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#redundantWith">dn:redundantWith</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="sameDescriptorsAs" id="sameDescriptorsAs"></a>dn:sameDescriptorsAs
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/sameDescriptorsAs</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>same descriptors as</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#similarTo">dn:similarTo</a></td></tr><tr><th>owl:propertyDisjointWith</th><td><a href="#differentDescriptorsFrom">dn:differentDescriptorsFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="samePopulationAs" id="samePopulationAs"></a>dn:samePopulationAs
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/samePopulationAs</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>same population as</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#similarTo">dn:similarTo</a></td></tr><tr><th>owl:propertyDisjointWith</th><td><a href="#differentPopulationFrom">dn:differentPopulationFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="sameRoleAs" id="sameRoleAs"></a>dn:sameRoleAs
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/sameRoleAs</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>same role as</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#similarTo">dn:similarTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="sample" id="sample"></a>dn:sample
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/sample</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>sample</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#portion">dn:portion</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#sampleOf">dn:sampleOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="sampleOf" id="sampleOf"></a>dn:sampleOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/sampleOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>sample of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#portionOf">dn:portionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#sample">dn:sample</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="section" id="section"></a>dn:section
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/section</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>section</td></tr><tr><th>rdfs:comment</th><td>Data can be cut in sections according to specific attributes.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#part">dn:part</a></td></tr><tr><th>skos:note</th><td>An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition.</td></tr><tr><th>owl:inverseOf</th><td><a href="#sectionOf">dn:sectionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="sectionOf" id="sectionOf"></a>dn:sectionOf
+
+
+<span class="badge transitive" title="transitive">T</span>
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/sectionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:TransitiveProperty</td></tr><tr><th>rdfs:label</th><td>section of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#partOf">dn:partOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#section">dn:section</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="selection" id="selection"></a>dn:selection
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/selection</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>selection</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derive">dn:derive</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#selectionFrom">dn:selectionFrom</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="selectionFrom" id="selectionFrom"></a>dn:selectionFrom
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/selectionFrom</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>selection from</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derivedFrom">dn:derivedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#selection">dn:selection</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="similarTo" id="similarTo"></a>dn:similarTo
+
+<span class="badge symmetric" title="symmetric">S</span>
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/similarTo</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:SymmetricProperty</td></tr><tr><th>rdfs:label</th><td>similar to</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#comparedAgainst">dn:comparedAgainst</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="snapshot" id="snapshot"></a>dn:snapshot
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/snapshot</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>snapshot</td></tr><tr><th>rdfs:comment</th><td>a copy of data in a specific time point</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#copy">dn:copy</a>  <a href="#version">dn:version</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#snapshotOf">dn:snapshotOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="snapshotOf" id="snapshotOf"></a>dn:snapshotOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/snapshotOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>snapshot of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#copyOf">dn:copyOf</a>  <a href="#versionOf">dn:versionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#snapshot">dn:snapshot</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="standIn" id="standIn"></a>dn:standIn
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/standIn</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>stand in</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derive">dn:derive</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#standInFor">dn:standInFor</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="standInFor" id="standInFor"></a>dn:standInFor
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/standInFor</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>stand in for</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derivedFrom">dn:derivedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#standIn">dn:standIn</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="statistic" id="statistic"></a>dn:statistic
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/statistic</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>statistic</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#computation">dn:computation</a>  <a href="#describedBy">dn:describedBy</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#statisticOf">dn:statisticOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="statisticOf" id="statisticOf"></a>dn:statisticOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/statisticOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>statistic of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#computationOf">dn:computationOf</a>  <a href="#describe">dn:describe</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#statistic">dn:statistic</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="summarization" id="summarization"></a>dn:summarization
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/summarization</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>summarization</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derive">dn:derive</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#summarizationOf">dn:summarizationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="summarizationOf" id="summarizationOf"></a>dn:summarizationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/summarizationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>summarization of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#derivedFrom">dn:derivedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#summarization">dn:summarization</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="translation" id="translation"></a>dn:translation
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/translation</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>translation</td></tr><tr><th>rdfs:comment</th><td>Living in a RDF world, data can be translated in many ways (vocabulary may change, RDF structure may be changed). Another example is reification.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedInto">dn:processedInto</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#translationOf">dn:translationOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="translationOf" id="translationOf"></a>dn:translationOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/translationOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>translation of</td></tr><tr><th>rdfs:comment</th><td>Some data being the translated form of other.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#processedFrom">dn:processedFrom</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#translation">dn:translation</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="types" id="types"></a>dn:types
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/types</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>types</td></tr><tr><th>rdfs:comment</th><td>Relates data to the types used.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#descriptors">dn:descriptors</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#typesOf">dn:typesOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="typesOf" id="typesOf"></a>dn:typesOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/typesOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>types of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#descriptorsOf">dn:descriptorsOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#types">dn:types</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="update" id="update"></a>dn:update
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/update</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>**update</td></tr><tr><th>rdfs:comment</th><td>some data is the update of some other</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#updateOf">dn:updateOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="updateOf" id="updateOf"></a>dn:updateOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/updateOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>update of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#update">dn:update</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="updatedVersion" id="updatedVersion"></a>dn:updatedVersion
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/updatedVersion</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>updated version</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#update">dn:update</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#updatedVersionOf">dn:updatedVersionOf</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="updatedVersionOf" id="updatedVersionOf"></a>dn:updatedVersionOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/updatedVersionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>updated version of</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#updateOf">dn:updateOf</a>  <a href="#newerVersionOf">dn:newerVersionOf</a></td></tr><tr><th>owl:inverseOf</th><td><a href="#updatedVersion">dn:updatedVersion</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="version" id="version"></a>dn:version
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/version</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>version</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr></tbody></table></div>
+</div><div class="definition">
+<h4><a name="versionOf" id="versionOf"></a>dn:versionOf
+
+
+
+
+
+
+</h4>
+<tt>http://purl.org/datanode/ns/versionOf</tt>
+<div><table class="table"><tbody><tr><th>rdf:type</th><td>owl:ObjectProperty</td></tr><tr><th>rdfs:label</th><td>version of</td></tr><tr><th>rdfs:comment</th><td>Use this property to represent a temporal relation between two dataset.</td></tr><tr><th>rdfs:subPropertyOf</th><td><a href="#relateTo">dn:relateTo</a></td></tr></tbody></table></div>
+</div></div>
+  <div class="tab-pane" id="diagram"></div>
+</div>
+
+<script type="text/javascript">var data = nodes;dynatree(data, "#diagram");</script>
+
+		<!-- end content here -->
+		</div>
+		
+	</body>
+</html>

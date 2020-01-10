@@ -9,7 +9,7 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
-		<node id="n4084565025118824783">
+		<node id="n4382984624">
 			<data key="k_label"><![CDATA[different capability from [S] ]]></data>
 			<data key="d5"><![CDATA[different capability from [S] ]]></data>
 			<data key="key_nodegraphics">
@@ -17,10 +17,24 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->different capability from [S] <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<node id="n2876371268952479016">
+		<edge id="e_4384699008_4382984624" source="n4384699008" target="n4382984624}">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+			</y:BezierEdge>
+			</data>
+		</edge>
+		<node id="n4384699008">
 			<data key="k_label"><![CDATA[different population from [S] ]]></data>
 			<data key="d5"><![CDATA[different population from [S] ]]></data>
 			<data key="key_nodegraphics">
@@ -28,10 +42,16 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->different population from [S] <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<edge id="e_2876371268952479016_4084565025118824783" source="n2876371268952479016" target="n4084565025118824783">
+		<edge id="e_4384701168_4384699008" source="n4384701168" target="n4384699008}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -39,7 +59,7 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-		<node id="n-2146788897184792685">
+		<node id="n4384701168">
 			<data key="k_label"><![CDATA[disjoint portion with [S] ]]></data>
 			<data key="d5"><![CDATA[disjoint portion with [S] ]]></data>
 			<data key="key_nodegraphics">
@@ -47,10 +67,16 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->disjoint portion with [S] <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<edge id="e_-2146788897184792685_2876371268952479016" source="n-2146788897184792685" target="n2876371268952479016">
+		<edge id="e_4384729200_4384699008" source="n4384729200" target="n4384699008}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -58,7 +84,7 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-		<node id="n-2923719171422338144">
+		<node id="n4384729200">
 			<data key="k_label"><![CDATA[disjoint capability [S] ]]></data>
 			<data key="d5"><![CDATA[disjoint capability [S] ]]></data>
 			<data key="key_nodegraphics">
@@ -66,10 +92,16 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->disjoint capability [S] <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<edge id="e_-2923719171422338144_2876371268952479016" source="n-2923719171422338144" target="n2876371268952479016">
+		<edge id="e_4384699568_4382984624" source="n4384699568" target="n4382984624}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -77,7 +109,7 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-		<node id="n4219511391835415302">
+		<node id="n4384699568">
 			<data key="k_label"><![CDATA[different vocabulary from [S] ]]></data>
 			<data key="d5"><![CDATA[different vocabulary from [S] ]]></data>
 			<data key="key_nodegraphics">
@@ -85,10 +117,16 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->different vocabulary from [S] <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<edge id="e_4219511391835415302_4084565025118824783" source="n4219511391835415302" target="n4084565025118824783">
+		<edge id="e_4384729200_4384699568" source="n4384729200" target="n4384699568}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -96,26 +134,7 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-		<node id="n-612727886082390414">
-			<data key="k_label"><![CDATA[disjoint section with [S] ]]></data>
-			<data key="d5"><![CDATA[disjoint section with [S] ]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->disjoint section with [S] <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-		<edge id="e_-612727886082390414_4219511391835415302" source="n-612727886082390414" target="n4219511391835415302">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-			</y:BezierEdge>
-			</data>
-		</edge>
-		<node id="n-2923719171422338144">
+		<node id="n4384729200">
 			<data key="k_label"><![CDATA[disjoint capability [S] ]]></data>
 			<data key="d5"><![CDATA[disjoint capability [S] ]]></data>
 			<data key="key_nodegraphics">
@@ -123,10 +142,16 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->disjoint capability [S] <y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-		<edge id="e_-2923719171422338144_4219511391835415302" source="n-2923719171422338144" target="n4219511391835415302">
+		<edge id="e_4384700608_4384699568" source="n4384700608" target="n4384699568}">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -134,5 +159,22 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
+		<node id="n4384700608">
+			<data key="k_label"><![CDATA[disjoint section with [S] ]]></data>
+			<data key="d5"><![CDATA[disjoint section with [S] ]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>#{node}<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
 	</graph>
 </graphml>

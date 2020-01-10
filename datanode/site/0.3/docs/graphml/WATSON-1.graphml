@@ -9,152 +9,9 @@
 		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
 		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
 	<graph edgedefault="directed" id="G">
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators -->
-<!-- ex:buzzerActivators -->
-		<node id="n2294154401344509854">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:buzzerActivators<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers -->
-<!-- ex:candidateAnswers -->
-		<node id="n195635086583824404">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:candidateAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers -->
-<!-- ex:confidentAnswers -->
-		<node id="n3727812226291470667">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:confidentAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases -->
-<!-- ex:relatedPhrases -->
-		<node id="n1557310786686887916">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:relatedPhrases<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence -->
-<!-- ex:goodConfidence -->
-		<node id="n-1837283071761199457">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:goodConfidence<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers -->
-<!-- ex:verifiedAnswers -->
-		<node id="n-4084160434541319257">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:verifiedAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidence -->
-<!-- ex:confidence -->
-		<node id="n-3543176345764889213">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#confidence]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#confidence]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:confidence<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#keywords -->
-<!-- ex:keywords -->
-		<node id="n-2058917547655125720">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#keywords]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#keywords]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:keywords<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#clues -->
-<!-- ex:clues -->
-		<node id="n4260488188263511353">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#clues]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#clues]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:clues<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- _:g70226776047780 -->
-<!-- _:g70226776047780 -->
-		<node id="n-765673509945656557">
-			<data key="k_label"><![CDATA[_:g70226776047780]]></data>
-			<data key="d5"><![CDATA[_:g70226776047780]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->_:g70226776047780<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments -->
-<!-- ex:sentenceFragments -->
-		<node id="n-2012473705797783230">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:sentenceFragments<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
 <!-- http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase -->
-<!-- ex:unstructuredKnowledgeBase -->
-		<node id="n252017882304825163">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase -->
+		<node id="n4445500912">
 			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase]]></data>
 			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase]]></data>
 			<data key="key_nodegraphics">
@@ -162,50 +19,75 @@
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:unstructuredKnowledgeBase<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
-			</data>
-		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase -->
-<!-- ex:structuredKnowledgeBase -->
-		<node id="n-1461854130409890885">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase]]></data>
-			<data key="key_nodegraphics">
-				<y:GenericNode configuration="com.yworks.flowchart.start1">
-					<y:Fill color="#FFFFFF" transparent="true"/>
-					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
-					<y:NodeLabel 
->ex:structuredKnowledgeBase<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
 <!-- http://purl.org/datanode/ex/0.2/WATSON/1#KB -->
-<!-- ex:KB -->
-		<node id="n412048390738465301">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#KB]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#KB]]></data>
+		<edge id="e_4445500912_4445500752_4445500112" source="n4445500912" target="n4445500112">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase -->
+		<node id="n4445500912">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:KB<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- http://purl.org/datanode/ex/0.2/WATSON/1#unconfidentAnswers -->
-<!-- ex:unconfidentAnswers -->
-		<node id="n-3918361334186964975">
-			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#unconfidentAnswers]]></data>
-			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#unconfidentAnswers]]></data>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#KB -->
+		<edge id="e_4445500912_4445500752_4445500112" source="n4445500912" target="n4445500112">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers -->
+		<node id="n4445482912">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers]]></data>
 			<data key="key_nodegraphics">
 				<y:GenericNode configuration="com.yworks.flowchart.start1">
 					<y:Fill color="#FFFFFF" transparent="true"/>
 					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
 					<y:NodeLabel 
->ex:unconfidentAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> <y:ModelParameter> <y:SmartNodeLabelModelParameter /></y:ModelParameter></y:NodeLabel>				</y:GenericNode>
+>http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
 		</node>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers"] -->
-		<edge id="e_2294154401344509854_2506089666056738560_195635086583824404" source="n2294154401344509854" target="n195635086583824404">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers -->
+		<edge id="e_4445482912_4445482752_4445499792" source="n4445482912" target="n4445499792">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -214,28 +96,8 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers"] -->
-		<edge id="e_2294154401344509854_-221073982107129787_3727812226291470667" source="n2294154401344509854" target="n3727812226291470667">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:overlappingPopulationWith</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases"] -->
-		<edge id="e_195635086583824404_2506089666056738560_1557310786686887916" source="n195635086583824404" target="n1557310786686887916">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence"] -->
-		<edge id="e_3727812226291470667_-2453407706380967885_-1837283071761199457" source="n3727812226291470667" target="n-1837283071761199457">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence -->
+		<edge id="e_4445482912_4445499632_4445499712" source="n4445482912" target="n4445499712">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -244,8 +106,27 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers"] -->
-		<edge id="e_3727812226291470667_2506089666056738560_-4084160434541319257" source="n3727812226291470667" target="n-4084160434541319257">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers -->
+		<node id="n4445482912">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers -->
+		<edge id="e_4445482912_4445482752_4445499792" source="n4445482912" target="n4445499792">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -254,18 +135,37 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#confidence"] -->
-		<edge id="e_-1837283071761199457_2506089666056738560_-3543176345764889213" source="n-1837283071761199457" target="n-3543176345764889213">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence -->
+		<edge id="e_4445482912_4445499632_4445499712" source="n4445482912" target="n4445499712">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#clues"] -->
-		<edge id="e_-2058917547655125720_2946689333635303490_4260488188263511353" source="n-2058917547655125720" target="n4260488188263511353">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments -->
+		<node id="n4445500832">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#clues -->
+		<edge id="e_4445500832_4445499952_4445500192" source="n4445500832" target="n4445500192">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -274,38 +174,56 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#keywords", "http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments", "http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase"] -->
-		<edge id="e_-765673509945656557_-3559460925438584643_-2058917547655125720" source="n-765673509945656557" target="n-2058917547655125720">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments -->
+		<node id="n4445500832">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#clues -->
+		<edge id="e_4445500832_4445499952_4445500192" source="n4445500832" target="n4445500192">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#keywords", "http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments", "http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase"] -->
-		<edge id="e_-765673509945656557_-3559460925438584643_-2012473705797783230" source="n-765673509945656557" target="n-2012473705797783230">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
-			</y:BezierEdge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases -->
+		<node id="n4445499552">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
 			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#keywords", "http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments", "http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase"] -->
-		<edge id="e_-765673509945656557_-3559460925438584643_252017882304825163" source="n-765673509945656557" target="n252017882304825163">
-			<data key="key_edgegraphics">
-			<y:BezierEdge>
-				<y:LineStyle color="#000000" type="line" width="2.0"/>
-				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
-			</y:BezierEdge>
-			</data>
-		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#confidence"] -->
-		<edge id="e_1557310786686887916_-2453407706380967885_-3543176345764889213" source="n1557310786686887916" target="n-3543176345764889213">
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidence -->
+		<edge id="e_4445499552_4445499632_4445500032" source="n4445499552" target="n4445500032">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -314,8 +232,8 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["_:g70226776047780"] -->
-		<edge id="e_1557310786686887916_-1010561668003868258_-765673509945656557" source="n1557310786686887916" target="n-765673509945656557">
+<!-- ub2bL34C22 -->
+		<edge id="e_4445499552_4445500352_4445482592" source="n4445499552" target="n4445482592">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -324,58 +242,164 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#clues"] -->
-		<edge id="e_-2012473705797783230_2946689333635303490_4260488188263511353" source="n-2012473705797783230" target="n4260488188263511353">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases -->
+		<node id="n4445499552">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidence -->
+		<edge id="e_4445499552_4445499632_4445500032" source="n4445499552" target="n4445500032">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#KB"] -->
-		<edge id="e_-1461854130409890885_1978728956697469392_412048390738465301" source="n-1461854130409890885" target="n412048390738465301">
+<!-- ub2bL34C22 -->
+		<edge id="e_4445499552_4445500352_4445482592" source="n4445499552" target="n4445482592">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+				<y:EdgeLabel>dn:isStatisticOf</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers"] -->
-		<edge id="e_-3918361334186964975_-544645699249580864_3727812226291470667" source="n-3918361334186964975" target="n3727812226291470667">
+<!-- ub2bL34C22 -->
+<!-- ub2bL34C22 -->
+		<node id="n4445482592">
+			<data key="k_label"><![CDATA[ub2bL34C22]]></data>
+			<data key="d5"><![CDATA[ub2bL34C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL34C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments -->
+		<edge id="e_4445482592_4445500672_4445500832" source="n4445482592" target="n4445500832">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:disjointPortionWith</y:EdgeLabel>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers"] -->
-		<edge id="e_-3918361334186964975_2506089666056738560_-4084160434541319257" source="n-3918361334186964975" target="n-4084160434541319257">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase -->
+		<edge id="e_4445482592_4445500672_4445500912" source="n4445482592" target="n4445500912">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#KB"] -->
-		<edge id="e_252017882304825163_1978728956697469392_412048390738465301" source="n252017882304825163" target="n412048390738465301">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#keywords -->
+		<edge id="e_4445482592_4445500672_4445499472" source="n4445482592" target="n4445499472">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
-				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers"] -->
-		<edge id="e_-4084160434541319257_-3425921004107461258_195635086583824404" source="n-4084160434541319257" target="n195635086583824404">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1# -->
+<!-- When playing Jeopardy! all players must wait until host Alex Trebek reads each clue in its entirety,  after which a light is lit as a 'ready' signal; the first to activate their buzzer button wins the  chance to respond. Watson received the clues as electronic texts at the same moment they were  made visible to the human players. It would then parse the clues into different keywords and sentence  fragments in order to find statistically related phrases. Watson's main innovation was not in the creation  of a new algorithm for this operation but rather its ability to quickly execute thousands of proven language  analysis algorithms simultaneously to find the correct answer. The more algorithms that find  the same answer independently the more likely Watson is to be correct. Once Watson has a small number of potential solutions, it is able to check against its database to ascertain  whether the solution makes sense. In a sequence of 20 mock games, human participants were able  to use the average six to seven seconds that Watson needed to hear the clue and decide whether to signal for responding.  During that time, Watson also has to evaluate the response and determine whether it is sufficiently  confident in the result to signal. Part of the system used to win the Jeopardy! contest was the  electronic circuitry that receives the 'ready' signal and then examined whether Watson's  confidence level was great enough to activate the buzzer. -->
+		<node id="n4445481792">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>When playing Jeopardy! all players must wait until host Alex Trebek reads each clue in its entirety,  after which a light is lit as a 'ready' signal; the first to activate their buzzer button wins the  chance to respond. Watson received the clues as electronic texts at the same moment they were  made visible to the human players. It would then parse the clues into different keywords and sentence  fragments in order to find statistically related phrases. Watson's main innovation was not in the creation  of a new algorithm for this operation but rather its ability to quickly execute thousands of proven language  analysis algorithms simultaneously to find the correct answer. The more algorithms that find  the same answer independently the more likely Watson is to be correct. Once Watson has a small number of potential solutions, it is able to check against its database to ascertain  whether the solution makes sense. In a sequence of 20 mock games, human participants were able  to use the average six to seven seconds that Watson needed to hear the clue and decide whether to signal for responding.  During that time, Watson also has to evaluate the response and determine whether it is sufficiently  confident in the result to signal. Part of the system used to win the Jeopardy! contest was the  electronic circuitry that receives the 'ready' signal and then examined whether Watson's  confidence level was great enough to activate the buzzer.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- When playing Jeopardy! all players must wait until host Alex Trebek reads each clue in its entirety,  after which a light is lit as a 'ready' signal; the first to activate their buzzer button wins the  chance to respond. Watson received the clues as electronic texts at the same moment they were  made visible to the human players. It would then parse the clues into different keywords and sentence  fragments in order to find statistically related phrases. Watson's main innovation was not in the creation  of a new algorithm for this operation but rather its ability to quickly execute thousands of proven language  analysis algorithms simultaneously to find the correct answer. The more algorithms that find  the same answer independently the more likely Watson is to be correct. Once Watson has a small number of potential solutions, it is able to check against its database to ascertain  whether the solution makes sense. In a sequence of 20 mock games, human participants were able  to use the average six to seven seconds that Watson needed to hear the clue and decide whether to signal for responding.  During that time, Watson also has to evaluate the response and determine whether it is sufficiently  confident in the result to signal. Part of the system used to win the Jeopardy! contest was the  electronic circuitry that receives the 'ready' signal and then examined whether Watson's  confidence level was great enough to activate the buzzer. -->
+		<edge id="e_4445481792_4445482432_4445395280" source="n4445481792" target="n4445395280">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) Receives the clues as electronic text 1) The clues is parsed into different keywords and sentence fragments 2) The system finds statistically related phrases 3) Executes thousands of proven language analysis algorithms simultaneously 4) Some of these answers are found by many independent algorithms 5) Verify solutions with the database to check whether they make sense 6) Evaluate if the candidate response is sufficiently confident 7) Active the buzzer if the response looks good -->
+		<edge id="e_4445481792_4445482032_4445382352" source="n4445481792" target="n4445382352">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4445481792_4445482112_4445482272" source="n4445481792" target="n4445482272">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers -->
+		<node id="n4445499792">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers -->
+		<edge id="e_4445499792_4445500272_4445482672" source="n4445499792" target="n4445482672">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -384,13 +408,470 @@
 			</y:BezierEdge>
 			</data>
 		</edge>
-<!-- ["http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase"] -->
-		<edge id="e_-4084160434541319257_2946689333635303490_-1461854130409890885" source="n-4084160434541319257" target="n-1461854130409890885">
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase -->
+		<edge id="e_4445499792_4445499952_4445500512" source="n4445499792" target="n4445500512">
 			<data key="key_edgegraphics">
 			<y:BezierEdge>
 				<y:LineStyle color="#000000" type="line" width="2.0"/>
 				<y:Arrows source="none" target="white_delta"/>
 				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers -->
+		<node id="n4445499792">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers -->
+		<edge id="e_4445499792_4445500272_4445482672" source="n4445499792" target="n4445482672">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase -->
+		<edge id="e_4445499792_4445499952_4445500512" source="n4445499792" target="n4445500512">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase -->
+		<node id="n4445500512">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#KB -->
+		<edge id="e_4445500512_4445500752_4445500112" source="n4445500512" target="n4445500112">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase -->
+		<node id="n4445500512">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#structuredKnowledgeBase<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#KB -->
+		<edge id="e_4445500512_4445500752_4445500112" source="n4445500512" target="n4445500112">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#unconfidentAnswers -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#unconfidentAnswers -->
+		<node id="n4445500432">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#unconfidentAnswers]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#unconfidentAnswers]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#unconfidentAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#verifiedAnswers -->
+		<edge id="e_4445500432_4445482752_4445499792" source="n4445500432" target="n4445499792">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers -->
+		<edge id="e_4445500432_4445500992_4445482912" source="n4445500432" target="n4445482912">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:disjointPortionWith</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL34C22 -->
+<!-- ub2bL34C22 -->
+		<node id="n4445482592">
+			<data key="k_label"><![CDATA[ub2bL34C22]]></data>
+			<data key="d5"><![CDATA[ub2bL34C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL34C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#sentenceFragments -->
+		<edge id="e_4445482592_4445500672_4445500832" source="n4445482592" target="n4445500832">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#unstructuredKnowledgeBase -->
+		<edge id="e_4445482592_4445500672_4445500912" source="n4445482592" target="n4445500912">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#keywords -->
+		<edge id="e_4445482592_4445500672_4445499472" source="n4445482592" target="n4445499472">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:combinationFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#keywords -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#keywords -->
+		<node id="n4445499472">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#keywords]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#keywords]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#keywords<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#clues -->
+		<edge id="e_4445499472_4445499952_4445500192" source="n4445499472" target="n4445500192">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#keywords -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#keywords -->
+		<node id="n4445499472">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#keywords]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#keywords]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#keywords<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#clues -->
+		<edge id="e_4445499472_4445499952_4445500192" source="n4445499472" target="n4445500192">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:processedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators -->
+		<node id="n4445482512">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers -->
+		<edge id="e_4445482512_4445482752_4445482672" source="n4445482512" target="n4445482672">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers -->
+		<edge id="e_4445482512_4445482192_4445482912" source="n4445482512" target="n4445482912">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:overlappingPopulationWith</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators -->
+		<node id="n4445482512">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#buzzerActivators<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers -->
+		<edge id="e_4445482512_4445482752_4445482672" source="n4445482512" target="n4445482672">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidentAnswers -->
+		<edge id="e_4445482512_4445482192_4445482912" source="n4445482512" target="n4445482912">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:overlappingPopulationWith</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence -->
+		<node id="n4445499712">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidence -->
+		<edge id="e_4445499712_4445482752_4445500032" source="n4445499712" target="n4445500032">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence -->
+		<node id="n4445499712">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#goodConfidence<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#confidence -->
+		<edge id="e_4445499712_4445482752_4445500032" source="n4445499712" target="n4445500032">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers -->
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers -->
+		<node id="n4445482672">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/WATSON/1#candidateAnswers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1#relatedPhrases -->
+		<edge id="e_4445482672_4445482752_4445499552" source="n4445482672" target="n4445499552">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/WATSON/1# -->
+<!-- When playing Jeopardy! all players must wait until host Alex Trebek reads each clue in its entirety,  after which a light is lit as a 'ready' signal; the first to activate their buzzer button wins the  chance to respond. Watson received the clues as electronic texts at the same moment they were  made visible to the human players. It would then parse the clues into different keywords and sentence  fragments in order to find statistically related phrases. Watson's main innovation was not in the creation  of a new algorithm for this operation but rather its ability to quickly execute thousands of proven language  analysis algorithms simultaneously to find the correct answer. The more algorithms that find  the same answer independently the more likely Watson is to be correct. Once Watson has a small number of potential solutions, it is able to check against its database to ascertain  whether the solution makes sense. In a sequence of 20 mock games, human participants were able  to use the average six to seven seconds that Watson needed to hear the clue and decide whether to signal for responding.  During that time, Watson also has to evaluate the response and determine whether it is sufficiently  confident in the result to signal. Part of the system used to win the Jeopardy! contest was the  electronic circuitry that receives the 'ready' signal and then examined whether Watson's  confidence level was great enough to activate the buzzer. -->
+		<node id="n4445481792">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/WATSON/1#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>When playing Jeopardy! all players must wait until host Alex Trebek reads each clue in its entirety,  after which a light is lit as a 'ready' signal; the first to activate their buzzer button wins the  chance to respond. Watson received the clues as electronic texts at the same moment they were  made visible to the human players. It would then parse the clues into different keywords and sentence  fragments in order to find statistically related phrases. Watson's main innovation was not in the creation  of a new algorithm for this operation but rather its ability to quickly execute thousands of proven language  analysis algorithms simultaneously to find the correct answer. The more algorithms that find  the same answer independently the more likely Watson is to be correct. Once Watson has a small number of potential solutions, it is able to check against its database to ascertain  whether the solution makes sense. In a sequence of 20 mock games, human participants were able  to use the average six to seven seconds that Watson needed to hear the clue and decide whether to signal for responding.  During that time, Watson also has to evaluate the response and determine whether it is sufficiently  confident in the result to signal. Part of the system used to win the Jeopardy! contest was the  electronic circuitry that receives the 'ready' signal and then examined whether Watson's  confidence level was great enough to activate the buzzer.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- When playing Jeopardy! all players must wait until host Alex Trebek reads each clue in its entirety,  after which a light is lit as a 'ready' signal; the first to activate their buzzer button wins the  chance to respond. Watson received the clues as electronic texts at the same moment they were  made visible to the human players. It would then parse the clues into different keywords and sentence  fragments in order to find statistically related phrases. Watson's main innovation was not in the creation  of a new algorithm for this operation but rather its ability to quickly execute thousands of proven language  analysis algorithms simultaneously to find the correct answer. The more algorithms that find  the same answer independently the more likely Watson is to be correct. Once Watson has a small number of potential solutions, it is able to check against its database to ascertain  whether the solution makes sense. In a sequence of 20 mock games, human participants were able  to use the average six to seven seconds that Watson needed to hear the clue and decide whether to signal for responding.  During that time, Watson also has to evaluate the response and determine whether it is sufficiently  confident in the result to signal. Part of the system used to win the Jeopardy! contest was the  electronic circuitry that receives the 'ready' signal and then examined whether Watson's  confidence level was great enough to activate the buzzer. -->
+		<edge id="e_4445481792_4445482432_4445395280" source="n4445481792" target="n4445395280">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) Receives the clues as electronic text 1) The clues is parsed into different keywords and sentence fragments 2) The system finds statistically related phrases 3) Executes thousands of proven language analysis algorithms simultaneously 4) Some of these answers are found by many independent algorithms 5) Verify solutions with the database to check whether they make sense 6) Evaluate if the candidate response is sufficiently confident 7) Active the buzzer if the response looks good -->
+		<edge id="e_4445481792_4445482032_4445382352" source="n4445481792" target="n4445382352">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4445481792_4445482112_4445482272" source="n4445481792" target="n4445482272">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
 			</y:BezierEdge>
 			</data>
 		</edge>

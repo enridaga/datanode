@@ -1,0 +1,1592 @@
+@prefix :        <http://purl.org/datanode/ns/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+owl:incompatibleWith
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Ontology , rdfs:Resource ;
+      rdfs:range owl:Ontology , rdfs:Resource ;
+      rdfs:subPropertyOf owl:incompatibleWith .
+
+owl:backwardCompatibleWith
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Ontology , rdfs:Resource ;
+      rdfs:range owl:Ontology , rdfs:Resource ;
+      rdfs:subPropertyOf owl:backwardCompatibleWith .
+
+owl:TransitiveProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:TransitiveProperty , owl:ObjectProperty ;
+      owl:equivalentClass owl:TransitiveProperty .
+
+:datatypes
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates data to the properties used."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "datatypes"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :descriptors , :datatypes , :relateTo ;
+      owl:equivalentProperty
+              :datatypes ;
+      owl:inverseOf :datatypeOf .
+
+:removalOf
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "removal of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :changeOf , :relateTo , :removalOf , :updateOf ;
+      owl:equivalentProperty
+              :removalOf ;
+      owl:inverseOf :removal .
+
+:computation
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "computation"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :relateTo , :computation , :derive ;
+      owl:equivalentProperty
+              :computation ;
+      owl:inverseOf :computationOf .
+
+:disjointPortion
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "disjoint portion"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :disjointPortion , :adjacent , :disjointPart , :relateTo ;
+      owl:equivalentProperty
+              :disjointPortion .
+
+:reification
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "reification"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :reification , :relateTo , :derive ;
+      owl:equivalentProperty
+              :reification ;
+      owl:inverseOf :reificationOf .
+
+owl:Nothing
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:Thing , rdfs:Resource , owl:Nothing ;
+      owl:equivalentClass owl:Nothing .
+
+rdfs:Literal
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdfs:Literal ;
+      owl:equivalentClass rdfs:Literal .
+
+rdfs:subClassOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdfs:Class ;
+      rdfs:range rdfs:Resource , rdfs:Class ;
+      rdfs:subPropertyOf rdfs:subClassOf .
+
+:samePopulationAs
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "same population as"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :relateTo , :comparedAgainst , :samePopulationAs ;
+      owl:equivalentProperty
+              :samePopulationAs ;
+      owl:propertyDisjointWith
+              :differentPopulationFrom .
+
+rdf:type
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Class ;
+      rdfs:subPropertyOf rdf:type .
+
+owl:IrreflexiveProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:IrreflexiveProperty ;
+      owl:equivalentClass owl:IrreflexiveProperty .
+
+:sectionOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "section of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :sectionOf , :partOf , :relateTo ;
+      owl:equivalentProperty
+              :sectionOf ;
+      owl:inverseOf :section .
+
+:updatedVersion
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "updated version"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :update , :updatedVersion , :relateTo ;
+      owl:equivalentProperty
+              :updatedVersion ;
+      owl:inverseOf :updatedVersionOf .
+
+:copyOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "copy of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :copyOf , :derivedFrom ;
+      owl:equivalentProperty
+              :copyOf ;
+      owl:inverseOf :copy .
+
+owl:OntologyProperty
+      a       rdfs:Resource , rdfs:Class ;
+      rdfs:subClassOf rdf:Property .
+
+owl:imports
+      a       rdfs:Resource , rdf:Property , owl:OntologyProperty ;
+      rdfs:domain owl:Ontology , rdfs:Resource ;
+      rdfs:range owl:Ontology , rdfs:Resource ;
+      rdfs:subPropertyOf owl:imports .
+
+owl:Property
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:Property , rdfs:Resource ;
+      owl:equivalentClass owl:Property .
+
+:summarizationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "summarization of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :summarizationOf , :relateTo , :derivedFrom ;
+      owl:equivalentProperty
+              :summarizationOf ;
+      owl:inverseOf :summarization .
+
+:describe
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:comment "Data describe other data."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "describe"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :describe , :about , :relateTo ;
+      owl:equivalentProperty
+              :describe ;
+      owl:inverseOf :describedBy .
+
+:duplicate
+      a       owl:SymmetricProperty , rdfs:Resource , owl:IrreflexiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "duplicate"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :duplicate , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :duplicate .
+
+:sample
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "sample"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :part , :portion , :relateTo , :sample ;
+      owl:equivalentProperty
+              :sample ;
+      owl:inverseOf :sampleOf .
+
+xsd:negativeInteger
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+:properties
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates data to the properties used."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "properties"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :descriptors , :properties , :relateTo ;
+      owl:equivalentProperty
+              :properties ;
+      owl:inverseOf :propertiesOf .
+
+:types
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates data to the types used."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "types"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :descriptors , :types , :relateTo ;
+      owl:equivalentProperty
+              :types ;
+      owl:inverseOf :typesOf .
+
+:portion
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "portion"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :part , :portion , :relateTo ;
+      owl:equivalentProperty
+              :portion ;
+      owl:inverseOf :portionOf ;
+      skos:note ":portion is used to capture the relation with a subset of the data."@en .
+
+owl:sameAs
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:sameAs .
+
+:typesOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "types of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :descriptorsOf , :typesOf , :relateTo ;
+      owl:equivalentProperty
+              :typesOf ;
+      owl:inverseOf :types .
+
+owl:versionInfo
+      a       owl:AnnotationProperty , rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf owl:versionInfo .
+
+:differentPopulationFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "different population from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :differentFrom , :differentPopulationFrom , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :differentPopulationFrom ;
+      owl:propertyDisjointWith
+              :samePopulationAs .
+
+:translation
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Living in a RDF world, data can be translated in many ways (vocabulary may change, RDF structure may be changed). Another example is reification." ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "translation"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :relateTo , :translation , :derive ;
+      owl:equivalentProperty
+              :translation ;
+      owl:inverseOf :translationOf .
+
+xsd:long
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:long , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:long .
+
+:optimizedFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "optimized from"@end ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :processedFrom , :optimizedFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :optimizedFrom ;
+      owl:inverseOf :optimized .
+
+xsd:short
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:long , xsd:int , xsd:integer , xsd:short ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:short .
+
+:redundantWith
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "redundant with"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :redundantWith , :overlappingCapability , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :redundantWith .
+
+rdfs:domain
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Class ;
+      rdfs:subPropertyOf rdfs:domain .
+
+owl:Thing
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:Thing , rdfs:Resource ;
+      owl:equivalentClass owl:Thing .
+
+owl:disjointWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:range rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subPropertyOf owl:disjointWith .
+
+:nearlySamePopulationAs
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "nearly same population as"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :nearlySamePopulationAs , :relateTo , :fuzzySimilarTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :nearlySamePopulationAs .
+
+:portionOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "portion of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :portionOf , :partOf , :relateTo ;
+      owl:equivalentProperty
+              :portionOf ;
+      owl:inverseOf :portion .
+
+xsd:float
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+owl:Class
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:Class , rdfs:Class ;
+      owl:equivalentClass owl:Class .
+
+:identifiers
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "identifiers"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :section , :part , :identifiers , :relateTo ;
+      owl:equivalentProperty
+              :identifiers ;
+      owl:inverseOf :identifiersOf .
+
+:datatypeOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "datatypes of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :descriptorsOf , :datatypeOf , :relateTo ;
+      owl:equivalentProperty
+              :datatypeOf ;
+      owl:inverseOf :datatypes .
+
+:anonymized
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "anonymized"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :standIn , :anonymized , :relateTo , :derive ;
+      owl:equivalentProperty
+              :anonymized ;
+      owl:inverseOf :anonymizedFrom .
+
+:previousVersionOf
+      a       owl:InverseFunctionalProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "previous version of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :previousVersionOf , :olderVersionOf , :relateTo , :versionOf ;
+      owl:equivalentProperty
+              :previousVersionOf ;
+      owl:inverseOf :nextVersionOf .
+
+:part
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "To related data to any of their subset data."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "part"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :part , :relateTo ;
+      owl:equivalentProperty
+              :part ;
+      owl:inverseOf :partOf .
+
+owl:Ontology
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:Ontology ;
+      owl:equivalentClass owl:Ontology .
+
+rdfs:Class
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdfs:Class ;
+      owl:equivalentClass rdfs:Class .
+
+rdfs:subPropertyOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf rdfs:subPropertyOf .
+
+:nearlySameDescriptorsAs
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "nearly same descriptors as"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :relateTo , :fuzzySimilarTo , :comparedAgainst , :nearlySameDescriptorsAs ;
+      owl:equivalentProperty
+              :nearlySameDescriptorsAs .
+
+owl:SymmetricProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:SymmetricProperty , rdfs:Resource , owl:ObjectProperty ;
+      owl:equivalentClass owl:SymmetricProperty .
+
+owl:InverseFunctionalProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:InverseFunctionalProperty , rdfs:Resource , owl:ObjectProperty ;
+      owl:equivalentClass owl:InverseFunctionalProperty .
+
+:inference
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "inference"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :inference , :relateTo , :derive ;
+      owl:equivalentProperty
+              :inference ;
+      owl:inverseOf :inferenceOf .
+
+owl:equivalentClass
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:range rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subPropertyOf owl:equivalentClass .
+
+xsd:gYearMonth
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+:selection
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "selection"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :selection , :relateTo , :derive ;
+      owl:equivalentProperty
+              :selection ;
+      owl:inverseOf :selectionFrom .
+
+skos:note
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf skos:note .
+
+:section
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Data can be cut in sections according to specific attributes."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "section"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :part , :section , :relateTo ;
+      owl:equivalentProperty
+              :section ;
+      owl:inverseOf :sectionOf ;
+      skos:note "An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition."@en .
+
+:cleaned
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "cleaned"@end ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :cleaned , :relateTo , :derive ;
+      owl:equivalentProperty
+              :cleaned ;
+      owl:inverseOf :cleanedFrom .
+
+:descriptorsOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "descriptors of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :descriptorsOf , :relateTo ;
+      owl:equivalentProperty
+              :descriptorsOf ;
+      owl:inverseOf :descriptors .
+
+xsd:hexBinary
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+xsd:integer
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:decimal , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:integer .
+
+:processedInto
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "processed into"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :relateTo , :derive ;
+      owl:equivalentProperty
+              :processedInto ;
+      owl:inverseOf :processedFrom .
+
+:similarTo
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "similar to"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :similarTo .
+
+:extractionOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "extraction of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :extractionOf , :relateTo , :processedFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :extractionOf ;
+      owl:inverseOf :extraction .
+
+:newerVersionOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "newer version of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :newerVersionOf , :relateTo , :versionOf ;
+      owl:equivalentProperty
+              :newerVersionOf ;
+      owl:inverseOf :olderVersionOf .
+
+xsd:gYear
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+owl:AnnotationProperty
+      a       rdfs:Resource , rdfs:Class .
+
+foaf:depiction
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf foaf:depiction .
+
+:enhancementOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "enhancement of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :adjacent , :enhancementOf , :relateTo , :attachedTo , :derivedFrom ;
+      owl:equivalentProperty
+              :enhancementOf ;
+      owl:inverseOf :enhancement .
+
+rdfs:label
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Literal ;
+      rdfs:subPropertyOf rdfs:label .
+
+:fuzzySimilarTo
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "fuzzy similar to"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :relateTo , :fuzzySimilarTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :fuzzySimilarTo .
+
+:standIn
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "stand in"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :standIn , :relateTo , :derive ;
+      owl:equivalentProperty
+              :standIn ;
+      owl:inverseOf :standInFor .
+
+:adjacent
+      a       owl:SymmetricProperty , rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "To relate data to any of their adjacent data."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "adjacent"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :adjacent , :relateTo ;
+      owl:equivalentProperty
+              :adjacent .
+
+:translationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Some data being the translated form of other." ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "translation of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :translationOf , :relateTo , :processedFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :translationOf ;
+      owl:inverseOf :translation .
+
+rdfs:Container
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdfs:Container ;
+      owl:equivalentClass rdfs:Container .
+
+()    a       rdfs:Resource , rdf:List .
+
+:comparedAgainst
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Anytime we need to describe a comparison as a binary relation (for example smaller, similar)"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "**compared against"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :comparedAgainst .
+
+:processedFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "processed from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :processedFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :processedFrom ;
+      owl:inverseOf :processedInto .
+
+:sampleOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "sample of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :sampleOf , :portionOf , :partOf , :relateTo ;
+      owl:equivalentProperty
+              :sampleOf ;
+      owl:inverseOf :sample .
+
+:overlappingCapability
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "overlapping capability"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :overlappingCapability , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :overlappingCapability .
+
+xsd:byte
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:byte , xsd:long , xsd:int , xsd:integer , xsd:short ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:byte .
+
+:dependencyOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "dependency of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :dependencyOf , :relateTo ;
+      owl:equivalentProperty
+              :dependencyOf ;
+      owl:inverseOf :dependency .
+
+xsd:nonPositiveInteger
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime .
+
+:summarization
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "summarization"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :summarization , :relateTo , :derive ;
+      owl:equivalentProperty
+              :summarization ;
+      owl:inverseOf :summarizationOf .
+
+:disjointSection
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Data can be cut in sections according to specific attributes."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "disjoint section"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :adjacent , :disjointPart , :disjointSection , :relateTo ;
+      owl:equivalentProperty
+              :disjointSection .
+
+owl:ReflexiveProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:ReflexiveProperty ;
+      owl:equivalentClass owl:ReflexiveProperty .
+
+:metadata
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:comment "To relate data to metadata."@en , "Data have other data as metadata."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "metadata" ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :metadata ;
+      owl:equivalentProperty
+              :metadata ;
+      owl:inverseOf :about .
+
+:statistic
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "statistic"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :describedBy , :relateTo , :metadata , :computation , :statistic , :derive ;
+      owl:equivalentProperty
+              :statistic ;
+      owl:inverseOf :statisticOf .
+
+:updateOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "update of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :updateOf ;
+      owl:equivalentProperty
+              :updateOf ;
+      owl:inverseOf :update .
+
+:updatedVersionOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "updated version of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :newerVersionOf , :relateTo , :versionOf , :updateOf , :updatedVersionOf ;
+      owl:equivalentProperty
+              :updatedVersionOf ;
+      owl:inverseOf :updatedVersion .
+
+:version
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "version"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :version , :relateTo ;
+      owl:equivalentProperty
+              :version .
+
+rdf:subject
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Statement ;
+      rdfs:subPropertyOf rdf:subject ;
+      owl:equivalentProperty
+              rdf:subject .
+
+xsd:boolean
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+xsd:date
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+:enhancement
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "enhancement"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :adjacent , :enhancement , :haveAttached , :relateTo , :derive ;
+      owl:equivalentProperty
+              :enhancement ;
+      owl:inverseOf :enhancementOf .
+
+:snapshotOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "snapshot of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :snapshotOf , :relateTo , :copyOf , :versionOf , :derivedFrom ;
+      owl:equivalentProperty
+              :snapshotOf ;
+      owl:inverseOf :snapshot .
+
+:snapshot
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "a copy of data in a specific time point"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "snapshot"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :copy , :version , :snapshot , :relateTo , :derive ;
+      owl:equivalentProperty
+              :snapshot ;
+      owl:inverseOf :snapshotOf .
+
+xsd:string
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+:identifiersOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "identifiers of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :identifiersOf , :sectionOf , :partOf , :relateTo ;
+      owl:equivalentProperty
+              :identifiersOf ;
+      owl:inverseOf :identifiers .
+
+xsd:decimal
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime .
+
+:sameCapabilityAs
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "same capability as"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :redundantWith , :overlappingCapability , :relateTo , :sameCapabilityAs , :comparedAgainst ;
+      owl:equivalentProperty
+              :sameCapabilityAs .
+
+xsd:int
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:long , xsd:int , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:int .
+
+owl:onProperty
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class , owl:Restriction ;
+      rdfs:range owl:Property , rdfs:Resource ;
+      rdfs:subPropertyOf owl:onProperty .
+
+rdfs:seeAlso
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf rdfs:seeAlso ;
+      owl:equivalentProperty
+              rdfs:seeAlso .
+
+:disjointCapabilityFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "disjoint capability from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :disjointCapabilityFrom , :differentFrom , :relateTo , :comparedAgainst , :differentCapabilityFrom ;
+      owl:equivalentProperty
+              :disjointCapabilityFrom ;
+      owl:propertyDisjointWith
+              :overlappingCapability .
+
+rdfs:comment
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Literal ;
+      rdfs:subPropertyOf rdfs:comment .
+
+rdf:Seq
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Seq , rdfs:Container ;
+      owl:equivalentClass rdf:Seq .
+
+xsd:nonNegativeInteger
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:nonNegativeInteger , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:nonNegativeInteger .
+
+:statisticOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "statistic of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :computationOf , :describe , :about , :statisticOf , :relateTo , :processedFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :statisticOf ;
+      owl:inverseOf :statistic .
+
+owl:FunctionalProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Property , owl:FunctionalProperty ;
+      owl:equivalentClass owl:FunctionalProperty .
+
+:versionOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Use this property to represent a temporal relation between two dataset."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "version of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :versionOf ;
+      owl:equivalentProperty
+              :versionOf .
+
+xsd:unsignedLong
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:nonNegativeInteger , xsd:long , xsd:unsignedLong , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:unsignedLong .
+
+:differentCapabilityFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "different capability from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :differentFrom , :relateTo , :comparedAgainst , :differentCapabilityFrom ;
+      owl:equivalentProperty
+              :differentCapabilityFrom .
+
+:annotationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "annotation of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :adjacent , :about , :relateTo , :attachedTo , :annotationOf ;
+      owl:equivalentProperty
+              :annotationOf ;
+      owl:inverseOf :annotation .
+
+owl:differentFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:differentFrom .
+
+:changeOf
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:comment "some data is the coming change of some other"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "change of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :changeOf , :relateTo , :updateOf ;
+      owl:equivalentProperty
+              :changeOf ;
+      owl:inverseOf :change .
+
+:referenceTo
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "reference to"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :referenceTo , :relateTo ;
+      owl:equivalentProperty
+              :referenceTo ;
+      owl:inverseOf :referencedBy .
+
+xsd:double
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+:sameDescriptorsAs
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "same descriptors as"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :sameDescriptorsAs , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :sameDescriptorsAs ;
+      owl:propertyDisjointWith
+              :differentDescriptorsFrom .
+
+:inconsistentWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "inconsistent with"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :inconsistentWith , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :inconsistentWith ;
+      owl:propertyDisjointWith
+              :consistentWith .
+
+:about
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:comment "Data is metadata of other data."@en , "Data is about other data."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "about"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :about , :relateTo ;
+      owl:equivalentProperty
+              :about ;
+      owl:inverseOf :metadata .
+
+:Data
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:comment "This is the Top Class of DataVOK"@en ;
+      rdfs:label "Data"@en ;
+      rdfs:subClassOf owl:Thing , rdfs:Resource , :Data ;
+      owl:equivalentClass :Data .
+
+xsd:anyURI
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+rdf:rest
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty ;
+      rdfs:domain rdfs:Resource , rdf:List ;
+      rdfs:range rdfs:Resource , rdf:List ;
+      rdfs:subPropertyOf rdf:rest ;
+      owl:equivalentProperty
+              rdf:rest .
+
+:sameRoleAs
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "same role as"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :similarTo , :relateTo , :sameRoleAs , :comparedAgainst ;
+      owl:equivalentProperty
+              :sameRoleAs .
+
+rdfs:range
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Class ;
+      rdfs:subPropertyOf rdfs:range .
+
+:derivedFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "derived from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :derivedFrom ;
+      owl:equivalentProperty
+              :derivedFrom ;
+      owl:inverseOf :derive .
+
+:differentRoleFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "different role from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :differentRoleFrom , :differentFrom , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :differentRoleFrom .
+
+:disjointPart
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "disjoint part"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :adjacent , :disjointPart , :relateTo ;
+      owl:equivalentProperty
+              :disjointPart .
+
+:referencedBy
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "referenced by"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :referencedBy ;
+      owl:equivalentProperty
+              :referencedBy ;
+      owl:inverseOf :referenceTo .
+
+xsd:unsignedShort
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:unsignedShort , xsd:nonNegativeInteger , xsd:unsignedInt , xsd:long , xsd:unsignedLong , xsd:int , xsd:integer , xsd:short ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:unsignedShort .
+
+xsd:time
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+:partOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "part of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :partOf , :relateTo ;
+      owl:equivalentProperty
+              :partOf ;
+      owl:inverseOf :part .
+
+rdf:first
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty ;
+      rdfs:domain rdfs:Resource , rdf:List ;
+      rdfs:subPropertyOf rdf:first ;
+      owl:equivalentProperty
+              rdf:first .
+
+:standInFor
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "stand in for"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :standInFor , :derivedFrom ;
+      owl:equivalentProperty
+              :standInFor ;
+      owl:inverseOf :standIn .
+
+:linkTo
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:comment "Data link to data"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "link to"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :referenceTo , :relateTo , :linkTo ;
+      owl:equivalentProperty
+              :linkTo ;
+      owl:inverseOf :linkedFrom .
+
+owl:equivalentProperty
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf owl:equivalentProperty .
+
+:copy
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "copy"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :copy , :relateTo , :derive ;
+      owl:equivalentProperty
+              :copy ;
+      owl:inverseOf :copyOf .
+
+:describedBy
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:comment "Data have other data as description."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "described by" ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :describedBy , :relateTo , :metadata ;
+      owl:equivalentProperty
+              :describedBy ;
+      owl:inverseOf :describe .
+
+:computationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "computation of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :computationOf , :relateTo , :processedFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :computationOf ;
+      owl:inverseOf :computation .
+
+rdf:List
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:List ;
+      owl:equivalentClass rdf:List .
+
+rdfs:ContainerMembershipProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Property , rdfs:ContainerMembershipProperty ;
+      owl:equivalentClass rdfs:ContainerMembershipProperty .
+
+:reificationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "reification of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :reificationOf , :derivedFrom ;
+      owl:equivalentProperty
+              :reificationOf ;
+      owl:inverseOf :reification .
+
+:attachedTo
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:comment "Data are attached to data for some reason"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "attached to"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :adjacent , :relateTo , :attachedTo ;
+      owl:equivalentProperty
+              :attachedTo ;
+      owl:inverseOf :haveAttached ;
+      skos:note "This, along with its inverse \"haveAttached\" , are considered to model the \"physical\" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments; but there may emerge other examples."@en .
+
+:example
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "example"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :example , :relateTo , :derive ;
+      owl:equivalentProperty
+              :example ;
+      owl:inverseOf :exampleOf .
+
+rdfs:Datatype
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdfs:Class , rdfs:Datatype ;
+      owl:equivalentClass rdfs:Datatype .
+
+rdf:Alt
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Alt , rdfs:Container ;
+      owl:equivalentClass rdf:Alt .
+
+owl:ObjectProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      owl:equivalentClass owl:ObjectProperty .
+
+owl:intersectionOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subPropertyOf owl:intersectionOf .
+
+xsd:gMonthDay
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+:annotation
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "annotation"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :adjacent , :haveAttached , :annotation , :relateTo , :metadata ;
+      owl:equivalentProperty
+              :annotation ;
+      owl:inverseOf :annotationOf .
+
+:fuzzyDifferentFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "fuzzy different from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :differentFrom , :relateTo , :comparedAgainst , :fuzzyDifferentFrom ;
+      owl:equivalentProperty
+              :fuzzyDifferentFrom .
+
+owl:inverseOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf owl:inverseOf .
+
+:descriptors
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates data to the schema entities used."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "**descriptors"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :descriptors , :relateTo ;
+      owl:equivalentProperty
+              :descriptors ;
+      owl:inverseOf :descriptorsOf .
+
+rdf:object
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Statement ;
+      rdfs:subPropertyOf rdf:object ;
+      owl:equivalentProperty
+              rdf:object .
+
+:differentFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "different from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :differentFrom , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :differentFrom .
+
+:addition
+      a       owl:InverseFunctionalProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "some data is the addition-update of some other"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "addition"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :update , :addition , :relateTo , :change ;
+      owl:equivalentProperty
+              :addition ;
+      owl:inverseOf :additionOf .
+
+:exampleOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "example of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :exampleOf , :relateTo , :derivedFrom ;
+      owl:equivalentProperty
+              :exampleOf ;
+      owl:inverseOf :example .
+
+:propertiesOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "properties of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :descriptorsOf , :propertiesOf , :relateTo ;
+      owl:equivalentProperty
+              :propertiesOf ;
+      owl:inverseOf :properties .
+
+:combinationFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A dataset that is the result of the combination of another dataset with something else"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "combination from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :combinationFrom , :relateTo , :derivedFrom ;
+      owl:equivalentProperty
+              :combinationFrom .
+
+rdfs:Resource
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource ;
+      owl:equivalentClass rdfs:Resource .
+
+owl:DatatypeProperty
+      a       rdfs:Resource , rdfs:Class ;
+      rdfs:subClassOf rdf:Property .
+
+:removal
+      a       owl:InverseFunctionalProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "some data is the removal-update of some other"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "removal"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :update , :removal , :relateTo , :change ;
+      owl:equivalentProperty
+              :removal ;
+      owl:inverseOf :removalOf .
+
+:haveAttached
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:comment "Data have attached other data for some reason"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "have attached"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :adjacent , :haveAttached , :relateTo ;
+      owl:equivalentProperty
+              :haveAttached ;
+      owl:inverseOf :attachedTo .
+
+rdf:Property
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Property ;
+      owl:equivalentClass rdf:Property .
+
+xsd:unsignedByte
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:unsignedShort , xsd:unsignedByte , xsd:byte , xsd:nonNegativeInteger , xsd:unsignedInt , xsd:long , xsd:unsignedLong , xsd:int , xsd:integer , xsd:short ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:unsignedByte .
+
+xsd:positiveInteger
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+<http://purl.org/datanode/0.1/>
+      a       owl:Ontology , rdfs:Resource ;
+      rdfs:label "The Datanode Vocabulary" ;
+      dcterms:creator "enridaga - enricodaga@gmail.com" ;
+      owl:versionInfo "0.1" ;
+      foaf:depiction <http://www.radioantena.si/img/Gallery/Photo/wo_d0608ed2-3af3-43e2-af1a-1bb1d09c7705.jpg> .
+
+:consistentWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "consistent with"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :consistentWith , :relateTo , :comparedAgainst ;
+      owl:equivalentProperty
+              :consistentWith .
+
+:extraction
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "extraction"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :extraction , :relateTo , :derive ;
+      owl:equivalentProperty
+              :extraction ;
+      owl:inverseOf :extractionOf .
+
+rdfs:isDefinedBy
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf rdfs:seeAlso , rdfs:isDefinedBy ;
+      owl:equivalentProperty
+              rdfs:isDefinedBy .
+
+:cleanedFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "cleaned from"@end ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :cleanedFrom , :relateTo , :processedFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :cleanedFrom ;
+      owl:inverseOf :cleaned .
+
+:nextVersionOf
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "next version of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :newerVersionOf , :nextVersionOf , :relateTo , :versionOf ;
+      owl:equivalentProperty
+              :nextVersionOf ;
+      owl:inverseOf :previousVersionOf .
+
+xsd:unsignedInt
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:nonNegativeInteger , xsd:unsignedInt , xsd:long , xsd:unsignedLong , xsd:int , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:unsignedInt .
+
+xsd:gMonth
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+:linkedFrom
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "linked from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :linkedFrom , :relateTo , :referencedBy ;
+      owl:equivalentProperty
+              :linkedFrom ;
+      owl:inverseOf :linkTo .
+
+rdf:Statement
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Statement ;
+      owl:equivalentClass rdf:Statement .
+
+owl:oneOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subPropertyOf owl:oneOf .
+
+:update
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "some data is the update of some other"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "**update"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :update , :relateTo ;
+      owl:equivalentProperty
+              :update ;
+      owl:inverseOf :updateOf .
+
+dcterms:creator
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf dcterms:creator .
+
+:change
+      a       owl:InverseFunctionalProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "some data has a change to come"@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "change"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :update , :relateTo , :change ;
+      owl:equivalentProperty
+              :change ;
+      owl:inverseOf :changeOf .
+
+rdf:XMLLiteral
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:XMLLiteral ;
+      owl:equivalentClass rdf:XMLLiteral .
+
+rdf:predicate
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Statement ;
+      rdfs:subPropertyOf rdf:predicate ;
+      owl:equivalentProperty
+              rdf:predicate .
+
+:dependency
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "dependency"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :referenceTo , :dependency , :relateTo ;
+      owl:equivalentProperty
+              :dependency ;
+      owl:inverseOf :dependencyOf .
+
+xsd:duration
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+:additionOf
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "addition of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :changeOf , :additionOf , :relateTo , :updateOf ;
+      owl:equivalentProperty
+              :additionOf ;
+      owl:inverseOf :addition .
+
+:olderVersionOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "older version of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :olderVersionOf , :relateTo , :versionOf ;
+      owl:equivalentProperty
+              :olderVersionOf ;
+      owl:inverseOf :newerVersionOf .
+
+:inferenceOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "inference of"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :inferenceOf , :relateTo , :processedFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :inferenceOf ;
+      owl:inverseOf :inference .
+
+:relateTo
+      a       owl:SymmetricProperty , rdfs:Resource , owl:ReflexiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "This is the Top Property of DataVOK."@en , "Some data relate to other data."@en ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "relate to"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo ;
+      owl:equivalentProperty
+              :relateTo .
+
+:differentDescriptorsFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "different descriptors from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :differentFrom , :relateTo , :differentDescriptorsFrom , :comparedAgainst ;
+      owl:equivalentProperty
+              :differentDescriptorsFrom ;
+      owl:propertyDisjointWith
+              :sameDescriptorsAs .
+
+:selectionFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "selection from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :selectionFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :selectionFrom ;
+      owl:inverseOf :selection .
+
+xsd:gDay
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+xsd:base64Binary
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+owl:priorVersion
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Ontology , rdfs:Resource ;
+      rdfs:range owl:Ontology , rdfs:Resource ;
+      rdfs:subPropertyOf owl:priorVersion .
+
+:anonymizedFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "anonymized from"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :anonymizedFrom , :relateTo , :standInFor , :processedFrom , :derivedFrom ;
+      owl:equivalentProperty
+              :anonymizedFrom ;
+      owl:inverseOf :anonymized .
+
+owl:propertyDisjointWith
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf owl:propertyDisjointWith .
+
+rdf:Bag
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Bag , rdfs:Container ;
+      owl:equivalentClass rdf:Bag .
+
+xsd:dateTime
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+owl:Restriction
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:Class , owl:Restriction ;
+      owl:equivalentClass owl:Restriction .
+
+:optimized
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "optimized"@end ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :processedInto , :relateTo , :optimized , :derive ;
+      owl:equivalentProperty
+              :optimized ;
+      owl:inverseOf :optimizedFrom .
+
+:derive
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , rdfs:Resource , :Data ;
+      rdfs:label "**derive"@en ;
+      rdfs:range owl:Thing , rdfs:Resource , :Data ;
+      rdfs:subPropertyOf :relateTo , :derive ;
+      owl:equivalentProperty
+              :derive ;
+      owl:inverseOf :derivedFrom .
