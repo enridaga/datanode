@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml 
+	xmlns="http://graphml.graphdrawing.org/xmlns" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:y="http://www.yworks.com/xml/graphml" 
+	xmlns:yed="http://www.yworks.com/xml/yed/3" 
+	xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+		<key attr.name="label" attr.type="string" for="node" id="k_label"/>
+		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
+		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
+	<graph edgedefault="directed" id="G">
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link -->
+		<node id="n4369722496">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+		<edge id="e_4369722496_4369732224_4369723056" source="n4369722496" target="n4369723056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:disjointPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<edge id="e_4369722496_4369722896_4369732464" source="n4369722496" target="n4369732464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<edge id="e_4369722496_4369732384_4369732464" source="n4369722496" target="n4369732464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isInferenceOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 21211 -->
+		<edge id="e_4369722496_4369732304_4369679952" source="n4369722496" target="n4369679952">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>void:entities</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<edge id="e_4369722496_4369731824_4369722816" source="n4369722496" target="n4369722816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+		<node id="n4369723056">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-links]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-links]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#artists-links<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<edge id="e_4369723056_4369723296_4369722816" source="n4369723056" target="n4369722816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+		<node id="n4369723056">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-links]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-links]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#artists-links<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<edge id="e_4369723056_4369723296_4369722816" source="n4369723056" target="n4369722816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link -->
+		<node id="n4369722496">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+		<edge id="e_4369722496_4369732224_4369723056" source="n4369722496" target="n4369723056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:disjointPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<edge id="e_4369722496_4369722896_4369732464" source="n4369722496" target="n4369732464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<edge id="e_4369722496_4369732384_4369732464" source="n4369722496" target="n4369732464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isInferenceOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 21211 -->
+		<edge id="e_4369722496_4369732304_4369679952" source="n4369722496" target="n4369679952">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>void:entities</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<edge id="e_4369722496_4369731824_4369722816" source="n4369722496" target="n4369722816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-three-links -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-three-links -->
+		<node id="n4369732544">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-three-links]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-three-links]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-three-links<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- 9555 -->
+		<edge id="e_4369732544_4369732304_4369680464" source="n4369732544" target="n4369680464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>void:entities</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<edge id="e_4369732544_4369722896_4369732464" source="n4369732544" target="n4369732464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<edge id="e_4369732544_4369732384_4369732464" source="n4369732544" target="n4369732464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isInferenceOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+		<edge id="e_4369732544_4369731824_4369723056" source="n4369732544" target="n4369723056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<node id="n4369732464">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#link-stats]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#link-stats]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#link-stats<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<edge id="e_4369732464_4369732784_4369722816" source="n4369732464" target="n4369722816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isStatisticOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<edge id="e_4369732464_4369733344_4369722816" source="n4369732464" target="n4369722816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<node id="n4369732464">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#link-stats]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#link-stats]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#link-stats<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<edge id="e_4369732464_4369732784_4369722816" source="n4369732464" target="n4369722816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isStatisticOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<edge id="e_4369732464_4369733344_4369722816" source="n4369732464" target="n4369722816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:samePopulation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4# -->
+<!-- We also analysed the dataset to identify how artists are related to each other (by direct links)  in DBpedia (Fig. 4). We observed that 21,211 of them (more than 50%) are not linked to any artists,  and 9,555 are linked to three of them, the maximum being 14 links from one artist to 14 others.  Then, by using indirect links for computing semantic distance with LDSD, we are able to provide  recommendations for these 21,211 isolated artists. -->
+		<node id="n4369722096">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>We also analysed the dataset to identify how artists are related to each other (by direct links)  in DBpedia (Fig. 4). We observed that 21,211 of them (more than 50%) are not linked to any artists,  and 9,555 are linked to three of them, the maximum being 14 links from one artist to 14 others.  Then, by using indirect links for computing semantic distance with LDSD, we are able to provide  recommendations for these 21,211 isolated artists.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4369722096_4369722416_4369722576" source="n4369722096" target="n4369722576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- We also analysed the dataset to identify how artists are related to each other (by direct links)  in DBpedia (Fig. 4). We observed that 21,211 of them (more than 50%) are not linked to any artists,  and 9,555 are linked to three of them, the maximum being 14 links from one artist to 14 others.  Then, by using indirect links for computing semantic distance with LDSD, we are able to provide  recommendations for these 21,211 isolated artists. -->
+		<edge id="e_4369722096_4369722736_4369639248" source="n4369722096" target="n4369639248">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having dbpedia >> access, Dbpedia 1) identify artists >> identify, Artist 2) identify links between artists >> identify, Link, Artist, Between 3) compute the number of links for each artist >> compute, Number, Link, Each, Artist 4) the artists with no links are more then 50%, ie 21.211 >> Artist, Without, Link, MoreThen, 50% 5) the artists with three links are 9,555 >> Artist, 3, Link, 9555 6) the maximum number of links is 14 >> Max, Number, Link, 14 7) identify indirect links between artists >> identify, Indirect, Link, Between, Artist -->
+		<edge id="e_4369722096_4369722336_4369638608" source="n4369722096" target="n4369638608">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4# -->
+<!-- We also analysed the dataset to identify how artists are related to each other (by direct links)  in DBpedia (Fig. 4). We observed that 21,211 of them (more than 50%) are not linked to any artists,  and 9,555 are linked to three of them, the maximum being 14 links from one artist to 14 others.  Then, by using indirect links for computing semantic distance with LDSD, we are able to provide  recommendations for these 21,211 isolated artists. -->
+		<node id="n4369722096">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>We also analysed the dataset to identify how artists are related to each other (by direct links)  in DBpedia (Fig. 4). We observed that 21,211 of them (more than 50%) are not linked to any artists,  and 9,555 are linked to three of them, the maximum being 14 links from one artist to 14 others.  Then, by using indirect links for computing semantic distance with LDSD, we are able to provide  recommendations for these 21,211 isolated artists.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4369722096_4369722416_4369722576" source="n4369722096" target="n4369722576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- We also analysed the dataset to identify how artists are related to each other (by direct links)  in DBpedia (Fig. 4). We observed that 21,211 of them (more than 50%) are not linked to any artists,  and 9,555 are linked to three of them, the maximum being 14 links from one artist to 14 others.  Then, by using indirect links for computing semantic distance with LDSD, we are able to provide  recommendations for these 21,211 isolated artists. -->
+		<edge id="e_4369722096_4369722736_4369639248" source="n4369722096" target="n4369639248">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having dbpedia >> access, Dbpedia 1) identify artists >> identify, Artist 2) identify links between artists >> identify, Link, Artist, Between 3) compute the number of links for each artist >> compute, Number, Link, Each, Artist 4) the artists with no links are more then 50%, ie 21.211 >> Artist, Without, Link, MoreThen, 50% 5) the artists with three links are 9,555 >> Artist, 3, Link, 9555 6) the maximum number of links is 14 >> Max, Number, Link, 14 7) identify indirect links between artists >> identify, Indirect, Link, Between, Artist -->
+		<edge id="e_4369722096_4369722336_4369638608" source="n4369722096" target="n4369638608">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link -->
+		<node id="n4369722496">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-no-link<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+		<edge id="e_4369722496_4369732224_4369723056" source="n4369722496" target="n4369723056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:disjointPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<edge id="e_4369722496_4369722896_4369732464" source="n4369722496" target="n4369732464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#link-stats -->
+		<edge id="e_4369722496_4369732384_4369732464" source="n4369722496" target="n4369732464">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isInferenceOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 21211 -->
+		<edge id="e_4369722496_4369732304_4369679952" source="n4369722496" target="n4369679952">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>void:entities</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<edge id="e_4369722496_4369731824_4369722816" source="n4369722496" target="n4369722816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-14-links -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-14-links -->
+		<node id="n4369723136">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-14-links]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-14-links]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#artists-with-14-links<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- 14 -->
+		<edge id="e_4369723136_4369732064_4369639632" source="n4369723136" target="n4369639632">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>void:properties</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+		<edge id="e_4369723136_4369731824_4369723056" source="n4369723136" target="n4369723056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#indirect-links -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#indirect-links -->
+		<node id="n4369733024">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#indirect-links]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#indirect-links]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#indirect-links<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists-links -->
+		<edge id="e_4369733024_4369732384_4369723056" source="n4369733024" target="n4369723056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isInferenceOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<node id="n4369722816">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#artists<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#DBPedia -->
+		<edge id="e_4369722816_4369722896_4369722976" source="n4369722816" target="n4369722976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#artists -->
+		<node id="n4369722816">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DBREC/4#artists]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DBREC/4#artists<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DBREC/4#DBPedia -->
+		<edge id="e_4369722816_4369722896_4369722976" source="n4369722816" target="n4369722976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+	</graph>
+</graphml>

@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml 
+	xmlns="http://graphml.graphdrawing.org/xmlns" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:y="http://www.yworks.com/xml/graphml" 
+	xmlns:yed="http://www.yworks.com/xml/yed/3" 
+	xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+		<key attr.name="label" attr.type="string" for="node" id="k_label"/>
+		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
+		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
+	<graph edgedefault="directed" id="G">
+<!-- ub2bL30C8 -->
+<!-- ub2bL30C8 -->
+		<node id="n4490912544">
+			<data key="k_label"><![CDATA[ub2bL30C8]]></data>
+			<data key="d5"><![CDATA[ub2bL30C8]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL30C8<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+		<edge id="e_4490912544_4490903456_4490911984" source="n4490912544" target="n4490911984">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL30C8 -->
+<!-- ub2bL30C8 -->
+		<node id="n4490912544">
+			<data key="k_label"><![CDATA[ub2bL30C8]]></data>
+			<data key="d5"><![CDATA[ub2bL30C8]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL30C8<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+		<edge id="e_4490912544_4490903456_4490911984" source="n4490912544" target="n4490911984">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+		<node id="n4490911824">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view1]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view1]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/1#view1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#database -->
+		<edge id="e_4490911824_4490912064_4490912144" source="n4490911824" target="n4490912144">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSnapshotOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL21C8 -->
+		<edge id="e_4490911824_4490902976_4490903216" source="n4490911824" target="n4490903216">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+		<edge id="e_4490911824_4490911904_4490911984" source="n4490911824" target="n4490911984">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasNextVersion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL19C22 -->
+		<edge id="e_4490911824_4490902976_4490902576" source="n4490911824" target="n4490902576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+		<node id="n4490911824">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view1]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view1]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/1#view1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#database -->
+		<edge id="e_4490911824_4490912064_4490912144" source="n4490911824" target="n4490912144">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSnapshotOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL21C8 -->
+		<edge id="e_4490911824_4490902976_4490903216" source="n4490911824" target="n4490903216">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+		<edge id="e_4490911824_4490911904_4490911984" source="n4490911824" target="n4490911984">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasNextVersion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL19C22 -->
+		<edge id="e_4490911824_4490902976_4490902576" source="n4490911824" target="n4490902576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL21C8 -->
+<!-- ub2bL21C8 -->
+		<node id="n4490903216">
+			<data key="k_label"><![CDATA[ub2bL21C8]]></data>
+			<data key="d5"><![CDATA[ub2bL21C8]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL21C8<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+		<edge id="e_4490903216_4490903456_4490911824" source="n4490903216" target="n4490911824">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+		<node id="n4490911984">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view2]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view2]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/1#view2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL28C22 -->
+		<edge id="e_4490911984_4490902976_4490902896" source="n4490911984" target="n4490902896">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view3 -->
+		<edge id="e_4490911984_4490911904_4490912624" source="n4490911984" target="n4490912624">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasNextVersion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#database -->
+		<edge id="e_4490911984_4490912064_4490912144" source="n4490911984" target="n4490912144">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSnapshotOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL30C8 -->
+		<edge id="e_4490911984_4490902976_4490912544" source="n4490911984" target="n4490912544">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+		<edge id="e_4490911984_4490912384_4490911824" source="n4490911984" target="n4490911824">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPrevVersion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL28C22 -->
+<!-- ub2bL28C22 -->
+		<node id="n4490902896">
+			<data key="k_label"><![CDATA[ub2bL28C22]]></data>
+			<data key="d5"><![CDATA[ub2bL28C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL28C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://www.w3.org/ns/prov# -->
+		<edge id="e_4490902896_4490903296_4490903136" source="n4490902896" target="n4490903136">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:usesSchema</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL28C22 -->
+<!-- ub2bL28C22 -->
+		<node id="n4490902896">
+			<data key="k_label"><![CDATA[ub2bL28C22]]></data>
+			<data key="d5"><![CDATA[ub2bL28C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL28C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://www.w3.org/ns/prov# -->
+		<edge id="e_4490902896_4490903296_4490903136" source="n4490902896" target="n4490903136">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:usesSchema</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL19C22 -->
+<!-- ub2bL19C22 -->
+		<node id="n4490902576">
+			<data key="k_label"><![CDATA[ub2bL19C22]]></data>
+			<data key="d5"><![CDATA[ub2bL19C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL19C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://www.w3.org/ns/prov# -->
+		<edge id="e_4490902576_4490903296_4490903136" source="n4490902576" target="n4490903136">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:usesSchema</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL19C22 -->
+<!-- ub2bL19C22 -->
+		<node id="n4490902576">
+			<data key="k_label"><![CDATA[ub2bL19C22]]></data>
+			<data key="d5"><![CDATA[ub2bL19C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL19C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://www.w3.org/ns/prov# -->
+		<edge id="e_4490902576_4490903296_4490903136" source="n4490902576" target="n4490903136">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:usesSchema</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1# -->
+<!-- [...] incremental semantic lifting of data. [...] We capture provenance (using the latest W3C working draft) by making views over datasets immutable and tracking  differences between views (effectively allowing sharing of data between views). The meta-information pertaining to  provenance and each data view is itself stored in RDF and can be made externally visible. -->
+		<node id="n4490902336">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>[...] incremental semantic lifting of data. [...] We capture provenance (using the latest W3C working draft) by making views over datasets immutable and tracking  differences between views (effectively allowing sharing of data between views). The meta-information pertaining to  provenance and each data view is itself stored in RDF and can be made externally visible.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- 0) having data >> access, Data 1) identify relevant entities for data >> identify, Relevance, Entity, Data 0) having data >> access, Data 1) make a snapshot of data and save it >> photograph, Data, Snapshot 2) link the snapshot to the data >> link, Snapshot 3) annotate the snapshot using latest W3C draft >> annotate, Provenance, Latest -->
+		<edge id="e_4490902336_4490902256_4490806224" source="n4490902336" target="n4490806224">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- [...] incremental semantic lifting of data. [...] We capture provenance (using the latest W3C working draft) by making views over datasets immutable and tracking  differences between views (effectively allowing sharing of data between views). The meta-information pertaining to  provenance and each data view is itself stored in RDF and can be made externally visible. -->
+		<edge id="e_4490902336_4490902816_4490806864" source="n4490902336" target="n4490806864">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4490902336_4490902496_4490902656" source="n4490902336" target="n4490902656">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1# -->
+<!-- [...] incremental semantic lifting of data. [...] We capture provenance (using the latest W3C working draft) by making views over datasets immutable and tracking  differences between views (effectively allowing sharing of data between views). The meta-information pertaining to  provenance and each data view is itself stored in RDF and can be made externally visible. -->
+		<node id="n4490902336">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>[...] incremental semantic lifting of data. [...] We capture provenance (using the latest W3C working draft) by making views over datasets immutable and tracking  differences between views (effectively allowing sharing of data between views). The meta-information pertaining to  provenance and each data view is itself stored in RDF and can be made externally visible.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- 0) having data >> access, Data 1) identify relevant entities for data >> identify, Relevance, Entity, Data 0) having data >> access, Data 1) make a snapshot of data and save it >> photograph, Data, Snapshot 2) link the snapshot to the data >> link, Snapshot 3) annotate the snapshot using latest W3C draft >> annotate, Provenance, Latest -->
+		<edge id="e_4490902336_4490902256_4490806224" source="n4490902336" target="n4490806224">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- [...] incremental semantic lifting of data. [...] We capture provenance (using the latest W3C working draft) by making views over datasets immutable and tracking  differences between views (effectively allowing sharing of data between views). The meta-information pertaining to  provenance and each data view is itself stored in RDF and can be made externally visible. -->
+		<edge id="e_4490902336_4490902816_4490806864" source="n4490902336" target="n4490806864">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4490902336_4490902496_4490902656" source="n4490902336" target="n4490902656">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+		<node id="n4490911824">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view1]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view1]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/1#view1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#database -->
+		<edge id="e_4490911824_4490912064_4490912144" source="n4490911824" target="n4490912144">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSnapshotOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL21C8 -->
+		<edge id="e_4490911824_4490902976_4490903216" source="n4490911824" target="n4490903216">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+		<edge id="e_4490911824_4490911904_4490911984" source="n4490911824" target="n4490911984">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasNextVersion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL19C22 -->
+		<edge id="e_4490911824_4490902976_4490902576" source="n4490911824" target="n4490902576">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+		<node id="n4490911984">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view2]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view2]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/1#view2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL28C22 -->
+		<edge id="e_4490911984_4490902976_4490902896" source="n4490911984" target="n4490902896">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view3 -->
+		<edge id="e_4490911984_4490911904_4490912624" source="n4490911984" target="n4490912624">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasNextVersion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#database -->
+		<edge id="e_4490911984_4490912064_4490912144" source="n4490911984" target="n4490912144">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSnapshotOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL30C8 -->
+		<edge id="e_4490911984_4490902976_4490912544" source="n4490911984" target="n4490912544">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+		<edge id="e_4490911984_4490912384_4490911824" source="n4490911984" target="n4490911824">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPrevVersion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view2 -->
+		<node id="n4490911984">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view2]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/SPUD/1#view2]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/SPUD/1#view2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL28C22 -->
+		<edge id="e_4490911984_4490902976_4490902896" source="n4490911984" target="n4490902896">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view3 -->
+		<edge id="e_4490911984_4490911904_4490912624" source="n4490911984" target="n4490912624">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasNextVersion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#database -->
+		<edge id="e_4490911984_4490912064_4490912144" source="n4490911984" target="n4490912144">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSnapshotOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL30C8 -->
+		<edge id="e_4490911984_4490902976_4490912544" source="n4490911984" target="n4490912544">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasAnnotation</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/SPUD/1#view1 -->
+		<edge id="e_4490911984_4490912384_4490911824" source="n4490911984" target="n4490911824">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPrevVersion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+	</graph>
+</graphml>

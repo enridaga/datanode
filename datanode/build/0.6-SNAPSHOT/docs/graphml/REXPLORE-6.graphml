@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml 
+	xmlns="http://graphml.graphdrawing.org/xmlns" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:y="http://www.yworks.com/xml/graphml" 
+	xmlns:yed="http://www.yworks.com/xml/yed/3" 
+	xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+		<key attr.name="label" attr.type="string" for="node" id="k_label"/>
+		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
+		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
+	<graph edgedefault="directed" id="G">
+<!-- ub2bL28C23 -->
+<!-- ub2bL28C23 -->
+		<node id="n4414395808">
+			<data key="k_label"><![CDATA[ub2bL28C23]]></data>
+			<data key="d5"><![CDATA[ub2bL28C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL28C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topics -->
+		<edge id="e_4414395808_4414394928_4414396368" source="n4414395808" target="n4414396368">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414395808_4414394928_4414394848" source="n4414395808" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<edge id="e_4414395808_4414394928_4414395088" source="n4414395808" target="n4414395088">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL28C23 -->
+<!-- ub2bL28C23 -->
+		<node id="n4414395808">
+			<data key="k_label"><![CDATA[ub2bL28C23]]></data>
+			<data key="d5"><![CDATA[ub2bL28C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL28C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topics -->
+		<edge id="e_4414395808_4414394928_4414396368" source="n4414395808" target="n4414396368">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414395808_4414394928_4414394848" source="n4414395808" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<edge id="e_4414395808_4414394928_4414395088" source="n4414395808" target="n4414395088">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authors -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authors -->
+		<node id="n4414394608">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#authors]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#authors]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#authors<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase -->
+		<edge id="e_4414394608_4414395488_4414395568" source="n4414394608" target="n4414395568">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isDescribedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authors -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authors -->
+		<node id="n4414394608">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#authors]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#authors]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#authors<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase -->
+		<edge id="e_4414394608_4414395488_4414395568" source="n4414394608" target="n4414395568">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isDescribedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6# -->
+<!-- Rexplore is able to visualize different topic trends: 1) publication trends, 2) author trends and 3) migration trends.  The first two are the number of publications or authors associated with a semantically enriched topic on a timeline.  The latter is defined as the number of estimated migrations between two topics and is computed by analyzing the shifting in authors’ interest [...] -->
+		<node id="n4414381184">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>Rexplore is able to visualize different topic trends: 1) publication trends, 2) author trends and 3) migration trends.  The first two are the number of publications or authors associated with a semantically enriched topic on a timeline.  The latter is defined as the number of estimated migrations between two topics and is computed by analyzing the shifting in authors’ interest [...]<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- 0) Visualized information include publication trends, author trends and migration trends 1) publication trends is the number of publications associated with a semantically enriched topic on a timeline 2) author trends is the number of authors associated with a semantically enriched topic on a timeline 3) migration trends is the number of estimated migrations between two topics computed by analyzing the shifting in authors' interest -->
+		<edge id="e_4414381184_4414381424_4414298448" source="n4414381184" target="n4414298448">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4414381184_4414381504_4414381664" source="n4414381184" target="n4414381664">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- Rexplore is able to visualize different topic trends: 1) publication trends, 2) author trends and 3) migration trends.  The first two are the number of publications or authors associated with a semantically enriched topic on a timeline.  The latter is defined as the number of estimated migrations between two topics and is computed by analyzing the shifting in authors’ interest [...] -->
+		<edge id="e_4414381184_4414381824_4414298064" source="n4414381184" target="n4414298064">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL16C22 -->
+<!-- ub2bL16C22 -->
+		<node id="n4414381584">
+			<data key="k_label"><![CDATA[ub2bL16C22]]></data>
+			<data key="d5"><![CDATA[ub2bL16C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL16C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+		<edge id="e_4414381584_4414395328_4414395248" source="n4414381584" target="n4414395248">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL17C23 -->
+		<edge id="e_4414381584_4414394688_4414394528" source="n4414381584" target="n4414394528">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL39C23 -->
+<!-- ub2bL39C23 -->
+		<node id="n4414396128">
+			<data key="k_label"><![CDATA[ub2bL39C23]]></data>
+			<data key="d5"><![CDATA[ub2bL39C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL39C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<edge id="e_4414396128_4414394928_4414395088" source="n4414396128" target="n4414395088">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publications -->
+		<edge id="e_4414396128_4414394928_4414395888" source="n4414396128" target="n4414395888">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414396128_4414394928_4414394848" source="n4414396128" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL39C23 -->
+<!-- ub2bL39C23 -->
+		<node id="n4414396128">
+			<data key="k_label"><![CDATA[ub2bL39C23]]></data>
+			<data key="d5"><![CDATA[ub2bL39C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL39C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<edge id="e_4414396128_4414394928_4414395088" source="n4414396128" target="n4414395088">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publications -->
+		<edge id="e_4414396128_4414394928_4414395888" source="n4414396128" target="n4414395888">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414396128_4414394928_4414394848" source="n4414396128" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends -->
+		<node id="n4414381904">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL16C22 -->
+		<edge id="e_4414381904_4414381984_4414381584" source="n4414381904" target="n4414381584">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isStatisticOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL28C23 -->
+<!-- ub2bL28C23 -->
+		<node id="n4414395808">
+			<data key="k_label"><![CDATA[ub2bL28C23]]></data>
+			<data key="d5"><![CDATA[ub2bL28C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL28C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topics -->
+		<edge id="e_4414395808_4414394928_4414396368" source="n4414395808" target="n4414396368">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414395808_4414394928_4414394848" source="n4414395808" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<edge id="e_4414395808_4414394928_4414395088" source="n4414395808" target="n4414395088">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends -->
+		<node id="n4414395168">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL27C27 -->
+		<edge id="e_4414395168_4414395648_4414394448" source="n4414395168" target="n4414394448">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isInterpretationOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends -->
+		<node id="n4414396768">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends -->
+		<edge id="e_4414396768_4414396208_4414395168" source="n4414396768" target="n4414395168">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends -->
+		<edge id="e_4414396768_4414396208_4414381904" source="n4414396768" target="n4414381904">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends -->
+		<edge id="e_4414396768_4414396208_4414396048" source="n4414396768" target="n4414396048">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<node id="n4414395088">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#time]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#time]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#time<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase -->
+		<edge id="e_4414395088_4414395488_4414395568" source="n4414395088" target="n4414395568">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isDescribedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<node id="n4414395088">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#time]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#time]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#time<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase -->
+		<edge id="e_4414395088_4414395488_4414395568" source="n4414395088" target="n4414395568">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isDescribedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topics -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topics -->
+		<node id="n4414396368">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topics]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topics]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#topics<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase -->
+		<edge id="e_4414396368_4414395488_4414395568" source="n4414396368" target="n4414395568">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isDescribedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414396368_4414396608_4414394848" source="n4414396368" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topics -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topics -->
+		<node id="n4414396368">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topics]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topics]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#topics<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase -->
+		<edge id="e_4414396368_4414395488_4414395568" source="n4414396368" target="n4414395568">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isDescribedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414396368_4414396608_4414394848" source="n4414396368" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL16C22 -->
+<!-- ub2bL16C22 -->
+		<node id="n4414381584">
+			<data key="k_label"><![CDATA[ub2bL16C22]]></data>
+			<data key="d5"><![CDATA[ub2bL16C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL16C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+		<edge id="e_4414381584_4414395328_4414395248" source="n4414381584" target="n4414395248">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL17C23 -->
+		<edge id="e_4414381584_4414394688_4414394528" source="n4414381584" target="n4414394528">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL27C27 -->
+<!-- ub2bL27C27 -->
+		<node id="n4414394448">
+			<data key="k_label"><![CDATA[ub2bL27C27]]></data>
+			<data key="d5"><![CDATA[ub2bL27C27]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL27C27<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+		<edge id="e_4414394448_4414395328_4414395248" source="n4414394448" target="n4414395248">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL28C23 -->
+		<edge id="e_4414394448_4414394688_4414395808" source="n4414394448" target="n4414395808">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL39C23 -->
+<!-- ub2bL39C23 -->
+		<node id="n4414396128">
+			<data key="k_label"><![CDATA[ub2bL39C23]]></data>
+			<data key="d5"><![CDATA[ub2bL39C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL39C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<edge id="e_4414396128_4414394928_4414395088" source="n4414396128" target="n4414395088">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publications -->
+		<edge id="e_4414396128_4414394928_4414395888" source="n4414396128" target="n4414395888">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414396128_4414394928_4414394848" source="n4414396128" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publications -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publications -->
+		<node id="n4414395888">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publications]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publications]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#publications<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+		<edge id="e_4414395888_4414395488_4414395248" source="n4414395888" target="n4414395248">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isDescribedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publications -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publications -->
+		<node id="n4414395888">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publications]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publications]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#publications<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+		<edge id="e_4414395888_4414395488_4414395248" source="n4414395888" target="n4414395248">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isDescribedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL17C23 -->
+<!-- ub2bL17C23 -->
+		<node id="n4414394528">
+			<data key="k_label"><![CDATA[ub2bL17C23]]></data>
+			<data key="d5"><![CDATA[ub2bL17C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL17C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authors -->
+		<edge id="e_4414394528_4414394928_4414394608" source="n4414394528" target="n4414394608">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<edge id="e_4414394528_4414394928_4414395088" source="n4414394528" target="n4414395088">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414394528_4414394928_4414394848" source="n4414394528" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topics -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topics -->
+		<node id="n4414396368">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topics]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topics]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#topics<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase -->
+		<edge id="e_4414396368_4414395488_4414395568" source="n4414396368" target="n4414395568">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isDescribedBy</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414396368_4414396608_4414394848" source="n4414396368" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPortion</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL17C23 -->
+<!-- ub2bL17C23 -->
+		<node id="n4414394528">
+			<data key="k_label"><![CDATA[ub2bL17C23]]></data>
+			<data key="d5"><![CDATA[ub2bL17C23]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL17C23<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authors -->
+		<edge id="e_4414394528_4414394928_4414394608" source="n4414394528" target="n4414394608">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#time -->
+		<edge id="e_4414394528_4414394928_4414395088" source="n4414394528" target="n4414395088">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#aTopic -->
+		<edge id="e_4414394528_4414394928_4414394848" source="n4414394528" target="n4414394848">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:describes</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL27C27 -->
+<!-- ub2bL27C27 -->
+		<node id="n4414394448">
+			<data key="k_label"><![CDATA[ub2bL27C27]]></data>
+			<data key="d5"><![CDATA[ub2bL27C27]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL27C27<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+		<edge id="e_4414394448_4414395328_4414395248" source="n4414394448" target="n4414395248">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL28C23 -->
+		<edge id="e_4414394448_4414394688_4414395808" source="n4414394448" target="n4414395808">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends -->
+		<node id="n4414396768">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#topicTrends<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#migrationTrends -->
+		<edge id="e_4414396768_4414396208_4414395168" source="n4414396768" target="n4414395168">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#authorTrends -->
+		<edge id="e_4414396768_4414396208_4414381904" source="n4414396768" target="n4414381904">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends -->
+		<edge id="e_4414396768_4414396208_4414396048" source="n4414396768" target="n4414396048">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL38C22 -->
+<!-- ub2bL38C22 -->
+		<node id="n4414395728">
+			<data key="k_label"><![CDATA[ub2bL38C22]]></data>
+			<data key="d5"><![CDATA[ub2bL38C22]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL38C22<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+		<edge id="e_4414395728_4414395328_4414395248" source="n4414395728" target="n4414395248">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL39C23 -->
+		<edge id="e_4414395728_4414394688_4414396128" source="n4414395728" target="n4414396128">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+		<node id="n4414395248">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase -->
+		<edge id="e_4414395248_4414395328_4414395568" source="n4414395248" target="n4414395568">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags -->
+		<node id="n4414395248">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTags<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#knowledgeBase -->
+		<edge id="e_4414395248_4414395328_4414395568" source="n4414395248" target="n4414395568">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPortionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends -->
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends -->
+		<node id="n4414396048">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/REXPLORE/6#publicationTrends<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL38C22 -->
+		<edge id="e_4414396048_4414381984_4414395728" source="n4414396048" target="n4414395728">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isStatisticOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/REXPLORE/6# -->
+<!-- Rexplore is able to visualize different topic trends: 1) publication trends, 2) author trends and 3) migration trends.  The first two are the number of publications or authors associated with a semantically enriched topic on a timeline.  The latter is defined as the number of estimated migrations between two topics and is computed by analyzing the shifting in authors’ interest [...] -->
+		<node id="n4414381184">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/REXPLORE/6#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>Rexplore is able to visualize different topic trends: 1) publication trends, 2) author trends and 3) migration trends.  The first two are the number of publications or authors associated with a semantically enriched topic on a timeline.  The latter is defined as the number of estimated migrations between two topics and is computed by analyzing the shifting in authors’ interest [...]<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- 0) Visualized information include publication trends, author trends and migration trends 1) publication trends is the number of publications associated with a semantically enriched topic on a timeline 2) author trends is the number of authors associated with a semantically enriched topic on a timeline 3) migration trends is the number of estimated migrations between two topics computed by analyzing the shifting in authors' interest -->
+		<edge id="e_4414381184_4414381424_4414298448" source="n4414381184" target="n4414298448">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4414381184_4414381504_4414381664" source="n4414381184" target="n4414381664">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- Rexplore is able to visualize different topic trends: 1) publication trends, 2) author trends and 3) migration trends.  The first two are the number of publications or authors associated with a semantically enriched topic on a timeline.  The latter is defined as the number of estimated migrations between two topics and is computed by analyzing the shifting in authors’ interest [...] -->
+		<edge id="e_4414381184_4414381824_4414298064" source="n4414381184" target="n4414298064">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+	</graph>
+</graphml>

@@ -1,0 +1,1762 @@
+@prefix :        <http://purl.org/datanode/ns/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dn:      <http://purl.org/datanode/ns/> .
+
+dn:hasAttached
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Data have attached other data for some reason"@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has attached"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:hasAttached , dn:adjacentTo , dn:relatedWith ;
+      owl:equivalentProperty
+              dn:hasAttached ;
+      owl:inverseOf dn:attachedTo .
+
+dn:isStandInOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is stand-in of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isStandInOf , dn:isDerivationOf , dn:relatedWith , dn:overlappingCapabilityWith ;
+      owl:equivalentProperty
+              dn:isStandInOf ;
+      owl:inverseOf dn:hasStandIn .
+
+owl:incompatibleWith
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Ontology , rdfs:Resource ;
+      rdfs:range owl:Ontology , rdfs:Resource ;
+      rdfs:subPropertyOf owl:incompatibleWith .
+
+owl:backwardCompatibleWith
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Ontology , rdfs:Resource ;
+      rdfs:range owl:Ontology , rdfs:Resource ;
+      rdfs:subPropertyOf owl:backwardCompatibleWith .
+
+dn:overlappingVocabularyWith
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "overlapping vocabulary with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:overlappingCapabilityWith , dn:overlappingVocabularyWith ;
+      dct:description "<p>Two datanodes share a set of vocabulary terms.</p>" ;
+      owl:equivalentProperty
+              dn:overlappingVocabularyWith .
+
+owl:TransitiveProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:TransitiveProperty , owl:ObjectProperty ;
+      owl:equivalentClass owl:TransitiveProperty .
+
+dn:isPartOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is part of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:overlappingPopulationWith , dn:relatedWith , dn:overlappingCapabilityWith , dn:isPartOf , dn:touch ;
+      owl:equivalentProperty
+              dn:isPartOf ;
+      owl:inverseOf dn:hasPart .
+
+dn:hasIdentifiers
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has identifiers"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasPart , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:hasIdentifiers , dn:hasSection , dn:touch ;
+      dct:description "<p>Relates a datanode to the collection of the identifiers of its population.</p>" ;
+      owl:equivalentProperty
+              dn:hasIdentifiers ;
+      owl:inverseOf dn:identifiersOf .
+
+dn:isSnapshotOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is snapshot of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:overlappingVocabularyWith , dn:isCopyOf , dn:sameCapabilityAs , dn:isSnapshotOf , dn:sharesInterpretationWith , dn:isDerivationOf , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:sameIdentityAs , dn:touch , dn:versionOf , dn:samePopulationAs , dn:sameVocabularyAs ;
+      owl:equivalentProperty
+              dn:isSnapshotOf ;
+      owl:inverseOf dn:hasSnapshot .
+
+dn:adjacentTo
+      a       owl:SymmetricProperty , rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "To relate a data node to any of their adjacent data node."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "adjacent to"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:adjacentTo ;
+      dct:description "<p>This property basically represents the proximity of some data to other. Two parts of the same dataset are adjacents each other.</p>"^^rdf:HTML ;
+      owl:equivalentProperty
+              dn:adjacentTo .
+
+dn:hasDatatypes
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates a datanode to the vocabulary of datatypes used in it."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has datatypes"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:hasDatatypes , dn:touch , dn:hasVocabulary ;
+      owl:equivalentProperty
+              dn:hasDatatypes ;
+      owl:inverseOf dn:datatypesOf .
+
+owl:Nothing
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:Thing , rdfs:Resource , owl:Nothing ;
+      owl:equivalentClass owl:Nothing .
+
+rdfs:Literal
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdfs:Literal ;
+      owl:equivalentClass rdfs:Literal .
+
+rdfs:subClassOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdfs:Class ;
+      rdfs:range rdfs:Resource , rdfs:Class ;
+      rdfs:subPropertyOf rdfs:subClassOf .
+
+dn:samePopulationAs
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "same population"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:overlappingPopulationWith , dn:relatedWith , dn:overlappingCapabilityWith , dn:samePopulationAs ;
+      owl:equivalentProperty
+              dn:samePopulationAs .
+
+rdf:type
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Class ;
+      rdfs:subPropertyOf rdf:type .
+
+owl:IrreflexiveProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:IrreflexiveProperty ;
+      owl:equivalentClass owl:IrreflexiveProperty .
+
+dn:isInterpretationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Some data emerge as the interpretation of other."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is interpretation of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isDerivationOf , dn:relatedWith , dn:isInterpretationOf ;
+      owl:equivalentProperty
+              dn:isInterpretationOf ;
+      owl:inverseOf dn:hasInterpretation .
+
+dn:hasSection
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Data can be cut in sections according to specific attributes."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has section"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasPart , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:hasSection , dn:touch ;
+      dct:description "An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition."@en ;
+      owl:equivalentProperty
+              dn:hasSection ;
+      owl:inverseOf dn:isSectionOf .
+
+owl:OntologyProperty
+      a       rdfs:Resource , rdfs:Class ;
+      rdfs:subClassOf rdf:Property .
+
+owl:imports
+      a       rdfs:Resource , rdf:Property , owl:OntologyProperty ;
+      rdfs:domain owl:Ontology , rdfs:Resource ;
+      rdfs:range owl:Ontology , rdfs:Resource ;
+      rdfs:subPropertyOf owl:imports .
+
+owl:Property
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:Property , rdfs:Resource ;
+      owl:equivalentClass owl:Property .
+
+dn:hasCopy
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has copy"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:hasCopy , dn:sharesInterpretationWith , dn:hasDerivation , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingVocabularyWith , dn:overlappingCapabilityWith , dn:sameIdentityAs , dn:touch , dn:sameCapabilityAs , dn:samePopulationAs , dn:sameVocabularyAs ;
+      owl:equivalentProperty
+              dn:hasCopy ;
+      owl:inverseOf dn:isCopyOf .
+
+dn:hasDescriptors
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A descriptor is an element used to qualify a value. Relates a data node to the collection of the descriptors used (being it a data node, obviously)."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has descriptors"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasDescriptors , dn:relatedWith , dn:touch , dn:hasVocabulary ;
+      dct:description "<p>We choose the term descriptor to indicate generically the element used to bind/map/qualify a value with respect to its entity. Practically, this term maps to <ul><li>\"Field\" in Object Oriented Programming; <li>\"Predicate\" in First Order Logic <li>Column identifier (Attribute) in Relation Database terminology <li>rdf:Property in the Resource Description Framework </ul></p>" ;
+      owl:equivalentProperty
+              dn:hasDescriptors ;
+      owl:inverseOf dn:descriptorsOf .
+
+dn:hasDependency
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A datanode needs another to be used or interpreted."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has dependency"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasDependency , dn:relatedWith , dn:references ;
+      owl:equivalentProperty
+              dn:hasDependency ;
+      owl:inverseOf dn:isDependencyOf ;
+      skos:note "The concept of dependency is here considered as to be expressed within the datanode (it is subproperty of references). Is this really a requirement?" .
+
+dn:duplicate
+      a       owl:SymmetricProperty , rdfs:Resource , owl:IrreflexiveProperty , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "duplicate"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingVocabularyWith , dn:overlappingCapabilityWith , dn:sameIdentityAs , dn:duplicate , dn:touch , dn:sameCapabilityAs , dn:samePopulationAs , dn:sameVocabularyAs ;
+      owl:equivalentProperty
+              dn:duplicate .
+
+xsd:negativeInteger
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+owl:sameAs
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:sameAs .
+
+dn:typesOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates the vocabulary of the types used in a datanode to the datanode itself."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "types of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:typesOf , dn:touch , dn:isVocabularyOf ;
+      owl:equivalentProperty
+              dn:typesOf ;
+      owl:inverseOf dn:hasTypes .
+
+owl:versionInfo
+      a       owl:AnnotationProperty , rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf owl:versionInfo .
+
+dn:differentPopulationFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "different population from"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:differentPopulationFrom , dn:differentCapabilityFrom ;
+      dct:description "<p>Two datanodes do not share any population.</p>" ;
+      owl:equivalentProperty
+              dn:differentPopulationFrom .
+
+xsd:long
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:long , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:long .
+
+dn:optimizedFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "optimized from"@end ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isDerivationOf , dn:relatedWith , dn:overlappingCapabilityWith , dn:processedFrom , dn:optimizedFrom ;
+      owl:equivalentProperty
+              dn:optimizedFrom ;
+      owl:inverseOf dn:optimizedInto .
+
+xsd:short
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:long , xsd:int , xsd:integer , xsd:short ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:short .
+
+dn:optimizedInto
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A datanode have been optimized into a new one, to amplify its functional capabilities."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "optimized into"@end ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:processedInto , dn:optimizedInto , dn:hasDerivation , dn:relatedWith , dn:overlappingCapabilityWith ;
+      owl:equivalentProperty
+              dn:optimizedInto ;
+      owl:inverseOf dn:optimizedFrom .
+
+dn:redundantWith
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "redundant with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:redundantWith , dn:overlappingPopulationWith , dn:relatedWith , dn:overlappingVocabularyWith , dn:overlappingCapabilityWith ;
+      owl:equivalentProperty
+              dn:redundantWith .
+
+rdfs:domain
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Class ;
+      rdfs:subPropertyOf rdfs:domain .
+
+dn:overlappingPopulationWith
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "overlapping population with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:overlappingPopulationWith , dn:relatedWith , dn:overlappingCapabilityWith ;
+      dct:description "<p>Two datanodes share some population.</p>" ;
+      owl:equivalentProperty
+              dn:overlappingPopulationWith .
+
+dn:isChangeOf
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:comment "some data is the coming change of some other"@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is change of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:isChangeOf , dn:relatedWith , dn:touch , dn:isUpdateOf ;
+      owl:equivalentProperty
+              dn:isChangeOf ;
+      owl:inverseOf dn:hasChange .
+
+dn:sameVocabularyAs
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "same vocabulary"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:overlappingVocabularyWith , dn:overlappingCapabilityWith , dn:sameVocabularyAs ;
+      owl:equivalentProperty
+              dn:sameVocabularyAs .
+
+dn:cleanedInto
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node has been cleaned, a new data node is obtained."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "cleaned into"@end ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:processedInto , dn:cleanedInto , dn:hasDerivation , dn:relatedWith , dn:overlappingCapabilityWith ;
+      dct:description "<p>Data are cleaned to better fit a purpose, sometimes making explicit potential capabilities. We intend cleaning in a broad sense, including activities like fixes in the syntax of the data or pruning of unfitting data with relation to a given task.</p>"^^rdf:HTML ;
+      owl:equivalentProperty
+              dn:cleanedInto ;
+      owl:inverseOf dn:cleanedFrom .
+
+owl:Thing
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:Thing , rdfs:Resource ;
+      owl:equivalentClass owl:Thing .
+
+owl:disjointWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:range rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subPropertyOf owl:disjointWith .
+
+xsd:float
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+owl:Class
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:Class , rdfs:Class ;
+      owl:equivalentClass owl:Class .
+
+dn:hasDeletion
+      a       owl:InverseFunctionalProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node is the to-delete-information of some other. In other terms, it is the outdated information."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has deletion"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasUpdate , dn:relatedWith , dn:hasChange , dn:hasDeletion , dn:touch ;
+      dct:description "<p>Indicates a data node which includes information that is now old or outdated. We don't indicate it to be also a part, this is to discuss.</p>" ;
+      owl:equivalentProperty
+              dn:hasDeletion ;
+      owl:inverseOf dn:isDeletionOf .
+
+dn:isUpdatedVersionOf
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "updated version of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:newerVersionOf , dn:nextVersionOf , dn:relatedWith , dn:overlappingCapabilityWith , dn:isUpdatedVersionOf , dn:versionOf , dn:isUpdateOf ;
+      owl:equivalentProperty
+              dn:isUpdatedVersionOf ;
+      owl:inverseOf dn:hasUpdatedVersion .
+
+dn:previousVersionOf
+      a       owl:InverseFunctionalProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "previous version of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:previousVersionOf , dn:relatedWith , dn:olderVersionOf , dn:overlappingCapabilityWith , dn:versionOf ;
+      owl:equivalentProperty
+              dn:previousVersionOf ;
+      owl:inverseOf dn:nextVersionOf .
+
+dn:datatypesOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates a vocabulary of datatypes to the datanode that uses them."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "datatypes of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:datatypesOf , dn:relatedWith , dn:touch , dn:isVocabularyOf ;
+      owl:equivalentProperty
+              dn:datatypesOf ;
+      owl:inverseOf dn:hasDatatypes .
+
+owl:Ontology
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:Ontology ;
+      owl:equivalentClass owl:Ontology .
+
+rdfs:Class
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdfs:Class ;
+      owl:equivalentClass rdfs:Class .
+
+dn:sameIdentityAs
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "same identity as"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingVocabularyWith , dn:overlappingCapabilityWith , dn:touch , dn:sameIdentityAs , dn:sameCapabilityAs , dn:samePopulationAs , dn:sameVocabularyAs ;
+      owl:equivalentProperty
+              dn:sameIdentityAs .
+
+rdfs:subPropertyOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf rdfs:subPropertyOf .
+
+dn:hasStandIn
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Some data is a substitute of another, for specific reasons."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has stand-in"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:hasDerivation , dn:relatedWith , dn:overlappingCapabilityWith , dn:hasStandIn ;
+      dct:description "<p>Are we sure a stand-in is always a derivation?</p>" ;
+      owl:equivalentProperty
+              dn:hasStandIn ;
+      owl:inverseOf dn:isStandInOf .
+
+owl:SymmetricProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:SymmetricProperty , rdfs:Resource , owl:ObjectProperty ;
+      owl:equivalentClass owl:SymmetricProperty .
+
+dn:relationsOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "relations of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relationsOf , dn:sharesInterpretationWith , dn:relatedWith , dn:descriptorsOf , dn:touch , dn:isVocabularyOf ;
+      owl:equivalentProperty
+              dn:relationsOf ;
+      owl:inverseOf dn:hasRelations .
+
+owl:InverseFunctionalProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf owl:InverseFunctionalProperty , rdfs:Resource , owl:ObjectProperty ;
+      owl:equivalentClass owl:InverseFunctionalProperty .
+
+owl:equivalentClass
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:range rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subPropertyOf owl:equivalentClass .
+
+xsd:gYearMonth
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+skos:note
+      a       owl:AnnotationProperty , rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf skos:note .
+
+dn:refactoredInto
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "refactored into"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:processedInto , dn:hasDerivation , dn:relatedWith , dn:refactoredInto ;
+      dct:description "<p>Refactoring is transforming to make it simpler, optimized and more efficient for a target task.</p>" ;
+      owl:equivalentProperty
+              dn:refactoredInto ;
+      owl:inverseOf dn:refactoredFrom .
+
+dn:hasAddition
+      a       owl:InverseFunctionalProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "some data is the addition-update of some other"@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has addition"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasUpdate , dn:relatedWith , dn:hasChange , dn:touch , dn:hasAddition ;
+      owl:equivalentProperty
+              dn:hasAddition ;
+      owl:inverseOf dn:isAdditionOf .
+
+dn:hasExtraction
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has extraction"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:hasExtraction , dn:hasDerivation , dn:relatedWith , dn:hasInterpretation ;
+      dct:description "<p>Relates a datanode to another that formalize the information obtained as a result of an information extraction process, for example a data mining process.</p>" ;
+      owl:equivalentProperty
+              dn:hasExtraction ;
+      owl:inverseOf dn:isExtractionOf .
+
+dn:sharesInterpretationWith
+      a       owl:SymmetricProperty , rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "This relates a data node to any datanode that can support its interpretation. They connected nodes might be in the same interpretation model."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "shares interpretation with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith ;
+      owl:equivalentProperty
+              dn:sharesInterpretationWith .
+
+dn:describes
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node describes another."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "describes"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:describes , dn:relatedWith , dn:about ;
+      dct:description "<p>This relates a datanode to any datanode being an object in its representation.</p>" ;
+      owl:equivalentProperty
+              dn:describes ;
+      owl:inverseOf dn:describedBy .
+
+dn:hasSelection
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "We represent here the outcome of the isolation of a part of a data node for a specific intent."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has selection"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasPart , dn:hasDerivation , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:hasSelection , dn:touch ;
+      owl:equivalentProperty
+              dn:hasSelection ;
+      owl:inverseOf dn:isSelectionOf .
+
+dn:descriptorsOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "This property relates a datanode of descriptors to the datanode that uses them."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "descriptors of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:descriptorsOf , dn:touch , dn:isVocabularyOf ;
+      owl:equivalentProperty
+              dn:descriptorsOf ;
+      owl:inverseOf dn:hasDescriptors .
+
+dn:disjointCapabilityWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "disjoint capability"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:disjointCapabilityWith , dn:differentPopulationFrom , dn:differentVocabularyFrom , dn:differentCapabilityFrom ;
+      owl:equivalentProperty
+              dn:disjointCapabilityWith .
+
+xsd:hexBinary
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+dn:isAdditionOf
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is addition of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:isChangeOf , dn:relatedWith , dn:touch , dn:isUpdateOf , dn:isAdditionOf ;
+      owl:equivalentProperty
+              dn:isAdditionOf ;
+      owl:inverseOf dn:hasAddition .
+
+xsd:integer
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:decimal , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:integer .
+
+dn:processedInto
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node is processed (transformed) to obtain another one."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "processed into"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:processedInto , dn:hasDerivation , dn:relatedWith ;
+      owl:equivalentProperty
+              dn:processedInto ;
+      owl:inverseOf dn:processedFrom .
+
+dn:   a       owl:Ontology , rdfs:Resource ;
+      rdfs:label "The Datanode Vocabulary" ;
+      dct:creator "enridaga - enricodaga@gmail.com" ;
+      dct:description "<p>Naming conventions: <ol><li>camel case <li>has[Noun]/is[Noun]Of <li>[present tense transitive verb]/[past tense verb]By,To,From,... <li>has[Past tense verb]/[past tense verb]To,From,... </ol></p>" ;
+      owl:versionInfo "0.5-SNAPSHOT" ;
+      skos:note """
+<p>Changelog 0.5:</p>
+<ol>
+<li>
+</ol>
+<p>Changelog 0.4:</p>
+<ol>
+<li>A dn:touch
+</ol>
+
+<p>Changelog 0.3</p>
+<ol>
+<li>D :isUpdatedVersionOf rdfs:subPropertyOf :olderVersionOf
+<li>D :hasUpdatedVersion rdfs:subPropertyOf :newerVersionOf
+<li>A :isUpdatedVersionOf rdfs:subPropertyOf :nextVersionOf
+<li>A :hasUpdatedVersion rdfs:subPropertyOf :previousVersionOf
+<li>A :versionOf :subPropertyOf :overlappingCapabilityWith
+<li>A :remodelledFrom rdfs:subPropertyOf :overlappingPopulationWith ;
+<li>A :remodelledTo rdfs:subPropertyOf :overlappingPopulationWith ;
+<li>A :isPartOf rdfs:subPropertyOf :overlappingPopulationWith, :overlappingVocabularyWith
+<li>A :duplicate a owl:TransitiveProperty
+<li>A :isCopyOf rdfs:subPropertyOf :sameCapabilityAs
+<li>A :links rdfs:subPropertyOf :overlappingPopulationWith
+<li>A :linkedTo rdfs:subPropertyOf :overlappingPopulationWith
+<li>A 
+:sharesInterpretationWith
+	a owl:TransitiveProperty, owl:SymmetricProperty ;
+	rdfs:label \"shares interpretation with\"@en ;
+	rdfs:comment \"This relates a data node to any datanode that can support its interpretation. They connected nodes might be in the same interpretation model.\"@en .
+:isUpdateOf rdfs:subPropertyOf :sharesInterpretationWith .
+:hasUpdate rdfs:subPropertyOf :sharesInterpretationWith .
+:overlappingPopulation rdfs:subPropertyOf :sharesInterpretationWith .
+:overlappingVocabulary rdfs:subPropertyOf :sharesInterpretationWith .
+:inconsistentWith rdfs:subPropertyOf :sharesInterpretationWith .
+:consistentWith rdfs:subPropertyOf :sharesInterpretationWith .
+:references rdfs:subPropertyOf :sharesInterpretationWith .
+:referencedBy rdfs:subPropertyOf :sharesInterpretationWith .
+:hasVocabulary rdfs:subPropertyOf :sharesInterpretationWith .
+:isVocabularyOf rdfs:subPropertyOf :sharesInterpretationWith .
+<li>Alignments with prov, void and dcat
+</ol> """ .
+
+dn:hasPart
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "To related a data node to another which is contained in it."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has part"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasPart , dn:overlappingPopulationWith , dn:relatedWith , dn:overlappingCapabilityWith , dn:touch ;
+      owl:equivalentProperty
+              dn:hasPart ;
+      owl:inverseOf dn:isPartOf .
+
+dn:hasInference
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has inference"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:hasInference , dn:hasDerivation , dn:relatedWith , dn:hasInterpretation ;
+      dct:description "<p>Relates a datanode to another including a set of logical inferences deduced from the first.</p>" ;
+      owl:equivalentProperty
+              dn:hasInference ;
+      owl:inverseOf dn:isInferenceOf .
+
+dn:isPortionOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is portion of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isPortionOf , dn:sharesInterpretationWith , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:isPartOf , dn:touch ;
+      owl:equivalentProperty
+              dn:isPortionOf ;
+      owl:inverseOf dn:hasPortion .
+
+dn:newerVersionOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "newer version of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:newerVersionOf , dn:relatedWith , dn:overlappingCapabilityWith , dn:versionOf ;
+      owl:equivalentProperty
+              dn:newerVersionOf ;
+      owl:inverseOf dn:olderVersionOf .
+
+xsd:gYear
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+owl:AnnotationProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:AnnotationProperty ;
+      owl:equivalentClass owl:AnnotationProperty .
+
+dn:refactoredFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "refactored from"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:refactoredFrom , dn:isDerivationOf , dn:relatedWith , dn:processedFrom ;
+      owl:equivalentProperty
+              dn:refactoredFrom ;
+      owl:inverseOf dn:refactoredInto .
+
+rdfs:label
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Literal ;
+      rdfs:subPropertyOf rdfs:label .
+
+dn:isStatisticOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is statistic of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:describes , dn:isDerivationOf , dn:relatedWith , dn:isComputationOf , dn:about , dn:isStatisticOf , dn:processedFrom ;
+      owl:equivalentProperty
+              dn:isStatisticOf ;
+      owl:inverseOf dn:hasStatistic .
+
+dn:hasAnonymized
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has anonymized substitute"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:processedInto , dn:hasAnonymized , dn:hasDerivation , dn:relatedWith , dn:overlappingCapabilityWith , dn:hasStandIn ;
+      dct:description "<p>Relates a datanode to another that is the result of a process that removes any personal identifiable information. The resulting datanode is meant to play the role of its origin in the application.</p>" ;
+      owl:equivalentProperty
+              dn:hasAnonymized ;
+      owl:inverseOf dn:isAnonymizedOf .
+
+dn:Datanode
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:comment "A data node is an underspecified data object, in a network of data nodes."@en ;
+      rdfs:label "A data node"@en ;
+      rdfs:subClassOf owl:Thing , dn:Datanode , rdfs:Resource ;
+      owl:equivalentClass dn:Datanode .
+
+dn:isAnonymizedOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is anonymized substitute of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isStandInOf , dn:isDerivationOf , dn:relatedWith , dn:overlappingCapabilityWith , dn:isAnonymizedOf , dn:processedFrom ;
+      owl:equivalentProperty
+              dn:isAnonymizedOf ;
+      owl:inverseOf dn:hasAnonymized .
+
+rdfs:Container
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdfs:Container ;
+      owl:equivalentClass rdfs:Container .
+
+()    a       rdfs:Resource , rdf:List .
+
+dn:processedFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "processed from"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isDerivationOf , dn:relatedWith , dn:processedFrom ;
+      owl:equivalentProperty
+              dn:processedFrom ;
+      owl:inverseOf dn:processedInto .
+
+dn:hasStatistic
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Computed metadata." ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has statistic"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:processedInto , dn:describedBy , dn:hasComputation , dn:hasStatistic , dn:hasDerivation , dn:relatedWith , dn:metadata ;
+      dct:description "<p>Statistics are at the same time computations and metadata of a source datanode.</p>" ;
+      owl:equivalentProperty
+              dn:hasStatistic ;
+      owl:inverseOf dn:isStatisticOf ;
+      skos:note "Maybe rename hasStatistics?" .
+
+xsd:byte
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:byte , xsd:long , xsd:int , xsd:integer , xsd:short ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:byte .
+
+dn:isExampleOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "example of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:isDerivationOf , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:isExampleOf , dn:isPartOf , dn:touch , dn:isSelectionOf ;
+      owl:equivalentProperty
+              dn:isExampleOf ;
+      owl:inverseOf dn:hasExample .
+
+dn:hasCache
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has cache"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:overlappingVocabularyWith , dn:sameCapabilityAs , dn:hasCopy , dn:sharesInterpretationWith , dn:hasSnapshot , dn:hasDerivation , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:sameIdentityAs , dn:touch , dn:hasCache , dn:hasStandIn , dn:versionOf , dn:samePopulationAs , dn:sameVocabularyAs ;
+      owl:equivalentProperty
+              dn:hasCache ;
+      owl:inverseOf dn:isCacheOf .
+
+xsd:nonPositiveInteger
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime .
+
+dn:hasAnnotation
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "This relates a datanode to some metadata attached to it."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has annotation"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:hasAttached , dn:adjacentTo , dn:relatedWith , dn:metadata , dn:hasAnnotation ;
+      owl:equivalentProperty
+              dn:hasAnnotation ;
+      owl:inverseOf dn:isAnnotationOf .
+
+rdf:HTML
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:HTML ;
+      owl:equivalentClass rdf:HTML .
+
+dn:isAnnotationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "When an attached datanode is also metadata about what it is attached to... it is an annotation."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is annotation of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:adjacentTo , dn:relatedWith , dn:about , dn:attachedTo , dn:isAnnotationOf ;
+      owl:equivalentProperty
+              dn:isAnnotationOf ;
+      owl:inverseOf dn:hasAnnotation .
+
+dn:isDependencyOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A datanode is required by another one in order for it to be used or interpreted."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is dependency of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:isDependencyOf , dn:relatedWith , dn:referencedBy ;
+      owl:equivalentProperty
+              dn:isDependencyOf ;
+      owl:inverseOf dn:hasDependency .
+
+owl:ReflexiveProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:ReflexiveProperty ;
+      owl:equivalentClass owl:ReflexiveProperty .
+
+dn:hasPortion
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has portion"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasPart , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:hasPortion , dn:touch ;
+      dct:description ":hasPortion is used to capture the relation with a subset of the data."@en ;
+      owl:equivalentProperty
+              dn:hasPortion ;
+      owl:inverseOf dn:isPortionOf .
+
+dn:linkedBy
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node is linked by another using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs)."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "linked by"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:overlappingPopulationWith , dn:relatedWith , dn:overlappingCapabilityWith , dn:linkedBy , dn:referencedBy ;
+      owl:equivalentProperty
+              dn:linkedBy ;
+      owl:inverseOf dn:links .
+
+dn:metadata
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node has another data node as metadata."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "metadata" ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:metadata ;
+      dct:description "<p>This is used to relate a data node to its metadata.</p>" ;
+      owl:equivalentProperty
+              dn:metadata ;
+      owl:inverseOf dn:about .
+
+dn:remodelledFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "remodelled from"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:remodelledFrom , dn:sharesInterpretationWith , dn:isDerivationOf , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:samePopulationAs , dn:processedFrom ;
+      dct:description "<p>Remodelling refer to the translation of the data to another symbolic structure (model), while keeping the same interpretation.</p>" ;
+      owl:equivalentProperty
+              dn:remodelledFrom ;
+      owl:inverseOf dn:remodelledTo .
+
+rdf:subject
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Statement ;
+      rdfs:subPropertyOf rdf:subject ;
+      owl:equivalentProperty
+              rdf:subject .
+
+xsd:boolean
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+xsd:date
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+dn:isSectionOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is section of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:isSectionOf , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:isPartOf , dn:touch ;
+      owl:equivalentProperty
+              dn:isSectionOf ;
+      owl:inverseOf dn:hasSection .
+
+dn:isDerivationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is derivation of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:isDerivationOf ;
+      dct:description "<p>This relation indicates that a data node is the origin of another, in the sense that the second have been produced using the first as information source.</p>" ;
+      owl:equivalentProperty
+              dn:isDerivationOf ;
+      owl:inverseOf dn:hasDerivation ;
+      skos:note "This property is not transitive." .
+
+xsd:string
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+dn:identifiersOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "identifiers of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:identifiersOf , dn:isSectionOf , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:isPartOf , dn:touch ;
+      owl:equivalentProperty
+              dn:identifiersOf ;
+      owl:inverseOf dn:hasIdentifiers .
+
+dn:hasChange
+      a       owl:InverseFunctionalProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "some data has some other as a change to come"@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has change"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasUpdate , dn:relatedWith , dn:hasChange , dn:touch ;
+      owl:equivalentProperty
+              dn:hasChange ;
+      owl:inverseOf dn:isChangeOf .
+
+xsd:decimal
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime .
+
+dn:isExtractionOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "extraction of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isDerivationOf , dn:relatedWith , dn:isInterpretationOf , dn:isExtractionOf ;
+      owl:equivalentProperty
+              dn:isExtractionOf ;
+      owl:inverseOf dn:hasExtraction .
+
+dn:sameCapabilityAs
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "same capability as"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingVocabularyWith , dn:overlappingCapabilityWith , dn:sameCapabilityAs , dn:samePopulationAs , dn:sameVocabularyAs ;
+      dct:description "<p>Having the same capability implies having the same population and the same vocabulary. In colloquial terms, the same data is described in the same terms.</p>" ;
+      owl:equivalentProperty
+              dn:sameCapabilityAs .
+
+dn:hasVocabulary
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates a data node to a datanode representing a set of names that are all used in it."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has vocabulary"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:touch , dn:hasVocabulary ;
+      dct:description "<p>The range of this property is a data node which enumerates a set of terms that are all used by the subject data node as identifiers (eventually to name structural elements, like attribute names or types).</p>" ;
+      owl:equivalentProperty
+              dn:hasVocabulary ;
+      owl:inverseOf dn:isVocabularyOf ;
+      skos:note "<p>When a data node :hasVocabulary another, we expect the latter to be the collection of terms used by the data node to name its properties and types.<br/>How to know if there is some term that is not part of that vocabulary? In other words, is it relevant to know whether a vocabulary is complete or not wrt some data?</p>" .
+
+xsd:int
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:long , xsd:int , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:int .
+
+owl:onProperty
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class , owl:Restriction ;
+      rdfs:range owl:Property , rdfs:Resource ;
+      rdfs:subPropertyOf owl:onProperty .
+
+rdfs:seeAlso
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf rdfs:seeAlso ;
+      owl:equivalentProperty
+              rdfs:seeAlso .
+
+rdfs:comment
+      a       owl:AnnotationProperty , rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Literal ;
+      rdfs:subPropertyOf rdfs:comment .
+
+rdf:Seq
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Seq , rdfs:Container ;
+      owl:equivalentClass rdf:Seq .
+
+xsd:nonNegativeInteger
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:nonNegativeInteger , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:nonNegativeInteger .
+
+dn:hasRelations
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates a datanode to another enumerating the set of relations used in it."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has relations"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasDescriptors , dn:relatedWith , dn:touch , dn:hasRelations , dn:hasVocabulary ;
+      owl:equivalentProperty
+              dn:hasRelations ;
+      owl:inverseOf dn:relationsOf .
+
+owl:FunctionalProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Property , owl:FunctionalProperty ;
+      owl:equivalentClass owl:FunctionalProperty .
+
+dn:versionOf
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "version"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:overlappingCapabilityWith , dn:versionOf ;
+      dct:description "<p>Use this property to represent a temporal relation between two data nodes that are meant to be the same at a different point in time. The property is symmetric and does not specify a direction.<br/>This property is not transitive. While it can be argued that the identity of something tracked temporarly should not change, thus implying transitivity, we want support the case when a data note has more then one following version (branching). Avoiding transitivity allows it.</p>" ;
+      owl:equivalentProperty
+              dn:versionOf .
+
+dn:links
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node links to other data using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs)."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "links"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:overlappingPopulationWith , dn:relatedWith , dn:overlappingCapabilityWith , dn:references , dn:links ;
+      owl:equivalentProperty
+              dn:links ;
+      owl:inverseOf dn:linkedBy ;
+      skos:note "It would be interesting to have a taste of other ways of doing similar links in other context then Linked Data."@en .
+
+xsd:unsignedLong
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:nonNegativeInteger , xsd:long , xsd:unsignedLong , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:unsignedLong .
+
+dn:differentCapabilityFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "different capability from"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:differentCapabilityFrom ;
+      dct:description "<p>Two nodes have different potential. Two data nodes using different vocabularies or two copies of the same data in different places.</p>" ;
+      owl:equivalentProperty
+              dn:differentCapabilityFrom ;
+      skos:note "(Similarly to :overlappingCapabilityWith) This relation is needed to generically express comparison of data nodes with relation to specific tasks."@en .
+
+owl:differentFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:differentFrom .
+
+dn:isDeletionOf
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is deletion of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isDeletionOf , dn:sharesInterpretationWith , dn:isChangeOf , dn:relatedWith , dn:touch , dn:isUpdateOf ;
+      owl:equivalentProperty
+              dn:isDeletionOf ;
+      owl:inverseOf dn:hasDeletion .
+
+xsd:double
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+dn:inconsistentWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node that should not be used together with another."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "inconsistent with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:inconsistentWith , dn:relatedWith ;
+      dct:description "<p>It can be the case that a single data node is corrupted to some respect. It can then be marked to be inconsistent with itself.</p>" ;
+      owl:equivalentProperty
+              dn:inconsistentWith ;
+      skos:note "<p>We intend consistency in a general sense: two data nodes are inconsistent because they do not agree.</p>" .
+
+dn:relatedWith
+      a       owl:SymmetricProperty , rdfs:Resource , owl:ReflexiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node is connected to another one."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "related with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith ;
+      dct:description "<p>This is the Top Property of Datanode.</p>" ;
+      owl:equivalentProperty
+              dn:relatedWith .
+
+dn:about
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node is about another data node."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "about"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:about ;
+      dct:description "<p>A data node may be metadata about another.</p>" ;
+      owl:equivalentProperty
+              dn:about ;
+      owl:inverseOf dn:metadata .
+
+dn:isInferenceOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is inference of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isDerivationOf , dn:relatedWith , dn:isInterpretationOf , dn:isInferenceOf ;
+      owl:equivalentProperty
+              dn:isInferenceOf ;
+      owl:inverseOf dn:hasInference .
+
+dn:isCopyOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is copy of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:isDerivationOf , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingVocabularyWith , dn:overlappingCapabilityWith , dn:isCopyOf , dn:sameIdentityAs , dn:touch , dn:sameCapabilityAs , dn:samePopulationAs , dn:sameVocabularyAs ;
+      owl:equivalentProperty
+              dn:isCopyOf ;
+      owl:inverseOf dn:hasCopy .
+
+dn:hasAttributes
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates data to the attributes used."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has attributes"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasDescriptors , dn:relatedWith , dn:touch , dn:hasAttributes , dn:hasVocabulary ;
+      dct:description "<p>We relate with this property a data node to a collection of attributes used in it. We distinguish attributes from relations because the first does not qualify the range entity but only the domain entity (saying that a person is 1.82m tall does not change our knowledge about 1.82m).</p>" ;
+      owl:equivalentProperty
+              dn:hasAttributes ;
+      owl:inverseOf dn:attributesOf .
+
+xsd:anyURI
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+dn:isReificationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is reification of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isDerivationOf , dn:relatedWith , dn:isReificationOf , dn:processedFrom ;
+      owl:equivalentProperty
+              dn:isReificationOf ;
+      owl:inverseOf dn:hasReification .
+
+rdf:rest
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty ;
+      rdfs:domain rdfs:Resource , rdf:List ;
+      rdfs:range rdfs:Resource , rdf:List ;
+      rdfs:subPropertyOf rdf:rest ;
+      owl:equivalentProperty
+              rdf:rest .
+
+rdfs:range
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Property ;
+      rdfs:range rdfs:Resource , rdfs:Class ;
+      rdfs:subPropertyOf rdfs:range .
+
+dn:hasUpdatedVersion
+      a       owl:InverseFunctionalProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A new version of a data node in a specific time point that is meant to substitute it."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "updated version"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:previousVersionOf , dn:hasUpdate , dn:relatedWith , dn:overlappingCapabilityWith , dn:olderVersionOf , dn:versionOf , dn:hasUpdatedVersion ;
+      owl:equivalentProperty
+              dn:hasUpdatedVersion ;
+      owl:inverseOf dn:isUpdatedVersionOf .
+
+dct:description
+      a       owl:AnnotationProperty , rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf dct:description .
+
+dn:disjointSectionWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Data can be cut in sections according to specific attributes."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "disjoint section with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:disjointSectionWith , dn:adjacentTo , dn:relatedWith , dn:disjointPartWith , dn:differentVocabularyFrom , dn:differentCapabilityFrom ;
+      owl:equivalentProperty
+              dn:disjointSectionWith .
+
+dn:hasDerivation
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has derivation"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:hasDerivation ;
+      owl:equivalentProperty
+              dn:hasDerivation ;
+      owl:inverseOf dn:isDerivationOf .
+
+dn:hasSummarization
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has summarization"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:hasSummarization , dn:hasDerivation , dn:relatedWith ;
+      owl:equivalentProperty
+              dn:hasSummarization ;
+      owl:inverseOf dn:isSummarizationOf .
+
+dn:isSelectionOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is selection of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:isDerivationOf , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:isPartOf , dn:touch , dn:isSelectionOf ;
+      owl:equivalentProperty
+              dn:isSelectionOf ;
+      owl:inverseOf dn:hasSelection .
+
+dn:disjointPartWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Two datanodes are adjacent parts of another. This property relates the two parts without specifying anything about their container. Can be used in conjunction with isPartOf to state that two parts do not overlap."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "disjoint part with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:adjacentTo , dn:relatedWith , dn:disjointPartWith ;
+      owl:equivalentProperty
+              dn:disjointPartWith .
+
+dn:hasInterpretation
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Some data is interpretated such to produce other data."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has interpretation"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:hasDerivation , dn:relatedWith , dn:hasInterpretation ;
+      owl:equivalentProperty
+              dn:hasInterpretation ;
+      owl:inverseOf dn:isInterpretationOf .
+
+dn:referencedBy
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "referenced by"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:referencedBy ;
+      owl:equivalentProperty
+              dn:referencedBy ;
+      owl:inverseOf dn:references .
+
+xsd:unsignedShort
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:unsignedShort , xsd:nonNegativeInteger , xsd:unsignedInt , xsd:long , xsd:unsignedLong , xsd:int , xsd:integer , xsd:short ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:unsignedShort .
+
+xsd:time
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+rdf:first
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty ;
+      rdfs:domain rdfs:Resource , rdf:List ;
+      rdfs:subPropertyOf rdf:first ;
+      owl:equivalentProperty
+              rdf:first .
+
+dn:hasTypes
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates a data node to the vocabulary of the types used."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has types"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:touch , dn:hasVocabulary , dn:hasTypes ;
+      owl:equivalentProperty
+              dn:hasTypes ;
+      owl:inverseOf dn:typesOf .
+
+owl:equivalentProperty
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf owl:equivalentProperty .
+
+dn:describedBy
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Data have other data as description."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "described by"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:describedBy , dn:relatedWith , dn:metadata ;
+      dct:description "<p>This relates a datanode to any datanode being an object in its representation.</p>" ;
+      owl:equivalentProperty
+              dn:describedBy ;
+      owl:inverseOf dn:describes .
+
+dn:disjointPortionWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "disjoint portion with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:adjacentTo , dn:relatedWith , dn:disjointPortionWith , dn:differentPopulationFrom , dn:disjointPartWith , dn:differentCapabilityFrom ;
+      owl:equivalentProperty
+              dn:disjointPortionWith .
+
+rdf:List
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:List ;
+      owl:equivalentClass rdf:List .
+
+dn:attributesOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "attributes of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:descriptorsOf , dn:touch , dn:attributesOf , dn:isVocabularyOf ;
+      owl:equivalentProperty
+              dn:attributesOf ;
+      owl:inverseOf dn:hasAttributes .
+
+rdfs:ContainerMembershipProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Property , rdfs:ContainerMembershipProperty ;
+      owl:equivalentClass rdfs:ContainerMembershipProperty .
+
+dn:attachedTo
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Data are attached to data for some reason"@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "attached to"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:adjacentTo , dn:relatedWith , dn:attachedTo ;
+      dct:description "<p>This, along with its inverse <em>haveAttached</em> , are considered to model the \"physical\" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments.</p>"^^rdf:HTML ;
+      owl:equivalentProperty
+              dn:attachedTo ;
+      owl:inverseOf dn:hasAttached .
+
+dn:differentVocabularyFrom
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "different vocabulary from"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:differentCapabilityFrom , dn:differentVocabularyFrom ;
+      dct:description "<p>Two datanodes do not share any set of vocabulary terms.</p>" ;
+      owl:equivalentProperty
+              dn:differentVocabularyFrom .
+
+dn:schemaUsedBy
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "schema used by"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:schemaUsedBy , dn:sharesInterpretationWith , dn:relatedWith , dn:referencedBy ;
+      owl:equivalentProperty
+              dn:schemaUsedBy ;
+      owl:inverseOf dn:usesSchema ;
+      skos:note "Does being a schema imply being a dependency?"@en .
+
+dn:hasUpdate
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node may be related to another that improves its currency."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has update"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasUpdate , dn:relatedWith ;
+      dct:description "<p>Update is considered in a general meaning of having a role meant to better reflect the referred world.</p>" ;
+      owl:equivalentProperty
+              dn:hasUpdate ;
+      owl:inverseOf dn:isUpdateOf .
+
+rdfs:Datatype
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdfs:Class , rdfs:Datatype ;
+      owl:equivalentClass rdfs:Datatype .
+
+rdf:Alt
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Alt , rdfs:Container ;
+      owl:equivalentClass rdf:Alt .
+
+dn:isVocabularyOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is vocabulary of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:touch , dn:isVocabularyOf ;
+      dct:description "<p>This datanode enumerate a set of terms that are all used by the related datanode.</p>" ;
+      owl:equivalentProperty
+              dn:isVocabularyOf ;
+      owl:inverseOf dn:hasVocabulary .
+
+owl:ObjectProperty
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      owl:equivalentClass owl:ObjectProperty .
+
+owl:intersectionOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subPropertyOf owl:intersectionOf .
+
+xsd:gMonthDay
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+owl:inverseOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf owl:inverseOf .
+
+rdf:object
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Statement ;
+      rdfs:subPropertyOf rdf:object ;
+      owl:equivalentProperty
+              rdf:object .
+
+dn:isCacheOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is cache of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isStandInOf , dn:relatedWith , dn:overlappingVocabularyWith , dn:isCopyOf , dn:sameCapabilityAs , dn:isSnapshotOf , dn:sharesInterpretationWith , dn:isCacheOf , dn:isDerivationOf , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:sameIdentityAs , dn:touch , dn:versionOf , dn:samePopulationAs , dn:sameVocabularyAs ;
+      owl:equivalentProperty
+              dn:isCacheOf ;
+      owl:inverseOf dn:hasCache .
+
+dn:isComputationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is computation of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isDerivationOf , dn:relatedWith , dn:isComputationOf , dn:processedFrom ;
+      owl:equivalentProperty
+              dn:isComputationOf ;
+      owl:inverseOf dn:hasComputation .
+
+dn:combinationFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "The subject data node is the result of the combination of a data node with some other."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "combination from"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:combinationFrom , dn:isDerivationOf , dn:relatedWith ;
+      dct:description "<p>This relation specifies the fact that the object includes the subject. However, this does not mean that the subject is included as-is. Therefore, a combination implies derivation but not partition.</p>"^^rdf:HTML ;
+      owl:equivalentProperty
+              dn:combinationFrom ;
+      owl:inverseOf dn:combinedIn .
+
+rdfs:Resource
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource ;
+      owl:equivalentClass rdfs:Resource .
+
+owl:DatatypeProperty
+      a       rdfs:Resource , rdfs:Class ;
+      rdfs:subClassOf rdf:Property .
+
+dn:hasComputation
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has computation"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:processedInto , dn:hasComputation , dn:hasDerivation , dn:relatedWith ;
+      dct:description "<p>Relates a datanode to another that is the result of some computation on its data.</p>" ;
+      owl:equivalentProperty
+              dn:hasComputation ;
+      owl:inverseOf dn:isComputationOf .
+
+dn:usesSchema
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Relates a data node to another used as schema."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "uses schema"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:usesSchema , dn:references ;
+      dct:description "<p>The second is intended to be a self contained model that is (even partly) used in the data node.</p>" , "<p>We distinguish the schema and the vocabulary as follows. A vocabulary is the enumeration of a set of terms. A schema organize a set of terms in a system of some sort. A list of body parts is not the anatomy of a body. The furniture is not an interior design model.</p>" ;
+      owl:equivalentProperty
+              dn:usesSchema ;
+      owl:inverseOf dn:schemaUsedBy .
+
+rdf:Property
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Property ;
+      owl:equivalentClass rdf:Property .
+
+dn:hasReification
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has reification"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:processedInto , dn:hasReification , dn:hasDerivation , dn:relatedWith ;
+      dct:description "<p>This property refer to the semantic of reification in RDF.</p>" ;
+      owl:equivalentProperty
+              dn:hasReification ;
+      owl:inverseOf dn:isReificationOf .
+
+xsd:unsignedByte
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:unsignedShort , xsd:unsignedByte , xsd:byte , xsd:nonNegativeInteger , xsd:unsignedInt , xsd:long , xsd:unsignedLong , xsd:int , xsd:integer , xsd:short ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:unsignedByte .
+
+xsd:positiveInteger
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+dn:consistentWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node that can (should) be used together with another. "@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "consistent with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:consistentWith ;
+      dct:description "<p>We intend consistency in a general sense: two data nodes are consistent because they agree (ie, they do not disagree...).</p>"^^rdf:HTML ;
+      owl:equivalentProperty
+              dn:consistentWith ;
+      skos:note "<p>It can be the case that a single data node is verified to be consistent (with relation to some logic). It can then be marked to be consistent with itself.</p>" .
+
+rdfs:isDefinedBy
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf rdfs:seeAlso , rdfs:isDefinedBy ;
+      owl:equivalentProperty
+              rdfs:isDefinedBy .
+
+dn:cleanedFrom
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node is obtained as the result of a data cleaning activity."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "cleaned from"@end ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:cleanedFrom , dn:isDerivationOf , dn:relatedWith , dn:overlappingCapabilityWith , dn:processedFrom ;
+      owl:equivalentProperty
+              dn:cleanedFrom ;
+      owl:inverseOf dn:cleanedInto .
+
+dn:nextVersionOf
+      a       rdfs:Resource , rdf:Property , owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "next version of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:newerVersionOf , dn:nextVersionOf , dn:relatedWith , dn:overlappingCapabilityWith , dn:versionOf ;
+      dct:description "<p>Relates a datanode to another that is the direct next version.</p>" ;
+      owl:equivalentProperty
+              dn:nextVersionOf ;
+      owl:inverseOf dn:previousVersionOf .
+
+xsd:unsignedInt
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf xsd:nonNegativeInteger , xsd:unsignedInt , xsd:long , xsd:unsignedLong , xsd:int , xsd:integer ;
+      owl:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      owl:equivalentClass xsd:unsignedInt .
+
+xsd:gMonth
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+rdf:Statement
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Statement ;
+      owl:equivalentClass rdf:Statement .
+
+owl:oneOf
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subPropertyOf owl:oneOf .
+
+dn:hasExample
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has example"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasPart , dn:hasDerivation , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:hasSelection , dn:touch , dn:hasExample ;
+      owl:equivalentProperty
+              dn:hasExample ;
+      owl:inverseOf dn:isExampleOf .
+
+dn:isSummarizationOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is summarization of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isSummarizationOf , dn:isDerivationOf , dn:relatedWith ;
+      owl:equivalentProperty
+              dn:isSummarizationOf ;
+      owl:inverseOf dn:hasSummarization .
+
+dn:hasSample
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has sample"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:hasPart , dn:hasSample , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:hasPortion , dn:touch ;
+      dct:description "<p>Relates a datanode to an excerpt of its population, with some, non specified, attributes.</p>" ;
+      owl:equivalentProperty
+              dn:hasSample ;
+      owl:inverseOf dn:isSampleOf .
+
+dct:creator
+      a       owl:AnnotationProperty , rdfs:Resource , rdf:Property ;
+      rdfs:subPropertyOf dct:creator .
+
+dn:touch
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "touch"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:touch ;
+      owl:equivalentProperty
+              dn:touch .
+
+dn:combinedIn
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node that have been combined (with another data node) into a target one."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "combined in"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:hasDerivation , dn:relatedWith , dn:combinedIn ;
+      owl:equivalentProperty
+              dn:combinedIn ;
+      owl:inverseOf dn:combinationFrom .
+
+dn:remodelledTo
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "remodelled to"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:processedInto , dn:sharesInterpretationWith , dn:hasDerivation , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:remodelledTo , dn:samePopulationAs ;
+      owl:equivalentProperty
+              dn:remodelledTo ;
+      owl:inverseOf dn:remodelledFrom .
+
+rdf:XMLLiteral
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:XMLLiteral ;
+      owl:equivalentClass rdf:XMLLiteral .
+
+rdf:predicate
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain rdfs:Resource , rdf:Statement ;
+      rdfs:subPropertyOf rdf:predicate ;
+      owl:equivalentProperty
+              rdf:predicate .
+
+xsd:duration
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+dn:olderVersionOf
+      a       rdfs:Resource , owl:TransitiveProperty , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "older version of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:olderVersionOf , dn:overlappingCapabilityWith , dn:versionOf ;
+      owl:equivalentProperty
+              dn:olderVersionOf ;
+      owl:inverseOf dn:newerVersionOf .
+
+dn:isSampleOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is sample of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:isPortionOf , dn:sharesInterpretationWith , dn:relatedWith , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:isPartOf , dn:isSampleOf , dn:touch ;
+      owl:equivalentProperty
+              dn:isSampleOf ;
+      owl:inverseOf dn:hasSample .
+
+dn:references
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "references"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:references ;
+      dct:description "<p>It looks like there could be a more generic property here, which refer to the fact of sharing some signatures (identifiers), without assuming an order or direction of the reference. Two data nodes may simply use the same identifier independently from the intention of making a reference to anything else (then the identifier itself). Does this make sense?</p>" , "<p>The subject of this property includes a mention to something which is (included in) another data node. <br/> Talking about RDF datasets, this refer to the mention of a URI belonging to another dataset. For example, a dataset about employees could mention a Geonames location.</p>" ;
+      owl:equivalentProperty
+              dn:references ;
+      owl:inverseOf dn:referencedBy .
+
+dn:isUpdateOf
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A data node that is meant to improve the currency of another."@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "is update of"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:sharesInterpretationWith , dn:relatedWith , dn:isUpdateOf ;
+      owl:equivalentProperty
+              dn:isUpdateOf ;
+      owl:inverseOf dn:hasUpdate .
+
+xsd:gDay
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+dn:hasSnapshot
+      a       rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "A copy of a data node in a specific time point"@en ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "has snapshot"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:overlappingVocabularyWith , dn:sameCapabilityAs , dn:hasCopy , dn:sharesInterpretationWith , dn:hasSnapshot , dn:hasDerivation , dn:overlappingPopulationWith , dn:overlappingCapabilityWith , dn:sameIdentityAs , dn:touch , dn:versionOf , dn:samePopulationAs , dn:sameVocabularyAs ;
+      owl:equivalentProperty
+              dn:hasSnapshot ;
+      owl:inverseOf dn:isSnapshotOf .
+
+xsd:base64Binary
+      a       rdfs:Resource , rdfs:Datatype , rdfs:Class .
+
+owl:priorVersion
+      a       rdfs:Resource , rdf:Property ;
+      rdfs:domain owl:Ontology , rdfs:Resource ;
+      rdfs:range owl:Ontology , rdfs:Resource ;
+      rdfs:subPropertyOf owl:priorVersion .
+
+rdf:Bag
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , rdf:Bag , rdfs:Container ;
+      owl:equivalentClass rdf:Bag .
+
+dn:overlappingCapabilityWith
+      a       owl:SymmetricProperty , rdfs:Resource , rdf:Property , owl:ObjectProperty ;
+      rdfs:domain owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:label "overlapping capability with"@en ;
+      rdfs:range owl:Thing , dn:Datanode , rdfs:Resource ;
+      rdfs:subPropertyOf dn:relatedWith , dn:overlappingCapabilityWith ;
+      dct:description "<p>Two data nodes have similar potential, their domains overlap.</p>" ;
+      owl:equivalentProperty
+              dn:overlappingCapabilityWith ;
+      skos:note "If the capability is the location, two version might not have the same location. We might want to specify a number of well known capabilities - format, location, meta-model, accessMethod, ... . Might this allow more inferences than the ones we can do now?"@en , "This relation is needed to generically express comparison of data nodes with relation to the domain covered."@en , "Similar relations might refer to other features, being it structural (they share schema elements), physical (they are both in XML) or related to the domain (they both talk about Music Artists) - just to make few examples.. We might want to specify other kind of features, covering: ownership (sameOwner), meta-model (sameMetaModel), syntax (sameSyntax), accessMethod (sameAccessMethod), license (compatibleLicense, sameLicense), policies (?)."@en .
+
+xsd:dateTime
+      a       rdfs:Resource , owl:Class , rdfs:Datatype , rdfs:Class ;
+      owl:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+owl:Restriction
+      a       rdfs:Resource , owl:Class , rdfs:Class ;
+      rdfs:subClassOf rdfs:Resource , owl:Class , owl:Restriction ;
+      owl:equivalentClass owl:Restriction .

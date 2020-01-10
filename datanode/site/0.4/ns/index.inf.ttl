@@ -1,0 +1,1750 @@
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0:     <http://www.w3.org/2002/07/owl#> .
+@prefix ns2:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns1:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns3:     <http://purl.org/dc/terms/> .
+
+<http://purl.org/datanode/ns/hasAttached>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Data have attached other data for some reason"@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has attached"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/hasAttached> , <http://purl.org/datanode/ns/adjacentTo> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasAttached> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/attachedTo> .
+
+<http://purl.org/datanode/ns/isStandInOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is stand-in of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isStandInOf> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isStandInOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasStandIn> .
+
+ns0:incompatibleWith
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns0:Ontology , ns1:Resource ;
+      ns1:range ns0:Ontology , ns1:Resource ;
+      ns1:subPropertyOf ns0:incompatibleWith .
+
+ns0:backwardCompatibleWith
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns0:Ontology , ns1:Resource ;
+      ns1:range ns0:Ontology , ns1:Resource ;
+      ns1:subPropertyOf ns0:backwardCompatibleWith .
+
+<http://purl.org/datanode/ns/overlappingVocabularyWith>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "overlapping vocabulary with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> ;
+      ns3:description "<p>Two datanodes share a set of vocabulary terms.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/overlappingVocabularyWith> .
+
+ns0:TransitiveProperty
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns0:TransitiveProperty , ns0:ObjectProperty ;
+      ns0:equivalentClass ns0:TransitiveProperty .
+
+<http://purl.org/datanode/ns/isPartOf>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is part of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isPartOf> , <http://purl.org/datanode/ns/touch> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isPartOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasPart> .
+
+<http://purl.org/datanode/ns/hasIdentifiers>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has identifiers"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasPart> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/hasIdentifiers> , <http://purl.org/datanode/ns/hasSection> , <http://purl.org/datanode/ns/touch> ;
+      ns3:description "<p>Relates a datanode to the collection of the identifiers of its population.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasIdentifiers> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/identifiersOf> .
+
+<http://purl.org/datanode/ns/isSnapshotOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is snapshot of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/isCopyOf> , <http://purl.org/datanode/ns/sameCapabilityAs> , <http://purl.org/datanode/ns/isSnapshotOf> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/sameIdentityAs> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/versionOf> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isSnapshotOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasSnapshot> .
+
+<http://purl.org/datanode/ns/adjacentTo>
+      a       ns0:SymmetricProperty , ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "To relate a data node to any of their adjacent data node."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "adjacent to"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/adjacentTo> ;
+      ns3:description "<p>This property basically represents the proximity of some data to other. Two parts of the same dataset are adjacents each other.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/adjacentTo> .
+
+<http://purl.org/datanode/ns/hasDatatypes>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Relates a datanode to the vocabulary of datatypes used in it."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has datatypes"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/hasDatatypes> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/hasVocabulary> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasDatatypes> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/datatypesOf> .
+
+ns0:Nothing
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns0:Thing , ns1:Resource , ns0:Nothing ;
+      ns0:equivalentClass ns0:Nothing .
+
+ns1:Literal
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns1:Literal ;
+      ns0:equivalentClass ns1:Literal .
+
+ns1:subClassOf
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , ns1:Class ;
+      ns1:range ns1:Resource , ns1:Class ;
+      ns1:subPropertyOf ns1:subClassOf .
+
+<http://purl.org/datanode/ns/samePopulationAs>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "same population"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/samePopulationAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/samePopulationAs> .
+
+rdf:type
+      a       ns1:Resource , rdf:Property ;
+      ns1:range ns1:Resource , ns1:Class ;
+      ns1:subPropertyOf rdf:type .
+
+ns0:IrreflexiveProperty
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns0:IrreflexiveProperty ;
+      ns0:equivalentClass ns0:IrreflexiveProperty .
+
+<http://purl.org/datanode/ns/isInterpretationOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Some data emerge as the interpretation of other."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is interpretation of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/isInterpretationOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isInterpretationOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasInterpretation> .
+
+<http://purl.org/datanode/ns/hasSection>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Data can be cut in sections according to specific attributes."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has section"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasPart> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/hasSection> , <http://purl.org/datanode/ns/touch> ;
+      ns3:description "An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition."@en ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasSection> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isSectionOf> .
+
+ns0:OntologyProperty
+      a       ns1:Resource , ns1:Class ;
+      ns1:subClassOf rdf:Property .
+
+ns0:imports
+      a       ns1:Resource , rdf:Property , ns0:OntologyProperty ;
+      ns1:domain ns0:Ontology , ns1:Resource ;
+      ns1:range ns0:Ontology , ns1:Resource ;
+      ns1:subPropertyOf ns0:imports .
+
+ns0:Property
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns0:Property , ns1:Resource ;
+      ns0:equivalentClass ns0:Property .
+
+<http://purl.org/datanode/ns/hasCopy>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has copy"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/hasCopy> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/sameIdentityAs> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/sameCapabilityAs> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasCopy> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isCopyOf> .
+
+<http://purl.org/datanode/ns/hasDescriptors>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A descriptor is an element used to qualify a value. Relates a data node to the collection of the descriptors used (being it a data node, obviously)."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has descriptors"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasDescriptors> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/hasVocabulary> ;
+      ns3:description "<p>We choose the term descriptor to indicate generically the element used to bind/map/qualify a value with respect to its entity. Practically, this term maps to <ul><li>\"Field\" in Object Oriented Programming; <li>\"Predicate\" in First Order Logic <li>Column identifier (Attribute) in Relation Database terminology <li>rdf:Property in the Resource Description Framework </ul></p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasDescriptors> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/descriptorsOf> .
+
+<http://purl.org/datanode/ns/hasDependency>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A datanode needs another to be used or interpreted."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has dependency"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasDependency> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/references> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasDependency> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isDependencyOf> ;
+      ns2:note "The concept of dependency is here considered as to be expressed within the datanode (it is subproperty of references). Is this really a requirement?" .
+
+<http://purl.org/datanode/ns/duplicate>
+      a       ns0:SymmetricProperty , ns1:Resource , ns0:IrreflexiveProperty , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "duplicate"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/sameIdentityAs> , <http://purl.org/datanode/ns/duplicate> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/sameCapabilityAs> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns0:disjointPropertyWith
+              <http://purl.org/datanode/ns/disjointCapabilityWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/duplicate> .
+
+xsd:negativeInteger
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+ns0:sameAs
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:subPropertyOf ns0:sameAs .
+
+<http://purl.org/datanode/ns/typesOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Relates the vocabulary of the types used in a datanode to the datanode itself."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "types of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/typesOf> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isVocabularyOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/typesOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasTypes> .
+
+ns0:versionInfo
+      a       ns0:AnnotationProperty , ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns0:versionInfo .
+
+<http://purl.org/datanode/ns/differentPopulationFrom>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "different population from"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/differentPopulationFrom> , <http://purl.org/datanode/ns/differentCapabilityFrom> ;
+      ns3:description "<p>Two datanodes do not share any population.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/differentPopulationFrom> .
+
+xsd:long
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:long , xsd:integer ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:long .
+
+<http://purl.org/datanode/ns/optimizedFrom>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "optimized from"@end ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/processedFrom> , <http://purl.org/datanode/ns/optimizedFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/optimizedFrom> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/optimizedInto> .
+
+xsd:short
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:long , xsd:int , xsd:integer , xsd:short ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:short .
+
+<http://purl.org/datanode/ns/optimizedInto>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A datanode have been optimized into a new one, to amplify existing capabilities."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "optimized into"@end ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/processedInto> , <http://purl.org/datanode/ns/optimizedInto> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/optimizedInto> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/optimizedFrom> .
+
+<http://purl.org/datanode/ns/redundantWith>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "redundant with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/redundantWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/redundantWith> .
+
+ns1:domain
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , rdf:Property ;
+      ns1:range ns1:Resource , ns1:Class ;
+      ns1:subPropertyOf ns1:domain .
+
+<http://purl.org/datanode/ns/overlappingPopulationWith>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "overlapping population with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> ;
+      ns3:description "<p>Two datanodes share some population.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/overlappingPopulationWith> .
+
+<http://purl.org/datanode/ns/isChangeOf>
+      a       ns1:Resource , rdf:Property , ns0:FunctionalProperty , ns0:ObjectProperty ;
+      ns1:comment "some data is the coming change of some other"@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is change of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isChangeOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isUpdateOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isChangeOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasChange> .
+
+<http://purl.org/datanode/ns/sameVocabularyAs>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "same vocabulary"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/sameVocabularyAs> .
+
+<http://purl.org/datanode/ns/cleanedInto>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Clean to make emerge potential capabilities. We intend cleaning in a broad sense, including activities like fixes in the syntax of the data or pruning of unfitting data, with relation to a target task."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "cleaned into"@end ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/processedInto> , <http://purl.org/datanode/ns/cleanedInto> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/cleanedInto> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/cleanedFrom> .
+
+ns0:Thing
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns0:Thing , ns1:Resource ;
+      ns0:equivalentClass ns0:Thing .
+
+ns0:disjointWith
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:range ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subPropertyOf ns0:disjointWith .
+
+xsd:float
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns0:disjointWith xsd:string , xsd:duration , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+ns0:Class
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns0:Class , ns1:Class ;
+      ns0:equivalentClass ns0:Class .
+
+<http://purl.org/datanode/ns/hasDeletion>
+      a       ns0:InverseFunctionalProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node is the to-delete-information of some other. In other terms, it is the outdated information."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has deletion"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasUpdate> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/hasChange> , <http://purl.org/datanode/ns/hasDeletion> , <http://purl.org/datanode/ns/touch> ;
+      ns3:description "<p>Indicates a data node which includes information that is now old or outdated. We don't indicate it to be also a part, this is to discuss.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasDeletion> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isDeletionOf> .
+
+<http://purl.org/datanode/ns/isUpdatedVersionOf>
+      a       ns1:Resource , rdf:Property , ns0:FunctionalProperty , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "updated version of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/newerVersionOf> , <http://purl.org/datanode/ns/nextVersionOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isUpdatedVersionOf> , <http://purl.org/datanode/ns/versionOf> , <http://purl.org/datanode/ns/isUpdateOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isUpdatedVersionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasUpdatedVersion> .
+
+<http://purl.org/datanode/ns/previousVersionOf>
+      a       ns0:InverseFunctionalProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "previous version of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/previousVersionOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/olderVersionOf> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/versionOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/previousVersionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/nextVersionOf> .
+
+<http://purl.org/datanode/ns/datatypesOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Relates a vocabulary of datatypes to the datanode that uses them."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "datatypes of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/datatypesOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isVocabularyOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/datatypesOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasDatatypes> .
+
+ns0:Ontology
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns0:Ontology ;
+      ns0:equivalentClass ns0:Ontology .
+
+ns1:Class
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns1:Class ;
+      ns0:equivalentClass ns1:Class .
+
+<http://purl.org/datanode/ns/sameIdentityAs>
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/sameIdentityAs> , <http://purl.org/datanode/ns/sameCapabilityAs> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/sameIdentityAs> .
+
+ns1:subPropertyOf
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , rdf:Property ;
+      ns1:range ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns1:subPropertyOf .
+
+<http://purl.org/datanode/ns/hasStandIn>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Some data is a substitute of another, for specific reasons."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has stand-in"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/hasStandIn> ;
+      ns3:description "<p>Are we sure a stand-in is always a derivation?</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasStandIn> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isStandInOf> .
+
+ns0:SymmetricProperty
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns0:SymmetricProperty , ns1:Resource , ns0:ObjectProperty ;
+      ns0:equivalentClass ns0:SymmetricProperty .
+
+<http://purl.org/datanode/ns/relationsOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "relations of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relationsOf> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/descriptorsOf> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isVocabularyOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/relationsOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasRelations> .
+
+ns0:InverseFunctionalProperty
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns0:InverseFunctionalProperty , ns1:Resource , ns0:ObjectProperty ;
+      ns0:equivalentClass ns0:InverseFunctionalProperty .
+
+ns0:equivalentClass
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:range ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subPropertyOf ns0:equivalentClass .
+
+xsd:gYearMonth
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+ns2:note
+      a       ns0:AnnotationProperty , ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns2:note .
+
+<http://purl.org/datanode/ns/refactoredInto>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "refactored into"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/processedInto> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/refactoredInto> ;
+      ns3:description "<p>Refactoring is transforming to make it simpler, optimized and more efficient for a target task.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/refactoredInto> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/refactoredFrom> .
+
+<http://purl.org/datanode/ns/hasAddition>
+      a       ns0:InverseFunctionalProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "some data is the addition-update of some other"@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has addition"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasUpdate> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/hasChange> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/hasAddition> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasAddition> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isAdditionOf> .
+
+<http://purl.org/datanode/ns/hasExtraction>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has extraction"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/hasExtraction> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/hasInterpretation> ;
+      ns3:description "<p>Relates a datanode to another that formalize the information obtained as a result of an information extraction process, for example a data mining process.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasExtraction> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isExtractionOf> .
+
+<http://purl.org/datanode/ns/sharesInterpretationWith>
+      a       ns0:SymmetricProperty , ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "This relates a data node to any datanode that can support its interpretation. They connected nodes might be in the same interpretation model."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "shares interpretation with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/sharesInterpretationWith> .
+
+<http://purl.org/datanode/ns/describes>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node describes another."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "describes"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/describes> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/about> ;
+      ns3:description "<p>This relates a datanode to any datanode being an object in its representation.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/describes> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/describedBy> .
+
+<http://purl.org/datanode/ns/hasSelection>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "We represent here the outcome of the isolation of a part of a data node for a specific intent."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has selection"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasPart> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/hasSelection> , <http://purl.org/datanode/ns/touch> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasSelection> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isSelectionOf> .
+
+<http://purl.org/datanode/ns/descriptorsOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "This property relates a datanode of descriptors to the datanode that uses them."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "descriptors of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/descriptorsOf> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isVocabularyOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/descriptorsOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasDescriptors> .
+
+<http://purl.org/datanode/ns/disjointCapabilityWith>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "disjoint capability"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/disjointCapabilityWith> , <http://purl.org/datanode/ns/differentPopulationFrom> , <http://purl.org/datanode/ns/differentVocabularyFrom> , <http://purl.org/datanode/ns/differentCapabilityFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/disjointCapabilityWith> .
+
+xsd:hexBinary
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+<http://purl.org/datanode/ns/isAdditionOf>
+      a       ns1:Resource , rdf:Property , ns0:FunctionalProperty , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is addition of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isChangeOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isUpdateOf> , <http://purl.org/datanode/ns/isAdditionOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isAdditionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasAddition> .
+
+xsd:integer
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:decimal , xsd:integer ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:integer .
+
+<http://purl.org/datanode/ns/processedInto>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node is processed (transformed) to obtain another one."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "processed into"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/processedInto> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/processedInto> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/processedFrom> .
+
+<http://purl.org/datanode/ns/>
+      a       ns0:Ontology , ns1:Resource ;
+      ns1:label "The Datanode Vocabulary" ;
+      ns3:creator "enridaga - enricodaga@gmail.com" ;
+      ns3:description "<p>Naming conventions: <ol><li>camel case <li>has[Noun]/is[Noun]Of <li>[present tense transitive verb]/[past tense verb]By,To,From,... <li>has[Past tense verb]/[past tense verb]To,From,... </ol></p>" ;
+      ns0:versionInfo "0.4-alpha" ;
+      ns2:note """<p>Changelog 0.3</p>
+<ol>
+<li>D :isUpdatedVersionOf rdfs:subPropertyOf :olderVersionOf
+<li>D :hasUpdatedVersion rdfs:subPropertyOf :newerVersionOf
+<li>A :isUpdatedVersionOf rdfs:subPropertyOf :nextVersionOf
+<li>A :hasUpdatedVersion rdfs:subPropertyOf :previousVersionOf
+<li>A :versionOf :subPropertyOf :overlappingCapabilityWith
+<li>A :remodelledFrom rdfs:subPropertyOf :overlappingPopulationWith ;
+<li>A :remodelledTo rdfs:subPropertyOf :overlappingPopulationWith ;
+<li>A :isPartOf rdfs:subPropertyOf :overlappingPopulationWith, :overlappingVocabularyWith
+<li>A :duplicate a owl:TransitiveProperty
+<li>A :isCopyOf rdfs:subPropertyOf :sameCapabilityAs
+<li>A :links rdfs:subPropertyOf :overlappingPopulationWith
+<li>A :linkedTo rdfs:subPropertyOf :overlappingPopulationWith
+<li>A 
+:sharesInterpretationWith
+	a owl:TransitiveProperty, owl:SymmetricProperty ;
+	rdfs:label \"shares interpretation with\"@en ;
+	rdfs:comment \"This relates a data node to any datanode that can support its interpretation. They connected nodes might be in the same interpretation model.\"@en .
+:isUpdateOf rdfs:subPropertyOf :sharesInterpretationWith .
+:hasUpdate rdfs:subPropertyOf :sharesInterpretationWith .
+:overlappingPopulation rdfs:subPropertyOf :sharesInterpretationWith .
+:overlappingVocabulary rdfs:subPropertyOf :sharesInterpretationWith .
+:inconsistentWith rdfs:subPropertyOf :sharesInterpretationWith .
+:consistentWith rdfs:subPropertyOf :sharesInterpretationWith .
+:references rdfs:subPropertyOf :sharesInterpretationWith .
+:referencedBy rdfs:subPropertyOf :sharesInterpretationWith .
+:hasVocabulary rdfs:subPropertyOf :sharesInterpretationWith .
+:isVocabularyOf rdfs:subPropertyOf :sharesInterpretationWith .
+<li>Alignments with prov, void and dcat
+</ol> """ .
+
+<http://purl.org/datanode/ns/hasPart>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "To related a data node to another which is contained in it."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has part"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasPart> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/touch> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasPart> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isPartOf> .
+
+<http://purl.org/datanode/ns/hasInference>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has inference"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/hasInference> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/hasInterpretation> ;
+      ns3:description "<p>Relates a datanode to another including a set of logical inferences deduced from the first.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasInference> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isInferenceOf> .
+
+<http://purl.org/datanode/ns/isPortionOf>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is portion of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isPortionOf> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isPartOf> , <http://purl.org/datanode/ns/touch> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isPortionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasPortion> .
+
+<http://purl.org/datanode/ns/newerVersionOf>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "newer version of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/newerVersionOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/versionOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/newerVersionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/olderVersionOf> .
+
+xsd:gYear
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+ns0:AnnotationProperty
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns0:AnnotationProperty ;
+      ns0:equivalentClass ns0:AnnotationProperty .
+
+<http://purl.org/datanode/ns/refactoredFrom>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "refactored from"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/refactoredFrom> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/processedFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/refactoredFrom> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/refactoredInto> .
+
+ns1:label
+      a       ns1:Resource , rdf:Property ;
+      ns1:range ns1:Resource , ns1:Literal ;
+      ns1:subPropertyOf ns1:label .
+
+<http://purl.org/datanode/ns/isStatisticOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is statistic of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/describes> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/isComputationOf> , <http://purl.org/datanode/ns/about> , <http://purl.org/datanode/ns/isStatisticOf> , <http://purl.org/datanode/ns/processedFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isStatisticOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasStatistic> .
+
+<http://purl.org/datanode/ns/hasAnonymized>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has anonymized substitute"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/processedInto> , <http://purl.org/datanode/ns/hasAnonymized> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/hasStandIn> ;
+      ns3:description "<p>Relates a datanode to another that is the result of a process that removes any personal identifiable information. The resulting datanode is meant to play the role of its origin in the application.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasAnonymized> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isAnonymizedOf> .
+
+<http://purl.org/datanode/ns/Datanode>
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:comment "A data node is an underspecified data object, in a network of data nodes."@en ;
+      ns1:label "A data node"@en ;
+      ns1:subClassOf ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns0:equivalentClass <http://purl.org/datanode/ns/Datanode> .
+
+<http://purl.org/datanode/ns/isAnonymizedOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is anonymized substitute of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isStandInOf> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isAnonymizedOf> , <http://purl.org/datanode/ns/processedFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isAnonymizedOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasAnonymized> .
+
+ns1:Container
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns1:Container ;
+      ns0:equivalentClass ns1:Container .
+
+()    a       ns1:Resource , rdf:List .
+
+<http://purl.org/datanode/ns/processedFrom>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "processed from"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/processedFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/processedFrom> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/processedInto> .
+
+<http://purl.org/datanode/ns/hasStatistic>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has statistic"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/processedInto> , <http://purl.org/datanode/ns/describedBy> , <http://purl.org/datanode/ns/hasComputation> , <http://purl.org/datanode/ns/hasStatistic> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/metadata> ;
+      ns3:description "<p>Statistics are at the same time computations and metadata of a source datanode.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasStatistic> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isStatisticOf> .
+
+xsd:byte
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:byte , xsd:long , xsd:int , xsd:integer , xsd:short ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:byte .
+
+<http://purl.org/datanode/ns/isExampleOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "example of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isExampleOf> , <http://purl.org/datanode/ns/isPartOf> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isSelectionOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isExampleOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasExample> .
+
+<http://purl.org/datanode/ns/hasCache>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has cache"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/sameCapabilityAs> , <http://purl.org/datanode/ns/hasCopy> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasSnapshot> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/sameIdentityAs> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/hasCache> , <http://purl.org/datanode/ns/hasStandIn> , <http://purl.org/datanode/ns/versionOf> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasCache> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isCacheOf> .
+
+xsd:nonPositiveInteger
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime .
+
+<http://purl.org/datanode/ns/hasAnnotation>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "This relates a datanode to some metadata attached to it."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has annotation"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/hasAttached> , <http://purl.org/datanode/ns/adjacentTo> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/metadata> , <http://purl.org/datanode/ns/hasAnnotation> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasAnnotation> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isAnnotationOf> .
+
+<http://purl.org/datanode/ns/isAnnotationOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "When an attached datanode is also metadata about what it is attached to... it is an annotation."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is annotation of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/adjacentTo> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/about> , <http://purl.org/datanode/ns/attachedTo> , <http://purl.org/datanode/ns/isAnnotationOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isAnnotationOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasAnnotation> .
+
+<http://purl.org/datanode/ns/isDependencyOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A datanode is required by another one in order for it to be used or interpreted."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is dependency of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isDependencyOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/referencedBy> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isDependencyOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasDependency> .
+
+ns0:ReflexiveProperty
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns0:ReflexiveProperty ;
+      ns0:equivalentClass ns0:ReflexiveProperty .
+
+<http://purl.org/datanode/ns/hasPortion>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has portion"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasPart> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/hasPortion> , <http://purl.org/datanode/ns/touch> ;
+      ns3:description ":hasPortion is used to capture the relation with a subset of the data."@en ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasPortion> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isPortionOf> .
+
+<http://purl.org/datanode/ns/linkedBy>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node is linked by another using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs)."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "linked by"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/linkedBy> , <http://purl.org/datanode/ns/referencedBy> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/linkedBy> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/links> .
+
+<http://purl.org/datanode/ns/metadata>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node has another data node as metadata."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "metadata" ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/metadata> ;
+      ns3:description "<p>This is used to relate a data node to its metadata.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/metadata> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/about> .
+
+<http://purl.org/datanode/ns/remodelledFrom>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "remodelled from"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/remodelledFrom> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/processedFrom> ;
+      ns3:description "<p>Remodelling refer to the translation of the data to another symbolic structure (model), while keeping the same interpretation.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/remodelledFrom> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/remodelledTo> .
+
+rdf:subject
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , rdf:Statement ;
+      ns1:subPropertyOf rdf:subject ;
+      ns0:equivalentProperty
+              rdf:subject .
+
+xsd:boolean
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns0:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+xsd:date
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns0:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+<http://purl.org/datanode/ns/isSectionOf>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is section of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isSectionOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isPartOf> , <http://purl.org/datanode/ns/touch> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isSectionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasSection> .
+
+<http://purl.org/datanode/ns/isDerivationOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is derivation of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/isDerivationOf> ;
+      ns3:description "<p>This relation indicates that a data node is the origin of another, in the sense that the second have been produced using the first as information source.</p>" , "<p>Is this property transitive? (No)</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isDerivationOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasDerivation> .
+
+xsd:string
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns0:disjointWith xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+<http://purl.org/datanode/ns/identifiersOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "identifiers of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/identifiersOf> , <http://purl.org/datanode/ns/isSectionOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isPartOf> , <http://purl.org/datanode/ns/touch> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/identifiersOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasIdentifiers> .
+
+<http://purl.org/datanode/ns/hasChange>
+      a       ns0:InverseFunctionalProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "some data has some other as a change to come"@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has change"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasUpdate> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/hasChange> , <http://purl.org/datanode/ns/touch> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasChange> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isChangeOf> .
+
+xsd:decimal
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime .
+
+<http://purl.org/datanode/ns/isExtractionOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "extraction of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/isInterpretationOf> , <http://purl.org/datanode/ns/isExtractionOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isExtractionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasExtraction> .
+
+<http://purl.org/datanode/ns/sameCapabilityAs>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "same capability as"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/sameCapabilityAs> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns3:description "<p>Having the same capability implies having the same population and the same vocabulary. In colloquial terms, the same data is described in the same terms.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/sameCapabilityAs> .
+
+<http://purl.org/datanode/ns/hasVocabulary>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Relates a data node to a datanode representing a set of names that are all used in it."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has vocabulary"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/hasVocabulary> ;
+      ns3:description "<p>The range of this property is a data node which enumerates a set of terms that are all used by the subject data node as identifiers (eventually to name structural elements, like attribute names or types).</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasVocabulary> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isVocabularyOf> ;
+      ns2:note "<p>When a data node :hasVocabulary another, we expect the latter to be the collection of terms used by the data node to name its properties and types.<br/>How to know if there is some term that is not part of that vocabulary? In other words, is it relevant to know whether a vocabulary is complete or not wrt some data?</p>" .
+
+xsd:int
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:long , xsd:int , xsd:integer ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:int .
+
+ns0:onProperty
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , ns0:Class , ns1:Class , ns0:Restriction ;
+      ns1:range ns0:Property , ns1:Resource ;
+      ns1:subPropertyOf ns0:onProperty .
+
+ns1:seeAlso
+      a       ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns1:seeAlso ;
+      ns0:equivalentProperty
+              ns1:seeAlso .
+
+ns1:comment
+      a       ns1:Resource , rdf:Property ;
+      ns1:range ns1:Resource , ns1:Literal ;
+      ns1:subPropertyOf ns1:comment .
+
+rdf:Seq
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:Seq , ns1:Container ;
+      ns0:equivalentClass rdf:Seq .
+
+xsd:nonNegativeInteger
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:nonNegativeInteger , xsd:integer ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:nonNegativeInteger .
+
+<http://purl.org/datanode/ns/hasRelations>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Relates a datanode to another enumerating the set of relations used in it."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has relations"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasDescriptors> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/hasRelations> , <http://purl.org/datanode/ns/hasVocabulary> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasRelations> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/relationsOf> .
+
+ns0:FunctionalProperty
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:Property , ns0:FunctionalProperty ;
+      ns0:equivalentClass ns0:FunctionalProperty .
+
+<http://purl.org/datanode/ns/versionOf>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "version"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/versionOf> ;
+      ns3:description "<p>Use this property to represent a temporal relation between two data nodes that are meant to be the same at a different point in time. The property is symmetric and does not specify a direction.<br/>This property is not transitive. While it can be argued that the identity of something tracked temporarly should not change, thus implying transitivity, we want support the case when a data note has more then one following version (branching). Avoiding transitivity allows it.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/versionOf> .
+
+<http://purl.org/datanode/ns/links>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node links to other data using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs)."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "links"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/references> , <http://purl.org/datanode/ns/links> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/links> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/linkedBy> ;
+      ns2:note "It would be interesting to have a taste of other ways of doing similar links in other context then Linked Data."@en .
+
+xsd:unsignedLong
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:nonNegativeInteger , xsd:long , xsd:unsignedLong , xsd:integer ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:unsignedLong .
+
+<http://purl.org/datanode/ns/differentCapabilityFrom>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "different capability from"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/differentCapabilityFrom> ;
+      ns3:description "<p>Two nodes have different potential. Two data nodes using different vocabularies or two copies of the same data in different places.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/differentCapabilityFrom> ;
+      ns2:note "(Similarly to :overlappingCapabilityWith) This relation is needed to generically express comparison of data nodes with relation to specific tasks."@en .
+
+ns0:differentFrom
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:subPropertyOf ns0:differentFrom .
+
+<http://purl.org/datanode/ns/isDeletionOf>
+      a       ns1:Resource , rdf:Property , ns0:FunctionalProperty , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is deletion of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isDeletionOf> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isChangeOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isUpdateOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isDeletionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasDeletion> .
+
+xsd:double
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+<http://purl.org/datanode/ns/inconsistentWith>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node that should not be used together with another."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "inconsistent with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/inconsistentWith> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns3:description "<p>It can be the case that a single data node is corrupted to some respect. It can then be marked to be inconsistent with itself.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/inconsistentWith> ;
+      ns0:propertyDisjointWith
+              <http://purl.org/datanode/ns/consistentWith> ;
+      ns2:note "<p>We intend consistency in a general sense: two data nodes are inconsistent because they do not agree.</p>" .
+
+<http://purl.org/datanode/ns/relatedWith>
+      a       ns0:SymmetricProperty , ns1:Resource , ns0:ReflexiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node is connected to another one."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "related with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> ;
+      ns3:description "<p>This is the Top Property of Datanode.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/relatedWith> .
+
+<http://purl.org/datanode/ns/about>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node is about another data node."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "about"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/about> ;
+      ns3:description "<p>A data node may be metadata about another.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/about> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/metadata> .
+
+<http://purl.org/datanode/ns/isInferenceOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is inference of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/isInterpretationOf> , <http://purl.org/datanode/ns/isInferenceOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isInferenceOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasInference> .
+
+<http://purl.org/datanode/ns/isCopyOf>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is copy of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isCopyOf> , <http://purl.org/datanode/ns/sameIdentityAs> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/sameCapabilityAs> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isCopyOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasCopy> .
+
+<http://purl.org/datanode/ns/hasAttributes>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Relates data to the attributes used."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has attributes"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasDescriptors> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/hasAttributes> , <http://purl.org/datanode/ns/hasVocabulary> ;
+      ns3:description "<p>We relate with this property a data node to a collection of attributes used in it. We distinguish attributes from relations because the first does not qualify the range entity but only the domain entity (saying that a person is 1.82m tall does not change our knowledge about 1.82m).</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasAttributes> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/attributesOf> .
+
+xsd:anyURI
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+<http://purl.org/datanode/ns/isReificationOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is reification of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/isReificationOf> , <http://purl.org/datanode/ns/processedFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isReificationOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasReification> .
+
+rdf:rest
+      a       ns1:Resource , rdf:Property , ns0:FunctionalProperty ;
+      ns1:domain ns1:Resource , rdf:List ;
+      ns1:range ns1:Resource , rdf:List ;
+      ns1:subPropertyOf rdf:rest ;
+      ns0:equivalentProperty
+              rdf:rest .
+
+ns1:range
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , rdf:Property ;
+      ns1:range ns1:Resource , ns1:Class ;
+      ns1:subPropertyOf ns1:range .
+
+<http://purl.org/datanode/ns/hasUpdatedVersion>
+      a       ns0:InverseFunctionalProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A new version of a data node in a specific time point that is meant to substitute it."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "updated version"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/previousVersionOf> , <http://purl.org/datanode/ns/hasUpdate> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/olderVersionOf> , <http://purl.org/datanode/ns/versionOf> , <http://purl.org/datanode/ns/hasUpdatedVersion> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasUpdatedVersion> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isUpdatedVersionOf> .
+
+ns3:description
+      a       ns0:AnnotationProperty , ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns3:description .
+
+<http://purl.org/datanode/ns/disjointSectionWith>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Data can be cut in sections according to specific attributes."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "disjoint section with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/disjointSectionWith> , <http://purl.org/datanode/ns/adjacentTo> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/disjointPartWith> , <http://purl.org/datanode/ns/differentVocabularyFrom> , <http://purl.org/datanode/ns/differentCapabilityFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/disjointSectionWith> .
+
+<http://purl.org/datanode/ns/hasDerivation>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has derivation"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/hasDerivation> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasDerivation> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isDerivationOf> .
+
+<http://purl.org/datanode/ns/hasSummarization>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has summarization"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/hasSummarization> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasSummarization> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isSummarizationOf> .
+
+<http://purl.org/datanode/ns/isSelectionOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is selection of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isPartOf> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isSelectionOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isSelectionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasSelection> .
+
+<http://purl.org/datanode/ns/disjointPartWith>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Two datanodes are adjacent parts of another. This property relates the two parts without specifying anything about their container. Can be used in conjunction with isPartOf to state that two parts do not overlap."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "disjoint part with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/adjacentTo> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/disjointPartWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/disjointPartWith> .
+
+<http://purl.org/datanode/ns/hasInterpretation>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Some data is interpretated such to produce other data."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has interpretation"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/hasInterpretation> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasInterpretation> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isInterpretationOf> .
+
+<http://purl.org/datanode/ns/referencedBy>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "referenced by"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/referencedBy> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/referencedBy> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/references> .
+
+xsd:unsignedShort
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:unsignedShort , xsd:nonNegativeInteger , xsd:unsignedInt , xsd:long , xsd:unsignedLong , xsd:int , xsd:integer , xsd:short ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:unsignedShort .
+
+xsd:time
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns0:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+rdf:first
+      a       ns1:Resource , rdf:Property , ns0:FunctionalProperty ;
+      ns1:domain ns1:Resource , rdf:List ;
+      ns1:subPropertyOf rdf:first ;
+      ns0:equivalentProperty
+              rdf:first .
+
+<http://purl.org/datanode/ns/hasTypes>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Relates a data node to the vocabulary of the types used."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has types"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/hasVocabulary> , <http://purl.org/datanode/ns/hasTypes> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasTypes> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/typesOf> .
+
+ns0:equivalentProperty
+      a       ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns0:equivalentProperty .
+
+<http://purl.org/datanode/ns/describedBy>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Data have other data as description."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "described by"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/describedBy> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/metadata> ;
+      ns3:description "<p>This relates a datanode to any datanode being an object in its representation.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/describedBy> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/describes> .
+
+<http://purl.org/datanode/ns/disjointPortionWith>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "disjoint portion with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/adjacentTo> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/disjointPortionWith> , <http://purl.org/datanode/ns/differentPopulationFrom> , <http://purl.org/datanode/ns/disjointPartWith> , <http://purl.org/datanode/ns/differentCapabilityFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/disjointPortionWith> .
+
+rdf:List
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:List ;
+      ns0:equivalentClass rdf:List .
+
+<http://purl.org/datanode/ns/attributesOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "attributes of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/descriptorsOf> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/attributesOf> , <http://purl.org/datanode/ns/isVocabularyOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/attributesOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasAttributes> .
+
+ns1:ContainerMembershipProperty
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:Property , ns1:ContainerMembershipProperty ;
+      ns0:equivalentClass ns1:ContainerMembershipProperty .
+
+<http://purl.org/datanode/ns/attachedTo>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Data are attached to data for some reason"@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "attached to"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/adjacentTo> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/attachedTo> ;
+      ns3:description "This, along with its inverse \"haveAttached\" , are considered to model the \"physical\" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments."@en ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/attachedTo> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasAttached> .
+
+<http://purl.org/datanode/ns/differentVocabularyFrom>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "different vocabulary from"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/differentCapabilityFrom> , <http://purl.org/datanode/ns/differentVocabularyFrom> ;
+      ns3:description "<p>Two datanodes do not share any set of vocabulary terms.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/differentVocabularyFrom> .
+
+<http://purl.org/datanode/ns/schemaUsedBy>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "schema used by"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/schemaUsedBy> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/referencedBy> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/schemaUsedBy> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/usesSchema> ;
+      ns2:note "Does being a schema imply being a dependency?"@en .
+
+<http://purl.org/datanode/ns/hasUpdate>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node may be related to another that improves its currency."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has update"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasUpdate> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns3:description "<p>Update is considered in a general meaning of having a role meant to better reflect the referred world.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasUpdate> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isUpdateOf> .
+
+ns1:Datatype
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns1:Class , ns1:Datatype ;
+      ns0:equivalentClass ns1:Datatype .
+
+rdf:Alt
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:Alt , ns1:Container ;
+      ns0:equivalentClass rdf:Alt .
+
+<http://purl.org/datanode/ns/isVocabularyOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is vocabulary of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/isVocabularyOf> ;
+      ns3:description "<p>This datanode enumerate a set of terms that are all used by the related datanode.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isVocabularyOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasVocabulary> .
+
+ns0:ObjectProperty
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns0:equivalentClass ns0:ObjectProperty .
+
+ns0:intersectionOf
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subPropertyOf ns0:intersectionOf .
+
+xsd:gMonthDay
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+ns0:inverseOf
+      a       ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns0:inverseOf .
+
+rdf:object
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , rdf:Statement ;
+      ns1:subPropertyOf rdf:object ;
+      ns0:equivalentProperty
+              rdf:object .
+
+<http://purl.org/datanode/ns/isCacheOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is cache of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isStandInOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/isCopyOf> , <http://purl.org/datanode/ns/sameCapabilityAs> , <http://purl.org/datanode/ns/isSnapshotOf> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/isCacheOf> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/sameIdentityAs> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/versionOf> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isCacheOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasCache> .
+
+<http://purl.org/datanode/ns/isComputationOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is computation of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/isComputationOf> , <http://purl.org/datanode/ns/processedFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isComputationOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasComputation> .
+
+<http://purl.org/datanode/ns/combinationFrom>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node that is the result of the combination of another data node with something else."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "combination from"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/combinationFrom> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/combinationFrom> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/combinedIn> .
+
+ns1:Resource
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource ;
+      ns0:equivalentClass ns1:Resource .
+
+ns0:DatatypeProperty
+      a       ns1:Resource , ns1:Class ;
+      ns1:subClassOf rdf:Property .
+
+<http://purl.org/datanode/ns/hasComputation>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has computation"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/processedInto> , <http://purl.org/datanode/ns/hasComputation> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns3:description "<p>Relates a datanode to another that is the result of some computation on its data.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasComputation> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isComputationOf> .
+
+<http://purl.org/datanode/ns/usesSchema>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "Relates a data node to another used as schema."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "uses schema"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/usesSchema> , <http://purl.org/datanode/ns/references> ;
+      ns3:description "<p>The second is intended to be a self contained model that is (even partly) used in the data node.</p>" , "<p>We distinguish the schema and the vocabulary as follows. A vocabulary is the enumeration of a set of terms. A schema organize a set of terms in a system of some sort. A list of body parts is not the anatomy of a body. The furniture is not an interior design model.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/usesSchema> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/schemaUsedBy> .
+
+rdf:Property
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:Property ;
+      ns0:equivalentClass rdf:Property .
+
+<http://purl.org/datanode/ns/hasReification>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has reification"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/processedInto> , <http://purl.org/datanode/ns/hasReification> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns3:description "<p>This property refer to the semantic of reification in RDF.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasReification> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isReificationOf> .
+
+xsd:unsignedByte
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:unsignedShort , xsd:unsignedByte , xsd:byte , xsd:nonNegativeInteger , xsd:unsignedInt , xsd:long , xsd:unsignedLong , xsd:int , xsd:integer , xsd:short ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:unsignedByte .
+
+xsd:positiveInteger
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+<http://purl.org/datanode/ns/consistentWith>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node that can (should) be used together with another. "@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "consistent with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/consistentWith> ;
+      ns3:description "<p>It can be the case that a single data node is verified to be correct. It can then be marked to be consistent with itself.</p>" , "<p>We intend consistency in a general sense: two data nodes are consistent because they agree (ie, they do not disagree...).</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/consistentWith> .
+
+ns1:isDefinedBy
+      a       ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns1:seeAlso , ns1:isDefinedBy ;
+      ns0:equivalentProperty
+              ns1:isDefinedBy .
+
+<http://purl.org/datanode/ns/cleanedFrom>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "cleaned from"@end ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/cleanedFrom> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/processedFrom> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/cleanedFrom> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/cleanedInto> .
+
+<http://purl.org/datanode/ns/nextVersionOf>
+      a       ns1:Resource , rdf:Property , ns0:FunctionalProperty , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "next version of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/newerVersionOf> , <http://purl.org/datanode/ns/nextVersionOf> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/versionOf> ;
+      ns3:description "<p>Relates a datanode to another that is the direct next version.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/nextVersionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/previousVersionOf> .
+
+xsd:unsignedInt
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf xsd:nonNegativeInteger , xsd:unsignedInt , xsd:long , xsd:unsignedLong , xsd:int , xsd:integer ;
+      ns0:disjointWith xsd:time , xsd:string , xsd:date , xsd:boolean , xsd:duration , xsd:float , xsd:dateTime ;
+      ns0:equivalentClass xsd:unsignedInt .
+
+xsd:gMonth
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+rdf:Statement
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:Statement ;
+      ns0:equivalentClass rdf:Statement .
+
+ns0:oneOf
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subPropertyOf ns0:oneOf .
+
+<http://purl.org/datanode/ns/hasExample>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has example"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasPart> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/hasSelection> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/hasExample> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasExample> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isExampleOf> .
+
+<http://purl.org/datanode/ns/isSummarizationOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is summarization of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isSummarizationOf> , <http://purl.org/datanode/ns/isDerivationOf> , <http://purl.org/datanode/ns/relatedWith> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isSummarizationOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasSummarization> .
+
+<http://purl.org/datanode/ns/hasSample>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has sample"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasPart> , <http://purl.org/datanode/ns/hasSample> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/hasPortion> , <http://purl.org/datanode/ns/touch> ;
+      ns3:description "<p>Relates a datanode to an excerpt of its population, with some, non specified, attributes.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasSample> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isSampleOf> .
+
+ns0:disjointPropertyWith
+      a       ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns0:disjointPropertyWith .
+
+ns3:creator
+      a       ns0:AnnotationProperty , ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns3:creator .
+
+<http://purl.org/datanode/ns/touch>
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/touch> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/touch> .
+
+<http://purl.org/datanode/ns/combinedIn>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node that have been combined (with something else) in a given data node."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "combined in"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/combinedIn> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/combinedIn> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/combinationFrom> .
+
+<http://purl.org/datanode/ns/remodelledTo>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "remodelled to"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/processedInto> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/remodelledTo> , <http://purl.org/datanode/ns/samePopulationAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/remodelledTo> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/remodelledFrom> .
+
+rdf:XMLLiteral
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:XMLLiteral ;
+      ns0:equivalentClass rdf:XMLLiteral .
+
+rdf:predicate
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns1:Resource , rdf:Statement ;
+      ns1:subPropertyOf rdf:predicate ;
+      ns0:equivalentProperty
+              rdf:predicate .
+
+xsd:duration
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns0:disjointWith xsd:string , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:dateTime , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+<http://purl.org/datanode/ns/olderVersionOf>
+      a       ns1:Resource , ns0:TransitiveProperty , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "older version of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/olderVersionOf> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/versionOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/olderVersionOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/newerVersionOf> .
+
+<http://purl.org/datanode/ns/isSampleOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is sample of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/isPortionOf> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/isPartOf> , <http://purl.org/datanode/ns/isSampleOf> , <http://purl.org/datanode/ns/touch> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isSampleOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasSample> .
+
+<http://purl.org/datanode/ns/references>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "references"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/references> ;
+      ns3:description "<p>It looks like there could be a more generic property here, which refer to the fact of sharing some signatures (identifiers), without assuming an order or direction of the reference. Two data nodes may simply use the same identifier independently from the intention of making a reference to anything else (then the identifier itself). Does this make sense?</p>" , "<p>The subject of this property includes a mention to something which is (included in) another data node. <br/> Talking about RDF datasets, this refer to the mention of a URI belonging to another dataset. For example, a dataset about employees could mention a Geonames location.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/references> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/referencedBy> .
+
+<http://purl.org/datanode/ns/isUpdateOf>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A data node that is meant to improve the currency of another."@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "is update of"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/isUpdateOf> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/isUpdateOf> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/hasUpdate> .
+
+xsd:gDay
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+<http://purl.org/datanode/ns/hasSnapshot>
+      a       ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:comment "A copy of a data node in a specific time point"@en ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "has snapshot"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingVocabularyWith> , <http://purl.org/datanode/ns/sameCapabilityAs> , <http://purl.org/datanode/ns/hasCopy> , <http://purl.org/datanode/ns/sharesInterpretationWith> , <http://purl.org/datanode/ns/hasSnapshot> , <http://purl.org/datanode/ns/hasDerivation> , <http://purl.org/datanode/ns/overlappingPopulationWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> , <http://purl.org/datanode/ns/sameIdentityAs> , <http://purl.org/datanode/ns/touch> , <http://purl.org/datanode/ns/versionOf> , <http://purl.org/datanode/ns/samePopulationAs> , <http://purl.org/datanode/ns/sameVocabularyAs> ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/hasSnapshot> ;
+      ns0:inverseOf <http://purl.org/datanode/ns/isSnapshotOf> .
+
+xsd:base64Binary
+      a       ns1:Resource , ns1:Datatype , ns1:Class .
+
+ns0:priorVersion
+      a       ns1:Resource , rdf:Property ;
+      ns1:domain ns0:Ontology , ns1:Resource ;
+      ns1:range ns0:Ontology , ns1:Resource ;
+      ns1:subPropertyOf ns0:priorVersion .
+
+ns0:propertyDisjointWith
+      a       ns1:Resource , rdf:Property ;
+      ns1:subPropertyOf ns0:propertyDisjointWith .
+
+rdf:Bag
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , rdf:Bag , ns1:Container ;
+      ns0:equivalentClass rdf:Bag .
+
+<http://purl.org/datanode/ns/overlappingCapabilityWith>
+      a       ns0:SymmetricProperty , ns1:Resource , rdf:Property , ns0:ObjectProperty ;
+      ns1:domain ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:label "overlapping capability with"@en ;
+      ns1:range ns0:Thing , <http://purl.org/datanode/ns/Datanode> , ns1:Resource ;
+      ns1:subPropertyOf <http://purl.org/datanode/ns/relatedWith> , <http://purl.org/datanode/ns/overlappingCapabilityWith> ;
+      ns3:description "<p>Two data nodes have similar potential, their domains overlap.</p>" ;
+      ns0:equivalentProperty
+              <http://purl.org/datanode/ns/overlappingCapabilityWith> ;
+      ns2:note "If the capability is the location, two version might not have the same location. We might want to specify a number of well known capabilities - format, location, meta-model, accessMethod, ... . Might this allow more inferences than the ones we can do now?"@en , "This relation is needed to generically express comparison of data nodes with relation to the domain covered."@en , "Similar relations might refer to other features, being it structural (they share schema elements), physical (they are both in XML) or related to the domain (they both talk about Music Artists) - just to make few examples.. We might want to specify other kind of features, covering: ownership (sameOwner), meta-model (sameMetaModel), syntax (sameSyntax), accessMethod (sameAccessMethod), license (compatibleLicense, sameLicense), policies (?)."@en .
+
+xsd:dateTime
+      a       ns1:Resource , ns0:Class , ns1:Datatype , ns1:Class ;
+      ns0:disjointWith xsd:string , xsd:duration , xsd:float , xsd:decimal , xsd:unsignedInt , xsd:long , xsd:int , xsd:short , xsd:unsignedShort , xsd:time , xsd:unsignedByte , xsd:date , xsd:boolean , xsd:byte , xsd:nonNegativeInteger , xsd:nonPositiveInteger , xsd:unsignedLong , xsd:integer .
+
+ns0:Restriction
+      a       ns1:Resource , ns0:Class , ns1:Class ;
+      ns1:subClassOf ns1:Resource , ns0:Class , ns0:Restriction ;
+      ns0:equivalentClass ns0:Restriction .

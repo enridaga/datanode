@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml 
+	xmlns="http://graphml.graphdrawing.org/xmlns" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:y="http://www.yworks.com/xml/graphml" 
+	xmlns:yed="http://www.yworks.com/xml/yed/3" 
+	xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+		<key attr.name="label" attr.type="string" for="node" id="k_label"/>
+		<key for="node" id="key_nodegraphics" yfiles.type="nodegraphics"/>
+		<key for="edge" id="key_edgegraphics" yfiles.type="edgegraphics"/>
+	<graph edgedefault="directed" id="G">
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similar -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similar -->
+		<node id="n4477854736">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similar]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similar]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#similar<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL32C19 -->
+		<edge id="e_4477854736_4477853936_4477854336" source="n4477854736" target="n4477854336">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarText -->
+		<edge id="e_4477854736_4477855056_4477854976" source="n4477854736" target="n4477854976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similar -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similar -->
+		<node id="n4477854736">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similar]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similar]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#similar<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- ub2bL32C19 -->
+		<edge id="e_4477854736_4477853936_4477854336" source="n4477854736" target="n4477854336">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarText -->
+		<edge id="e_4477854736_4477855056_4477854976" source="n4477854736" target="n4477854976">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasPart</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#entities -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#entities -->
+		<node id="n4477837056">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#entities]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#entities]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#entities<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#text -->
+		<edge id="e_4477837056_4477837136_4477837216" source="n4477837056" target="n4477837216">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL20C19 -->
+		<edge id="e_4477837056_4477853936_4477836736" source="n4477837056" target="n4477836736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL23C34 -->
+		<edge id="e_4477837056_4477854176_4477853776" source="n4477837056" target="n4477853776">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:overlappingPopulationWith</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#entities -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#entities -->
+		<node id="n4477837056">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#entities]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#entities]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#entities<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#text -->
+		<edge id="e_4477837056_4477837136_4477837216" source="n4477837056" target="n4477837216">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:extractedFrom</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL20C19 -->
+		<edge id="e_4477837056_4477853936_4477836736" source="n4477837056" target="n4477836736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasSection</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL23C34 -->
+		<edge id="e_4477837056_4477854176_4477853776" source="n4477837056" target="n4477853776">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:overlappingPopulationWith</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarText -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarText -->
+		<node id="n4477854976">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similarText]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similarText]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#similarText<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities -->
+		<edge id="e_4477854976_4477855216_4477855296" source="n4477854976" target="n4477855296">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasExtraction</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarText -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarText -->
+		<node id="n4477854976">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similarText]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similarText]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#similarText<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities -->
+		<edge id="e_4477854976_4477855216_4477855296" source="n4477854976" target="n4477855296">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasExtraction</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL23C34 -->
+<!-- ub2bL23C34 -->
+		<node id="n4477853776">
+			<data key="k_label"><![CDATA[ub2bL23C34]]></data>
+			<data key="d5"><![CDATA[ub2bL23C34]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL23C34<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#index -->
+		<edge id="e_4477853776_4477854496_4477854416" source="n4477853776" target="n4477854416">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL23C34 -->
+<!-- ub2bL23C34 -->
+		<node id="n4477853776">
+			<data key="k_label"><![CDATA[ub2bL23C34]]></data>
+			<data key="d5"><![CDATA[ub2bL23C34]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL23C34<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#index -->
+		<edge id="e_4477853776_4477854496_4477854416" source="n4477853776" target="n4477854416">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11# -->
+<!-- textual components of open educational resources are automatically annotated with relevant entities  (using a named entity recognition system) so that these rich annotations can be searched by similarity. -->
+		<node id="n4477836496">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>textual components of open educational resources are automatically annotated with relevant entities  (using a named entity recognition system) so that these rich annotations can be searched by similarity.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4477836496_4477836656_4477836816" source="n4477836496" target="n4477836816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having an open educational resource >> access, Resource 1) identify its textual component >> identify, TextualComponent 2) identify the list of entity/score annotations of the textual component >> identify, List, Resource, Score, Annotation, TextualComponent 3) identify other similar lists of entity/score annotations >> identify, OtherThan, Annotation, Similarity, Score, Resource 4) identify the textual components of the similar lists of entity/score annotations >> identify, TextualComponent, List, Similarity, Resource, Score, Annotation 5) identify the open educational resources having the similar textual components >> identify, Resource, Set, ResourceFeature, Similarity, TextualComponent 6) take the 10 most similar open educational resources >> take, Best, 10, Similarity, Resource, Set -->
+		<edge id="e_4477836496_4477836576_4477740624" source="n4477836496" target="n4477740624">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- textual components of open educational resources are automatically annotated with relevant entities  (using a named entity recognition system) so that these rich annotations can be searched by similarity. -->
+		<edge id="e_4477836496_4477836976_4477740752" source="n4477836496" target="n4477740752">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11# -->
+<!-- textual components of open educational resources are automatically annotated with relevant entities  (using a named entity recognition system) so that these rich annotations can be searched by similarity. -->
+		<node id="n4477836496">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>textual components of open educational resources are automatically annotated with relevant entities  (using a named entity recognition system) so that these rich annotations can be searched by similarity.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://xmlns.com/foaf/0.1/Document -->
+		<edge id="e_4477836496_4477836656_4477836816" source="n4477836496" target="n4477836816">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdf:type</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- 0) having an open educational resource >> access, Resource 1) identify its textual component >> identify, TextualComponent 2) identify the list of entity/score annotations of the textual component >> identify, List, Resource, Score, Annotation, TextualComponent 3) identify other similar lists of entity/score annotations >> identify, OtherThan, Annotation, Similarity, Score, Resource 4) identify the textual components of the similar lists of entity/score annotations >> identify, TextualComponent, List, Similarity, Resource, Score, Annotation 5) identify the open educational resources having the similar textual components >> identify, Resource, Set, ResourceFeature, Similarity, TextualComponent 6) take the 10 most similar open educational resources >> take, Best, 10, Similarity, Resource, Set -->
+		<edge id="e_4477836496_4477836576_4477740624" source="n4477836496" target="n4477740624">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:comment</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- textual components of open educational resources are automatically annotated with relevant entities  (using a named entity recognition system) so that these rich annotations can be searched by similarity. -->
+		<edge id="e_4477836496_4477836976_4477740752" source="n4477836496" target="n4477740752">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>rdfs:label</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities -->
+		<node id="n4477855296">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#entities -->
+		<edge id="e_4477855296_4477854816_4477837056" source="n4477855296" target="n4477837056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:overlappingCapabilityWith</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#index -->
+		<edge id="e_4477855296_4477854496_4477854416" source="n4477855296" target="n4477854416">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL32C19 -->
+<!-- ub2bL32C19 -->
+		<node id="n4477854336">
+			<data key="k_label"><![CDATA[ub2bL32C19]]></data>
+			<data key="d5"><![CDATA[ub2bL32C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL32C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#score -->
+		<edge id="e_4477854336_4477853856_4477854096" source="n4477854336" target="n4477854096">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasVocabulary</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL32C19 -->
+<!-- ub2bL32C19 -->
+		<node id="n4477854336">
+			<data key="k_label"><![CDATA[ub2bL32C19]]></data>
+			<data key="d5"><![CDATA[ub2bL32C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL32C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#score -->
+		<edge id="e_4477854336_4477853856_4477854096" source="n4477854336" target="n4477854096">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasVocabulary</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#text -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#text -->
+		<node id="n4477837216">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#text]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#text]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#text<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#input -->
+		<edge id="e_4477837216_4477854496_4477855376" source="n4477837216" target="n4477855376">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#text -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#text -->
+		<node id="n4477837216">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#text]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#text]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#text<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#input -->
+		<edge id="e_4477837216_4477854496_4477855376" source="n4477837216" target="n4477855376">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities -->
+		<node id="n4477855296">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#similarEntities<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#entities -->
+		<edge id="e_4477855296_4477854816_4477837056" source="n4477855296" target="n4477837056">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:overlappingCapabilityWith</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#index -->
+		<edge id="e_4477855296_4477854496_4477854416" source="n4477855296" target="n4477854416">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isPartOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#output -->
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#output -->
+		<node id="n4477854256">
+			<data key="k_label"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#output]]></data>
+			<data key="d5"><![CDATA[http://purl.org/datanode/ex/0.2/DISCOU/11#output]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>http://purl.org/datanode/ex/0.2/DISCOU/11#output<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#similar -->
+		<edge id="e_4477854256_4477854656_4477854736" source="n4477854256" target="n4477854736">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:isSelectionOf</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL20C19 -->
+<!-- ub2bL20C19 -->
+		<node id="n4477836736">
+			<data key="k_label"><![CDATA[ub2bL20C19]]></data>
+			<data key="d5"><![CDATA[ub2bL20C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL20C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#score -->
+		<edge id="e_4477836736_4477853856_4477854096" source="n4477836736" target="n4477854096">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasVocabulary</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+<!-- ub2bL20C19 -->
+<!-- ub2bL20C19 -->
+		<node id="n4477836736">
+			<data key="k_label"><![CDATA[ub2bL20C19]]></data>
+			<data key="d5"><![CDATA[ub2bL20C19]]></data>
+			<data key="key_nodegraphics">
+				<y:GenericNode configuration="com.yworks.flowchart.start1">
+					<y:Fill color="#FFFFFF" transparent="true"/>
+					<y:BorderStyle color="#FFFFFF" transparent="true" type="line" width="0.0"/>
+					<y:NodeLabel 
+>ub2bL20C19<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel> 
+<y:ModelParameter> 
+<y:SmartNodeLabelModelParameter 
+/>
+</y:ModelParameter>
+</y:NodeLabel>
+				</y:GenericNode>
+			</data>
+		</node>
+<!-- http://purl.org/datanode/ex/0.2/DISCOU/11#score -->
+		<edge id="e_4477836736_4477853856_4477854096" source="n4477836736" target="n4477854096">
+			<data key="key_edgegraphics">
+			<y:BezierEdge>
+				<y:LineStyle color="#000000" type="line" width="2.0"/>
+				<y:Arrows source="none" target="white_delta"/>
+				<y:EdgeLabel>dn:hasVocabulary</y:EdgeLabel>
+			</y:BezierEdge>
+			</data>
+		</edge>
+	</graph>
+</graphml>

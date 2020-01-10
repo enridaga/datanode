@@ -1,0 +1,946 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ns3="http://purl.org/dc/terms/"
+    xmlns:ns0="http://www.w3.org/2002/07/owl#"
+    xmlns:ns2="http://www.w3.org/2004/02/skos/core#"
+    xmlns:ns1="http://www.w3.org/2000/01/rdf-schema#">
+  <ns0:Ontology rdf:about="http://purl.org/datanode/ns/">
+    <ns1:label>The Datanode Vocabulary</ns1:label>
+    <ns0:versionInfo>0.4-alpha</ns0:versionInfo>
+    <ns3:creator>enridaga - enricodaga@gmail.com</ns3:creator>
+    <ns3:description>&lt;p&gt;Naming conventions: &lt;ol&gt;&lt;li&gt;camel case &lt;li&gt;has[Noun]/is[Noun]Of &lt;li&gt;[present tense transitive verb]/[past tense verb]By,To,From,... &lt;li&gt;has[Past tense verb]/[past tense verb]To,From,... &lt;/ol&gt;&lt;/p&gt;</ns3:description>
+    <ns2:note>&lt;p&gt;Changelog 0.3&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;D :isUpdatedVersionOf rdfs:subPropertyOf :olderVersionOf
+&lt;li&gt;D :hasUpdatedVersion rdfs:subPropertyOf :newerVersionOf
+&lt;li&gt;A :isUpdatedVersionOf rdfs:subPropertyOf :nextVersionOf
+&lt;li&gt;A :hasUpdatedVersion rdfs:subPropertyOf :previousVersionOf
+&lt;li&gt;A :versionOf :subPropertyOf :overlappingCapabilityWith
+&lt;li&gt;A :remodelledFrom rdfs:subPropertyOf :overlappingPopulationWith ;
+&lt;li&gt;A :remodelledTo rdfs:subPropertyOf :overlappingPopulationWith ;
+&lt;li&gt;A :isPartOf rdfs:subPropertyOf :overlappingPopulationWith, :overlappingVocabularyWith
+&lt;li&gt;A :duplicate a owl:TransitiveProperty
+&lt;li&gt;A :isCopyOf rdfs:subPropertyOf :sameCapabilityAs
+&lt;li&gt;A :links rdfs:subPropertyOf :overlappingPopulationWith
+&lt;li&gt;A :linkedTo rdfs:subPropertyOf :overlappingPopulationWith
+&lt;li&gt;A 
+:sharesInterpretationWith
+	a owl:TransitiveProperty, owl:SymmetricProperty ;
+	rdfs:label "shares interpretation with"@en ;
+	rdfs:comment "This relates a data node to any datanode that can support its interpretation. They connected nodes might be in the same interpretation model."@en .
+:isUpdateOf rdfs:subPropertyOf :sharesInterpretationWith .
+:hasUpdate rdfs:subPropertyOf :sharesInterpretationWith .
+:overlappingPopulation rdfs:subPropertyOf :sharesInterpretationWith .
+:overlappingVocabulary rdfs:subPropertyOf :sharesInterpretationWith .
+:inconsistentWith rdfs:subPropertyOf :sharesInterpretationWith .
+:consistentWith rdfs:subPropertyOf :sharesInterpretationWith .
+:references rdfs:subPropertyOf :sharesInterpretationWith .
+:referencedBy rdfs:subPropertyOf :sharesInterpretationWith .
+:hasVocabulary rdfs:subPropertyOf :sharesInterpretationWith .
+:isVocabularyOf rdfs:subPropertyOf :sharesInterpretationWith .
+&lt;li&gt;Alignments with prov, void and dcat
+&lt;/ol&gt; </ns2:note>
+  </ns0:Ontology>
+  <ns0:Class rdf:about="http://purl.org/datanode/ns/Datanode">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <ns1:label xml:lang="en">A data node</ns1:label>
+    <ns1:comment xml:lang="en">A data node is an underspecified data object, in a network of data nodes.</ns1:comment>
+  </ns0:Class>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/relationsOf">
+    <ns1:label xml:lang="en">relations of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/descriptorsOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasRelations"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasAttached">
+    <ns1:label xml:lang="en">has attached</ns1:label>
+    <ns1:comment xml:lang="en">Data have attached other data for some reason</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/adjacentTo"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isStandInOf">
+    <ns1:label xml:lang="en">is stand-in of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDerivationOf"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasStandIn"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/identifiersOf">
+    <ns1:label xml:lang="en">identifiers of</ns1:label>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasIdentifiers"/>
+    </ns0:inverseOf>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/isSectionOf"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasChange">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <ns1:label xml:lang="en">has change</ns1:label>
+    <ns1:comment xml:lang="en">some data has some other as a change to come</ns1:comment>
+    <ns1:subPropertyOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/touch">
+        <ns1:subPropertyOf>
+          <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+        </ns1:subPropertyOf>
+      </rdf:Description>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasUpdate"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/overlappingVocabularyWith">
+    <ns3:description>&lt;p&gt;Two datanodes share a set of vocabulary terms.&lt;/p&gt;</ns3:description>
+    <ns1:label xml:lang="en">overlapping vocabulary with</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasIdentifiers">
+    <ns1:label xml:lang="en">has identifiers</ns1:label>
+    <ns3:description>&lt;p&gt;Relates a datanode to the collection of the identifiers of its population.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/hasSection"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isExtractionOf">
+    <ns1:label xml:lang="en">extraction of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isInterpretationOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasExtraction"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasVocabulary">
+    <ns1:label xml:lang="en">has vocabulary</ns1:label>
+    <ns1:comment xml:lang="en">Relates a data node to a datanode representing a set of names that are all used in it.</ns1:comment>
+    <ns3:description>&lt;p&gt;The range of this property is a data node which enumerates a set of terms that are all used by the subject data node as identifiers (eventually to name structural elements, like attribute names or types).&lt;/p&gt;</ns3:description>
+    <ns2:note>&lt;p&gt;When a data node :hasVocabulary another, we expect the latter to be the collection of terms used by the data node to name its properties and types.&lt;br/&gt;How to know if there is some term that is not part of that vocabulary? In other words, is it relevant to know whether a vocabulary is complete or not wrt some data?&lt;/p&gt;</ns2:note>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/touch"/>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/refactoredInto">
+    <ns1:label xml:lang="en">refactored into</ns1:label>
+    <ns3:description>&lt;p&gt;Refactoring is transforming to make it simpler, optimized and more efficient for a target task.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedInto"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isSnapshotOf">
+    <ns1:label xml:lang="en">is snapshot of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/isCopyOf"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/versionOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasSnapshot"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasAddition">
+    <ns1:label xml:lang="en">has addition</ns1:label>
+    <ns1:comment xml:lang="en">some data is the addition-update of some other</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasChange"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasExtraction">
+    <ns1:label xml:lang="en">has extraction</ns1:label>
+    <ns3:description>&lt;p&gt;Relates a datanode to another that formalize the information obtained as a result of an information extraction process, for example a data mining process.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasInterpretation"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/adjacentTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <ns1:label xml:lang="en">adjacent to</ns1:label>
+    <ns1:comment xml:lang="en">To relate a data node to any of their adjacent data node.</ns1:comment>
+    <ns3:description>&lt;p&gt;This property basically represents the proximity of some data to other. Two parts of the same dataset are adjacents each other.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/relatedWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isCacheOf">
+    <ns1:label xml:lang="en">is cache of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/isStandInOf"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/isSnapshotOf"/>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasCache"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/describes">
+    <ns1:label xml:lang="en">describes</ns1:label>
+    <ns1:comment xml:lang="en">A data node describes another.</ns1:comment>
+    <ns3:description>&lt;p&gt;This relates a datanode to any datanode being an object in its representation.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/about"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isComputationOf">
+    <ns1:label xml:lang="en">is computation of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasComputation"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDatatypes">
+    <ns1:label xml:lang="en">has datatypes</ns1:label>
+    <ns1:comment xml:lang="en">Relates a datanode to the vocabulary of datatypes used in it.</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasVocabulary"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasSelection">
+    <ns1:label xml:lang="en">has selection</ns1:label>
+    <ns1:comment xml:lang="en">We represent here the outcome of the isolation of a part of a data node for a specific intent.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/hasPart"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDerivation"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/descriptorsOf">
+    <ns1:label xml:lang="en">descriptors of</ns1:label>
+    <ns1:comment xml:lang="en">This property relates a datanode of descriptors to the datanode that uses them.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isVocabularyOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDescriptors"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasRelations">
+    <ns1:label xml:lang="en">has relations</ns1:label>
+    <ns1:comment xml:lang="en">Relates a datanode to another enumerating the set of relations used in it.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDescriptors"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/links">
+    <ns1:label xml:lang="en">links</ns1:label>
+    <ns1:comment xml:lang="en">A data node links to other data using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs).</ns1:comment>
+    <ns2:note xml:lang="en">It would be interesting to have a taste of other ways of doing similar links in other context then Linked Data.</ns2:note>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/overlappingPopulationWith"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/references"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/versionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <ns1:label xml:lang="en">version</ns1:label>
+    <ns3:description>&lt;p&gt;Use this property to represent a temporal relation between two data nodes that are meant to be the same at a different point in time. The property is symmetric and does not specify a direction.&lt;br/&gt;This property is not transitive. While it can be argued that the identity of something tracked temporarly should not change, thus implying transitivity, we want support the case when a data note has more then one following version (branching). Avoiding transitivity allows it.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isAdditionOf">
+    <ns1:label xml:lang="en">is addition of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isChangeOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasAddition"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDeletionOf">
+    <ns1:label xml:lang="en">is deletion of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isChangeOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDeletion"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedInto">
+    <ns1:label xml:lang="en">processed into</ns1:label>
+    <ns1:comment xml:lang="en">A data node is processed (transformed) to obtain another one.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDerivation"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/combinationFrom">
+    <ns1:label xml:lang="en">combination from</ns1:label>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/combinedIn"/>
+    </ns0:inverseOf>
+    <ns1:comment xml:lang="en">A data node that is the result of the combination of another data node with something else.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDerivationOf"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasInference">
+    <ns1:label xml:lang="en">has inference</ns1:label>
+    <ns3:description>&lt;p&gt;Relates a datanode to another including a set of logical inferences deduced from the first.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasInterpretation"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/inconsistentWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <ns1:label xml:lang="en">inconsistent with</ns1:label>
+    <ns1:comment xml:lang="en">A data node that should not be used together with another.</ns1:comment>
+    <ns2:note>&lt;p&gt;We intend consistency in a general sense: two data nodes are inconsistent because they do not agree.&lt;/p&gt;</ns2:note>
+    <ns3:description>&lt;p&gt;It can be the case that a single data node is corrupted to some respect. It can then be marked to be inconsistent with itself.&lt;/p&gt;</ns3:description>
+    <ns0:propertyDisjointWith>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/consistentWith"/>
+    </ns0:propertyDisjointWith>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/relatedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+    <ns1:label xml:lang="en">related with</ns1:label>
+    <ns1:comment xml:lang="en">A data node is connected to another one.</ns1:comment>
+    <ns3:description>&lt;p&gt;This is the Top Property of Datanode.&lt;/p&gt;</ns3:description>
+    <ns1:domain rdf:resource="http://purl.org/datanode/ns/Datanode"/>
+    <ns1:range rdf:resource="http://purl.org/datanode/ns/Datanode"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasComputation">
+    <ns1:label xml:lang="en">has computation</ns1:label>
+    <ns3:description>&lt;p&gt;Relates a datanode to another that is the result of some computation on its data.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/about">
+    <ns1:label xml:lang="en">about</ns1:label>
+    <ns1:comment xml:lang="en">A data node is about another data node.</ns1:comment>
+    <ns3:description>&lt;p&gt;A data node may be metadata about another.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relatedWith"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isInferenceOf">
+    <ns1:label xml:lang="en">is inference of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isInterpretationOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasInference"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isInterpretationOf">
+    <ns1:label xml:lang="en">is interpretation of</ns1:label>
+    <ns1:comment xml:lang="en">Some data emerge as the interpretation of other.</ns1:comment>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasInterpretation"/>
+    </ns0:inverseOf>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDerivationOf"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/usesSchema">
+    <ns1:label xml:lang="en">uses schema</ns1:label>
+    <ns1:comment xml:lang="en">Relates a data node to another used as schema.</ns1:comment>
+    <ns3:description>&lt;p&gt;The second is intended to be a self contained model that is (even partly) used in the data node.&lt;/p&gt;</ns3:description>
+    <ns3:description>&lt;p&gt;We distinguish the schema and the vocabulary as follows. A vocabulary is the enumeration of a set of terms. A schema organize a set of terms in a system of some sort. A list of body parts is not the anatomy of a body. The furniture is not an interior design model.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/references"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasAttributes">
+    <ns1:label xml:lang="en">has attributes</ns1:label>
+    <ns1:comment xml:lang="en">Relates data to the attributes used.</ns1:comment>
+    <ns3:description>&lt;p&gt;We relate with this property a data node to a collection of attributes used in it. We distinguish attributes from relations because the first does not qualify the range entity but only the domain entity (saying that a person is 1.82m tall does not change our knowledge about 1.82m).&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDescriptors"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isReificationOf">
+    <ns1:label xml:lang="en">is reification of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasReification"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasUpdatedVersion">
+    <ns1:label xml:lang="en">updated version</ns1:label>
+    <ns1:comment xml:lang="en">A new version of a data node in a specific time point that is meant to substitute it.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasUpdate"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:InverseFunctionalProperty rdf:about="http://purl.org/datanode/ns/previousVersionOf"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDescriptors">
+    <ns1:label xml:lang="en">has descriptors</ns1:label>
+    <ns1:comment xml:lang="en">A descriptor is an element used to qualify a value. Relates a data node to the collection of the descriptors used (being it a data node, obviously).</ns1:comment>
+    <ns3:description>&lt;p&gt;We choose the term descriptor to indicate generically the element used to bind/map/qualify a value with respect to its entity. Practically, this term maps to &lt;ul&gt;&lt;li&gt;"Field" in Object Oriented Programming; &lt;li&gt;"Predicate" in First Order Logic &lt;li&gt;Column identifier (Attribute) in Relation Database terminology &lt;li&gt;rdf:Property in the Resource Description Framework &lt;/ul&gt;&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasVocabulary"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasReification">
+    <ns1:label xml:lang="en">has reification</ns1:label>
+    <ns3:description>&lt;p&gt;This property refer to the semantic of reification in RDF.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDependency">
+    <ns1:label xml:lang="en">has dependency</ns1:label>
+    <ns1:comment xml:lang="en">A datanode needs another to be used or interpreted.</ns1:comment>
+    <ns2:note>The concept of dependency is here considered as to be expressed within the datanode (it is subproperty of references). Is this really a requirement?</ns2:note>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/references"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDerivation">
+    <ns1:label xml:lang="en">has derivation</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relatedWith"/>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDerivationOf"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/refactoredFrom">
+    <ns1:label xml:lang="en">refactored from</ns1:label>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/refactoredInto"/>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isStatisticOf">
+    <ns1:label xml:lang="en">is statistic of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/isComputationOf"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/describes"/>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasStatistic"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/consistentWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <ns1:label xml:lang="en">consistent with</ns1:label>
+    <ns1:comment xml:lang="en">A data node that can (should) be used together with another. </ns1:comment>
+    <ns3:description>&lt;p&gt;We intend consistency in a general sense: two data nodes are consistent because they agree (ie, they do not disagree...).&lt;/p&gt;</ns3:description>
+    <ns3:description>&lt;p&gt;It can be the case that a single data node is verified to be correct. It can then be marked to be consistent with itself.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasSummarization">
+    <ns1:label xml:lang="en">has summarization</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasDerivation"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasAnonymized">
+    <ns1:label xml:lang="en">has anonymized substitute</ns1:label>
+    <ns3:description>&lt;p&gt;Relates a datanode to another that is the result of a process that removes any personal identifiable information. The resulting datanode is meant to play the role of its origin in the application.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasStandIn"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/cleanedFrom">
+    <ns1:label xml:lang="end">cleaned from</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/cleanedInto"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/nextVersionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <ns1:label xml:lang="en">next version of</ns1:label>
+    <ns3:description>&lt;p&gt;Relates a datanode to another that is the direct next version.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/newerVersionOf"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/typesOf">
+    <ns1:label xml:lang="en">types of</ns1:label>
+    <ns1:comment xml:lang="en">Relates the vocabulary of the types used in a datanode to the datanode itself.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isVocabularyOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasTypes"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isSelectionOf">
+    <ns1:label xml:lang="en">is selection of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDerivationOf"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/isPartOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasSelection"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isAnonymizedOf">
+    <ns1:label xml:lang="en">is anonymized substitute of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/isStandInOf"/>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasAnonymized"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/referencedBy">
+    <ns1:label xml:lang="en">referenced by</ns1:label>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/references"/>
+    </ns0:inverseOf>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasInterpretation">
+    <ns1:label xml:lang="en">has interpretation</ns1:label>
+    <ns1:comment xml:lang="en">Some data is interpretated such to produce other data.</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasDerivation"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasExample">
+    <ns1:label xml:lang="en">has example</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasSelection"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/processedFrom">
+    <ns1:label xml:lang="en">processed from</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDerivationOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/optimizedFrom">
+    <ns1:label xml:lang="end">optimized from</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedFrom"/>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/optimizedInto"/>
+    </ns0:inverseOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/optimizedInto">
+    <ns1:label xml:lang="end">optimized into</ns1:label>
+    <ns1:comment xml:lang="en">A datanode have been optimized into a new one, to amplify existing capabilities.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isSummarizationOf">
+    <ns1:label xml:lang="en">is summarization of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDerivationOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasSummarization"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasSample">
+    <ns1:label xml:lang="en">has sample</ns1:label>
+    <ns3:description>&lt;p&gt;Relates a datanode to an excerpt of its population, with some, non specified, attributes.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/hasPortion"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/overlappingPopulationWith">
+    <ns1:label xml:lang="en">overlapping population with</ns1:label>
+    <ns3:description>&lt;p&gt;Two datanodes share some population.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isChangeOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <ns1:label xml:lang="en">is change of</ns1:label>
+    <ns1:comment xml:lang="en">some data is the coming change of some other</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/touch"/>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isUpdateOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasChange"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasStatistic">
+    <ns1:label xml:lang="en">has statistic</ns1:label>
+    <ns3:description>&lt;p&gt;Statistics are at the same time computations and metadata of a source datanode.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasComputation"/>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/describedBy"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isExampleOf">
+    <ns1:label xml:lang="en">example of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/isSelectionOf"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasExample"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasCache">
+    <ns1:label xml:lang="en">has cache</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasStandIn"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasSnapshot"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/combinedIn">
+    <ns1:label xml:lang="en">combined in</ns1:label>
+    <ns1:comment xml:lang="en">A data node that have been combined (with something else) in a given data node.</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasDerivation"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/remodelledTo">
+    <ns1:label xml:lang="en">remodelled to</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/samePopulationAs"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasAnnotation">
+    <ns1:label xml:lang="en">has annotation</ns1:label>
+    <ns1:comment xml:lang="en">This relates a datanode to some metadata attached to it.</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasAttached"/>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/metadata"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isAnnotationOf">
+    <ns1:label xml:lang="en">is annotation of</ns1:label>
+    <ns1:comment xml:lang="en">When an attached datanode is also metadata about what it is attached to... it is an annotation.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/attachedTo"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/about"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasAnnotation"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasTypes">
+    <ns1:label xml:lang="en">has types</ns1:label>
+    <ns1:comment xml:lang="en">Relates a data node to the vocabulary of the types used.</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasVocabulary"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/cleanedInto">
+    <ns1:label xml:lang="end">cleaned into</ns1:label>
+    <ns1:comment xml:lang="en">Clean to make emerge potential capabilities. We intend cleaning in a broad sense, including activities like fixes in the syntax of the data or pruning of unfitting data, with relation to a target task.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedInto"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/describedBy">
+    <ns1:label xml:lang="en">described by</ns1:label>
+    <ns1:comment xml:lang="en">Data have other data as description.</ns1:comment>
+    <ns3:description>&lt;p&gt;This relates a datanode to any datanode being an object in its representation.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/metadata"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/describes"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDependencyOf">
+    <ns1:label xml:lang="en">is dependency of</ns1:label>
+    <ns1:comment xml:lang="en">A datanode is required by another one in order for it to be used or interpreted.</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/referencedBy"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasDependency"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasDeletion">
+    <ns1:label xml:lang="en">has deletion</ns1:label>
+    <ns1:comment xml:lang="en">A data node is the to-delete-information of some other. In other terms, it is the outdated information.</ns1:comment>
+    <ns3:description>&lt;p&gt;Indicates a data node which includes information that is now old or outdated. We don't indicate it to be also a part, this is to discuss.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasChange"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isUpdatedVersionOf">
+    <ns1:label xml:lang="en">updated version of</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isUpdateOf"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/nextVersionOf"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasUpdatedVersion"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isSampleOf">
+    <ns1:label xml:lang="en">is sample of</ns1:label>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasSample"/>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/isPortionOf"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/linkedBy">
+    <ns1:label xml:lang="en">linked by</ns1:label>
+    <ns1:comment xml:lang="en">A data node is linked by another using specific tecniques known in the context of Linked Data (like rdfs:seeAlso or owl:sameAs).</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/overlappingPopulationWith"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/referencedBy"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/links"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/references">
+    <ns1:label xml:lang="en">references</ns1:label>
+    <ns3:description>&lt;p&gt;The subject of this property includes a mention to something which is (included in) another data node. &lt;br/&gt; Talking about RDF datasets, this refer to the mention of a URI belonging to another dataset. For example, a dataset about employees could mention a Geonames location.&lt;/p&gt;</ns3:description>
+    <ns3:description>&lt;p&gt;It looks like there could be a more generic property here, which refer to the fact of sharing some signatures (identifiers), without assuming an order or direction of the reference. Two data nodes may simply use the same identifier independently from the intention of making a reference to anything else (then the identifier itself). Does this make sense?&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/attributesOf">
+    <ns1:label xml:lang="en">attributes of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/descriptorsOf"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasAttributes"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/metadata">
+    <ns1:label>metadata</ns1:label>
+    <ns1:comment xml:lang="en">A data node has another data node as metadata.</ns1:comment>
+    <ns3:description>&lt;p&gt;This is used to relate a data node to its metadata.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relatedWith"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/about"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/attachedTo">
+    <ns1:label xml:lang="en">attached to</ns1:label>
+    <ns1:comment xml:lang="en">Data are attached to data for some reason</ns1:comment>
+    <ns3:description xml:lang="en">This, along with its inverse "haveAttached" , are considered to model the "physical" dependency between data. You need to have access to the first in order to access the second, for example. An obvious example is an email and its attachments.</ns3:description>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasAttached"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/adjacentTo"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isUpdateOf">
+    <ns1:label xml:lang="en">is update of</ns1:label>
+    <ns1:comment xml:lang="en">A data node that is meant to improve the currency of another.</ns1:comment>
+    <ns0:inverseOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasUpdate"/>
+    </ns0:inverseOf>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/schemaUsedBy">
+    <ns1:label xml:lang="en">schema used by</ns1:label>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/usesSchema"/>
+    <ns2:note xml:lang="en">Does being a schema imply being a dependency?</ns2:note>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/referencedBy"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/remodelledFrom">
+    <ns1:label xml:lang="en">remodelled from</ns1:label>
+    <ns3:description>&lt;p&gt;Remodelling refer to the translation of the data to another symbolic structure (model), while keeping the same interpretation.&lt;/p&gt;</ns3:description>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/remodelledTo"/>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/samePopulationAs"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/processedFrom"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasSnapshot">
+    <ns1:label xml:lang="en">has snapshot</ns1:label>
+    <ns1:comment xml:lang="en">A copy of a data node in a specific time point</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/hasCopy"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/versionOf"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasUpdate">
+    <ns1:label xml:lang="en">has update</ns1:label>
+    <ns1:comment xml:lang="en">A data node may be related to another that improves its currency.</ns1:comment>
+    <ns3:description>&lt;p&gt;Update is considered in a general meaning of having a role meant to better reflect the referred world.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/datatypesOf">
+    <ns1:label xml:lang="en">datatypes of</ns1:label>
+    <ns1:comment xml:lang="en">Relates a vocabulary of datatypes to the datanode that uses them.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isVocabularyOf"/>
+    </ns1:subPropertyOf>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasDatatypes"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isDerivationOf">
+    <ns1:label xml:lang="en">is derivation of</ns1:label>
+    <ns3:description>&lt;p&gt;This relation indicates that a data node is the origin of another, in the sense that the second have been produced using the first as information source.&lt;/p&gt;</ns3:description>
+    <ns3:description>&lt;p&gt;Is this property transitive? (No)&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relatedWith"/>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/hasStandIn">
+    <ns1:label xml:lang="en">has stand-in</ns1:label>
+    <ns1:comment xml:lang="en">Some data is a substitute of another, for specific reasons.</ns1:comment>
+    <ns3:description>&lt;p&gt;Are we sure a stand-in is always a derivation?&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasDerivation"/>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:ObjectProperty rdf:about="http://purl.org/datanode/ns/isVocabularyOf">
+    <ns1:label xml:lang="en">is vocabulary of</ns1:label>
+    <ns3:description>&lt;p&gt;This datanode enumerate a set of terms that are all used by the related datanode.&lt;/p&gt;</ns3:description>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasVocabulary"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/touch"/>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith"/>
+    </ns1:subPropertyOf>
+  </ns0:ObjectProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/hasPart">
+    <ns1:label xml:lang="en">has part</ns1:label>
+    <ns1:comment xml:lang="en">To related a data node to another which is contained in it.</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/touch"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/overlappingPopulationWith"/>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/olderVersionOf">
+    <ns1:label xml:lang="en">older version of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/versionOf"/>
+    <ns0:inverseOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/newerVersionOf"/>
+    </ns0:inverseOf>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/isPartOf">
+    <ns1:label xml:lang="en">is part of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/touch"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/overlappingPopulationWith"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasPart"/>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/hasPortion">
+    <ns1:label xml:lang="en">has portion</ns1:label>
+    <ns3:description xml:lang="en">:hasPortion is used to capture the relation with a subset of the data.</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasPart"/>
+    <ns0:inverseOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/isPortionOf"/>
+    </ns0:inverseOf>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/isCopyOf">
+    <ns1:label xml:lang="en">is copy of</ns1:label>
+    <ns1:subPropertyOf>
+      <rdf:Description rdf:about="http://purl.org/datanode/ns/sameIdentityAs">
+        <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/touch"/>
+        <ns1:subPropertyOf>
+          <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sameCapabilityAs"/>
+        </ns1:subPropertyOf>
+      </rdf:Description>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/isDerivationOf"/>
+    <ns0:inverseOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/hasCopy"/>
+    </ns0:inverseOf>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/hasSection">
+    <ns1:label xml:lang="en">has section</ns1:label>
+    <ns1:comment xml:lang="en">Data can be cut in sections according to specific attributes.</ns1:comment>
+    <ns3:description xml:lang="en">An example is the relation between a void:Dataset and a dataset being a specific void:propertyPartition.</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasPart"/>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sameCapabilityAs">
+    <ns1:label xml:lang="en">same capability as</ns1:label>
+    <ns3:description>&lt;p&gt;Having the same capability implies having the same population and the same vocabulary. In colloquial terms, the same data is described in the same terms.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/samePopulationAs"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sameVocabularyAs"/>
+    </ns1:subPropertyOf>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/hasCopy">
+    <ns1:label xml:lang="en">has copy</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/sameIdentityAs"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/hasDerivation"/>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sharesInterpretationWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relatedWith"/>
+    <ns1:label xml:lang="en">shares interpretation with</ns1:label>
+    <ns1:comment xml:lang="en">This relates a data node to any datanode that can support its interpretation. They connected nodes might be in the same interpretation model.</ns1:comment>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/isPortionOf">
+    <ns1:label xml:lang="en">is portion of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/isPartOf"/>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/newerVersionOf">
+    <ns1:label xml:lang="en">newer version of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/versionOf"/>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/redundantWith">
+    <ns1:label xml:lang="en">redundant with</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/overlappingVocabularyWith"/>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/overlappingPopulationWith"/>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/isSectionOf">
+    <ns1:label xml:lang="en">is section of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/isPartOf"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/hasSection"/>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/samePopulationAs">
+    <ns1:label xml:lang="en">same population</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/overlappingPopulationWith"/>
+  </ns0:TransitiveProperty>
+  <ns0:TransitiveProperty rdf:about="http://purl.org/datanode/ns/sameVocabularyAs">
+    <ns1:label xml:lang="en">same vocabulary</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/overlappingVocabularyWith"/>
+  </ns0:TransitiveProperty>
+  <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointSectionWith">
+    <ns1:label xml:lang="en">disjoint section with</ns1:label>
+    <ns1:comment xml:lang="en">Data can be cut in sections according to specific attributes.</ns1:comment>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentVocabularyFrom"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointPartWith"/>
+    </ns1:subPropertyOf>
+  </ns0:SymmetricProperty>
+  <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/overlappingCapabilityWith">
+    <ns1:label xml:lang="en">overlapping capability with</ns1:label>
+    <ns3:description>&lt;p&gt;Two data nodes have similar potential, their domains overlap.&lt;/p&gt;</ns3:description>
+    <ns2:note xml:lang="en">This relation is needed to generically express comparison of data nodes with relation to the domain covered.</ns2:note>
+    <ns2:note xml:lang="en">Similar relations might refer to other features, being it structural (they share schema elements), physical (they are both in XML) or related to the domain (they both talk about Music Artists) - just to make few examples.. We might want to specify other kind of features, covering: ownership (sameOwner), meta-model (sameMetaModel), syntax (sameSyntax), accessMethod (sameAccessMethod), license (compatibleLicense, sameLicense), policies (?).</ns2:note>
+    <ns2:note xml:lang="en">If the capability is the location, two version might not have the same location. We might want to specify a number of well known capabilities - format, location, meta-model, accessMethod, ... . Might this allow more inferences than the ones we can do now?</ns2:note>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relatedWith"/>
+  </ns0:SymmetricProperty>
+  <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointPortionWith">
+    <ns1:label xml:lang="en">disjoint portion with</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentPopulationFrom"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointPartWith"/>
+    </ns1:subPropertyOf>
+  </ns0:SymmetricProperty>
+  <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/duplicate">
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/sameIdentityAs"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    <ns1:label xml:lang="en">duplicate</ns1:label>
+    <ns0:disjointPropertyWith>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointCapabilityWith"/>
+    </ns0:disjointPropertyWith>
+  </ns0:SymmetricProperty>
+  <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointCapabilityWith">
+    <ns1:label xml:lang="en">disjoint capability</ns1:label>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentPopulationFrom"/>
+    </ns1:subPropertyOf>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentVocabularyFrom"/>
+    </ns1:subPropertyOf>
+  </ns0:SymmetricProperty>
+  <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentPopulationFrom">
+    <ns1:label xml:lang="en">different population from</ns1:label>
+    <ns3:description>&lt;p&gt;Two datanodes do not share any population.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf>
+      <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentCapabilityFrom"/>
+    </ns1:subPropertyOf>
+  </ns0:SymmetricProperty>
+  <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/disjointPartWith">
+    <ns1:label xml:lang="en">disjoint part with</ns1:label>
+    <ns1:comment xml:lang="en">Two datanodes are adjacent parts of another. This property relates the two parts without specifying anything about their container. Can be used in conjunction with isPartOf to state that two parts do not overlap.</ns1:comment>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/adjacentTo"/>
+  </ns0:SymmetricProperty>
+  <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentCapabilityFrom">
+    <ns3:description>&lt;p&gt;Two nodes have different potential. Two data nodes using different vocabularies or two copies of the same data in different places.&lt;/p&gt;</ns3:description>
+    <ns1:label xml:lang="en">different capability from</ns1:label>
+    <ns2:note xml:lang="en">(Similarly to :overlappingCapabilityWith) This relation is needed to generically express comparison of data nodes with relation to specific tasks.</ns2:note>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/relatedWith"/>
+  </ns0:SymmetricProperty>
+  <ns0:SymmetricProperty rdf:about="http://purl.org/datanode/ns/differentVocabularyFrom">
+    <ns1:label xml:lang="en">different vocabulary from</ns1:label>
+    <ns3:description>&lt;p&gt;Two datanodes do not share any set of vocabulary terms.&lt;/p&gt;</ns3:description>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/differentCapabilityFrom"/>
+  </ns0:SymmetricProperty>
+  <ns0:InverseFunctionalProperty rdf:about="http://purl.org/datanode/ns/previousVersionOf">
+    <ns1:label xml:lang="en">previous version of</ns1:label>
+    <ns1:subPropertyOf rdf:resource="http://purl.org/datanode/ns/olderVersionOf"/>
+    <ns0:inverseOf rdf:resource="http://purl.org/datanode/ns/nextVersionOf"/>
+  </ns0:InverseFunctionalProperty>
+  <ns0:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <ns0:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+  <ns0:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+</rdf:RDF>
